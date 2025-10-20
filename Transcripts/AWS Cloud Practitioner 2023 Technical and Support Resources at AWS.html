@@ -1,0 +1,363 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Technical &amp; Support Resources at AWS</h1><div class="section_text">Whenever Amazon Web Services gets a new customer to create even a basic account, they want to keep that customer for the lifetime of that entity. AWS supports the widest array of business and organizational customers in the world. 
+
+Begin this course by exploring AWS support plans, including AWS Developer, AWS Business, AWS Enterprise On-Ramp, and AWS Enterprise. Then you will dive into AWS Professional Services and Solutions Architects, the AWS Partner Network, and the AWS Support Center. Next, you will learn how to locate helpful resources at AWS, like whitepapers, blogs, and documentation. Finally, you will investigate the roles of AWS Trusted Advisor, the AWS Health Dashboard, and the AWS Health API, focus on reporting abuse of AWS resources with AWS Trust and Safety, and find out how to use AWS Partners and the Marketplace.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_16_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Comparing AWS Support Plans (it_clawsp23_16_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: AWS Professional Services and Solutions Architects (it_clawsp23_16_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: AWS Partner Network (it_clawsp23_16_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: AWS Support Center and Options (it_clawsp23_16_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Locating Resources at AWS (it_clawsp23_16_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Using AWS Trusted Advisor, Health Dashboard, and Health API (it_clawsp23_16_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: AWS Trust and Safety (it_clawsp23_16_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Using AWS Partners and Marketplace (it_clawsp23_16_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_16_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_16_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/77e16d3b-c8e2-48e2-a558-ac52684a375f/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/77e16d3b-c8e2-48e2-a558-ac52684a375f/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Technical and support resources at AWS.</p>
+<p>Whenever Amazon Web Services gets a new customer to create even a Basic account, they want to keep that customer for the lifetime of that entity. AWS supports the widest array of business and organizational customers in the world.</p>
+<p>In this course, we’ll discover AWS support plans, examine professional services and solutions architects, AWS Partner Network, and the AWS Support Center.</p>
+<p>We’ll explore AWS Trusted Advisor, the health dashboard, the health API, and AWS Trust &amp; Safety. And finally, we’ll survey AWS Partners and the AWS Marketplace.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Comparing AWS Support Plans (it_clawsp23_16_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/cf75276a-fa26-4577-a743-c97782d682b7/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/cf75276a-fa26-4577-a743-c97782d682b7/image001.jpg')();" /><div class="section_text">Learn how to compare support plans like AWS Developer, AWS Business, AWS Enterprise On-Ramp, and AWS Enterprise.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare support plans like AWS Developer, AWS Business, AWS Enterprise On-Ramp, and AWS Enterprise</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing AWS Support Plans. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this demonstration, we&#39;re going to go up to the AWS Support Plans site, which is one that you’re going to have to spend a few minutes on, on your own at this site, amazon.com/premiumsupport/plans because there’ll be several questions on the cloud practitioner from this particular site. <br /><br />[Video description begins] <em>On the AWS Chrome page, the title reads: AWS Support Plan Comparison. The header on the page reads: Compare AWS Support Plans. A Select a Support Plan button is given below. Under Basic Support, three items are displayed: Customer Service and Communities, AWS Trusted Advisor, and AWS Personal Health Dashboard. Each has further details and site links.</em> [Video description ends] So we’re going to spend some time here to make sure that you get those questions right.</p>
+<p>When you come up here to this site, you’re also going to see a couple of things- documentations, whitepapers, and AWS re:Post links. So, 24x7 access to this that may also be on the exam as well. The fact that all of the plans have 24x7 access, documentation, whitepapers, and the re:Post site.</p>
+<p>Later in this course, we’ll look at Trusted Advisor, which has checks, and then the AWS Personal Health Dashboard, and even the Basic account, which means you’re not a Developer, you’re just the Basic account.</p>
+<p>You&#39;re going to have still some limited access to Trusted Advisor, but you’ll also have the Personal Health Dashboard and 24x7 customer service, documentation, whitepapers, and the re:Post site.</p>
+<p>Now, beyond that, if we scroll down on the exam, you need to memorize these definitions that are in italics for each one of these four different types. So if you create an account and it&#39;s a personal account, and you decide during the setup process not to get a Developer or a Business plan, then you’re what’s called a Basic account.</p>
+<p>And the Basic account, and even the Developer, only get the quotas and a basic set of Security checks, which is a limited view of your checks in Trusted Advisor.</p>
+<p>So the first thing is memorizing these definitions. For Developer- experimenting or testing, Business- if you have a production workload, Enterprise On-Ramp- production and/or business critical workloads, and then Enterprise- business or mission critical workloads. So, these aren’t the same definitions.</p>
+<p>Enterprise as is business and/or mission critical, Enterprise on-ramp is production and/or business critical, and then Business is recommended if you have production workloads. So notice that the word ‘business’ is not even in the definition of the Business Support Plan. Go figure!</p>
+<p>If you want to get all the Trusted Advisor checks, you have to have a Business or Enterprise on-ramp or Enterprise account.</p>
+<p>Also, those three plans are also the only ones that get 24 hours a day, 7 days support from the engineers, and that also includes the DDoS response team.</p>
+<p>So in other words, if you want to get AWS Shield Advanced, which gives you 24x7 DDoS response team, that also means you have to have a Business or one of the Enterprise plans to get that 24x7 DDoS response team.</p>
+<p>On the exam, you don’t have to memorize these Case severities and Response times, but as you can imagine, the more expensive the plan, and Enterprise starts at 15,000, the more expensive the plan, the better offer you’re going to get.</p>
+<p>We’ll talk later on about the Support, AWS Support, which you can use an API to access AWS Support, and your Trusted Advisor through an API, but only the Business and the Enterprise plans can do that.</p>
+<p>There’s also Infrastructure Event Management, IEM, and that&#39;s pretty much like having a special team. If you have an upcoming, let’s say you’re going to do a national commercial, or you&#39;re going to do a rollout of a new product, or you’re going to do a database migration, that is a particular event, and they can help you with that event management. You&#39;re going to get that with the Enterprise plan. You get one per year with the On-ramp and the Business, you can get it for an extra fee. But you can’t get the IEM with a Basic or Developer account.</p>
+<p>The other things that are on here, remember that there’s a Technical Account Manager. You’re going to get a designated TAM for the Enterprise, and either one of the Enterprise accounts get a Concierge support team.</p>
+<p>This is kind of like those people that are, you know, multi-millionaires and billionaires who fly into, let’s say, Las Vegas or Monte Carlo or Atlantic City, you know, Macau. And they’re what we call whales, right? So they fly in with a bunch of money; maybe they have an entourage. And the casino resort will offer a concierge team that is dedicated to meet their needs for the entire time that they’re there, doing their eating and drinking and waging and all those things.</p>
+<p>That’s kind of the Concierge support team because that&#39;s a dedicated team to the whales.</p>
+<p>The Enterprise on-ramp that are paying starting at 5,500 a month and up, and the Enterprise plan does 15,000 a month and up.</p>
+<p>You don&#39;t want to memorize these pricings either, so don&#39;t worry about memorizing the pricings or memorizing these service level metrics for Case severity and Response time.</p>
+<p>But you do want to be aware of things like the Support API, the Infrastructure Event Management, Concierge team, TAM (Technical Account manager), and then, of course, you want to be aware of the fact that Basic and Developer don’t get 24x7 support. They don’t get the full set of Trusted Advisor checks.</p>
+<p>And then, of course, you want to know the basic definitions of Developer, Business, Enterprise on-ramp, and Enterprise. And you would expect at least two questions on the exam on the Support Plans.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: AWS Professional Services and Solutions Architects (it_clawsp23_16_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/3e2a4b6d-0946-447c-b9e7-fc0ed6943429/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3e2a4b6d-0946-447c-b9e7-fc0ed6943429/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare AWS Professional Services and Solutions Architects.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare AWS Professional Services and Solutions Architects</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Professional Services and Solutions Architects. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Professional Services.</p>
+<p>AWS Professional Services is available in the AWS Marketplace. It allows customers to find and buy assessments, implementation, support, managed services, and training for third-party software and building on AWS.</p>
+<p>AWS Marketplace assists customers in finding the software and associated services necessary to transform and simplify cloud service acquisition in one location.</p>
+<p>Professional Services offers wide-ranging business solutions and curated service offerings from independent software vendors and various consulting partners in a wide variety of business sectors.</p>
+<p>AWS Professional Services supports assessment and implementation. You can evaluate the current operating environment, explore services, and get help with configuration, setup, and deployment of third-party or native AWS services.</p>
+<p>Premium support- Get access to direction and aid from independent software vendors and consulting partners targeted to specific needs.</p>
+<p>Managed services- Achieve end-to-end environment management from independent software vendors or AWS consulting partners that represent the organization.</p>
+<p>And training- Take advantage of customized workshops, programs, and instructive tools delivered by AWS experts to help employees in learning best practices.</p>
+<p>The Solutions Architect team at AWS is tasked with assisting customers in the effective deployment of various cloud technologies. AWS customers can partner with internal AWS teams and leverage a profound knowledge of available tools and products. They can formulate scalable, agile, and robust cloud architectures that address customer business problems. As a team member, customers can experiment daily and help drive the future of cloud computing.</p>
+<p>Aspects of AWS Solutions Architect enablement include an “experiment and fail” culture, robust training programs, a diverse array of certification paths, leadership and mentorship programs, and flexible work-life balance.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: AWS Partner Network (it_clawsp23_16_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/3b857db8-a76b-4b09-bc2e-7747364bbf88/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3b857db8-a76b-4b09-bc2e-7747364bbf88/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe the AWS Partner Network.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the AWS Partner Network</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Partner Network. Presented by: Michael Shannon.</em> [Video description ends]
+<p>The AWS Partner Network (APN) is a global consortium of associates that combines programs, knowledge, and resources to build, market, and sell customer offerings. It is a diverse network of over 100,000 partners from more than 150 countries.</p>
+<p>As an AWS Partner, customers are strategically situated to take full advantage of all that Amazon Web Services has to offer.</p>
+<p>The AWS Partner Network helps customers hasten their experience in the cloud. AWS and partners work together to deliver inventive solutions, resolve technical issues, win deals and agreements, and provide value to mutual customers.</p>
+<p>With the AWS Partner Network, customers can innovate by taking advantage of the newest AWS technologies to test, build, and deliver differentiated customer solutions.</p>
+<p>Reach customers- Leverage the global reach, scalability, know-how, and vigor of AWS to increase the customer base and find new opportunities.</p>
+<p>And grow- Join with AWS to improve the value of unique offerings with resources, programs, and benefits that lead to higher profits.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: AWS Support Center and Options (it_clawsp23_16_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/7dd7e58d-f5bb-475a-aa38-8fb8aff8ed1c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/7dd7e58d-f5bb-475a-aa38-8fb8aff8ed1c/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe the AWS Support Center and support options, such as customer service and communities.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the AWS Support Center and support options, such as customer service and communities</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Support Center and Options. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this very short lesson, we’re going to look at the AWS Support Center.</p>
+<p>Customers must have permissions to access Support Center and to create a support case. They can use one of the following options to access Support Center.</p>
+<p>They can use the email address and password associated with the AWS account, otherwise known as the AWS account root user. They can use AWS IAM (Identity and Access Management). If they have a Business, Enterprise On-Ramp, or Enterprise Support plan, they can also use the AWS Support API to access AWS Support and Trusted Advisor operations programmatically.</p>
+<p>Here’s what it looks like in the AWS CLI or Cloud Shell, where you’re going to allow all access to all AWS support actions.</p>
+<p>Effect: Allow, Action: support: *, asterisk meaning all, Resources: *, asterisk meaning all. <br /><br />[Video description begins] <em>The header of the page reads: Allow Access to All AWS Support Actions. There are 6 lines of code presented on the screen. Line 1 reads: &#34;Version&#34;: &#34;2012-10-17&#34;,. Line 2 reads: &#34;Statement&#34;: [. Line 4 reads: &#34;Effect&#34;: &#34;Allow&#34;,. Line 5 reads: &#34;Action&#34;: [&#34;Support:*&#34;],. And line 6 reads: &#34;Resource&#34;: &#34;*&#34;</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Locating Resources at AWS (it_clawsp23_16_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/4591d34c-3b65-4dcc-a863-a78224eacd7b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/4591d34c-3b65-4dcc-a863-a78224eacd7b/image001.jpg')();" /><div class="section_text">Find out how to locate AWS whitepapers, blogs, and documentation on official AWS websites.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">locate AWS whitepapers, blogs, and documentation on official AWS websites</li></ul><div class="section_text">[Video description begins] <em>Topic title: Locating Resources at AWS. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Remember, Amazon Web Services is going to give you all of the opportunities to conduct your due diligence and due care in the entire journey at Amazon Web Services. Once they get you as a customer, they do not want to lose you as a customer to one of their competitors, especially Microsoft Azure, and so they’re going to offer everything that you could possibly need. <br /><br />[Video description begins] <em>On the AWS Chrome page, the header reads: AWS Whitepapers &amp; Guides. A ribbon with 6 options is given at the top, namely: Technology Categories, More Resources, and so on. A brief overview is given below. The page is divided into two sections. On the left pane, the header reads: Clear filters. A list of filters with further options is displayed on it, such as: Content Types, Methodology, and more. On the main pane, some whitepaper articles are shown.</em> [Video description ends]</p>
+<p>Here we see AWS whitepapers and guides, where you can expand your knowledge of the cloud with AWS technical content authored by AWS themselves, the community, there’s technical whitepaper, technical guides, reference material, architecture diagrams, pretty much everything you need up here.</p>
+<p>And you can go over here, and you can filter out whitepapers or technical guides. You can go and look at the Well-architected framework or the Cloud adoption framework.</p>
+<p>And by the way, on this exam, as you know, you need to be aware of both the Well-architected and the CAF.</p>
+<p>And then if you want to if you&#39;re interested, for example, like in Security or Serverless, you can come down here and filter out just those particular types of articles or whitepapers. And there are many, many whitepapers out here. Some of these for like bleeding-edge technologies.</p>
+<p>Also, here we see More Resources. [Video description begins] <em>On the ribbon, the presenter clicks on the dropdown arrow given on the tab: More Resources. It displays three resource names.</em> [Video description ends] So you can see the Architecture Blog, Architecture Icons, and Cloud Foundations.</p>
+<p>The AWS Blog is also a very important place to look at postings. [Video description begins] <em>The presenter opens a new Chrome page: AWS Blog. A ribbon with 3 options is given at the top: AWS Blog Home, Blogs, and Editions. Some Featured posts are displayed on the top. A list of Categories is given on the left pane to select from, namely: Analytics, Security, Identity, &amp; Compliance, and more. On the main pane, a list of articles is displayed.</em> [Video description ends]</p>
+<p>I spend a lot of time on a regular basis looking at all of the new security blogs because that’s kind of my specialty.</p>
+<p>So I could go to Security, Identity &amp; Compliance, and I’m going to see some really, you know, new postings, some bleeding-edge articles, for example, Building a scalable vulnerability management program, Auto-remediate best practice deviations that are detected by AWS Trusted Advisor.</p>
+<p>Here’s a cool one, Import Ethereum private keys to Amazon Web Services KMS. That’s pretty awesome! Those are blogs.</p>
+<p>And then whenever you go to a particular service, like here’s DynamoDB, and I’m logged in here. <br /><br />[Video description begins] <em>The header of the new Chrome page reads: Service | Amazon DynamoDB. The page is divided into three sections. On the left pane, a list of options is given, namely: Dashboard, Tables, and so on. On the main pane, a brief on Amazon DynamoDB is displayed. On the right pane, some boxes are displayed with headers, such as: Get started, Documentation, and more.</em> [Video description ends]</p>
+<p>Before I go and create a table in any of these services, if you scroll down and look at the right-hand side, you&#39;re going to see Documentation for the service. So you know, what is DynamoDB, how to get started, and set it up, and access it, how to program. You have tutorials. So video tutorials, frequently asked questions, a forum, blog articles that are specific to this NoSQL database. So there&#39;s a, there&#39;s plenty of resources.</p>
+<p>And as far as AWS is concerned, when it comes to infrastructure as a service or platform as a service, as a customer, we really don’t have an excuse if the due diligence and due care is not performed because AWS is giving us really more than we could possibly ever consume to help us perfect and optimize our experience in the AWS cloud.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Using AWS Trusted Advisor, Health Dashboard, and Health API (it_clawsp23_16_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/67ddfce1-e967-4c44-88c6-e2fedfd20911/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/67ddfce1-e967-4c44-88c6-e2fedfd20911/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the roles of Trusted Advisor, the AWS Health Dashboard, and the AWS Health API in managing and monitoring environments for cost optimization.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the roles of Trusted Advisor, the AWS Health Dashboard, and the AWS Health API in managing and monitoring environments for cost optimization</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Trusted Advisor, Health Dashboard, and Health API. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this demonstration, we’re going to look at three different components of Amazon Web Services- Trusted Advisor, the Health Dashboard, and the Health API.</p>
+<p>Now realize this is just a test training account and it&#39;s just a Basic plan. So, I don’t have a Developer or Business or Enterprise plan for this account. And I also don’t use my own production account and put it on a video and, you know, expose it to the entire planet. That would not be a good thing. <br /><br />[Video description begins] <em>The header of the AWS Chrome page reads: Trusted Advisor | Global. The page is divided into two sections. On the left pane, five Recommendations are displayed, such as: Cost optimization, Security, and so on. On the main pane, the Trusted Advisor Recommendations segment is open with a brief overview. Some boxes are displayed below with headers, such as: Checks summary, Recommended Actions, and more.</em> [Video description ends]</p>
+<p>But remember, under Trusted Advisor, there are five different areas, and you have to memorize these for the exam. It&#39;s very likely you&#39;ll get one of those two out of five questions. So, three of these will be the correct answer like Cost optimization, Performance, and Fault tolerance. And there’ll be two distractors. And the distractors maybe actually well-architected pillars. And you may get a two out of five well-architected question, and they’ll use as the distractors, Trusted Advisor. So be careful!</p>
+<p>Now remember, both the well-architected and Trusted Advisor have a Security component. There’s a Security pillar and there’s a Trusted Advisor category. So it&#39;s unlikely you&#39;ll see that as one of the questions or the distractors.</p>
+<p>But we have Cost optimization. Notice it’s reminding me to upgrade my Support plan to get all of the Trusted Advisor checks because remember, as a Basic, under Developer, I’m just really getting none of this, okay, a subset at best.</p>
+<p>Same thing with Performance, okay. We can see things that are grayed out. These are a lot of different performance things, like a large number of rules in an EC2 Security Group. There’s a few security things here. And I am getting a alert that says, look, in one of your security groups, you are allowing unrestricted access. So what you’re saying is source in my security group Firewall rule is 0.0.0.0/0, which is from any. Okay! So that’s something they’re going to warn you about.</p>
+<p>There’s also the Fault tolerance category. And again, even though I’m not upgraded, we can still see some of these for Fault tolerance. If you have a VPC-enabled Lambda Functions, then you might want to consider Multi-Availability Zone Deployment Redundancy. So usually in the Fault tolerance area, they’re reminding you of the benefits of multi-Availability Zone in RDS for example.</p>
+<p>And then Service limits are quotas. So you can see your checks or your service limits or quotas for different groups. You know, Auto Scaling Groups, CloudFormation Stacks, EBS Active Snapshots, and will kind of tell you where you are in that.</p>
+<p>Now, something else that’s kind of interesting when we look at Trusted Advisor. Up here in the right-hand side, you could download everything, which I’ve done, and you can see, it’s going to show you these different tabs down here for different areas. [Video description begins] <em>The Download all checks button is given at the top right corner of the page.</em> [Video description ends] </p>
+<p><br />[Video description begins] <em>An Excel sheet opens on the local machine. At the bottom, the page names are displayed, such as: CloudFormation Stacks, Auto Scaling Launch Configurations, and more. Each presents a table with six headers, namely: Status, Region, and so on.</em> [Video description ends]</p>
+<p>And you can download these metrics, and you can use them in your own tool, or it can be helpful with your configuration management database.</p>
+<p>You also have the Health dashboard.</p>
+<p>I don&#39;t have any recent issues, but you can see you’ve got Open and recent issues, any Scheduled changes that are coming up, Notifications, there’s an Event log. <br /><br />[Video description begins] <em>The header of the new Chrome page reads: AWS Health Dashboard. It is divided into two sections. On the left pane, four options are listed, namely: Your account health, Health Integrations, and so on. Each has further categories. On the main pane, the header reads: Your account health. The four categories are displayed on it.</em> [Video description ends] So this is an ongoing informational portal for things that are affecting your AWS resources, and you can get notifications.</p>
+<p>You can see the Service history. You can see any issues, open and recent. You can also conduct health investigations. And you can use Amazon EventBridge rule and a new service called AWS Health Aware. And if you click on this, there’ll be a blog article about Health Aware, but I don’t think you’ll have that on your exam.</p>
+<p>But you must be aware of the Health dashboard, which, by the way, is available even as you can see here to the Basic account. So, the Basic account and the Developer account both get, you know, 24 hours a day seven days a week, the Health dashboard.</p>
+<p>Now you have to have a Business, Enterprise On-Ramp, or Enterprise Support plan from AWS Support to use this Health API. <br /><br />[Video description begins] <em>The header of the Chrome page reads: Accessing the AWS Health API. The page is divided into three sections. On the left pane, some AWS Health User Guide are given, namely: What is AWS Health?, Concepts for AWS Health, and so on. On the main pane, a brief overview on AWS Health is given. On the right pane, some items are displayed.</em> [Video description ends]</p>
+<p>So, I showed you this earlier in the training course when we looked at the Support plans, and I mentioned the Support API. Okay.</p>
+<p>So AWS Health is a RESTful web service that uses TLS as a transport and JSON as the message format. So you can make requests directly to the AWS Health API. But again, you have to have one of those elevated Support plans to do this.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: AWS Trust and Safety (it_clawsp23_16_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/06ad1aa0-4002-4e48-91c8-7b31c70993a9/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/06ad1aa0-4002-4e48-91c8-7b31c70993a9/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe the role of the AWS Trust and Safety team to report abuse of AWS resources.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the role of the AWS Trust and Safety team to report abuse of AWS resources</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Trust and Safety. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Let’s take a moment to look at AWS Trust &amp; Safety. The AWS Trust &amp; Safety or T&amp;S team is a global group that helps protect against abusive uses of AWS services.</p>
+<p>It also functions to build trust with AWS customers, partners, and other stakeholders. The T&amp;S team scrutinizes potential abuse cases and contacts AWS customers to stop damaging activities.</p>
+<p>The AWS T&amp;S team serves as the first line of defense by investigating trends and reporting findings to AWS service groups as necessary.</p>
+<p>AWS Support Engineers, Solutions Architects, Technical Account Managers (TAMs), and product teams are available to provide guidance and help as needed. The AWS T&amp;S team helps customers when their cloud resources are exploited to conduct abusive actions like spam, port scanning, denial-of-service (DoS) attacks, or various types of malware.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Using AWS Partners and Marketplace (it_clawsp23_16_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/2b620f57-faed-46f2-9a29-3cee204eb3b3/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/2b620f57-faed-46f2-9a29-3cee204eb3b3/image001.jpg')();" /><div class="section_text">In this video, you will learn how to use the AWS Partners Site and Marketplace solutions.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use the AWS Partners Site and Marketplace solutions</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Partners and Marketplace. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this demonstration, we&#39;re going to look at a couple of key areas that you would call software as a service offerings from Amazon Web Services. Starting first with the APN, the AWS Partner Network, where you can join a global community of partners that leverages programs, expertise, and resources to build, market, and sell customer offerings. <br /><br />[Video description begins] <em>The URL of the Chrome page reads: https://aws.amazon.com/partners/. The header on the page reads: Join the AWS Partner Network. A ribbon with 6 tabs is given at the top, such as: Overview, Partner Paths, and so on. Below, a brief overview of APN is given.</em> [Video description ends]</p>
+<p>So they have different ways to become a partner, you have different Partner Paths. You have different Partner Programs.</p>
+<p>In the Partner Paths, we have a Software Path, a Hardware Path, a Services Path, a Training Path, for example, to become an AWS Training Partner, and a Distribution Path, where an organization can recruit, onboard, and support their partners to resell and develop AWS solutions, becoming an AWS Authorized Distributor. Once you are an Authorized Distributor, you could then take advantage of the AWS Marketplace.</p>
+<p>So the Marketplace is where you find, test, buy, and deploy software solutions running in AWS. [Video description begins] <em>The header of the new Chrome page reads: AWS Marketplace. A brief overview and how it works is displayed on it.</em> [Video description ends] It’s a curated digital catalog where we can find a wide variety of solutions to assist us with our infrastructure as a service or platform as a service solution.</p>
+<p>For example, we can find a wide variety of categories for solutions in networking, security, storage, database, business intelligence, big data, machine learning. We can also Bring Your Own License. We can take advantage of free trials, pay-as-you-go pricing, and other solutions. We can deploy our own Amazon Machine Images or use the community of AMIs.</p>
+<p>And if we go up here and search, we can manage our subscriptions. [Video description begins] <em>On the right pane of the page, some boxes are given with headers, such as: Get started, Pricing and costs, and so on. The presenter clicks on the Manage subscriptions button in the box: Get started.</em> [Video description ends]</p>
+<p>So here&#39;s where we can manage them. And we can also go and discover a wide variety of different solutions, even in the Private Marketplace. <br /><br />[Video description begins] <em>The header of the Chrome page reads: Subscriptions - AWS Marketplace. It is divided into two sections. On the left pane, six options are given, namely: Discover products, Private Marketplace, and so on. On the main pane, the header reads: Manage subscriptions. It has two blank fields: Your subscriptions and All delivery methods. A Discover products button is given below.</em> [Video description ends]</p>
+<p>If I go to Discover products, these will be categorized, for example, as Infrastructure Software, DevOps, Professional Services, Data Products, Business Applications, Machine Learning, Industries, and IoT.</p>
+<p>You can even sort by Delivery methods. You can sort by the Publisher. You can look at different Pricing models, Pricing units. You can even sort by Operating system, say, I want to look at either All Linux or Unix or maybe All Windows.</p>
+<p>If I want to see what offers a Free trial, I can choose that as well. The AWS Marketplace has over 10,000 results.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_16_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/fa45a851-8dce-4715-b804-5863387fc89b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/fa45a851-8dce-4715-b804-5863387fc89b/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this final course, you learned about AWS Support plans, Professional Services, and AWS Solutions Architects. AWS Partner Network, the AWS Support Center, Trusted Advisor, Health Dashboard, and Health API.</p>
+<p>And finally, AWS Trust &amp; Safety and a survey of AWS Partners and the AWS Marketplace.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

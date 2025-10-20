@@ -1,0 +1,404 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: AWS Network Services</h1><div class="section_text">When customers choose to use the AWS network services, they are leveraging some of the fastest and most cutting-edge datacenter and storage area networks (SANs) available. Many customers will begin the journey here since every account gets a default virtual network called a Virtual Private Cloud (VPC).
+
+In this course, you will begin by exploring the components of a VPC. You will then look at how to use VPC addressing, security, and peering and compare VPC endpoints with endpoint services such as PrivateLink. Next, you will learn about Amazon Route 53 and edge network services. Finally, you will discover connectivity options available for AWS, such as AWS VPN and Direct Connect.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_11_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Exploring Components of a Virtual Private Cloud (VPC) (it_clawsp23_11_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Utilizing VPC Addressing (it_clawsp23_11_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: VPC Security (it_clawsp23_11_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: VPC Peering (it_clawsp23_11_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Comparing Endpoints and Endpoint Services (it_clawsp23_11_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Amazon Route 53 (it_clawsp23_11_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Edge Network Services (it_clawsp23_11_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Exploring Network Connectivity Options (it_clawsp23_11_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_11_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_11_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/0a3ad958-11c9-4f78-97e5-230db4d301c0/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/0a3ad958-11c9-4f78-97e5-230db4d301c0/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>AWS Network Services. When a customer of AWS decides to use the AWS network services, they are leveraging some of their fastest and cutting edge data center and storage area networks on the planet.</p>
+<p>Many customers will begin the journey here, since every account gets a default virtual network called a Virtual Private Cloud or VPC.</p>
+<p>In this course, we’ll define the components of a Virtual Private Cloud (VPC). We’ll examine VPC addressing, survey VPC security, learn about VPC peering, endpoints, and the PrivateLink service which leverages endpoints, and describe Amazon Route 53 or Route 53, edge network services, and various network connectivity options.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Exploring Components of a Virtual Private Cloud (VPC) (it_clawsp23_11_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/b2eff3cf-d541-4dce-a167-3a0ad4df15ba/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b2eff3cf-d541-4dce-a167-3a0ad4df15ba/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to identify components of a virtual private cloud (VPC), such as subnets and gateways.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">identify components of a virtual private cloud (VPC), such as subnets and gateways</li></ul><div class="section_text">[Video description begins] <em>Topic title: Exploring Components of a Virtual Private Cloud (VPC). Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Okay, before we dive into the elements of the Virtual Private Cloud, the VPC, I want to reiterate and emphasize that on the cloud practitioner exam, there are no configuration questions. You’re not going to get those until you get to the administrator associate at the next level, SysOps admin, developer, architect.</p>
+<p>So, we’re going to look at the elements of the VPC here just to reinforce the technology. Obviously, if I go to Your VPCs, I am going to see a VPC here. [Video description begins] <em>The VPC Management Console is displayed, featuring a left pane with options such as EC2 Global View, Filter by VPC, and Virtual private cloud. Under Virtual private cloud, we have multiple options including Your VPCs, Subnets, Route tables, Internet gateways, Egress-only internet gateways, and so on. In the middle pane, we have two buttons at the top labeled: Create VPC and Launch EC2 Instances. And just below the buttons, there&#39;s a list of Resources by Region which includes VPCs, NAT Gateways, Subnets, VPC Peering Connections, Route Tables, and so on. Finally, in the right pane, there are 4 sections labeled: Service Health, Settings, Additional Information, and AWS Network Manager.</em> [Video description ends]</p>
+<p>Now this ID is what we call an ARN. It’s a unique Amazon Resource Number or Name. [Video description begins] <em>The presenter clicks on Your VPCs under Virtual private cloud from the left pane. A list of options is displayed including Name, VPC ID, State, IPv4 CIDR, IPv6 CIDR, and so on.</em> [Video description ends] So, in the AWS cloud, vpc-a446f6de and then those characters is unique. [Video description begins] <em>He points to the VPC ID.</em> [Video description ends]</p>
+<p>In the cloud, you can see that the State of the VPC, it says is Available and then by default, in your default VPC, the IPv4 CIDR (or CIDR), Classless Inter-Domain Routing, is going to be 172.31.0.0/16. If you create your own VPC by going up here and creating your own or doing it in the CloudShell, or the command line interface remotely, or CloudFormation, then you can choose some other private CIDR range: 10.something, 172.16, 192.68, so on and so forth.</p>
+<p>If we go down here, every VPC has a main route table. We’ll look later at the network ACL, and we’ll notice also is this the Default VPC? And this is a binary. So, it’s either Yes or No. So, on the exam, I want you to remember there’s two types of VPCs: the default VPC and a nondefault VPC.</p>
+<p>So, if I created my own by clicking on the Create VPC button and we’ll go ahead and do that real quick, even though there is no configuration, you’ll get this kind of wizard driven solution. This would be a nondefault VPC. [Video description begins] <em>After clicking on the Create VPC button, the VPC settings page is displayed, which includes options such as Resources to create, Name tag - optional, IPv4 CIDR block, IPv4 CIDR, and so on.</em> [Video description ends]</p>
+<p>Let&#39;s go back here. Next, we have Subnets. [Video description begins] <em>He clicks on Your VPCs at the top, and the Your VPCs page is displayed again. Then, he clicks on Subnets under Virtual private cloud in the left pane, and a list is displayed on the right with columns labeled: Name, Subnet ID, State, VPC, and so on.</em> [Video description ends] Now, there are six subnets in my default VPC, and a subnet is just basically a way to create smaller networks out of that /16 network that we just saw. Could you have one giant 172.31.0.0/16 VPC with 65,530 something hosts. You could do that, but it&#39;s actually not common at all.</p>
+<p>So, you can see here that’s been broken up into 6 subnets and they&#39;re all available and they&#39;re all part of this same VPC we just looked at, 6de. By default, AWS breaks these up with a /20, which means we have 32-20 bits now for the hosts instead of 32-16. So, 32-20 is 12, 2 to the 12th power, 4096. So, now with each one of these /20 subnets, we have mathematically 4096 hosts. However, we don&#39;t get all of those. We lose two automatically and then they&#39;re going to take some more addresses away from us because they&#39;re going to use them for the router.</p>
+<p>They&#39;re going to use them for the DNS server and for experimental purposes. Now, notice that in my default VPC, they give me by default 6 /20 subnets. Why is that? If I notice I’m in the N. Virginia region of AWS, it just so happens that there are 6 availability zones in the N. Virginia region. [Video description begins] <em>He points to the region in the top right pane.</em> [Video description ends]</p>
+<p>So, since there’s 6 availability zones, they&#39;re going to go ahead and give me 6 subnets. So if I want to, I could distribute and I could load balance, for example, with a network load balance resources across all 6 availability zones: 1a through 1f. If I were to go up here and change my region to, let’s say, the Ohio region where there&#39;s 3 availability zones, then in the default VPC, I would have by default 3 subnets.</p>
+<p>All of my subnets using the same route or route table as we&#39;ll discuss later on in this training, they&#39;re all using the same network access control list and these are default subnets. So, next we have route tables, and route tables just basically say, you know, hey, where do we route the traffic? [Video description begins] <em>He clicks on Route tables under Virtual private cloud in the left pane, and a list is displayed on the right. Then, he selects the checkbox associated with the only Route table ID: rtb-43d2ed3c, and multiple tabs are displayed at the bottom.</em> [Video description ends]</p>
+<p>And remember, all of my subnets are using this same route or route table. [Video description begins] <em>He clicks on the Routes tab, and a list of two options is displayed.</em> [Video description ends] All of the route tables are going to have this local entry. So there’s my local traffic, right? 172.31.0.0/16 But the other entry is an any an IPv4 CIDR (or CIDR) any 0.0.0.0/0</p>
+<p>So, that really serves as a default gateway. So, it basically says any traffic that’s not local, we’re going to go and send it to this default gateway or any.</p>
+<p>And by the way, it&#39;s going to be an Internet gateway. It&#39;s the route table entry that determines the type of subnet it is. And since all of these subnets have this entry to an Internet gateway, then these are public subnets. [Video description begins] <em>He clicks on Internet gateways under Virtual private cloud in the left pane, and a list is displayed on the right with columns labeled: Name, Internet gateway ID, State, and so on.</em> [Video description ends]</p>
+<p>Now, the purpose of the Internet gateway is really to do two things. One, it&#39;s going to manage all the traffic going in and out of the VPC to and from the Internet. And the other thing it&#39;s going to do is it&#39;s going to translate the private addressing, which we know in our case is 172.31 private addressing when necessary into a public IP address. Okay.</p>
+<p>So, the last thing I want to show you is how do we get that public IP address? [Video description begins] <em>He clicks on Elastic IPs under Virtual private cloud in the left pane, and a list is displayed on the right with columns labeled: Name, Allocated IPv4 address, Type, and so on</em> [Video description ends] Well, one way to do it is to go say, hey, why don&#39;t you allocate me a public IP address, Amazon, from your pool.</p>
+<p>And as you can see here in my account, I have three allocated addresses and these are all public addresses, not from the private RFC 1918. Now, these are allocated, but none of them are associated. And so technically I&#39;m paying for this. Okay, So, AWS is going to kind of ding me for this if I don’t use these. So maybe I&#39;ll select a couple of these and delete them just so I don&#39;t have to keep paying for these.</p>
+<p>So, I’m going to release a couple of these public addresses. [Video description begins] <em>He selects the checkboxes of the second and third IP addresses and clicks on Actions at the top right, followed by clicking on Release Elastic IP addresses. A dialog box is displayed, he clicks on Release.</em> [Video description ends] Now, they can go back to the pool and then they can be used by other people. Now, another way to get a public address is to say, you know what, just go ahead and assign it to me dynamically.</p>
+<p>So, if I were to go back to the VPC dashboard and I want to launch an EC2 Instance and we’ll just stick with the Amazon AMI, the Amazon Linux. If we choose this one, which is part of the free tier model and we go down. Notice that Auto-assign public IP is enabled. [Video description begins] <em>He clicks on VPC dashboard at the top left and then clicks on Launch EC2 Instances at the top. Another page titled Launch an instance is displayed, showcasing multiple options such as Name and tags, Application and OS Images (Amazon Machine Image), and so on. He scrolls down and points to the Amazon Linux 2023 AMI option.</em> [Video description ends]</p>
+<p>So, this particular Linux instance, if I deploy it into a public subnet that’s using an Internet gateway, if it tries to go and interact with something on the Internet, AWS will auto-assign an IP address to this instance. [Video description begins] <em>He scrolls down further and points to the Auto-assign public IP option under Network settings.</em> [Video description ends]</p>
+<p>Now, if I were to run this instance, get the Auto-assigned IP address and then stop running the instance, I would lose that Auto-assigned address. It would go back to the pool and AWS would allocate it to somebody else. If I want an IP address and I want to keep it persistently.</p>
+<p>Well, of course that’s when we will use the Elastic IP address, which I see here. If I decide to associate this with an instance or the virtual network interface of the instance, and then I decide to stop running that instance, I don&#39;t lose the IP address. [Video description begins] <em>He goes back to the VPC Management Console and clicks on Elastic IPs under Virtual private cloud in the left pane.</em> [Video description ends]</p>
+<p>It&#39;ll show up here as allocated but unassociated but the aforementioned Auto-assigned IP address, if you stop running the Linux instance, it goes back to the pool.</p>
+<p>Later on in our training, we&#39;ll talk about a third way for a instance in a public subnet to be represented with an IP address, and that would be by using an application elastic load balancer. But this is as far as I want to take you in this demonstration. Remember, on the exam there is no configuration. Just have an understanding of these concepts around the VPC.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Utilizing VPC Addressing (it_clawsp23_11_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/2fd36ea1-81aa-40bc-b643-ff3e3bfc56c5/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/2fd36ea1-81aa-40bc-b643-ff3e3bfc56c5/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to define VPC addressing options.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define VPC addressing options</li></ul><div class="section_text">[Video description begins] <em>Topic title: Utilizing VPC Addressing. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Okay, this is a demo. Although we&#39;re looking at a slide, I&#39;m actually going to write on this slide. And then we’re going to look at something known as the NAT gateway. That&#39;s part of the VPC that you might need to know about. [Video description begins] <em>A loop diagram of VPC Security is displayed. The VPC section is connected to IGW and VPG, and they are both interconnected to Router. The Router part is divided into two sections: NACL subnet 1 and NACL subnet 2, before that there are two Route tables connected between the two subnets and Router. At the bottom, each subnet is further connected to Security groups and instances.</em> [Video description ends]</p>
+<p>Now, let’s talk about IP addressing a little bit more. Kind of skirted around the topic in the previous lesson when we talked about the fact that when you get a VPC, it’s going to be a CIDR /16 network.</p>
+<p>And as I mentioned, you could say I&#39;m going to take my entire VPC and we’ll just leave it with the /16, which we saw. Mine was 172.31.0.0/16. You could do that. And remember the 16 means of the 32 bit address. The first 16 bits are the host.</p>
+<p>In other words, 8 172 &#43; 8 31 is the network and then 32-16 is how many hosts you have left over on that 172.31 network. Mathematically, 65,536, As we saw in the previous demo, you don’t get all of those, right. You lose. The router is going to get one. You&#39;re going to lose one to the DNS service.</p>
+<p>And then AWS takes a few more for experimental purposes. Since we’ve established that it’s unlikely that you’re going to do a /16, as far as IPv4 is concerned, what really are the valid options that most companies do?</p>
+<p>Well, we saw that in the default VPC that they gave me /20s, okay. So, with a /20, I’m taking basically four more bits from the third octet .0. So, I can have some subnets, right. So, it was /20, 32-20 is 12.</p>
+<p>So, now with a /20 we have 2 to the 12th power hosts on each /20 subnet. You don’t get all 4096. So, as we saw it was about 4089, okay.</p>
+<p>A lot of companies when they’re doing their VPCs, they are smaller networks. They’re for teams, they’re for projects, they’re for groups or whatever. So, it’s very common for them to use what you have probably right now on your home network /24. And with /24, you’re going to get 32-24, 8 bits for the hosts on each network. So, that’s 256. But you don’t get all of those.</p>
+<p>So really, it’s about 251. We’ll just round it to 250, okay. Are your only options to do /24 where you have about 250 hosts, or a /20 where you have over 4000 hosts? What if you want something in between?</p>
+<p>Well, you can have something in between, but it&#39;s just going to be, you know, it’s math, it’s binary. So basically, what you’re doing is you’re saying instead of a /24, we’re going to do it /23.</p>
+<p>So, we’re taking in only /23 for the network. So, the way the binary works, it’s exponential. You’re going to get, you know, over 500 here. You know it’s 512 mathematically. But we&#39;ll round it to about 500 okay.</p>
+<p>So, if you want about approximately 500 then you do a /23 subnets of your /16. If you want more than that but you don’t need over 4000, you’re going to double that. So, to get a little over a thousand, you’ll do a /22. And that’s going to give you 1000&#43;, mathematically, 1024. But you don’t get all those. That only leaves us with /21 right. So, /21 is going to give you twice as many as /22, which is a little over 2000. We&#39;ll just do approximately 2000. But we know it&#39;s 2048 with the exponential aspect of that.</p>
+<p>So, these are the networks that you would choose, right. You would say, do I want a network of about 250 hosts, about 500, about a 1000. Do I need 2000 hosts? Do I need 4000? And what drives this decision is: are you doing auto scaling? We&#39;ll talk about that. If your auto scaling these instances over here, well then, you know, can you auto scale up to 2000? Because remember you can auto scale instances of operating systems.</p>
+<p>But you can also do, you know, virtual appliances as well. And then the other thing that would be a factor into how many you need is: are you going to use endpoints? Interface endpoints, which we&#39;re going to talk more about later on in this training. So that&#39;s pretty much really more than you would need to know for IPv4 addressing. I would say one more thing.</p>
+<p>If you’re doing a nondefault VPC, don’t do 172.17. At the time of this recording, AWS uses the 172.17.0.0 RFC 1918 private address for some of its own internal use cases in its data centers, so that one would be off limits really for now.</p>
+<p>Now what about IPv6? Well, IPv6 is not enabled by default. And I&#39;ll show you that here in a second. But if you’re going to do IPv6, remember that’s a 128-bit address. And the way it works is really this. The first 64 bits are the domain. And then you have a 64-bit IPv6 address that is assigned to the instance. And it&#39;s actually going to use the Mac address of the elastic network interface 48 bits. It will use that to formulate the 64-bit address.</p>
+<p>So, with IPv6, it’s pretty cut and dried. You know, you&#39;ve got the first 64 bits of the network or your domain and then there are remaining 64 bits, which would be hexadecimal. Right. You can see that right here. See it’s some hexadecimal address. And then 64, right. That’s how IPv6 works, way easier. There is no network address translation. There is no hiding behind NAT routers. There&#39;s not even any ARP anymore.</p>
+<p>Now, one of the things I want to mention here is, let’s say, we have a public subnet. And this would be public because there is an IGW in its Route table. And then we’ve got a private subnet with let’s say the back-end, SQL servers, or whatever for these front-end Apache servers.</p>
+<p>This is a private subnet because it doesn’t have an IGW, nor does it have a virtual private gateway in its route table. So, it’s a sandbox. What a lot of customers want to do is they still want these instances of whatever Windows, SQL server, back-end for your SharePoint implementation.</p>
+<p>They still want these to go and use Windows Update service, or they still want them to go to the Internet to get an update or a service pack or a hotfix or whatever.</p>
+<p>But they can&#39;t because they don&#39;t have an entry in their route table to the IGW, right? So, they’re not in a public subnet. So, what would you do in this circumstance?</p>
+<p>In this scenario, you would deploy what’s called a NAT gateway in the public subnet. It&#39;s going to get one of your elastic IP addresses. And we saw that in the previous demonstration. Remember I had three of them and I released a couple of them. So, I still have one. So, I could use that elastic IP, assign it to the NAT gateway, and then the NAT gateway has an ARN, a unique ARN.</p>
+<p>And that would go in the route table of the private subnet. And so these would know hey if it’s not local traffic then go to my NAT gateway. So, the NAT gateway is kind of a proxy or mediated access to allow these instances to go out. It’s just a one way outbound only to the IGW to go to Windows Update service, or get something from a vendor or a website or whatever.</p>
+<p>Let me show you that real quick. So, let’s go down here and see NAT gateways. So, you would go to NAT gateways and you would create one. And it’s basically just this, you name it. So, you give it some unique name. [Video description begins] <em>The VPC Management Console is displayed now. He clicks on NAT gateways under Virtual private cloud in the left pane. Then, he clicks on Create NAT gateway at the top right. Another page titled Create NAT gateway is displayed, showcasing NAT gateway settings with options such as Name - optional, Subnet, Connectivity type, Elastic IP allocation ID, and so on.</em> [Video description ends] You have to put it in a public subnet, okay. Now, I’ve established that all of my 6 subnets are public. So, my first one is 1a. So, I would put it in this public subnet. And I&#39;m going to do public connectivity.</p>
+<p>And then notice it has to have an elastic IP address. And I have one, okay. The one I have left over: 18.205.50.217. But if I didn’t have one, I could go ahead and allocate it right here. And by the way, you should also tag as many things as you can. Always tag for change and configuration management. So, that’s a NAT gateway.</p>
+<p>Now, if you go to the VPC here, what if you want to do this same type of outbound only thing where you go to Windows Update service, but your servers are using IPv6 address.</p>
+<p>That’s an EIG, an Egress-only internet gateway. So, this is the same thing, but it’s for your IPv6 addressed servers in your, let’s say, your private subnet because there’s no network address translation in IPv6.</p>
+<p>Finally, what I want to show you here is that in your VPC and you can see my default VPC that IPv6 is not enabled. I don’t have an IPv6 CIDR, and if I clicked on Create VPC and I scroll down here, this is where you’re going to, you know, configure your IPv4 CIDR. [Video description begins] <em>He clicks on Your VPCs under Virtual private cloud in the left pane, followed by clicking on Create VPC at the top right. Another page titled Create VPC is displayed, showcasing VPC settings with options such as Resources to create, Name tag - optional, and so on. He scrolls down and points to the IPv4 CIDR option.</em> [Video description ends]</p>
+<p>And it has to be between /16 and /28. And notice it’s trying to do a /24. But also know that by default here no IPv6 CIDR block, right. So you have to explicitly enable this and understand that the router that is used, the AWS routers will be called dual-stack. [Video description begins] <em>He points to the No IPv6 CIDR block radio button under IPv6 CIDR block option.</em> [Video description ends]</p>
+<p>So, it can handle IPv4 and IPv6 simultaneously. But when you create your VPC you&#39;d have to say, you know, do I want to allocate it with IPAM, which is a IP protocol, don’t want to do Amazon-provided IPv6, which is typically the option you’re going to use. The first 64 bits of the network and then the 64-bit host. But you could also say, you know, here&#39;s the one that I own. I want you to notice that by default, No IPv6.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: VPC Security (it_clawsp23_11_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/1c30a8e1-b29d-4a0e-a12a-d445cf9ad22a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/1c30a8e1-b29d-4a0e-a12a-d445cf9ad22a/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to provide an overview of VPC security.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of VPC security</li></ul><div class="section_text">[Video description begins] <em>Topic title: VPC Security. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Okay, in this lesson, we’re going to build on the concepts that we learned about in the previous two demonstration lessons and look at some AWS security.</p>
+<p>Most of us are aware of the security triad: confidentiality, integrity, and availability (CIA). But AWS has a triad and their opinion is if you can gain mastery in all three of these areas, it will help you to have a more secure environment regardless of the services you decide to use and whether it be IaaS or PaaS or SaaS, moving forward in the AWS cloud.</p>
+<p>The three elements are Identity and Access Management (IAM), Infrastructure security, specifically securing the VPC, and Key Management Service (the KMS).</p>
+<p>There&#39;s three main elements to securing the VPC. Security of the VPC begins with the design of various subnets. Are the subnets public, private, or VPN only? Then the next step is to configure the different firewalls at layer 3 and layer 4 for internal traffic flow.</p>
+<p>Then, the external connectivity options are considered next. Do you use a Internet gateway? Do you use the VPG, virtual private gateway for your Site-to-Site VPN? And other options like a secure Direct Connect connection?</p>
+<p>Security begins with the design of your subnet, and the subnet depends upon entries in the route or the route table. [Video description begins] <em>A loop diagram of VPC Security is displayed. The VPC section is connected to IGW and VPG, and they are both interconnected to Router. The Router part is divided into two sections: NACL subnet 1 and NACL subnet 2, before that there are two Route tables connected between the two subnets and Router. At the bottom, each subnet is further connected to Security groups and Instances.</em> [Video description ends]</p>
+<p>So for example, if you want subnet 1 to be a public subnet, then you’re going to put an entry to the internet gateway IGW into the route table. By default, the route table has a default entry saying this is your local traffic. For example, in this diagram it’s 172.31.0.0/16. The subnets have been broken up with /20 CIDR subnets. If you want a subnet to be VPN only, for example, subnet 2, you would put a VPG entry into the route table. A subnet cannot be public and VPN only.</p>
+<p>In addition, if you have no IGW entry into the route table, nor do you have a VPG entry in the route table, it is a private subnet or a sandbox. The next step is Network ACLs.</p>
+<p>Network ACLs allow stateless traffic filtering to all inbound or outbound traffic on a VPC subnet. It applies to all instances and components and appliances in the associated subnet. Typically, the NACL contains ordered rules to permit or deny traffic. The rules are processed with a numbered order, typically beginning with 100 and then incrementing by fives or tens.</p>
+<p>The NACL is agnostic of TCP connections, UDP flows, or ICMP flows. It simply looks at the datagram or packet one at a time, otherwise referred to as atomically, and makes a decision based on the headers. If there is a match, it permits or denies. They are stateless or (static), and that the return traffic must also be explicitly allowed in the inbound NACL.</p>
+<p>These firewalls work together as a defense in depth mechanism with security groups, and they can permit or deny traffic before it reaches the interfaces of the elements inside the subnet. [Video description begins] <em>The same loop diagram is displayed again.</em> [Video description ends]</p>
+<p>Notice in the diagram, not only does the subnet have one and only one route table, but a subnet can only have one NACL. Can two subnets or more share the same route table? Yes, they can, in the same way that two or more subnets can share the same NACL. However, they have only one NACL with an inbound rule set and an outbound rule set.</p>
+<p>Keep in mind that by default, in the default VPC, the NACL is allowing all traffic inbound and outbound. In other words, it&#39;s not activated. It&#39;s an additional defense in depth mechanism. The security group, however, is activated.</p>
+<p>A Security group (SG) firewall applies to each individual EC2 instance in a subnet. They actually function at the hypervisor level. They’re attached to the virtual elastic network interface, by default, eth0. Security groups or SGS are layer 3/4 stateful virtual “Allow Only” firewalls.</p>
+<p>In other words, they&#39;re allow lists and they have no explicit deny rules like the NACLs. All EC2 instances are launched with the default SG unless otherwise designated. An unchanged default SG will allow communication between all resources within the security group AND all outbound traffic.</p>
+<p>However, all other traffic is implicitly denied. The return traffic is automatically allowed (with AWS Shield Standard Inspection). All rules in all applied SGs are evaluated before a decision is made. In other words, these are not numbered lists. Everything in the group is evaluated.</p>
+<p>There are limits or (quotas) on the number of SGs per VPC, on the number of rules you can add to a security group, and on the number of SGs that you can use with an elastic network interface.</p>
+<p>Earlier we mentioned that a subnet can only have one NACL. However, an interface can have two or more security groups. [Video description begins] <em>One more time, the same loop diagram is displayed.</em> [Video description ends] Notice in this diagram, subnet 1 has three instances of Windows, Linux, MacOS, or a virtual appliance. Each one can have its own Security group. Notice in subnet 2, we have two instances, let’s say, Linux. And they&#39;re sharing the default Security group.</p>
+<p>A Web Application Firewall or WAF, helps you protect against common web exploits and bots that can affect availability, compromise your security, or otherwise consume excessive resources.</p>
+<p>A WAF is a Layer 7 web access control list, or web ACL, that uses security rules to control traffic and block attack patterns such as SQL injection, request forgeries, or cross-site scripting (XSS) variants. You can apply a WAF to protect your web applications from exploits on an Amazon CloudFront distribution, on an Application Elastic Load Balancer, on an Amazon API Gateway, or you can apply it, for example, in a hybrid cloud solution on the AWS AppSync instance.</p>
+<p>To use a WAF, you create a policy or more often than not, you deploy managed rules that are maintained by AWS or AWS Marketplace sellers. These rules will block and filter. They protect against vulnerabilities and exploits such as SQLi or cross-site scripting attacks, and they filter out unwanted traffic by IP address, geographic location, or by defining specific patterns in regular expressions.</p>
+<p>Then, you can use Amazon CloudWatch to receive incoming traffic metrics for visibility and monitoring. Or you can use Amazon Kinesis Data Firehose to request details and tune rules based on metrics and log data. Or, you can rely upon the AWS Marketplace sellers to do all of this for you.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: VPC Peering (it_clawsp23_11_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/d92074f1-0152-47bd-9560-22c10b0ab325/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/d92074f1-0152-47bd-9560-22c10b0ab325/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to provide an overview of VPC peering.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of VPC peering</li></ul><div class="section_text">[Video description begins] <em>Topic title: VPC Peering. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>VPC Peering. A VPC peering connection is a networking connection between two VPCs at AWS, typically maxing out at 1.25 to 1.5 gigabit per second, depending upon the region. Customers can route traffic between the VPCs using private IPv4 or IPv6 addresses: Then, instances in either VPC can communicate with each other as if they are within the same network.</p>
+<p>VPC peering connections can be between your own VPCs or with a VPC in another AWS account. Intra-region or inter-region peering connections are allowed. [Video description begins] <em>A diagram of VPC Peering is displayed. There are two sections: VPC A and VPC B. Both sections are connected to each other with a VPC peering connection. Under each section, there&#39;s a Subnet and Instance.</em> [Video description ends]</p>
+<p>In the diagram, to create a peering connection between VPC A and VPC B, there has to be a requester and an acceptor. If an individual is an administrator and has the permissions if both VPCs are in the same account, somebody with permissions can be the requester and the acceptor.</p>
+<p>If the other VPC is in a different account and that same person has permissions, they can also be the acceptor and the requester. However, in this example, if a person has permissions in VPC A to do a request to VPC B but they don&#39;t have permissions in VPC B, somebody in that account has to accept the request.</p>
+<p>Once that’s done, there’s a two-way peering connection between the two VPCs. Notice that VPC A is using IPv4 addressing 10.0.0.0/16. In VPC B, they’re using 172.31.0.0/16. It’s a best practice and recommended. If the two different VPCs in the peering connection use different IP prefixes, they can overlap. However, there has to be some additional configuration done on route tables in both VPCs.</p>
+<p>Also, realize that VPC peering is not transitive. So for example, if there were a third VPC, VPC X and VPC A had a peering connection with X and VPC B had a peering connection with X. It’s non-transitive. Instances in VPC A could not go through VPC X to instances in VPC B and vice versa. They’d have to have an explicit peering connection between them. [Video description begins] <em>A diagram of VPC Full-mesh Peering is displayed. 7 VPCs with IP addresses are interconnected with each other in a mesh. VPC A is in the middle, and other VPCs are displayed in a circled manner around VPC A.</em> [Video description ends]</p>
+<p>Many organizations that have many accounts and lots of VPCs will do full-mesh peering. In this scenario with 7 VPCs, it would take 21 peering connections to create a full mesh and realize if you add just one more VPC for 8, you would then need 28 peering connections.</p>
+<p>And if you had 100 fully-meshed VPCs, that would take 4500 peering connections. And some customers have a 1000 or even more than 2000 VPCs. There is a solution for this, however, and it&#39;s the AWS Transit Gateway.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Comparing Endpoints and Endpoint Services (it_clawsp23_11_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/10670efd-8342-4f33-98be-978c9033dcd2/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/10670efd-8342-4f33-98be-978c9033dcd2/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare VPC endpoints and endpoint services like PrivateLink.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare VPC endpoints and endpoint services like PrivateLink</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Endpoints and Endpoint Services. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Okay, for this demonstration, I’m looking at a slide, but I’m going to do some drawing on the slide. So, this is a demo. [Video description begins] <em>A loop diagram is displayed. The VPC section is connected to IGW and VPG, and they are both interconnected to Router. The Router part is divided into two sections: NACL subnet 1 and NACL subnet 2, before that there are two Route tables connected between the two subnets and Router. At the bottom, each subnet is further connected to Security groups and Instances.</em> [Video description ends] And let&#39;s talk about endpoints. And I’m going to use, for example, objects in an S3 bucket.</p>
+<p>So, let’s say you have some graphics files or you have some video files or audio files. You&#39;re storing them as unstructured data in object storage in S3. Historically, for years, you would if you made that S3 bucket public, AWS would actually give you part of the Amazon namespace, a URL that you could use if you didn&#39;t have your own, and you could access that bucket over the internet using HTTP, or if you wanted to set that up, HTTP/S.</p>
+<p>And so that was kind of the de facto way that you access public objects in buckets using http. Today with S3 and many, many, many other services, I guess hundreds of services at AWS, there’s another way to do this. And this is part of Infrastructure as a Service where you can use AWS provisioned endpoints.</p>
+<p>So, let’s say this is an instance of Windows. And I bring up my Edge browser. Now could I go ahead and just open up the Edge browser? And then this is in a public subnet. So this is an IGW in the route table. So put the URL into, let’s say, the address bar of the Edge browser and then be routed out through the IGW. And then go over the Internet and access the objects in the S3 bucket. I could do that, certainly. But a better way is to use an endpoint.</p>
+<p>So here&#39;s how an endpoint works. AWS is going to create another elastic network interface. I already have one on this Windows Server. It’s basically Ethernet 0 with its own virtual Mac address, AWS creates a new elastic network interface.</p>
+<p>So, this would be Ethernet 1 with its own virtual Mac address. It would take the next available private IP address and then assign it to that endpoint. And then I would make an API call over the AWS cloud to the S3 bucket, a RESTful application programing interface call.</p>
+<p>And that&#39;s actually a great way to do it because you don&#39;t need to have a public address. You don&#39;t need to have a gateway. There&#39;s no address translation. And you can also assign a security policy to this endpoint. And you can actually control which API calls can be made from the Instance to the S3 bucket. And that&#39;s an endpoint.</p>
+<p>Let&#39;s go take a look at this through the management console. [Video description begins] <em>The VPC Management Console is displayed now. He clicks on Endpoints under Virtual private cloud in the left pane, and a list is displayed on the right with columns labeled: Name, VPC endpoint ID, VPC ID, Service name, and so on.</em> [Video description ends] As you can see I&#39;m in the VPC dashboard and I&#39;m going to scroll down. We can see Endpoints. Now I have a couple of Endpoints already, I have a endpoint to elasticfilesystem which is a very common thing to have an endpoint to. I also have an endpoint to cloudtrail.</p>
+<p>If I wanted to create more, just click on Create endpoint and you could see all these different things. You can create endpoints to and by default, most commonly we’re going to say AWS services. [Video description begins] <em>He clicks on Create endpoint at the top right, and another page titled Create Endpoint is displayed showcasing Endpoint settings with two options: Name tag - optional and Service category.</em> [Video description ends]</p>
+<p>And if I scroll down there are 239 AWS services that I can create these interface endpoints to. And so, it’s a very, very popular technique. It&#39;s also one of the reasons why you would need to have more IP addresses when you&#39;re doing your IP addressing, because it does use up one of those private IP addresses, IPv4.</p>
+<p>We’ll also notice that there’s not just Endpoints but there’s Endpoint services. Endpoint services today is a service we call PrivateLink. And here’s how PrivateLink works. [Video description begins] <em>Another page titled VPC Networking - AWS PrivateLink is open, displaying a flowchart. The flowchart is divided into 5 sections, the first 4 sections are labeled: Data center, AWS Direct Connect/VPN, VPC endpoints, AWS PrivateLink. The last section, VPC, has 4 sub-sections labeled: AWS Marketplace, Other AWS services, Third-party SaaS applications, and Enterprise applications in another VPC.</em> [Video description ends] It used to be, and you can still do it this way, if you want to have a relationship with one of the AWS Marketplace partners, like you would see that right here, you would have your own customer VPC and then they would have what&#39;s called the provider VPC. <br /><br />Both of us are customers of AWS, but you would have your own VPC and you would do VPC peering with the Marketplace partner provider VPC. Today, what you want to look for in the Marketplace are PrivateLink enabled because the PrivateLink enabled, basically, you just create an interface VPC endpoint and you connect to their load balancer.</p>
+<p>And you can connect, you know, through PrivateLink, through a bunch of things, through a load balancer, the AWS Marketplace partner is offering, Other AWS services, Third-party SaaS applications, a wide variety of different options. Notice, by the way, that in this diagram that a lot of customers are using a Direct Connect/VPN connection. You could do a VPN, but a VPN is limited.</p>
+<p>And we&#39;ll talk about that here in this course that a lot of customers use Direct Connect/VPNs with the VPC endpoints as opposed to older methodologies.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Amazon Route 53 (it_clawsp23_11_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/4a49d17d-c635-4ea4-bd46-f79a868ff16a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/4a49d17d-c635-4ea4-bd46-f79a868ff16a/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to provide an overview of the Amazon Route 53 managed domain name system (DNS) service.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of the Amazon Route 53 managed domain name system (DNS) service</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Route 53. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Amazon Route or Route 53. Route 53 is a highly available and scalable cloud domain name system (DNS) web service. It&#39;s designed to offer a very dependable and cost-effective way to route end users to Internet applications by translating human-readable domain names to IPv4 and/or IPv6 addresses.</p>
+<p>Route 53 effectively connects user requests to AWS services like EC2 instances, Elastic Load Balancing load balancers, typically application load balancers, and Simple Storage Service (S3) buckets, which can be accessed through URLs or APIs. It can also be used to route users to infrastructure elements outside of AWS. For example, headquarters, regional branch offices, or co-location environments. Let&#39;s see how it works.</p>
+<p>[Video description begins] <em>A flowchart of Amazon Route 53 is displayed. At the top, there are two sections: AWS Management Console and Amazon Route 53 SDK/API. In the middle, there are 5 sections labeled: End User, DNS resolver, Amazon Route 53 Authoritative DNS Service, Health Checks, and Endpoint instances. At the bottom, there&#39;s only one section, AWS CloudWatch.</em> [Video description ends] An End User sends a request. Route 53 has a DNS resolver which resolves domain name queries on behalf of the end users. Amazon Route 53 has an Authoritative DNS Service, so it will return IP addresses for DNS records queried by the DNS resolver.</p>
+<p>Eventually, the request gets to the endpoint instances. For example, the EC2 instance running Windows, Linux, or macOS, or maybe Red Hat Enterprise running a container. However, there are other services in play. For example, you can use the AWS Management Console for hosted zone creation, traffic policies, and the propagation of DNS records to the Route 53 global network of authoritative DNS servers.</p>
+<p>You can also use the SDK (Software Development Kit)/API with Route 53. Route 53 also performs health checks to monitor the health of your endpoints for high availability. And of course, you can leverage AWS CloudWatch, delivering monitoring metrics for Route 53 and generating alarms as well as Lambda functions if necessary.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Edge Network Services (it_clawsp23_11_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/dd669542-9a54-43d2-b96f-e0eca358d5d1/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/dd669542-9a54-43d2-b96f-e0eca358d5d1/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to provide an overview of edge services including CloudFront and Global Accelerator.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of edge services including CloudFront and Global Accelerator</li></ul><div class="section_text">[Video description begins] <em>Topic title: Edge Network Services. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this lesson, we’re going to look at Edge Network Services at AWS, starting with Amazon CloudFront. CloudFront is a content delivery or distribution network (CDN) service designed for high performance, security, and high suitability in DevOps environments, for example, web applications and containers.</p>
+<p>It securely delivers data, videos, applications, and application programing interfaces (APIs) to customers globally with low latency and high transfer speeds within a developer-friendly environment. It’s integrated with the AWS cloud - both physical locations that are directly connected to the AWS global edge locations and various service endpoints in metropolitan areas all over the world.<br /><br />[Video description begins] <em>A vertical flowchart of Amazon CloudFront is displayed. It&#39;s divided into 5 sections, End user traffic, AWS Shield and AWS WAF, Regional edge caches, Origin shield, and Application content origin. There are more sub-sections under AWS Shield and AWS WAF, and they are labeled: Amazon CloudFront and CloudFront Functions. And two sub-sections under Regional edge caches are labeled: Amazon CloudFront and Lambda&#64;Edge.</em> [Video description ends]</p>
+<p>When using CloudFront, the End User requests will go to the nearest AWS edge location, where CloudFront caches, typically in Redis ElastiCache, and serves static and dynamic content. It also provides &lt; 1 millisecond serverless edge functions. At the edge locations, you have AWS Shield, standard and advanced, for Anti-DDoS and DDoS protection, and the AWS Web Application Firewall to protect against OWASP top ten attacks against web applications.</p>
+<p>AWS also has regional edge caches in cities all over the world, where CloudFront leverages globally dispersed mid-tier caching for longer cache retention, and Lambda&#64;Edge to support serverless edge functions. Then, Origin shield improves network performance and cache-hit ratio to the origin content, which could be an S3 buckets, EC2 instances, you could also go through the API Gateway, Elastic Load Balancers, AWS Media Services, or even data stored on-premises or in other providers.</p>
+<p>Another Edge Network Service is Global Accelerator. This is a robust networking service that enables customers to expand the availability, performance, and security of their public applications. It offers two global static public IPs that represent a fixed entry point to application endpoints such as the Elastic Application Load Balancers, Network Load Balancers, Amazon Elastic Compute Cloud (EC2) instances, and even elastic IPs (eIPs).</p>
+<p>Some use cases for Global Accelerator would be using traffic dials as a global traffic manager to route traffic to the nearest region or attain fast failover across multiple regions. You can accelerate API workloads by up to 60%, leveraging TCP termination at the Global Accelerator edge. Simplify allowlisting in enterprise firewalling and IoT scenarios using global static IPs.</p>
+<p>And use custom routing techniques to deterministically route traffic to a fleet of EC2 instances for low-latency gaming and media services. [Video description begins] <em>A vertical flowchart of Global Accelerator is displayed. It&#39;s divided into two sections, first is End-user request, second is AWS Global Accelerator, and the last section features three sub-sections, labeled: AWS Region 1, AWS Region 2, and AWS Region 3.</em> [Video description ends]</p>
+<p>The end user sends the request and it goes to the AWS Global Accelerator, which can connect to up to 10 regions within the AWS Global Network.</p>
+<p>For example, in AWS Region 1, let’s say, US Northern Virginia, you could run a Network Load Balancer. In AWS Region 2, let’s say, the Paris region, you could run an Application Load Balancer. And then in AWS Region 3, in Ireland, you could run an Amazon EC2 instance.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Exploring Network Connectivity Options (it_clawsp23_11_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/b905d1d1-b9d7-4bf4-8282-48b9e3017509/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b905d1d1-b9d7-4bf4-8282-48b9e3017509/image001.jpg')();" /><div class="section_text">In this video, you will learn how to work with network connectivity options to AWS such as AWS VPN and Direct Connect.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with network connectivity options to AWS such as AWS VPN and Direct Connect</li></ul><div class="section_text">[Video description begins] <em>Topic title: Exploring Network Connectivity Options. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In the final demo of this course, we want to talk about two major topics of connectivity: the fully managed AWS Site-to-Site VPN and Direct Connect.</p>
+<p>Let’s start out with the VPN service, the Site-to-Site VPN. [Video description begins] <em>The VPC Management Console is displayed, featuring a menu in the left pane, a middle pane, and a right pane.</em> [Video description ends] <br /><br />And there&#39;s really two aspects to the VPN. Now on the exam, there&#39;s no configuration. I just want you to understand conceptually what&#39;s going on here. So, a Site-to-Site VPN connection has two elements to it. It has information about the customer device, your customer gateway, for example, a Cisco Aggregate Services Router or a Juniper Router or something else. And then the VPG, the Virtual private gateway.</p>
+<p>Now, before I show you these two elements that make up the Site-to-Site VPN connection, let me just mention that you can also have what’s called a Peer-to-Site VPN or a Client VPN connection, where you could have some teleworker or somebody who’s having to work from home on a workstation or a laptop, install OpenVPN, and then they would connect to the virtual private gateway at AWS.</p>
+<p>That’s a Peer-to-Site VPN, and you can do that too. The customer gateway, if I create it, you would just name it. [Video description begins] <em>The presenter clicks on Customer gateways under Virtual private network (VPN) in the left pane. Then, he clicks on Create customer gateway, another page is displayed with options such as Name tag - optional, BGP ASN, IP address, Certificate ARN, and so on.</em> [Video description ends]<br /><br />You’re going to use Border Gateway Protocol (BGP) for your dynamic routing. You can do static routing, but that&#39;s really not done anymore. We definitely want to use Border Gateway Protocol, BGP ASN. And if you don’t have your own Autonomous System Number (ASN), that’s okay.</p>
+<p>It&#39;ll tell you here you can go ahead and use one from the private range, which is 64,512- 65,534. [Video description begins] <em>He clicks on the info hyperlink next to BGP ASN, and highlights the range from the dialog box in the right.</em> [Video description ends] Then you would put the outside public IP address of your gateway device, for example, at your headquarters, regional branch office, remote branch office. That would be the public IP address. That could be usually hard coded.</p>
+<p>Sometimes, though, it&#39;s dynamically assigned like from a broadband provider or an ISP. In that case, the best thing to do is to go to the AWS Certificate Manager (ACM), generate an X.509v3 certificate for that gateway device. Load it up into RAM memory on the gateway device, let’s say the CISCO-ASR.</p>
+<p>And by the way, I could go ahead and put that in here if I wanted to CICSO-ASR-900 or whatever. And then I would choose the certificate from the dropdown list. It would be there because I created it in the Certificate Manager. And that would be a better way to identify the other device, the customer device. And that’s all you do, okay. Cancel out of there.</p>
+<p>And then the second thing would be to create the VPG. Create the VPG. [Video description begins] <em>He clicks on Virtual private gateways under Virtual private network (VPN) in the left pane. Then, he clicks on Create virtual private gateway, another page is displayed with two options: Name tag - optional and Autonomous System Number (ASN). There&#39;s a Tags section at the bottom.</em> [Video description ends]</p>
+<p>You&#39;re going to go ahead and go with the Amazon default BGP Autonomous System Number (ASN). So give it a name whatever it is. MY_VPG which will create a tag for it and then create it. And that’s all you do.</p>
+<p>Then when you go back to Virtual private gateways, when you create the Site-to-Site VPN, you’ve already got your Virtual private gateway, choose it from the drop down. [Video description begins] <em>He clicks on Site-to-Site VPN connections under Virtual private network (VPN) in the left pane. Then, he clicks on Create VPN connection, another page is displayed with options such as Name tag - optional, Target gateway type, Virtual private gateway, Customer gateway, and so on. And there&#39;s Tunnel options at the bottom.</em> [Video description ends]</p>
+<p>You’ve already got your customer gateway, choose it from the drop down. You’re going to be using Dynamic (requires BGP) and pretty much everything else is just has defaults.</p>
+<p>AWS will give you defaults. You can use any to represent the customer side of the network, the AWS side, you can just use any and then the Tunnel options. Basically everything&#39;s turned on. It&#39;s just lit up so it will match any type of IPsec, IKEv1 or IPsec IKEv2 profile that you have on the customer side. It will happen. You will create a security association.</p>
+<p>So, it’s very easy to do. You’re going to get generally 1.25 gigabit per second. That’s on the AWS side. Now, it depends on you probably get less than that. You may have a broadband connection where you max out at 1 gig, or you get something in the hundreds of megabits per second, but on the AWS side, it&#39;s going to max out at 1.25 gigabit per second. Now, what if you want bigger bandwidths than that and you don’t want to go over the public Internet? Well, there’s a solution.</p>
+<p>[Video description begins] <em>The Dedicated Network Connection page is open, displaying a vertical flowchart of AWS Direct Connect. It&#39;s divided into 3 sections, the first section includes 3 sub-sections, labeled: Data center, Branch office, and MPLS connection, and the second section is labeled AWS Direct Connect. Finally, the last section features 3 sub-sections, labeled: Any AWS Region, AWS Local Zones, and AWS GovCloud.</em> [Video description ends] And it’s called Direct Connect. With Direct Connect, in cities all over the world, you can connect your data center, your regional office, your branch office, even an MPLS connection to an AWS Co-location facility.</p>
+<p>So basically, what happens here is you’re going to have a customer cage in a metropolitan area. There may be 2 or 3 or more options depending upon where you are.</p>
+<p>When I lived in Houston, there was a couple of options. There&#39;s three options in Chicago. So, you’re going to have your own customer cage, and you’re going to get a service level agreement of usually 10 gig, 50 gig, or even in some situations a 100 gigabit per second. And you can use IPsec or not.</p>
+<p>And you can even in some areas use MACsec, which will encrypt the frames. And you can connect to Any AWS Region, AWS Local Zones. If it’s a government agency, you can connect to AWS GovCloud.</p>
+<p>So, Direct Connect is a very popular solution that supports hybrid cloud and edge computing. And we don&#39;t see it here. But we can also use endpoints or virtual interfaces to connect to many, many different services in AWS regions all over the world.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_11_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/9e2ca24d-b614-4b05-95bf-0c2b1b3bf016/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9e2ca24d-b614-4b05-95bf-0c2b1b3bf016/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this course, you learned about AWS VPC components, AWS security triad, and VPC security, and you learned about Amazon Route 53. CloudFront, Global Accelerator, the AWS managed Site-to-Site VPN, and Direct Connect.</p>
+<p>Coming up in the next course, you&#39;ll learn about AWS storage services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

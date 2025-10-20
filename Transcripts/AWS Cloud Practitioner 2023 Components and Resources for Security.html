@@ -1,0 +1,313 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Components &amp; Resources for Security</h1><div class="section_text">AWS has more than 200 fully featured services for a wide range of technologies, industries, and use cases. Fortunately, the cloud practitioner does not have to know about all of them. There are however quite a few security services to be aware of in this domain. 
+
+In this course, you will explore AWS security capabilities, including AWS Certificate Manager (ACM), AWS CloudHSM, Amazon Cognito, Amazon Detective, just to name a few. Then you will discover where to access AWS security information, for example, AWS Knowledge Center or AWS Security Blog. Next, you will learn how to manage network access control lists and examine the web application firewall (WAF) and AWS Shield. Finally, you will compare AWS Firewall Manager to AWS Network Firewall and AWS Trusted Advisor to AWS Health Dashboard. 
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_07_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: AWS Security Capabilities (it_clawsp23_07_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: AWS Security-related Documentation (it_clawsp23_07_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Comparing Security Solutions in the AWS Marketplace (it_clawsp23_07_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Managing Network Access Control Lists (NACLs) (it_clawsp23_07_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Using Security Groups (it_clawsp23_07_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Web Application Firewall (WAF) (it_clawsp23_07_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: AWS Firewall Manager and Network Firewall (it_clawsp23_07_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Comparing AWS Trusted Advisor to AWS Health Dashboard (it_clawsp23_07_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_07_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_07_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/f4925ba3-0a21-42df-bc47-1c81d036f5cb/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/f4925ba3-0a21-42df-bc47-1c81d036f5cb/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Components and resources for security. AWS has over 200 fully featured services for a wide range of technologies, industries, and use cases. Fortunately, the cloud practitioner does not have to know about all of them. There are, however, quite a few security services to be aware of in this domain. In this course, we&#39;ll learn about the AWS Certificate Manager (ACM), AWS CloudHSM (hardware security module), Amazon Cognito, Amazon Detective, the AWS Directory Service, Amazon GuardDuty, Amazon Inspector, and the AWS Key Management Service (AWS KMS).</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: AWS Security Capabilities (it_clawsp23_07_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/a68a65fb-0ece-4900-9e3b-d383fe1e9fe2/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a68a65fb-0ece-4900-9e3b-d383fe1e9fe2/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to outline the various AWS security capabilities, including AWS Artifact, AWS Audit Manager, AWS Certificate Manager (ACM), and so on.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the various AWS security capabilities, including AWS Artifact, AWS Audit Manager, AWS Certificate Manager (ACM), and so on</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Security Capabilities. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this first lesson, we&#39;re going to conduct a pretty lengthy survey of a number of security services you need to know about for the Cloud Practitioner exam. Now by no means is this a comprehensive list of all the different services at AWS, but fortunately for the Cloud Practitioner, you don&#39;t have to be aware of every service at AWS. In fact, some of these services we will return to and discuss again later in the training or we&#39;ve already briefly touched on them earlier in this training.</p>
+<p>Here&#39;s AWS Artifact. Artifact is a console-based, self-service auditing object retrieval service that gives customers quick and simple access to AWS compliance documentation and agreements. On the exam remember, there are two different categories of artifact information. One are Artifact Agreements, which allow customers to examine, approve, and manage agreements in AWS Organizations. Then we have Artifact reports where you can get compliance reports from third-party auditors who have tested and verified that AWS is compliant with a variety of global, regional, and industry-specific security standards and regulations. AWS Audit Manager allows customers to continuously map their compliance requirements to AWS usage data with prebuilt and custom frameworks and automated evidence collection.</p>
+<p>As the organization works to meet audit and regulatory obligations, they can save time by incorporating audit compliance processes into their DevOps model. That&#39;s just one use case. Audit Manager creates an HTTPS or TLS API endpoint to accomplish its solutions. Next, we have the AWS Certificate Manager. The ACM is one of our vital security services. AWS customers can leverage the ACM to provision, manage, and deploy public and private TLS certificates for use with AWS services and even internal connected resources in a hybrid cloud environment. ACM removes the time-consuming, manual process of acquiring, loading, and renewing TLS certificates. ACM supports domain-validated public certificates, private certificates from the AWS Private CA, certificate authority and imported public or private certificates.</p>
+<p>A hardware security module is a specialty hardened device that generates keys, stores keys, rotates keys, and supports overall corporate key management. Cloud HSM is a cloud-based version of that. So for example, the customer can use the AWS console and/or the command line interface to provision and manage their own virtual HSMs in the AWS Cloud or they can integrate AWS Cloud HSM Software Development Kit SDK into their applications and then perform cryptographic operations. AWS Cloud HSM enables the customer to provision and manage their own single-tenant hardware security modules, HSMs, allowing them to generate and use their own encryption keys. Then they can use other services like Amazon CloudWatch to log for monitoring and utilization and health of the HSM cluster in real time, or AWS CloudTrail which allows you to audit logs for provisioning, backup, and restore of HSMs uploaded to the customer account.</p>
+<p>Amazon Detective. Amazon Detective streamlines the investigative process and assists security teams in conducting quick and effective eDiscovery initiatives. Customers can quickly analyze and determine the nature and extent of possible security issues with Amazon Detective prebuilt data aggregations, summaries, and context. Detective automatically gathers log data from AWS resources, and that uses machine learning (ML), statistical analysis, and graph theory to generate a linked dataset to drive more efficient security inquiries or investigations. A lot of developers at Amazon Web Services want to develop mobile apps. Often they&#39;ll give the prospective customer of their mobile app the ability to sign up or create an account. They can do that with Amazon Cognito by creating a user pool. <br /><br />[Video description begins] <em>A screenshot of the Amazon Cognito user interface is displayed. It showcases a page titled &#39;Authentication providers&#39;. Below, some information is provided. A series of tabs appear next: Cognito, Amazon, Apple, Facebook, Google&#43;, Twitter/Digits, OpenID, SAML, and Custom. The Cognito tab is active. It displays 2 fields: User Pool ID and App client ID. A tab labeled Add Another Provider appears below. At the bottom of the page, 2 tabs appear: Cancel and Create Pool.</em> [Video description ends]</p>
+<p>With Amazon Cognito, AWS developers can add user sign-up and sign-in features with control access to their web and mobile applications. Cognito offers an identity store that scales to millions of users, but it also supports social and enterprise identity federation or single sign-on. So, if the potential customer wants to instead do single sign-on through their Amazon account or their Apple ID, or Facebook or Gmail or Twitter, Amazon Cognito gives the developer an elegant, user-friendly wizard walkthrough to create this environment. It&#39;s also built on open identity standards like OpenID and OAuth or SAML 2.0. It also supports various compliance regulations and integrates with front-end and back-end development resources. It also works with AWS Lambda to provide a wide variety of functions that can be used dynamically. For example, presenting your potential customer with a CAPTCHA or a two-factor authentication without having to run a persistent server.</p>
+<p>It just simply triggers a Lambda function when the user signs up. Amazon GuardDuty is a managed threat detection service that continually monitors for malicious activity and unauthorized behavior to protect AWS accounts, workloads, and data stored in Amazon S3, for example. GuardDuty can also monitor for zero-day activities. This is malware that just shows up on its first day. It can produce well-defined &#34;findings&#34;. It uses proprietary machine learning, an AI algorithm even now involving pre-crime and analysis and prediction, to determine malicious websites and domains 7 to 10 days in advance of launching an attack. Amazon Inspector might seem like it&#39;s the same thing as Amazon Detective, but they are completely different services. Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software weaknesses and inadvertent network exposures. Inspector offers continual scanning, a maintained vulnerability database, not unlike the national vulnerability database, and auto-discovery of near real-time results.</p>
+<p>Inspector contextualizes the findings to generate a meaningful Inspector score. And it uses the detailed findings to automate activities such as ticketing to the service desk or the help desk and automated remediation. AWS Directory Service for Microsoft Active Directory is also known as AWS Managed Microsoft AD. This basically activates your directory-aware workloads and AWS resources to use Managed Active Directory in the AWS Cloud. So, you create a managed directory by quickly creating an AWS Managed Microsoft AD on AWS with just a few clicks in the management console. Or you could use an API in the command line interface. You then deploy or migrate your apps, deploy new apps or migrate existing apps AD-aware workloads to Amazon Web Services, then activate the AWS ecosystem.</p>
+<p>Quickly integrate with directory-aware services like EC2, RDS for SQL Server, Amazon Workspaces, and the AWS IAM Identity Center for federated single sign-on. You can manage access by creating users, groups, and roles to manage your access to your directory-aware workloads and AWS services and connect and use your application and AWS services with the existing or new Active Directory credentials. AWS Key Management Service is a critical security service at Amazon Web Services. It lets customers create, manage, and control cryptographic keys across most applications and services. AWS KMS can encrypt data across AWS workloads, digitally sign data, encrypt within applications using the AWS Encryption SDK, and generate and verify message authentication codes or MACs.</p>
+<p>The customer managed keys (CMKs) never leave the AWS FIPS 140-validated HSMs unencrypted. In other words, AWS KMS is supported by hardware security modules in the data centers of Amazon Web Services. And yet customers have complete control over permissions, administration, and usage across AWS services. Amazon Macie is a data security service that uses machine learning and pattern matching and recognition to discover and help protect customer&#39;s sensitive data. Macie discovers sensitive data and provides visibility into data security risks, allowing automated protection against those risks. Many customers will get visibility into sensitive data across S3 buckets to enhance automated remediation of data security risks. Another common place to run Macie is behind an API gateway for pattern matching to protect data in transit as it interacts with server based and serverless technologies such as AWS Fargate and AWS Lambda.</p>
+<p>AWS Resource Access Manager or AWS RAM. Customers use AWS RAM to manage access to resources by creating a resource share. First, they choose the resource share details like a name and resource type, and then they assign it to the resources. Next, they associate permissions. In other words, the actions that can be performed on each resource type in the resource share. They grant access to principals by designating organizational units OUs, AWS accounts, and IAM role and users. When they&#39;re done, they&#39;ll review and create as their resources are now accessible according to the specified permissions.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: AWS Security-related Documentation (it_clawsp23_07_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/5b72262d-588c-4731-ae54-77615852faf7/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/5b72262d-588c-4731-ae54-77615852faf7/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline where AWS security information is available, for example, AWS Knowledge Center, 
+AWS Security Center, and AWS Security Blog.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline where AWS security information is available, for example, AWS Knowledge Center, 
+AWS Security Center, and AWS Security Blog</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Security-related Documentation. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Knowledge Center. AWS security information is available from several areas for free. The AWS Knowledge Center helps answer the questions most frequently asked by AWS Support customers and builders. And Knowledge Center articles are available in ten languages. Knowledge Center articles and videos are produced by an AWS team and display an &#34;AWS OFFICIAL&#34; badge. Knowledge Center articles on re:Post retain all previous content, including videos and related links. re:Post is a vibrant AWS community.</p>
+<p>Here are the four main goals of AWS Security Center. First, prevent, define user permissions and identities, infrastructure protection, and data protection measures for a smooth and planned AWS adoption strategy. Detect. Gain visibility into your organization&#39;s security posture with logging and monitoring services. Ingest this information into a scalable platform for event management, testing, and auditing. Respond. Automated incident response and recovery to help shift the primary focus of security teams from response to analyzing root cause.</p>
+<p>And then remediate, leverage event driven automation to quickly remediate and secure your AWS environment in real-time. The AWS Security Blog features regular posts by AWS experts and other industry professionals. The blog articles are an excellent research and information-gathering source for all things AWS. Realize they have blog articles for a wide variety of categories, not just security. Customers can search based on various categories, topics, keywords, products, solutions, industries, and even searching at specific learning levels. In the next lesson, we&#39;ll do a demonstration to compare security solutions in the AWS Marketplace.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Comparing Security Solutions in the AWS Marketplace (it_clawsp23_07_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/dcbfad6b-9078-4332-a902-c56253fe8e58/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/dcbfad6b-9078-4332-a902-c56253fe8e58/image001.jpg')();" /><div class="section_text">In this video, we will compare security solutions in the AWS Marketplace.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare security solutions in the AWS Marketplace</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Security Solutions in the AWS Marketplace. Presented by: Michael Shannon.</em> [Video description ends]
+<p>OK, in this lesson, we&#39;re going to do a web Safari up to the AWS marketplace and we&#39;re looking specifically at security solutions in the marketplace. And again, what is the marketplace? Well, it tells you right here, a place to Find, test, buy, and deploy software that runs on AWS. <br /><br />[Video description begins] <em>The AWS Marketplace Homepage appears. It displays a title bar at the top. It contains a search bar, the account user name, and a series of drop-downs like About, Categories, Delivery Methods, Solutions, AWS IQ, Resources, Your Saved List, and so on. A panel appears next, displaying banners on AWS Data Exchange. Below, a section titled &#39;What is AWS Marketplace?&#39; appears. It contains a tab called View all products. A table titled &#39;Find AWS Marketplace products that meet your needs&#39; appears next. It contains 4 fields: Categories, Vendors, Pricing Plans, and Delivery Methods. At the bottom right there are two tabs: Clear selection and View results. Another section called Popular Categories appears below. It contains options like Operating Systems, Security, Networking, and so on.</em> [Video description ends]</p>
+<p>We could also call these Software as a Service offerings as well if you want to look at it that way. And we&#39;re talking about security. I could push on this button right here or I could go up here and say, well, let&#39;s go down to the Categories, find Security, and then you can say just show us all the vendors, all the Pricing Plans. <br /><br />[Video description begins] <em>The Categories field contains a drop-down list. There is a search bar at the top. Below, a section called Infrastructure Software appears. It contains several options like All Infrastructure Software, Backup &amp; Recovery, Operating Systems, Security, and so on.</em> [Video description ends] <br /><br />The Pricing Plans could be Hourly, they could be Monthly, they could be Annual. Some of these are going to be Free as long as you have an account in good standing. <br /><br />[Video description begins] <em>The Pricing Plans field contains a drop-down list with various options like All pricing plans, Hourly, Monthly, Annual, Free, Bring your Own License, By Hosts, and so on.</em> [Video description ends]</p>
+<p>And then there&#39;s Bring Your Own License (BYOL) as well, and then different ways to you know deliver these solutions as a Machine Image, through SageMaker with Infrastructure as Code, CloudFormation or it could be a Container Image for example.<br /><br />[Video description begins] <em>The Delivery Methods field contains a drop-down list with various options like All delivery methods, Amazon Machine Image, Amazon SageMaker, CloudFormation, Container Image, Helm Chart, and so on.</em> [Video description ends] <br /><br />So, let&#39;s go ahead and View the results. I see a couple are off the bat. I see Fortinet FortiGate Next-Gen Firewall. That&#39;s a very popular MSSP, Managed Security Service Provider solution including VPN and SD software-defined wide area network.<br /><br />[Video description begins] <em>The Search Results page appears. The navigation pane on the left titled &#39;Refine Results&#39; contains 3 collapsible sections: All categories, Infrastructure Software, and Security. The Security section is expanded. It contains more collapsible sections like Delivery methods, Publisher, Pricing model, and so on. The Delivery methods section displays several items with checkboxes like Amazon Machine Image (1929), Professional Services (839), and so on. The main pane displays 3712 Security results. The title bar contains a Sort By option. Below, numerous items are displayed like Fortinet FortiGate Next-Generation Firewall, CrowdStrike Falcon Endpoint Protection, and so on. Each item contains the following components: 5 stars, AWS reviews, external reviews, and product information.</em> [Video description ends]</p>
+<p>You can see CrowdStrike, Trend Micro, Trend Cloud One, you&#39;ve got Palo Alto Next-Gen firewall, Sophos which is a product that I use. OpenVPN, this is something you would use on your AWS client endpoint or peer-to-site VPN. They also have solutions from Center for Internet Security. So, they have baselines and builds hardened images that are preconfigured that you might use from the CIS. Other things like F5 which are big as well. So, if we go up here, we can say just show us, you know, all of the different vendors. <br /><br />[Video description begins] <em>The Show All option at the bottom of the Publisher section is selected. A dialog box titled &#39;Top 1000 publishers&#39; appears. It displays a search bar at the top. Below, numerous items appear with checkboxes like Cognosys Inc Hardened Images (170), Hardened Images (141), Apollo (102), Foundation Security (89), Palo Alto Networks (24), and so on. At the bottom, 2 tabs appear: Cancel and Add filters.</em> [Video description ends] <br /><br />Other big vendors would be Barracuda Networks. There&#39;s also Palo Alto Networks, which is very popular. Fortinet, one of my favorites for years I was a Cisco person, Cisco certified instructors, CCNP, all those things.<br /><br />[Video description begins] <em>The search bar displays Cisco. Below, 2 items appear with checkboxes: Cisco Systems Inc. (34) and Cisco Secure Cloud Analytics (6). The Cisco Systems Inc. (34) item is selected.</em> [Video description ends] <br /><br />So, we can see that you know Cisco is pretty popular as far as infrastructure goes. So, the very popular adaptive security appliance with the pay-as-you-go with a free trial. <br /><br />[Video description begins] <em>The corresponding results appear under the title All products. The main pane displays 34 results. Some of them are Cisco Secure Firewall ASA Virtual - PAYG with 30-Day Free Trial, Cisco Secure Firewall Threat Defense Virtual PAYG w/ 30 Day Free Trial, and so on.</em> [Video description ends] <br /><br />Realize that often when you see things like these stars here, the stars are not necessarily reviews of the full product. More often than not they&#39;re reviewing the free trial or maybe the 30-day trial that you have. So, take those stars with a grain of salt. So, we&#39;ve also got the Cloud Services Routers, very popular to deploy these as virtual appliances in public subnets to support your existing wide area network, your SD-WAN, or your SD-MAN solution.</p>
+<p>So, on the exam, you want to be aware of the fact that you can go and easily search a wide variety of different ways in the AWS Marketplace and that AWS has a ton of partnerships with vendors all over the world and not just for you know, security solutions. We&#39;re focusing on that here, but in the marketplace, there&#39;s a wide variety of different solutions. As you can see here, Business Applications, Data &amp; Analytics, DevOps, IoT, Machine Learning, all the way down to, of course, Security. <br /><br />[Video description begins] <em>The Solutions drop-down from the aws marketplace toolbar is selected. A menu appears. It contains various options under 2 sections: Solutions and Industry. Under Solutions, there are options like AWS Well-Architected, Business Applications, Data &amp; Analytics, Data Products, and so on. Under Industry, there are options like Advertising &amp; Marketing, Energy, and so on.</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Managing Network Access Control Lists (NACLs) (it_clawsp23_07_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/c2dc907e-3303-439e-b3f7-552d194d843c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/c2dc907e-3303-439e-b3f7-552d194d843c/image001.jpg')();" /><div class="section_text">Find out how to manage network access control lists.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">manage network access control lists</li></ul><div class="section_text">[Video description begins] <em>Topic title: Managing Network Access Control Lists (NACLs). Presented by: Michael Shannon.</em> [Video description ends]
+<p>OK, in this lesson, we&#39;re up at the VPC dashboard and we&#39;re going to talk about network ACLs. So, down here in the Security area or the NACL. <br /><br />[Video description begins] <em>A tab titled VPC Management Console is displayed on the browser. There is a toolbar at the top, containing a Services icon, a search bar, a Cloudshell icon, a Notification icon, a Help icon, a location drop-down, and so on. The navigation pane on the left displays several collapsible sections like Virtual private cloud, Security, DNS firewall, and so on. The Security section contains 2 options: Network ACLs and Security groups. The main pane displays 2 buttons at the top: Create VPC and Launch EC2 Instances. Below, a section called Resources by Region appears. To the right, several sections appear such as Service Health, Settings, Additional information, and so on.</em> [Video description ends] <br /><br />Now it&#39;s probably pretty rare that you would configure a NACL by hand like this. <br /><br />[Video description begins] <em>The Network ACLs option is selected. The corresponding page appears on the main pane. It displays a few options at the top like refresh, Actions, and Create network ACL. A search bar appears next followed by a table with 5 column headers labeled Name, Network ACL ID, Associated with, Default, and VPC ID. The table lists 2 items. One of them is called acl-e2e9f298. At the bottom, a panel appears. It displays the following instruction: Select a network ACL.</em> [Video description ends] <br /><br />Often we&#39;ll use something called the Firewall Manager or the Network Firewall here to do that for us, but on the exam, you want to be aware of what a NACL is. A Network ACL, by virtue of its name, is applied to an entire network or a subnet.</p>
+<p>So, let&#39;s go ahead and take a look at this Network Access Control list and there&#39;s actually 6 different subnets, and this is in my default VPC. <br /><br />[Video description begins] <em>The acl-e2e9f298 item is selected. The corresponding page appears on the main pane. There is an Actions drop-down at the top right corner. Below, a section titled &#39;Details&#39; appears. It contains information on several fields like Network ACL ID, Associated with, Default, VPC ID, and Owner. A command bar appears next with 4 tabs: Inbound rules, Outbound rules, Subnet associations, and Tags. The Inbound rules option is active now. It displays an option called Edit inbound rules in the right corner. Below, a search bar appears to filter the inbound rules. A table appears next with several column headers like Rule number, Type, Protocol, Port Range, Source, and Allow/Deny.</em> [Video description ends] <br /><br />So in my default VPC, because I&#39;m in the N. Virginia region, it&#39;s going to give me 6 Subnets, 1 subnet for each Availability Zone because the N. Virginia region has 6 Availability Zones, so it gives me 6 Subnets. All of these subnets are using the same default NACL. A Network ACL is what we call stateless or static. It has no idea the traffic going into the subnet or the traffic going out of the subnet if it&#39;s part of a three-way TCP handshake or part of a single packet authentication to a TLS server, or whether it&#39;s a DNS response or an ICMP response, doesn&#39;t know, doesn&#39;t care. It just evaluates the packets going Inbound and going Outbound one at a time and makes a decision based on this numbered Access Control List that we see down here.</p>
+<p>Now, one thing we notice on this Inbound rule to all 6 of these Subnets is that by default, and there&#39;s only one Rule number 100, All the traffic on all Protocols on all Port ranges from any Source. <br /><br />[Video description begins] <em>The Outbound rules option is active now. It displays an option called Edit outbound rules in the right corner. Below, a search bar appears to filter the outbound rules. A table appears next with several column headers like Rule number, Type, Protocol, Port Range, Destination, and Allow/Deny.</em> [Video description ends] <br /><br />So, 0.0.0.0/0 is basically any, any source is allowed. So, technically speaking, in your default VPC, the network ACL is not activated. It&#39;s allowing all the traffic Inbound. It&#39;s also allowing all the traffic Outbound. OK, so you might ask in this stateless or static firewall, that&#39;s not tracking really any of the behavior, but just looking at each data grammar packet one at a time.</p>
+<p>What are the use cases for the network ACL? Well, one use case could be this. If you&#39;re under attack, let&#39;s say you&#39;re a small to medium-sized business and your public subnet is under attack, you could come into, let&#39;s say the Inbound rule, Edit the inbound rules, and you could Remove this statement. If you did remove that statement, you&#39;re basically blocking all traffic. <br /><br />[Video description begins] <em>The Edit inbound rules option is selected. A corresponding page appears. It displays a table with the following fields: Rule number, Type, Protocol, Port Range, Source, and Allow/Deny. An item appears below. It displays a Remove tab after the Allow/Deny field. There are 2 tabs available at the bottom of the table: Add new rule and Sort by rule number. At the bottom of the page, 3 tabs appear: Cancel, Preview changes, and Save changes.</em> [Video description ends] <br /><br />That&#39;s one thing you could do, because notice that if you remove this rule, all you have left is this implicit or implied rule which basically says All traffic on All Protocols on All Ports from anywhere or any is Denied. So, that&#39;s one thing that you could do manually if you were under attack. Or you could come in here, let&#39;s say, renumber this to 105, put in a new number 100, and then just simply deny the traffic that&#39;s attacking you. <br /><br />[Video description begins] <em>The Rule number field was highlighted before. The Type field is highlighted now. It contains a drop-down list with various options like All traffic, Custom Protocol, Custom TCP, Custom UDP, DNS (TCP) (53), DNS (UDP) (53), HTTP (80), and so on.</em> [Video description ends]</p>
+<p>So, if you know the TCP ports or the services, if it&#39;s a DNS attack, a UDP DNS attack, or maybe it&#39;s attack coming from somewhere and they&#39;re trying to use TLS or they&#39;re doing a SQL attack, you could put that in there and then put in the, either the prefix they&#39;re coming from on the Internet, or you could put in the IP address. <br /><br />[Video description begins] <em>The Source field is highlighted.</em> [Video description ends] <br /><br />Now on the exam, there is no configuration, but just realize that the Network ACL applies to all of the instances. In other words, everything in the subnet, which could be EC2 instances of Windows or macOS or Linux, or they could be running containers, or it could be virtual appliances. Because remember, in the previous lesson I showed you the AWS Marketplace.</p>
+<p>You may have something from Sophos or Fortinet or Cisco that&#39;s deployed in that subnet, and you may have to also use the network ACL to keep traffic from getting to that virtual security device or that virtual router. But the key takeaway for the exam is that the network ACL applies to everything in the subnet and it&#39;s stateless or static. It&#39;s just a set of numbered rules, inbound and outbound, and as soon as there&#39;s a match, you either Allow it or you Deny it, and then you go on to the next packet or the next datagram.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Using Security Groups (it_clawsp23_07_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/3345b4b3-4217-4a0c-8ce3-00fedf099d94/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3345b4b3-4217-4a0c-8ce3-00fedf099d94/image001.jpg')();" /><div class="section_text">During this video, you will learn how to work with security groups.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with security groups</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Security Groups. Presented by: Michael Shannon.</em> [Video description ends]
+<p>OK, in this lesson, we&#39;re going to look at a second type of firewall. And the only thing this firewall has in common with the network ACL is that it also functions technically at layer 3 and 4 of the OSI model. <br /><br />[Video description begins] <em>A page titled VPC Management Console appears. It contains a Search bar at the top, along with a few icons like Notifications icon, and 2 drop-down fields labeled N. Virginia and mjshannawstest. Below, the left navigation pane contains the header: VPC dashboard. It contains various sections below, such as Virtual private cloud, Security, DNS firewall, Network Firewall, and so on. The Security section contains 2 options: Network ACLs, and Security groups. The main pane displays 2 buttons at the top, labeled as Create VPC, and Launch EC2 Instances. Below, there is a section: Resources by Region. It contains a list of items like VPCs, NAT Gateways, Subnets, Route Tables, and so on. On the right, there are various sections displayed, like Service Health, Settings, Additional Information, AWS Network Manager, and so on.</em> [Video description ends] <br /><br />In other words, it&#39;s going to match against metadata in the IP header, IPv4, IPv6, as well as TCP ports, UDP ports, and ICMP, just like the network ACL. However, that&#39;s where the similarities end in comparison. <br /><br />[Video description begins] <em>The Security groups option is highlighted in the left pane. The main pane displays the header: Security Groups, with 2 drop-downs: Actions, and Export security groups to CSV, and a button labeled Create security group. Below, there is a table with column headers like Name, Security group ID, Security group name, VPC ID, Description, and so on. It contains 2 items: sg-0d334484db7071870, and sg-81f9f6c3.</em> [Video description ends] <br /><br />So, let&#39;s go ahead and look at this default Security Group in my default VPC.</p>
+<p>Now, it does have inbound rules and outbound rules like the network ACL, but the security group is what we call stateful. In other words, in the hypervisor, there is actually memory areas that are tracking whether this is part of a three-way handshake and a TCP connection, or a TLS session, or a DNS response, and ICMP response. That information is being stored. That&#39;s why we call it stateful, and that&#39;s how most modern firewalls function today. <br /><br />[Video description begins] <em>A section titled sg-81f9f6c3-default appears at the bottom. It contains 4 tabs: Details, Inbound rules, Outbound rules, and Tags. The Details tab is active. Below, it contains a table with column headers like Security group name, Security group ID, Description, and so on.</em> [Video description ends] <br /><br />Another difference however, is this. Look at the Inbound rules. Now the Inbound rule, if we edit that, is that All traffic or we can specify traffic, All Protocols and Port ranges on a specific IP address.<br /><br />[Video description begins] <em>The Inbound rules tab is active now. It contains various buttons on the right, labeled Manage tags, Edit inbound rules, and so on. Below, there is a table with column headers like Name, IP version, Type, Protocol, and so on.</em> [Video description ends] <br /><br />But notice some things that are different here. Number one, there&#39;s no numbers. So, a security group is not a numbered list like an Access Control List. In other words, it&#39;s an allow list. <br /><br />[Video description begins] <em>The page now displays the header: Edit inbound rules. Below, the section: Inbound rules contains various fields like Security group rule ID, Type, Protocol, Port range, Source, and Description-optional.</em> [Video description ends] <br /><br />So, you&#39;d basically come in here, unless you say All traffic. You could specifically say what are we going to allow? Secure Shell, add that as a rule, add POP3, add that as a rule, maybe add HTTPS as a rule. <br /><br />[Video description begins] <em>A drop-down list appears under the Type field. It contains various options like All traffic, SSH, SMTP, HTTP, POP3, and so on.</em> [Video description ends] <br /><br />So, you&#39;re putting things in here, the traffic types and the protocols and ports and even possibly IP addresses that you&#39;re allowing. There are no explicit deny entries, so in a network ACL, you can explicitly deny things. That&#39;s not the way it worked in a security group. You just simply put in here what you&#39;re allowing, allowing in and allowing out.</p>
+<p>Now here&#39;s the other big difference. Allowing into what, we know that the network ACL that we looked at in the previous lesson applies to all the instances in that subnet, but a security group is actually applied directly to the elastic network interface of the instance. Or it could even be, let&#39;s say, a virtual router, but the security group gets applied technically in the hypervisor to that virtual elastic network interface of the instance. Let me show you what I mean. If I cancel out of here, I can go to the VPC dashboard. If I Launch an EC2 Instance, one of the things that it&#39;s going to ask me when I go through this wizard to configure this instance of Amazon Linux or Windows or Red Hat or whatever, it&#39;s going to eventually ask me what type of security group do I want to apply to it. <br /><br />[Video description begins] <em>A page titled Launch an instance | EC2 | us-east-1 appears. It contains the header: Launch an instance. Below, there are various sections like Name and tags, Application and OS Images (Amazon Machine Image), Instance type, Key pair (login), Network settings, and so on. The Application and OS Images (Amazon Machine Image) section contains a tab: Quick Start. It contains various options like Amazon Linux, macOS, Ubuntu, Windows, and so on. The Network settings section contains various items like Network, Subnet, Auto-assign public IP, Firewall (security groups), and so on. The right pane contains a section labeled Summary. It displays several items like Software Image (AMI), Virtual server type (instance type), Storage (volumes), and so on.</em> [Video description ends]</p>
+<p>And it tells you right here a security group is a set of Firewall rules. Technically, these are allow only rules at layer 3 and layer 4 that control the traffic to your instance, right. So, you could choose the default security group. If you notice here you&#39;ll have a default security group. Or you could create your own security group. But remember, the security group is applied to the instance&#39;s elastic network interface, technically Ethernet 0, let&#39;s say on a Linux machine or a Windows machine. Another question that may come up is, can an instance actually have more than one security group applied to it? Technically yes, but it&#39;s not really a good idea.</p>
+<p>If you had multiple security groups, it would just combine the allow list and apply the aggregate or the combination of all the things you&#39;re allowing. So, that&#39;s the security group. It is stateful, it is layer 3 and layer 4. You have an inbound to the instance and a outbound from the instance, but again, it applies directly to the instance of whatever you&#39;re deploying in your subnet.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Web Application Firewall (WAF) (it_clawsp23_07_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/fc5bc112-791a-4520-9fdd-0e25b8f013c8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/fc5bc112-791a-4520-9fdd-0e25b8f013c8/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe WAF and AWS Shield.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe WAF and AWS Shield</li></ul><div class="section_text">[Video description begins] <em>Topic title: Web Application Firewall (WAF). Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;ll learn about the Web Application Firewall or the WAF. AWS WAF is an HTTP/HTTPS, or TLS deep packet inspection firewall that defends against common web exploits and bots that can affect availability, compromise security, or consume excessive resources. With AWS WAF, customers can create security rules or more often use third-party marketplace solutions that control bot traffic and block common attack patterns such as SQL injection or cross-site scripting. AWS WAF protects your web applications from common web exploits.</p>
+<p>Customers of AWS will run the WAF on an Amazon CloudFront distribution on an application Elastic Load Balancer or a public-facing load balancer, the Amazon API Gateway or AWS AppSync. <br /><br />[Video description begins] <em>This diagram describes how AWS WAF protects web applications from common web exploits. AWS WAF can be run on various web applications like Amazon CloudFront, Application Load Balancer, Amazon API Gateway, and AWS AppSync.</em> [Video description ends]<br /><br />You can build your own rules using the visual rule builder or JSON code. Or more often, customers will deploy managed rules that are maintained by AWS or AWS Marketplace sellers like CrowdStrike, Fortinet, and others. Once you deploy the Web Access Control List, you can protect against vulnerabilities and exploits such as SQL injection or cross-site scripting attacks, forgeries, and buffer overflows. You can filter out unwanted traffic by IP address or geographic location or by using regular expressions to define specific patterns. Along with WAF, you use Amazon CloudWatch to receive incoming traffic metrics and possibly use Amazon Kinesis Data Firehose to request details and tune your Web ACL rules based on metrics and log data. <br /><br />[Video description begins] <em>The functions of running AWS WAF on these web applications can be divided in 3 categories like Create a policy, Block and filter, and Monitor.</em> [Video description ends]</p>
+<p>If you don&#39;t want to do this yourself, you could depend upon the third-party AWS solution, the managed solution, or the aforementioned AWS Marketplace sellers. Web Application Firewall also works side by side and seamlessly with AWS Shield Advanced.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: AWS Firewall Manager and Network Firewall (it_clawsp23_07_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/02ac061f-bb53-4b5f-b65b-f6985d190405/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/02ac061f-bb53-4b5f-b65b-f6985d190405/image001.jpg')();" /><div class="section_text">In this video, we will compare AWS Firewall Manager to AWS Network Firewall.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare AWS Firewall Manager to AWS Network Firewall</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Firewall Manager and Network Firewall. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Now, earlier in this course we looked at the network ACL and we looked at the security group layer three and four firewalls. It&#39;s actually not that common for most medium-sized and larger customers of Amazon Web Services to actually manually configure NACLs and security groups. In fact, most will use the AWS Firewall Manager, especially if you&#39;re a larger enterprise. Firewall Manager is an Amazon Web Services security management service that enables clients to centrally configure and administer firewall rules across accounts and applications in AWS Organizations. As new applications are built or bought, Firewall Manager simplifies the process of introducing them and associated resources into compliance by enforcing a common set of security rules.</p>
+<p>Customers can enforce a key set of security group rules with a collective security policy while also deploying application-specific rules. They can create, configure, and maintain firewalls with common security policies across accounts and across multiple virtual private clouds in an AWS Organization structure. Also, with Firewall Manager, they can continually audit and scrub unused or redundant security groups and audit and manage security group rules to recognize high-risk rules. Traffic coming to the AWS Network Firewall could come from an AWS Transit Gateway, it could come from the AWS Direct Connect connection, or it could come from an AWS Site-to-Site VPN or through the Internet gateway to a public subnet. All requests entering and leaving the VPC through the gateways can be routed through the AWS Network Firewall.</p>
+<p>The network firewall will inspect and filter all traffic entering the firewall, and it&#39;s getting its configuration at the top from the aforementioned AWS Firewall Manager. Within the organization the AWS Firewall Manager will manage multiple AWS network firewall deployments. In the VPC, you create a policy, you can block and you can filter, and you can monitor traffic going to private subnets and traffic going to public subnets. Realize requests from resources in the VPC subnets can be routed through the AWS Network Firewall first before routing to the Internet gateway. Other services you could use in the back end with a network firewall is to store logs in an Amazon S3 bucket, to use Amazon CloudWatch as a visibility and monitoring tool, to use Amazon Kinesis to run machine learning algorithms against streams of data, or you could integrate a partner solution.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Comparing AWS Trusted Advisor to AWS Health Dashboard (it_clawsp23_07_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/79afde06-6151-4608-9dc4-3358fbfe9613/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/79afde06-6151-4608-9dc4-3358fbfe9613/image001.jpg')();" /><div class="section_text">In this video, we will compare AWS Trusted Advisor to AWS Health Dashboard.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare AWS Trusted Advisor to AWS Health Dashboard</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing AWS Trusted Advisor to AWS Health Dashboard. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Right now I&#39;m looking at the Trusted Advisor, and Trusted Advisor is actually part of the free tier model. So, regardless of whether you have a basic account or a developer account or one of the business or enterprise plans, you get Trusted Advisor for free. However, if you have a basic account or a developer account, you only get a subset or a certain number of checks, and here you can see we use this page to get an overview of the check results in our AWS account.<br /><br />[Video description begins] <em>A page titled Trusted Advisor - Recommendations appears. It contains a Search bar at the top, along with a few icons like Notifications icon, and 2 drop-down fields labeled Global and mjshannawstest. Below, the left navigation pane contains the header: Trusted Advisor. It contains 2 sections. The first section labeled Recommendations includes options like Cost optimization, Performance, Security, Fault tolerance, and Service limits. The second section labeled Preferences contains 2 options: Manage Trusted Advisor, and Notifications. The main pane displays the header: Trusted Advisor Recommendations. Adjacent to this, there are 2 buttons labeled Refresh all checks, and Download all checks. Below, there are various sections like Checks summary, Recommended Actions, and so on.</em> [Video description ends]</p>
+<p>On the exam, it&#39;s critical to know all of the five areas of Trusted Advisor. Cost optimization, notice here it&#39;s telling me to upgrade my support plan to get all of the Trusted Advisor checks, Performance, <br /><br />[Video description begins] <em>The Cost optimization option is highlighted now. The main pane displays the same header. Below, there is a section labeled Checks. The other options are selected one after the other.</em> [Video description ends] <br /><br />Security, Fault tolerance, and Service limits or quotas. <br /><br />[Video description begins] <em>The Service limits option is highlighted now. The main pane displays the same header. Below, in a section labeled Checks, there are various items like Auto Scaling Groups, Auto Scaling Launch Configurations, CloudFormation Stacks, and so on.</em> [Video description ends] <br /><br />As you know, on this exam, you&#39;ll have several questions that have five possible answers, and there&#39;ll be two correct answers out of five. This would be a prime candidate for one of those questions where you would have five options, and two of these would be on the list. Something like Performance and Fault tolerance or Fault tolerance and Service limits. Two out of five. Another free service that goes along with Trusted Advisor is the Personal Health Dashboard.</p>
+<p>Here we can stay informed of important events affecting our AWS resources. This is also free as long as your account is in good standing and we can scroll down and see I&#39;ve got No recent issues. This is just a test account, so it&#39;s actually used very little, but you could also use Amazon EventBridge to get a notification if something happens that might affect our services and resources. <br /><br />[Video description begins] <em>A page titled Your account health | AWS Health appears. The left navigation pane contains the header: AWS Health Dashboard. It contains various collapsible sections like Service health, Your account health, Your organization health, Health Integrations, and so on. The Your account health section contains items like Open and recent issues, Scheduled changes, Other notifications, and Event log. The Open and recent issues option is highlighted. The main pane displays a section labeled &#39;Amazon EventBridge&#39; rule at the top. Below, there are 4 tabs: Open and recent issues (0), Scheduled changes (0), Other notifications (0), and Event log. The Open and recent issues (0) tab is active. It contains a checkmark with a text: No recent issues.</em> [Video description ends] <br /><br />We can also see here besides Open and recent issues, Scheduled changes, Other notifications, and there&#39;s an Event log that you could also go through and see different issues here as well. It&#39;ll be broken down by your region or it could be a global issue. <br /><br />[Video description begins] <em>The Event log tab is active now. Below, it contains a table with column headers like Event, Status, Event category, Region/Zone, Start time, Last update time, and Affected resources. It contains different issues.</em> [Video description ends] <br /><br />This is the AWS Health Dashboard, it really goes hand in hand with the trusted advisor, and they&#39;re both part of the free-tier model.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_07_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/9faec147-0783-4bc1-8ed8-5d638eb7a8ef/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9faec147-0783-4bc1-8ed8-5d638eb7a8ef/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this course, you learned about a number of AWS security capabilities as well as security documentation. You also learned about NACLs, security groups, and AWS Web Application Firewall. And then finally, you learned about the AWS Trusted Advisor and Personal Health Dashboard. In the next course, we&#39;ll explore deploying and operating in the AWS Cloud.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

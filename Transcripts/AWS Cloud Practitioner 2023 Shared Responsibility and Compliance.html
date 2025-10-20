@@ -1,0 +1,310 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Shared Responsibility &amp; Compliance</h1><div class="section_text">Security and compliance are shared responsibilities between AWS and the customer. This shared relationship can help relieve the customer’s overhead as AWS operates, manages, and controls the infrastructure components from the host operating system and virtualization layer down to the physical security of the facilities in which the service resides and functions. 
+
+In this course, you will explore the AWS shared responsibility model and find out what responsibilities AWS and its customers share. You will also learn what responsibilities are separated, such as configuration, data management, and defending the infrastructure that runs AWS Cloud services. Then you will examine key concepts of governance and compliance. Finally, you will take a look at AWS Compliance services, AWS Artifact, and AWS License Manager.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_04_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: AWS Shared Responsibility Model (it_clawsp23_04_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Customer Responsibilities on AWS (it_clawsp23_04_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: AWS Responsibilities (it_clawsp23_04_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: AWS Governance Concepts (it_clawsp23_04_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: AWS Compliance Concepts (it_clawsp23_04_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Surveying AWS Compliance (it_clawsp23_04_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Using AWS Artifact (it_clawsp23_04_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Using AWS License Manager (it_clawsp23_04_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_04_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_04_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/ddf52ffa-e005-4521-9d07-80bdeaccbf00/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/ddf52ffa-e005-4521-9d07-80bdeaccbf00/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Shared responsibility and compliance.</p>
+<p>Security and compliance are shared responsibilities between Amazon Web Services and their customers. This shared relationship can help relieve the customer&#39;s overhead as AWS operates, manages and controls the infrastructure components from the host operating system and virtualization layer down to the physical security of the facilities in which the service resides and functions. In this course, we will explore the various aspects of shared responsibility, describe the concepts of governance and compliance, survey the AWS artifact portal,and learn about AWS licensing and the AWS License Manager.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: AWS Shared Responsibility Model (it_clawsp23_04_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/a0b59cf4-f658-4b89-b68c-b5418b9d516a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a0b59cf4-f658-4b89-b68c-b5418b9d516a/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe the shared responsibility model and responsibilities that the customer and AWS share.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the shared responsibility model and responsibilities that the customer and AWS share</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Shared Responsibility Model. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this first lesson, let’s explore the AWS Shared Responsibility Model. Security and compliance are shared responsibilities between AWS and their cloud customers.</p>
+<p>This shared approach can help lessen the customer&#39;s operational weight. AWS operates, manages and optimizes the components from the host operating system and virtualization layer all the way down to the physical security of the availability zone data centers in which the services operate. By default and an infrastructure as a service model, The customer assumes responsibility and management of the guest operating system, including updates, upgrades, fixes and security patches and other supplementary application software, along with the configuration of the cloud firewall solutions provided by AWS. Realize some of the responsibility can be handed back to AWS by using platform or software as a service offerings.</p>
+<p>Customers should carefully evaluate the selected services. Their responsibilities vary contingent on the services used. The integration of those services into their IT environments and any relevant laws and regulations. This is highly applicable to the platform as a service PaaS models. The nature of this shared responsibility also provides the flexibility and customer control that permits the deployment at AWS.</p>
+<p>To put it simply, AWS&#39;s responsibility is security of the cloud, where the customer has responsibility of security in the cloud.</p>
+<p>Some shared controls would be Patch management. AWS must Patch and fix configuration flaws within their infrastructure. But customers are often responsible for patching their guest operating systems and applications, primarily in the infrastructure as a service model.</p>
+<p>Configuration management preserves the configuration of its data center infrastructure devices, but customers may be responsible for configuring their own guest operating systems, databases and applications.</p>
+<p>As far as awareness and training goes, AWS trains AWS employees, But the customer must provide their own training for their own employees. Keep in mind however, AWS has plenty of resources. and certifications to help customers train their employees.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Customer Responsibilities on AWS (it_clawsp23_04_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/0b857387-5380-4620-a590-623cfae7f581/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/0b857387-5380-4620-a590-623cfae7f581/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe the customer’s responsibilities on AWS.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the customer’s responsibilities on AWS</li></ul><div class="section_text">[Video description begins] <em>Topic title: Customer Responsibilities on AWS. Presented by: Michael Shannon.</em> [Video description ends] Let&#39;s talk some more about the customer responsibilities on the AWS platform.
+<p>Customer responsibility will be driven by the cloud services that a customer chooses. This will dictate the amount of configuration tasks the customer will conduct, especially as part of their security responsibilities. For example, client side or server side encryption or using the key management service. For example, a service such as Amazon Elastic Cloud Compute, Amazon EC2 is considered an IaaS type. Therefore, it demands that the customer perform all the necessary security configuration and management duties.</p>
+<p>Customers that deploy an EC2 instance are responsible for managing: the guest operating system (including updates and security patches); any application software or utilities installed by the customer on the instances; configuration of the AWS-provided firewall (called a security group) on each instance. For abstracted services such as Simple Storage Service, S3 and DynamoDB. AWS will control the infrastructure layer, the operating system and platforms, and customers simply access the endpoints to store and retrieve data.</p>
+<p>Customers responsible for managing their data, however, including the aforementioned encryption choices. Classifying or tagging their assets and utilizing identity and access management tools to apply the proper permissions.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: AWS Responsibilities (it_clawsp23_04_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/ea96029a-9321-4fb5-ba3c-38913f444a71/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/ea96029a-9321-4fb5-ba3c-38913f444a71/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to outline AWS provider responsibilities and how the AWS responsibilities and customer responsibilities can shift, depending on the service used (e.g., Amazon Relational Databases Service, AWS Lambda, or Amazon Elastic Compute Cloud).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline AWS provider responsibilities and how the AWS responsibilities and customer responsibilities can shift, depending on the service used (e.g., Amazon Relational Databases Service, AWS Lambda, or Amazon Elastic Compute Cloud)</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Responsibilities. Presented by: Michael Shannon.</em> [Video description ends] Let&#39;s talk about the responsibilities of Amazon Web Services.
+<p>AWS is responsible for defending the infrastructure that runs all the services offered in the AWS cloud. This infrastructure is composed of the hardware, software, networking and facilities, including the people that run AWS cloud services all over the world.</p>
+<p>The customer fully inherits the physical and environmental controls from AWS. In your spare time, you may want to go to this URL at https://aws.amazon.com /blogs/security/take-a-digital-tour -of-an-aws-data-center-to-see-how-aws-secures-data-centers-around-the-world/ Or simply use your favorite search engine and look for digital tours of an AWS data center.</p>
+<p>Keep in mind that information will not be on the exam. However, you must understand that AWS has responsibility for security of the cloud. Whereas earlier, we discovered that the customer has responsibility for security in the cloud. Here we see the classic example of infrastructure as a service.</p>
+<p>AWS has regions all over the world. Every region has at least three availability zones, and then they have edge locations in metropolitan areas all over the world. They use that for content distribution, networking, edge computing and direct connections in those data centers.</p>
+<p>They have their hardware where they provide the compute storage database and networking services. To follow up on the previous lesson, the customer has responsibility for their data and with infrastructure as a service, the platforms, applications, identity and access management, operating systems and the network and firewall configuration.</p>
+<p>They&#39;re also responsible for client side or server side encryption. Realize you can transfer some of this responsibility to the provider by using things such as platform as a service or managed services and fully managed services and software as a service either from third parties or the AWS marketplace. Regardless of what service you use at AWS, it is critical that you know where the provider AWS, where the responsibility ends and where yours as the customer begins.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: AWS Governance Concepts (it_clawsp23_04_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/7d8ce2a3-8bd8-48b6-9790-041890cfceb7/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/7d8ce2a3-8bd8-48b6-9790-041890cfceb7/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to define various AWS compliance concepts.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define various AWS governance concepts</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Governance Concepts. Presented by: Michael Shannon.</em> [Video description ends] Governance Defined: Governance can be described as an initiative by which entities are directed and controlled.
+<p>Governance is focused on the structure and processes for decision making, accountability, control and activities at the top of the entity. The commercial enterprise or the organization.</p>
+<p>Governance influences how an organization&#39;s objectives are established and realized, how risk is monitored and assessed, and how performance is optimized.</p>
+<p>Governance is a system and process, not a single activity. and therefore successful implementation of a good governance strategy requires a systematic approach that involves strategic planning, risk management and performance management. Governance is a core component of the unique characteristics of a successful organization. For example, their culture.</p>
+<p>AWS governance is the capacity to introduce executive board policies and decisions that your cloud environment must observe. AWS governance policy includes the rules for the cloud environment, the definition of risks and alignment with internal organizational policies. A percentage of the governance policies is embedded in all other initiatives across all environments to certify adherence to policy requirements.</p>
+<p>Governance of the corporate environment is critical to understand why and how cloud services are consumed. The cloud environment must align with the organization&#39;s strategy on cloud service provider utilization. All organizations, regardless of the size or the industry they&#39;re in or business sector, need to establish a capability to effectively use cloud services, define policies and standards, understand and mitigate risks, and to approve essential legal, commercial and regulatory requirements. That is governance in a nutshell at Amazon Web Services.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: AWS Compliance Concepts (it_clawsp23_04_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/4b982417-e35b-42f1-a673-31d3fb976485/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/4b982417-e35b-42f1-a673-31d3fb976485/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to define various AWS governance concepts.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define various AWS compliance concepts </li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Compliance Concepts. Presented by: Michael Shannon.</em> [Video description ends] In this short lesson, we’ll look at some AWS compliance concepts. AWS Compliance is a two-fold proposition.
+<p>First, AWS maintains compliance for its organization, its data centers in availability zones and regions all over the world.</p>
+<p>And then secondly, AWS provides tools and resources to help their customers maintain compliance. AWS supports over 140 security standards and compliance certifications around the globe, including Payment Card Industry Data Security Standard (PCI-DSS). Health Insurance Portability and Accountability Act, (HIPAA) and HITECH, Health Information Technology for Economic and Clinical Health Act. The Federal Risk and Authorization Management Program, FedRAMP. The General Data Protection Regulation (GDPR) and the Federal Information Processing Standard 140-2 and the National Institute of Standards and Technology 800-171.</p>
+<p>AWS frequently attains third-party validation for thousands of global compliance requirements. They continually monitor to help customers meet security and compliance standards for finance, retail, healthcare, government and beyond. Customers can inherit the latest security controls that uses on its own infrastructure. Customers can streamline and automate compliance and reporting.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Surveying AWS Compliance (it_clawsp23_04_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/ba66fda6-842b-4eb9-97f7-2893511d9396/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/ba66fda6-842b-4eb9-97f7-2893511d9396/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to compare AWS compliance services and outline compliance needs among geographic locations or industries.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare AWS compliance services and outline compliance needs among geographic locations or industries</li></ul><div class="section_text">[Video description begins] <em>Topic title: Surveying AWS Compliance. Presented by: Michael Shannon.</em> [Video description ends] Okay. On the cloud practitioner exam, there’s really not much of the AWS compliance side that you really have to know. [Video description begins] <em>AWS Compliance window is open on the AWS website. There are two ribbon panes at the top. The first ribbon has various AWS services such as Products, Solutions, Pricing, AWS Marketplace, etc. The second ribbon has options such as AWS Cloud Security, Security Services, Compliance, etc.</em> [Video description ends]
+<p>You don&#39;t have to memorize these different several of the biggies. Out of the 143 standards, if you come down, though, [Video description begins] <em>The host highlights various security standards and compliance certifications supported by AWS .</em> [Video description ends] you will see kind of the benefits of compliance, third party validation. You inherit AWS’s security controls. You can streamline and automate your compliance with the wide variety of tools and you can automate it and get on-demand access using AWS Artifact and you will need to be aware of artifact on the exam.</p>
+<p>One thing I&#39;ll show you real quick up here under compliance. Compliance resources, this is a whole lot of resources. Be familiar with a couple of these things. For example, we have the CSA Consensus Assessments Initiative Questionnaire CAIQ, that&#39;s from the Cloud Security Alliance and AWS and the CSA have a really good relationship. And remember, this is something that is going to populate what&#39;s called the Star registry, the S T A R registry and cloud providers. A software as a service platform, as a service providers are going to fill out this questionnaire. It’s a long list of yes/no questions, and you can use that to evaluate and compare different providers. It&#39;s voluntary. You cannot answer the questionnaire on behalf of the vendor. They have to fill it out and they have to voluntarily submit it to the CSA to go into the star registry.</p>
+<p>But you can also see down here we&#39;ve got guides and workbooks for specific types of compliance for, you know, PCI, DSS, for bank cards, credit cards and debit cards, HIPAA for health care, privacy and security.</p>
+<p>Another organization to be aware of is the CIS, Center for Internet Security also another close partner to Amazon Web Services. [Video description begins] <em>The host clicks on the Compliance dropdown from the second ribbon panes and selects Compliance Resources. The Compliance Resources page has two panes, a left pane with a list of Essential and Best practices and Guides and Workbooks. The right pane with Other Compliance Resources.</em> [Video description ends] So I guess really on the exam, you want to be aware of how important it is for AWS to be compliant to many different types of regulations and mandates, but also the great length that they go to to help their customers and their partners maintain compliance to a wide variety of initiatives.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Using AWS Artifact (it_clawsp23_04_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/4d131d18-642e-4c01-a55b-1d5912fd1e71/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/4d131d18-642e-4c01-a55b-1d5912fd1e71/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to work with the AWS Artifact portal.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with the AWS Artifact portal</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Artifact. Presented by: Michael Shannon.</em> [Video description ends] All right, let&#39;s do a Web safari up to AWS and look at AWS artifact, which according to AWS, is the no cost self-service portal for on demand access to compliance reports and for entering into select online agreements. [Video description begins] <em>AWS Artifact window is open from the AWS website. The left pane navigation bar has options such as Agreements, Reports, Notification settings, FAQ, etc. The right pane has a call-to-action button to get started with AWS Artifacts and a Youtube Video on AWS Artifacts along with its pricing.</em> [Video description ends]
+<p>If you go down here, we&#39;ll see the two main areas. AWS Artifacts reports, accessing several compliance reports from third party auditors who have tested and verified their compliance with a variety of global, regional and industry specific security standards and regulations.</p>
+<p>Then we have the agreements, agreements to review, accept and terminate agreements with AWS for an individual account or for all accounts that are a part of an AWS organization. [Video description begins] <em>The host highlights the title of AWS Artifacts reports while explaining it.</em> [Video description ends] If we go up here, we can see view reports and we can find, well, you know, [Video description begins] <em>The host clicks on View Reports which redirects to AWS reports. This reports databank has several columns labeled title of the reports, reporting period, category, and description.</em> [Video description ends] 121 reports without getting too deep into this and ABS cloud computing implementation guide. We can see some of these are going to be different countries. Here’s NIST SP 800-171 part of the Cybersecurity Maturity Model Certification. So you get the idea. Just reports, reports and more reports. Let&#39;s go back to artifact and see the agreements, several agreements here. Here’s an AWS business Associate Addendum. Here’s an AWS SEC, Rule 17a-4 addendum. So not a whole lot there under the agreements for account, but we do have organization agreements.</p>
+<p>Now, if I click on this, I&#39;m not in an organization right now in this test account, so it&#39;ll tell me that I&#39;m not in an organization. So I&#39;d have to do that to see the organization agreement. So just remember, on the exam, under agreements in artifact, you have account agreements and organization agreements. And then we saw there were quite a few reports. A lot of those are very specific to different countries all over the world. And again, AWS artifact is free. [Video description begins] <em>The Account agreements databank has sevral columns labeled Title, Status, Effective start and Description.</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Using AWS License Manager (it_clawsp23_04_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/26e8f208-94ba-4e3c-a3a5-9946b06e6c9d/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/26e8f208-94ba-4e3c-a3a5-9946b06e6c9d/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to use the license manager service of AWS.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use the license manager service of AWS</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS License Manager . Presented by: Michael Shannon.</em> [Video description ends] In this demo, we’re going to check out the AWS License Manager.
+<p>Now on this, exam by no means will you have to be familiar with the actual interface and working with licenses, you will need to know that AWS offers licenses, especially for Windows Operating Systems, but you can also BYOL bring your own license.</p>
+<p>In the AWS License Manager, you have several ways to track your license usage over all your environments. You can get user based licenses, granted licenses, self-managed licenses or seller issued licenses.</p>
+<p>So manage, discover and report software license usage and there’s no additional charge to use the AWS License Manager. Here we can see the different types.</p>
+<p>Self-managed licenses make it easier to bring your eligible software licenses from vendors like Microsoft, SAP, Oracle, and IBM. This will be called BYOL, Bring Your own License. There&#39;s also seller issued licenses created by independent software vendors, ISVs, who use the AWS License Manager to manage and distribute software licenses to end users.</p>
+<p>We&#39;ve also got Linux subscriptions. You can view and manage commercial subscriptions such as Red Hat Enterprise, Linux, RHEL bring your own subscription model BYOS the Red Hat Cloud Access Program, SUSE Linux Enterprise Server and Ubuntu Pro, and you can track those across your AWS regions and accounts in the AWS organizations. And then finally we see user based subscriptions where you can launch Amazon EC2 instances using AMIs Amazon machine images that include Microsoft Office or Visual Studio.</p>
+<p>If you go up here, you can get started using the AWS License Manager and again, [Video description begins] <em>AWS Licence Manager is running that has a diagrammatic representaion of the AWS License Manager, and its Pricing. Upon scrolling down, on the left pane we have Self-managed licenses, seller-issued licenses etc, and on the right pane, we have More resources like documentation, API reference etc.</em> [Video description ends] they&#39;re going to ask you for permissions. And basically I&#39;m granting AWS License Manager the required permissions, which I can do because basically I&#39;m a root account user.</p>
+<p>Here we see the AWS License Manager dashboard where you can get [Video description begins] <em>The host clicks on the call to action button to get started with AWS License manager. A pop up window comes up, AWS License Manager is asking for permissions to manage licenses used by the resource.</em> [Video description ends] an overview of your different licenses. You can come down and see instance usage. With this visualization, you can also do a search of your inventory and at the bottom you can manage your various types of subscriptions. [Video description begins] <em>On the AWS License Manager, the Dashboard is selected from the left pane that has other various options such as usage reports, Inventory search, Self-managed licenses, etc. The right pane has a dashboard with overview of the number of granted licenses, self-managed licenses, and seller-issued licenses.</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_04_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/cc5b9d64-9bcb-460e-87c7-78d0f028450f/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/cc5b9d64-9bcb-460e-87c7-78d0f028450f/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends] In this lesson, you learned about the AWS shared responsibility model, governance and compliance, AWS artifact licensing and the License manager. In the next course, we&#39;ll get an overview of cloud security at Amazon Web Services.</div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

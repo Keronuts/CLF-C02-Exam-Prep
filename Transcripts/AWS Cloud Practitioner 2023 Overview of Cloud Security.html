@@ -1,0 +1,303 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Overview of Cloud Security</h1><div class="section_text"><p>Security and compliance are critical aspects of the cloud security model. These shared responsibilities must involve comprehensive due diligence and due care on the part of the cloud computing customer.</p>
+<p>In this course, you will explore the benefits of cloud security, including secure scaling and automation. Then you will learn how to capture and locate logs associated with cloud security and find out how customers secure resources on AWS using Amazon Inspector. Next, you will find out how to work with AWS Security Hub and AWS Shield and outline the key features of AWS Guard Duty. Finally, you will compare AWS encryption options and look at AWS services that aid in governance and compliance, including AWS CloudWatch, AWS CloudTrail, AWS Audit Manager, and AWS Config.</p>
+<p>This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</p></div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_05_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Benefits of Cloud Security (it_clawsp23_05_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Capturing and Locating Logs (it_clawsp23_05_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Amazon Inspector (it_clawsp23_05_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Using AWS Security Hub (it_clawsp23_05_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Using AWS Shield (it_clawsp23_05_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: AWS GuardDuty (it_clawsp23_05_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Comparing Encryption Options at AWS (it_clawsp23_05_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Governance and Compliance Services (it_clawsp23_05_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_05_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_05_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/4b0e75e6-1b55-49c5-88a3-4bb9b3a6ef66/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/4b0e75e6-1b55-49c5-88a3-4bb9b3a6ef66/image001.jpg')();" /><div class="section_text"><p>In this video, we will discover the key concepts covered in this course.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Overview of cloud security. Security and compliance is a critical aspect of the cloud security model. It is a shared responsibility that must involve comprehensive due diligence and due care on the part of the cloud computing customer. In this course, we&#39;ll outline the benefits of cloud security. We&#39;ll look at capturing and locating logs. We&#39;ll examine Amazon Inspector, AWS Security Hub, AWS Shield (standard and advanced), and AWS GuardDuty. We&#39;ll also outline your encryption options at AWS and define governance and compliance services.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Benefits of Cloud Security (it_clawsp23_05_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/42d65a5a-1145-45b4-a347-9dd55a3191f9/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/42d65a5a-1145-45b4-a347-9dd55a3191f9/image001.jpg')();" /><div class="section_text"><p>After completing this video, you will be able to describe the benefits of cloud security.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the benefits of cloud security</li></ul><div class="section_text">[Video description begins] <em>Topic title: Benefits of Cloud Security. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Scaling Securely with High Visibility and Control. With Amazon Web Services, customers manage where their data is stored, who can access their data, and what resource the organization is using at any point in time. In this regard, the customer responsibility of security in the cloud. Granular identity and access controls are combined with continuous monitoring for near real-time security information. It guarantees that the right resources have the right access at the right times, regardless of where information is stored in an Elastic Block Store, S3 buckets, Glacier Vaults, Elastic File System, or a database in the Relational Database Service. At AWS, customers can automate and minimize risk with deeply integrated services.</p>
+<p>It allows enterprises to be more secure. You can reduce human configuration errors, for example, leveraging templates, stacks, and infrastructure as code. It allows teams to focus on work that is business critical instead of the daily mundane manual tasks of infrastructure management. Companies can select from a variety of highly integrated solutions that could be merged to uniquely automate tasks, for example, a wide variety of services behind an API gateway. The security teams and DevOps can more easily work together to create and deploy code, traditional web applications, mobile apps, containers, and microservices faster and more securely. Customers of AWS can build with the top standards for privacy and data security. AWS is vigilant about the privacy of all of their cloud customers. Cloud customers also get to build on the most secure global infrastructure.</p>
+<p>Organizations always own their data. They decide how to encrypt it, they decide how to transport it, and they must manage the entire life cycle. That&#39;s part of the shared responsibility model. AWS automatically encrypts all data that moves over the AWS global data center and regional networks. For example, it&#39;s encrypted at the physical layer before leaving their secured facilities. There are additional encryption layers over all virtual private cloud (VPC) cross-region peering traffic, and customer or service-to-service Transport Layer Security (TLS) connections. Customers of AWS are able to utilize the biggest ecosystem of security partners and solutions.</p>
+<p>They can use trusted technology and consulting services from trusted solution providers like Fortinet and Palo Alto Networks, or Trend, just to name a few. Providers and partners with extensive expertise and proven success securing all phases of cloud adoption are selected. Customers also inherit the most extensive security and compliance controls in the world. To assist with organizational compliance initiatives, AWS attains third-party validation for thousands of global compliance requirements. AWS continually monitors compliance requirements to help their customers meet security and compliance standards for industries like finance, retail, healthcare, government, and more.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Capturing and Locating Logs (it_clawsp23_05_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/18d8fa81-fb91-427c-a497-44ed6400ec3c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/18d8fa81-fb91-427c-a497-44ed6400ec3c/image001.jpg')();" /><div class="section_text"><p>Find out how to capture and locate logs that are associated with cloud security.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">capture and locate logs that are associated with cloud security</li></ul><div class="section_text">[Video description begins] <em>Topic title: Capturing and Locating Logs. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>OK, on the exam from a security standpoint, you&#39;ll need to be aware of how to capture and locate logs specifically in this course for cloud security. So, the one-stop shop for this exam and even going forward in Amazon Web Services is the AWS Security Incident Response Guide. This is going to have all the answers we need under the Logging and events area. So, it&#39;s actually part of the Appendix, and then Logging and events, and you can see the URL up here. It&#39;s a white paper, the latest, and you can see it&#39;s just the aws-security-incident-response-guide/logging-and-events. And we&#39;re going to use this as our source to prepare for any questions on the exam. First off, we have AWS CloudTrail.</p>
+<p>This is our API tracing tool, an event history of all of your AWS account activity, things that you do through the console, through the AWS software development kits, through the command line interface, and other services. And there&#39;s two different types of API actions. There are CloudTrail management events or control plane operations, and there&#39;s CloudTrail data events. These are data plane operations. For example, an S3 GetObject API, or an S3 DeleteObject API, or maybe Lambda functions.<br /><br />[Video description begins] <em>A page titled Logging and events - AWS appears. At the top, it contains a search bar, an option called Contact Us, a drop-down labeled English, and a button labeled Return to the Console. The left navigation pane contains the header: AWS Security Incident Response Guide. Below, it has several options like Abstract, Introduction, Preparation, Operations, and so on. The main pane contains the header: Logging and events. Below, there are several sections like AWS CloudTrail, CloudTrail management events, CloudTrail data events, Amazon CloudWatch Events, and so on.</em> [Video description ends] <br /><br />If we go to the main CloudTrail site, notice this is under Management &amp; Governance. You can say, you know, get a trail and you can name the trail, it&#39;s going to show you where it&#39;s going to be stored.<br /><br />[Video description begins] <em>A page titled CloudTrail management events appears. It contains a search bar at the top, along with some icons and drop-downs, like the Notifications icon, Drop-down labeled N. Virginia, and so on. Below, there is a header: AWS CloudTrail. On the right, there is a section titled Create a trail with AWS CloudTrail. It contains a button labeled Create a trail. Below, there is another section titled How it works.</em> [Video description ends]<br /><br />This is your AWS CloudTrail log bucket and folder. And notice, it says that there&#39;s no cost to logging the events.</p>
+<p>But this is going to be in an S3 bucket and so there are minimal charges for storing that in your S3 bucket. Now, if you&#39;re still part of the free tier model, for the first 365 days, you really won&#39;t pay for that because you have plenty of storage for free. Then you just Create the trail and you&#39;ll have that trail automatically sending information for management events to that S3 bucket. <br /><br />[Video description begins] <em>A page titled Create trail-CloudTrail appears. It contains a header called Quick trail create. Below, it contains a section labeled Trail details. It contains 2 fields: Trail name, and Trail log bucket and folder.</em> [Video description ends] <br /><br />Now, on the exam, there&#39;s no configuration, so it&#39;s as far as I want to go with that. The next category would be Amazon CloudWatch. Now we&#39;ve got CloudWatch Events and if I scroll down, we&#39;ve also got CloudWatch Logs. So, we can use the CloudWatch Logs to monitor, store, and access log files from our operating systems.</p>
+<p>You know, our Windows 22 Server, our Red Hat Enterprise Linux, Amazon Linux AMI, as well as the applications that are running and other things that are in EC2 instances, and it&#39;s going to be using what&#39;s called the CloudWatch Logs agent running on those systems. And then we have the CloudWatch Events, which is near real-time stream of events when there&#39;s a change to your resources. And it also includes API calls that are published by the aforementioned CloudTrail. And you can set up rules, you can match target functions and streams. And so, here&#39;s our CloudWatch Management, where you can set Alarms, we&#39;ve got our Logs, we can set up our Events. So, here&#39;s the logging area, you&#39;ve got Log groups. <br /><br />[Video description begins] <em>A page titled CloudWatch Management appears. The left navigation pane contains the header: CloudWatch. It contains options like Alarms, Logs, Metrics, Events, and so on. The main pane contains a section: Overview. It contains 2 drop-downs. Below, there is another section: Get started with CloudWatch. It contains 4 tabs: Create alarms, Create a default dashboard, View logs, and View events. Under this, there is a section titled Get started with Application Insights.</em> [Video description ends] <br /><br />And then under the Events area, we save our event rules. Now they&#39;re going to have, you know, a bunch of preset event rules. But notice when we decide to use this, they were actually using another service in concert with CloudWatch, and that&#39;s Amazon EventBridge.</p>
+<p>And we&#39;ll actually be talking about these services again in this training.<br /><br />[Video description begins] <em>A page titled Amazon EventBridge appears. The left pane displays the header: Amazon EventBridge. It contains various sections below, such as Developer resources, Buses, Pipes, Scheduler, and so on. The Buses section contains options like Event buses, Rules, Replays, and so on. The Rules option is highlighted. The main pane contains a pop-up displaying an Important Message. Below, it has a header: Rules. It contains fields like Event bus, and so on.</em> [Video description ends] <br /><br />This isn&#39;t the only time we&#39;re going to do that. But you can see here the four main areas. You can set alarms on any of your metrics to receive notification if you cross a threshold. You can generate and name your own CloudWatch dashboard. You can monitor your existing operating systems that are running the applications, like MySQL on Red Hat Enterprise. You can even write rules to dictate which events you find interesting on your application and what action you should take. So, that&#39;s CloudWatch. If you go back down here, we&#39;ve got AWS Config. This is a service that allows you to assess, audit, and evaluate your configurations. Very important service.</p>
+<p>This is also going to store files in an S3 bucket. This is really part of your change in configuration management. The VPC generates flow logs. In fact, you&#39;re going to have Flow Logs on your virtual private cloud. You&#39;re going to have logs on your web application firewall. You&#39;re going to have logging on your Route 53 Resolver. This is your DNS service, so logging all of your DNS queries, which is also part of security. But I would say specifically it&#39;s more of a networking issue, definitely the web application firewall log is security-related. There&#39;s also Flow Logs that run on your Load Balancers, but finally, we&#39;re going to look at S3, your Simple Storage Service access logs. If you&#39;re storing sensitive information in a bucket, you might want to turn this on to record all of your uploads and your downloads, and your changes. So, let me show you that. If I go to S3, you can see I&#39;m in an S3 bucket called shanpics2019.</p>
+<p>It&#39;s just got a couple of objects in it. But if I go to the Properties of the bucket and I scroll down, obviously, we&#39;ve got Bucket Versioning, that&#39;s very cool, the Default encryption, that&#39;s definitely security-related, but we&#39;re talking about logging, and capturing information. So, here&#39;s Server access logging. So, you can Log all the requests for access to your bucket, but you can also have AWS CloudTrail data events. You&#39;re basically creating events in CloudTrail to log all of your object-level API operations and you can show that into the CloudTrail console. Event notifications also and you got, remember we saw EventBridge earlier.</p>
+<p>So, a lot of these services are going to work in concert with each other to help you locate logging information which will generally be in S3 buckets and capturing various events and metrics, and other data to help you manage security in the AWS cloud. <br /><br />[Video description begins] <em>A page titled shanpics2019-S3 bucket appears. It contains various tabs below, such as Objects, Properties, Permissions, Metrics, and so on. The Properties tab is active. Under this, there are sections like Bucket overview, Bucket Versioning, Tags, Server access logging, AWS CloudTrail data events, and so on.</em> [Video description ends] <br /><br />Now as far as specific questions go, I really think you should focus on CloudTrail. So, if they ask you what&#39;s a primary service for getting visibility into security events in the cloud, you really should gravitate towards CloudTrail.<br /><br />[Video description begins] <em>The page titled Create trail-CloudTrail reappears.</em> [Video description ends] <br /><br />And notice that in the AWS Security Incident Response Guide, if you go back up here, it&#39;s the first one on the list, that should tell you something. And again, we know that you can obviously get findings of the control plane operations, the management events, and the data or data plane operations.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Amazon Inspector (it_clawsp23_05_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/5ed1f8d4-e6c1-449a-b10e-923682a86cba/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/5ed1f8d4-e6c1-449a-b10e-923682a86cba/image001.jpg')();" /><div class="section_text"><p>Upon completion of this video, you will be able to describe how customers secure resources on AWS, for example, Amazon Inspector.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe how customers secure resources on AWS, for example, Amazon Inspector</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Inspector. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In the previous demonstration, we looked at the importance of using logs at Amazon Web Services. Another important vulnerability assessment tool at AWS is Amazon Inspector. Inspector is a managed vulnerability assessment service that continually scans AWS workloads for software vulnerabilities, gaps, and unintentional network exposures. It can automatically locate and scan running Elastic Compute Cloud (EC2) instances, container images in the Amazon EC2, the Container Registry, as well as AWS Lambda functions or serverless code for known vulnerabilities and unintended exposure. Amazon Inspector creates a finding when it discovers a software vulnerability or a network configuration issue.</p>
+<p>A finding describes the vulnerability, it identifies the affected resource, it rates the severity of the vulnerability, and it provides remediation guidance not unlike the CVSS in the National Vulnerability Database. Customers can analyze results using the Amazon Inspector console or visualize and process discoveries through other associated AWS services. Amazon Inspector will centrally manage multiple Amazon Inspector accounts, continuously scan your environment for vulnerabilities and network exposure. Assess vulnerabilities accurately with a risk score in Common Vulnerabilities Scoring System (CVSS) format. Identify high-impact findings with the Amazon Inspector dashboard, and manage your findings using customizable views. In the next lesson, we&#39;ll do a demonstration of the all-important Security Hub at Amazon Web Services.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Using AWS Security Hub (it_clawsp23_05_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/2c9d8e94-57ba-444c-ad29-4130eb819297/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/2c9d8e94-57ba-444c-ad29-4130eb819297/image001.jpg')();" /><div class="section_text"><p>In this video, you will learn how to work with AWS Security Hub.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with AWS Security Hub</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Security Hub. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>OK, in this demo, we&#39;re going to look at the very important AWS Security Hub service at Amazon Web Services. <br /><br />[Video description begins] <em>A page titled Security Hub | us-east-1 appears. It contains a search bar at the top, along with some icons and drop-downs, like the Notifications icon, Drop-down labeled N. Virginia, and so on. Below, there is a header: AWS Security Hub. On the right, there is a section titled Get started with Security Hub. It contains a button labeled Go to Security Hub.</em> [Video description ends]<br /><br />If I scroll down to the bottom here, here&#39;s a couple of Use Cases. Continuously scan your AWS accounts for configuration errors with various security standards and checks at the account and multi-account level. For example, if you&#39;re in an organization, you can also use its summary dashboards and filtering rules to identify and prioritize the findings that are most important and which need the most immediate attention.<br /><br />[Video description begins] <em>The bottom-most section titled Use Cases contains 2 items: Security scanning, and Triage and prioritize security issues. Under this, there is one more section titled Related services.</em> [Video description ends]</p>
+<p>If you go back up here, we can see How it works. Security Hub does automated security checks, running automated security checks over your entire AWS environment, consolidated, prioritized findings with Amazon GuardDuty, Amazon Inspector, and Amazon Macie. You&#39;ll learn about all three of those services in this training and then take action by building customized actions and then sending the findings to ticketing, chat, email, or automated remediation systems by integrating with Amazon EventBridge.</p>
+<p>And we saw earlier when we were looking at capturing and locating logs for cloud security, how CloudWatch also integrated with Amazon EventBridge. Something to keep in mind on the exam.<br /><br />[Video description begins] <em>On moving up, below the AWS Security Hub header, there is a section titled How it works. It contains 3 elements in it, such as Automated security checks, Consolidated, prioritized security findings, and Take action. On the right, there is a pane containing sections like Security checks, Finding ingestion events, More resources, and so on. Below this, there is yet another section titled Benefits and features.</em> [Video description ends] <br /><br />Now if we go to the Security Hub, a couple of things to remember. You&#39;re going to have to Enable AWS Config. So, before you can use it, you have to enable the recording into the AWS Config. And then we see down here that enabling AWS Security Hub grants permissions to perform security checks, and it&#39;s going to be using Amazon CloudWatch, Amazon SNS, the Simple Notification Service, AWS Config, and AWS CloudTrail.</p>
+<p>And you can see your best practices or benchmarks you can choose from. So, by default, they&#39;ve selected the AWS Foundational Security Best Practices and the Center for Internet Security, CIS AWS Foundations Benchmark Version 1.2. Notice we also have the CIS Foundations 1.4. We have the NIST SP 800-53 Revision 5 and PCI DSS benchmarks that we may also want to use if it&#39;s applicable to our particular business sector. <br /><br />[Video description begins] <em>A page appears with the header: Enable AWS Security Hub. Below, it contains 3 sections like Enable AWS Config, Security standards, and AWS Integrations. The Security standards section contains various items with checkboxes next to each one of them. A few of these items are Enable AWS Foundational Security Best Practices v1.0.0, Enable CIS AWS Foundations Benchmark v1.2.0, Enable PCI DSS v3.2.1, and so on.</em> [Video description ends]<br /><br />That&#39;s the Security Hub. In the next lesson, we&#39;ll look at our anti distributed denial-of-service features in the form of AWS Shield Standard and Shield Advanced.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Using AWS Shield (it_clawsp23_05_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/c1912fd3-4227-418d-a157-6d558b11238f/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/c1912fd3-4227-418d-a157-6d558b11238f/image001.jpg')();" /><div class="section_text"><p>During this video, discover how to work with AWS Shield Standard and Advanced.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with AWS Shield Standard and Advanced</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Shield. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this Web Safari, we&#39;re going to look at the AWS Shield service, which is your fully managed distributed denial-of-service protection service. Now we know that we have other protection services like GuardDuty, for example, but GuardDuty does not specifically have findings for DDoS attacks otherwise known as botnets. And also realize that Shield really goes hand-in-hand with the web application firewall. Now the WAF is going to run on your API Gateways, your CloudFront CDN distributions, your public-facing Elastic Application Load Balancers, but customers are going to use WAF and Shield together.</p>
+<p>You can see it really begins at about $3000 a month to get the DDoS protection along with the web application firewall which protects you against cross-site scripting, request forgeries, SQL injection, other injection attacks, buffer overflows, all those nasty OWASP top 10 things. And there&#39;s two versions of Shield. <br /><br />[Video description begins] <em>A page titled AWS Shield appears. It contains a search bar at the top, along with some icons and drop-downs, like the notifications icon, drop-down labeled Global, and so on. The left navigation pane contains the header: WAF &amp; Shield. Below, it has various collapsible items like AWS WAF, AWS Shield, AWS Firewall Manager, and so on. The AWS Shield section contains options like Getting started, Overview, Events, and so on. The main pane contains a header: AWS Shield. On the right, there is a section titled Get started with Shield Advanced. It contains a button labeled Subscribe to Shield Advanced. Underneath, there is a section: Global activity detected by AWS Shield. It contains a map within. It contains several details under the header: Last two weeks summary.</em> [Video description ends] <br /><br />Shield Advanced is what&#39;s going to cost you extra, and you have to have a support plan that&#39;s either a business support plan or an enterprise support plan. The enterprise on-ramp starts at 5500, the full enterprise starts at 15,000, and you have to have that to get the 24 hours a day, 7 days a week protection from the DDoS response team. So, this is really kind of a full enterprise security bundle for managed protection, continuous attack detection, automatic mitigations, and if you&#39;re a customer in good standing, you&#39;re going to get AWS Shield automatically.</p>
+<p>So, if you have a public subnet and you have instances that are creating TCP handshakes so they&#39;re doing single-packet authentication, going out to servers or services on the Internet, the traffic coming back is automatically protected with AWS Shield standard. And that&#39;s always free, part of the free tier model if you have an account in good standing. But Shield Advanced is, you know, something totally different. Here we see a summary of events detected by AWS Shield across all applications and if you have advanced, you&#39;ll get a specific dashboard for your applications. And we can see the most common vector, the SYN flood which is, you know, a classic denial-of-service attack. And then if we go down, it compares AWS Shield Standard which is again free and enabled by default to the AWS Shield Advanced. We&#39;re going to get Automated application or layer 7 of the OSI model traffic monitoring.</p>
+<p>You&#39;re going to get Customized detection and mitigation for your applications, Detection based on the health of your resources, Adaptive layer 3 &amp; 4 mitigation, Layer 7 anomaly detection. Attack Analysis and detailed reporting. Cloudwatch metrics, and again the 24 hours a day, 7 days support from the AWS Shield Response Team. And as I mentioned, you have to have a business or enterprise support plan for that and it&#39;s cost-effective because it&#39;s bundled your WAF requests for protected resources, you get that at no additional cost. Also the AWS Firewall Manager is bundled in at no extra cost.<br /><br />[Video description begins] <em>Down below, there are more sections like Account activity detected by AWS Shield, AWS Shield tier comparison, and others. The latter contains a table with 3 column headings: Features, AWS Shield Standard, and AWS Shield Advanced. It contains various sections like Active monitoring, Event visibility and reporting, Cost efficiency, and so on.</em> [Video description ends] <br /><br />So, that&#39;s AWS Shield. Remember on the exam, standard is always free and always on, protecting your public-facing resources, but Shield Advanced, a whole different story.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: AWS GuardDuty (it_clawsp23_05_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/24502661-fe10-4f7f-b65f-e250349b3aa0/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/24502661-fe10-4f7f-b65f-e250349b3aa0/image001.jpg')();" /><div class="section_text"><p>After completing this video, you will be able to outline key features of AWS GuardDuty.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline key features of AWS GuardDuty</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS GuardDuty. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>AWS GuardDuty. This is a managed threat detection service that constantly monitors for malevolent and unauthorized behavior. It watches out for unusual application programming interface calls (APIs), or potentially unauthorized deployments that indicate a possible account compromise or a zero day. Zero being the first day, it shows up in the wild. GuardDuty can detect potentially compromised instances or reconnaissance attacks by advanced persistent threat actors. The one thing that GuardDuty does not do is protect against denial-of-service or distributed denial-of-service attacks. That&#39;s for AWS Shield Standard and Shield Advanced. Also, there&#39;s no configuration with GuardDuty. You just turn it on and you&#39;re charged according to your usage of Amazon Web Services.</p>
+<p>GuardDuty utilizes proprietary machine learning and artificial intelligence (AI) along with strategic partners like CrowdStrike, Splunk, Trend Micro, Trustwave, Rapid7, and Alert Logic. It detects suspicious or unexpected behavior and generates a finding, which is a notification that has the details about an imminent security issue. The finding details include information about what occurred, what AWS resources were involved, for example S3, EC2, or disabling CloudTrail logging in the suspicious activity. It also has a date and timestamp of when the activity took place along with other metadata. The finding type provides a description of the potential security issue. For example, in the reconnaissance finding category after the colon, we see the particular service involved, EC2, and then the finding port probe of an unprotected port. And GuardDuty now uses AI to conduct &#34;pre-crime&#34; identification of bad actors 7-10 days in advance of a malware release or the aforementioned zero day.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Comparing Encryption Options at AWS (it_clawsp23_05_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/ce6c0b03-5d40-4766-894a-414ac5f4380b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/ce6c0b03-5d40-4766-894a-414ac5f4380b/image001.jpg')();" /><div class="section_text"><p>In this video, you will compare encryption options at AWS.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare encryption options at AWS</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Encryption Options at AWS. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this demonstration, we&#39;re going to talk about your most popular or the most common encryption options at Amazon Web Services. We&#39;re not going to get deep here because there&#39;s no configuration on the exam. We want to have a general understanding of our options. So, let&#39;s begin with block storage or volume storage at the very popular EC2 Elastic Block Store. <br /><br />[Video description begins] <em>A page titled Dashboard | EC2 Management appears. It contains a search bar at the top, along with some icons and drop-downs, like the notifications icon, a drop-down labeled N. Virginia, and so on. The left navigation pane contains a button: New EC2 Experience at the top. Below, it has various collapsible sections like Instances, Images, Elastic Block Store, and so on. The Elastic Block Store section contains options like Volumes, Snapshots, and so on. The main pane contains various sections like Resources, Launch instance, Service health, and so on. There are a few tabs on the right, labeled Account attributes, Explore AWS, and so on.</em> [Video description ends]<br /><br />If we go and we go to the Volumes area, we can see that we&#39;ve got a couple of volumes here already. <br /><br />[Video description begins] <em>The Volumes option is highlighted under the Elastic Block Store section. The main pane displays the header Volumes. It contains a Refresh button, a button labeled Create volume, and a drop-down labeled Actions at the top. There is a table underneath, with column headings like Name, Volume ID, Type, Size, and so on.</em> [Video description ends]<br /><br />Let&#39;s Create a volume. And so, we&#39;re going to choose the Volume type. We have several solid-state drive options from the least expensive to the most expensive. Also a couple of hard disk options. Remember, this is virtualized network storage across the AWS data center.</p>
+<p>So, we&#39;ll just stick with the General Purpose solid-state, the Size, it&#39;s going to default to a 100 gigabytes. But the important thing is down here under Encryption. So, we can say Encrypt this volume and then we can choose a key from the key management service. So, we have a key of our own. We can choose and use that key or we could use the AWS. They&#39;ll create a key for us. And I&#39;m going to show you the key management system here in a second. So, these are a couple of the options that we have to encrypt the volume. Now, one thing you could do is you could do client-side encryption in the sense that you&#39;re going to put encrypted files on this Elastic Block Store volume. So, that&#39;s an option as well. So that&#39;s, you know, encryption of our volume, that&#39;s going to be AES 256 by the way, Advanced Encryption Standard.</p>
+<p>The other very popular thing that you&#39;re going to encrypt would be S3 buckets. <br /><br />[Video description begins] <em>A page titled Create volume appears. It contains a section: Volume settings. It further contains various fields in it, such as Volume type, Size (GiB), IOPS, Availability Zone, and so on.</em> [Video description ends]<br /><br />So, let&#39;s go to S3, take a look at my S3 bucket shanpics2019, and if you go to here to Properties, and scroll down, we&#39;ll see Default encryption. <br /><br />[Video description begins] <em>A page titled S3 Management Console appears. There are various options on the left navigation pane, such as Buckets, Access Points, Dashboards, and so on. The main pane displays a section at the top, labeled as Account snapshot. Below, there is a section called Buckets. It contains various buttons below, like Copy ARN, Empty, Delete, and so on. Under this, there is a table with 4 column headings: Name, AWS Region, Access, and Creation date. It contains various items. One of them is shanpics2019.</em> [Video description ends] <br /><br />So, notice with this server-side encryption option, they&#39;re using right now the Server-side encryption with Amazon S3 managed keys. So, this is what we call SSE followed by the service. So, the encryption and decryption keys here are all managed by S3. OK, earlier when I showed you the keys that I was going to use on that Elastic Block Store volume, I could use my own KMS keys across multiple different services.<br /><br />[Video description begins] <em>A page titled shanpics2019-S3 bucket appears. It contains various tabs below, such as Objects, Properties, Permissions, Metrics, and so on. The Properties tab is active. Under this, there are sections like Bucket overview, Bucket Versioning, and so on. Below, there is a section labeled Default encryption. It contains 2 fields: Encryption type and Bucket Key. There is an Edit button available at the top right corner of the section.</em> [Video description ends] <br /><br />So, if I click on Edit here, I could say, you know, let&#39;s do Server-side encryption with the AWS key manager option. And then I could say Choose one of my keys and here&#39;s that same key that we saw just a moment ago.<br /><br />[Video description begins] <em>A corresponding page titled Edit default encryption appears. It contains 4 fields: Encryption type, AWS KMS key, Available AWS KMS keys, and Bucket Key.</em> [Video description ends]</p>
+<p>It&#39;s just a bunch of random letters. But here&#39;s the key that I saw that I had it in KMS and my own customer managed key. So, that&#39;s an option, when you use KMS, you can use the same encryption key, AES 256 to encrypt the objects in this bucket. I can use the same key to encrypt the data that&#39;s on the Elastic Block Store volume. OK, something that&#39;s new that probably won&#39;t be on the exam, but it&#39;s called Dual-layer server-side encryption with AWS Key Management Services. So, securing your objects with two separate layers of encryption, and that&#39;s going to cost you, OK. Let&#39;s go up here to Buckets and let&#39;s Create a bucket and let&#39;s call this AWS.</p>
+<p>There&#39;s no configuration on your exam. So, you know, don&#39;t worry about having to memorize any of this test bucket and we&#39;ll go ahead and we can copy the settings from a bucket. But we&#39;re not going to do that. And notice, by default, all public access is blocked. And notice, that they&#39;ve asked you to do Default encryption, so Server-side <br /><br />[Video description begins] <em>A page titled Create bucket appears. It contains a section: General configuration. It further contains various fields in it, such as Bucket name, AWS Region, and so on. Under this, there are some more sections like Object Ownership, Block Public Access settings for this bucket, Default encryption, and so on.</em> [Video description ends]<br /><br />encryption is automatically applied to new objects stored in this bucket. So, on this new version of the Cloud Practitioner exam, notice that server-side encryptions automatically apply. So, before you could do client-side encryption, well, you could basically say no encryption on this bucket, and then you could upload your own encrypted files. AWS doesn&#39;t do that anymore. So, really now you have three different server-side options.</p>
+<p>So, on the exam, remember you can have S3 manage the keys, server-side encryption S3, where these keys are only used in the S3 service. Or you can use customer managed keys from KMS and you can either use ones that you have or they&#39;ll generate one for you. Or there&#39;s this new Dual-layer server-side encryption (DSSE-KMS). Now, speaking of the KMS, let&#39;s go ahead and look at that service real quick. I&#39;m going to leave this bucket. But notice I&#39;ve got one customer managed key here. This is the one that you saw. OK, it&#39;s a Symmetric type key. <br /><br />[Video description begins] <em>A page titled KMS Console appears. The left pane displays the header: Key Management Service (KMS). Below, there are options like AWS managed keys, Customer managed keys, Custom key stores, External key stores, and so on. The main pane displays the header Customer managed keys. It contains a Create key button at the top, along with a drop-down labeled Key actions. There is a table underneath, with column headings: Aliases, Key ID, Key type, Key spec, and so on.</em> [Video description ends]<br /><br />If you click on Create keys, notice you can choose Symmetric keys and you can say I want to create Symmetric keys to Encrypt and decrypt or I want to use Symmetric keys to Generate and verify Message Authentication Code. So, I&#39;m only using this key to generate and verify HMACs.</p>
+<p>I can use the key pair. Generally, we&#39;re talking about, you know, RSA20048 something like that. You can see that would be the baseline. So, RSA_20048, which means that the key space is 2 to the 2048 power, which is really large. But obviously, we get exponentially stronger with 3072 or 4096. And generally speaking, you&#39;re going to choose the largest key pair, the strongest keying material that you can agree upon. And then you can also create keys to do digitally signing, OK. So, when you digitally sign something, basically you&#39;re taking the input, let&#39;s say the API, running it through a hash function, and you&#39;re encrypting that hash. And you can see other options here besides RSA. We start getting into things like Elliptic Curve Cryptography, which is excellent for like mobile devices and IoT and things like that, smart appliances, embedded devices. So, that&#39;s the KMS service, that&#39;s as far as I really want to go and just showing you the different types of keys at the key management service.<br /><br />[Video description begins] <em>The page now displays the header: Configure key. The left navigation pane contains options like Step 1, Step 2, Step 3, Step 4, and Step 5. The main pane displays various sections, such as Key type, Key usage, Key spec, and so on. The Key type section contains 2 options: Symmetric, and Asymmetric. The Key usage section also contains 2 options like Encrypt and decrypt, and Sign and verify.</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Governance and Compliance Services (it_clawsp23_05_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/aadfda2a-594b-41d0-b39d-14f5c9dca29b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/aadfda2a-594b-41d0-b39d-14f5c9dca29b/image001.jpg')();" /><div class="section_text"><p>Upon completion of this video, you will be able to recognize services that aid in governance and compliance, including Amazon CloudWatch, AWS CloudTrail, AWS Audit Manager, and AWS Config.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">recognize services that aid in governance and compliance, including Amazon CloudWatch, AWS CloudTrail, AWS Audit Manager, and AWS Config</li></ul><div class="section_text">[Video description begins] <em>Topic title: Governance and Compliance Services. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Governance and Compliance Services. There are a plethora of services that assist in governance and compliance at Amazon Web Services. Although the following services have a number of different use cases, Amazon CloudWatch, AWS CloudTrail, AWS Audit Manager, and AWS Config are commonly utilized to support organizational governance and compliance with access reporting. CloudWatch gathers and visualizes real-time logs, metrics, and event data in automated dashboards to streamline infrastructure and application maintenance, both of which are part of governance.</p>
+<p>CloudTrail allows you to view, search, download, archive, analyze, and respond to API activity across the AWS infrastructure, a key service for compliance. AWS Audit Manager maps customer compliance requirements to AWS usage data with prebuilt and custom frameworks and automated evidence collection. You cannot separate auditing from governance and compliance. And AWS Config. This service continually assesses, audits, and evaluates the configurations and relationships of AWS resources in on premises, and other clouds. On the exam, remember these four key services that support governance and compliance at Amazon Web Services.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_05_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/98848da5-aef5-4f0a-bef1-b88fb3f84729/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/98848da5-aef5-4f0a-bef1-b88fb3f84729/image001.jpg')();" /><div class="section_text"><p>In this video, we will summarize the key concepts covered in this course.</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this course, you learned the benefits of cloud security and logging. You explored Amazon Inspector, AWS Security Hub, AWS Shield, and AWS GuardDuty. And you learned about encryption, governance, and compliance. Coming up in the next course, you&#39;ll explore AWS access management.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

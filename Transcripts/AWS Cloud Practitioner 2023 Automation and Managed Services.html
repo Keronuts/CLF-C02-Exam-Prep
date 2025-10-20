@@ -1,0 +1,355 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Automation &amp; Managed Services</h1><div class="section_text">It is an established fact that when an organization can remove human error from their infrastructure configuration, the environment will be more consistent, secure, and optimized. Automation and orchestration are vital services in the cloud. 
+
+In this course, the learner will discover the benefits of automation in the AWS cloud. This approach will also be critical when deploying managed services such as Amazon Relational Database Service (Amazon RDS), Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon DynamoDB, AWS Lambda, and Amazon Simple Storage Service (S3), all of which will be surveyed in this course.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_03_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Benefits of Automation (it_clawsp23_03_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Amazon Relational Database Service (RDS) (it_clawsp23_03_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Amazon Elastic Container Service (ECS) (it_clawsp23_03_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Amazon Elastic Kubernetes Service (Amazon EKS) (it_clawsp23_03_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Surveying Amazon DynamoDB (it_clawsp23_03_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Surveying AWS Lambda (it_clawsp23_03_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Examining Amazon Simple Storage Service (S3) (it_clawsp23_03_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Course Summary (it_clawsp23_03_enus_09)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_03_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/37b71804-3d59-46ea-9bfc-31a3c5ce825e/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/37b71804-3d59-46ea-9bfc-31a3c5ce825e/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. The host for this session is Michael Shannon.</em> [Video description ends]
+<p>Automation and managed services.</p>
+<p>It is an established fact that when an organization can remove human error from its infrastructure configuration, the environment will be more consistent, secure, and optimized. Automation and orchestration are vital services in the cloud.</p>
+<p>Learning objectives for this course will be:To outline the benefits of automation in the AWS cloud. <br />To describe Amazon Relational Database Service (RDS), Amazon Elastic Container Service (Amazon ECS), Amazon Elastic Kubernetes Service (Amazon EKS), Amazon DynamoDB, AWS Lambda, and Amazon Simple Storage (S3).</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Benefits of Automation (it_clawsp23_03_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/f9ab902d-a4e6-4b8e-bf36-e32baadd4ff6/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/f9ab902d-a4e6-4b8e-bf36-e32baadd4ff6/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to identify the benefits of automation.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">identify the benefits of automation</li></ul><div class="section_text">[Video description begins] <em>Topic title: Benefits of Automation. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Let&#39;s begin this course looking at the benefits of automation.</p>
+<p>A beneficial mental image for automation through Infrastructure as Code or IAC, is to imagine an architect’s drawing actually coming to life in two dimensions or even three dimensions. Just as a blueprint with walls, doors, and windows can be converted into a real brick-and-mortar building, so too can load balancers, databases, or network infrastructure be written in source code and then instantiated (or terraformed).</p>
+<p>Contemporary monolithic or container based architectures benefit greatly from infrastructure-level automation. With virtual machines, IT teams can easily replicate environments, and create stacks and templates of operating system states, to use as they need.</p>
+<p>The host operating system became immutable and disposable, and with cloud computing the idea exploded and scale was added to the solution. There&#39;s no need to predict the future when you can simply provision on demand for what you need, and pay for what you use.</p>
+<p>Organizations can also automate compliance in the cloud. By introducing compliance requirements early in the product or service life cycle, customers can ensure that they address policy and regulation objectives while improving their value proposition, whether it be a product or a service.</p>
+<p>Automating compliance in the cloud has three benefits. There&#39;s an immediate cost savings. Shifting workloads to the cloud, logically encourages greater automation, and when the automated process identifies a problem, the remediation can be much easier to deploy.</p>
+<p>Automation in AWS emphasizes the setup, configuration, deployment, and support of infrastructure and the applications that run on it. By leveraging automation tools, customers of AWS can roll out environments more quickly in a standardized, consistent, and repeatable way.</p>
+<p>The removal of manual processes is a critical success factor (CSF) in an effective DevOps strategy. And the main service for automation and Infrastructure as Code in AWS, is AWS CloudFormation.</p>
+<p>Here’s eight reasons to use AWS’ Infrastructure as Code CloudFormation service:</p>
+<p>It&#39;s a free and managed service.</p>
+<p>Human errors and configuration errors can be avoided. The architecture code is kept in your repository. You can create environments with re-usable templates.</p>
+<p>Costs are reduced by deleting unused stacks and re-creating them later.</p>
+<p>It’s easy to learn with YAML, Yet Another Markup Language, or JSON, JavaScript Object Notation Language.</p>
+<p>The templates are self-explanatory.</p>
+<p>And finally, it&#39;s integrated with practically all AWS services.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Amazon Relational Database Service (RDS) (it_clawsp23_03_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/1a34296c-3b8d-4223-8324-8dada5d871bb/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/1a34296c-3b8d-4223-8324-8dada5d871bb/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to provide an overview of the Amazon Relational Database Service (RDS).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of the Amazon Relational Database Service (RDS)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Relational Database Service (RDS). Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>Alright. Let’s do a quick survey of the AWS Relational Database Service. [Video description begins] <em>The Amazon RDS dashboard is open on screen. It displays three panes. The left pane lists a variety of tabs. The middle lists Resources. The right pane displays a Recommended for you section.</em> [Video description ends]</p>
+<p>We could go to the Splash page, but I’m going to go ahead and go into the Amazon RDS Dashboard.</p>
+<p>Remember, on the exam there is no configuration. So by no means will you have to memorize anything here. But notice that we’re using the following RDS resources, so far none. But we’re in the US East (N. Virginia) region.</p>
+<p>Let&#39;s come down here where it says create a database. [Video description begins] <em>The host scrolls down in the Resources section and clicks on the Create Database button to open the Create Database tab.</em> [Video description ends]</p>
+<p>You have a couple of options. You can go with a Standard create where we can set all the configuration options, we can do our availability settings, security, backups, and maintenance, or they have an Easy create option. This is the recommended best practice configurations.</p>
+<p>But you can always change them, of course, after the fact. On the exam, it&#39;s important to realize that the RDS service is going to support five different platforms. So on the CLF-C02 exam, they have two types of questions. Several questions that have five possibilities, and you have to choose two of the five possibilities.</p>
+<p>So looking at this right here, this looks pretty prototypical of what you might see on the exam. For example, we’re going to talk more about Amazon Aurora.<br /><br />[Video description begins] <em>The host scrolls down to where Engine options are listed with their logos and radio buttons that allow you to select any one of them.</em> [Video description ends] <br /><br />But if they ask you which two of these five platforms are supported by Amazon Aurora, the two correct answers would be MySQL and PostgreSQL. You can also see that they support MariaDB, Oracle, and Microsoft SQL Server. <br /><br />So for most of you early practitioners, you’d want to do the Easy create option, and then go down and choose one of these options. Remember, this is still a managed platform as a service offering if you choose MariaDB, or Oracle, or Microsoft SQL Server. But Aurora offers what we call fully-managed.</p>
+<p>Then you can go down and you can choose your DB instance size. [Video description begins] <em>The host scrolls down and the Auto generate a password option, which is checked, becomes visible. He then scrolls down further.</em> [Video description ends] <br /><br />Probably beginning with the Dev/Test option as opposed to the Production option. Create a name for your DB cluster and then a Master username, which would be the ID of the master user of your database instance. And you can have them Auto generate a password for you right there.</p>
+<p>If you want to, you can set up an EC2 connection after creating the database and of course finally viewing the default settings for easy create would be right here. [Video description begins] <em>He clicks on View default settings for easy create to expand its contents, displaying a table with the default settings such as encryption, VPC and more.</em> [Video description ends]</p>
+<p>As I mentioned, there&#39;s no configuration on this exam, but you definitely want to know the five different platforms that are supported by Amazon RDS.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Amazon Elastic Container Service (ECS) (it_clawsp23_03_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/98272ca0-cff8-4d2d-b82f-1b7b4a340f11/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/98272ca0-cff8-4d2d-b82f-1b7b4a340f11/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to provide an overview of the Amazon Elastic Container Service (ECS).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of the Amazon Elastic Container Service (ECS)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Elastic Container Service (ECS). Presented by: Michael Shannon.</em> [Video description ends]
+<p>Containers are a very popular way to develop applications at Amazon Web Services. Whether you use Agile or CI/CD as your development life cycle, it&#39;s very likely you&#39;re developing with containers.</p>
+<p>But before we look at the different services offered at AWS, let&#39;s define what containers are.</p>
+<p>It’s a standard unit of software that packages code and all of its dependencies. And the application can run rapidly and reliably from one computing environment or platform to another. For example, from Windows to macOS to Linux.</p>
+<p>A container image is a lightweight, standalone, executable bundle of software that comprises everything necessary to run an application, including the code, the runtime environment, system tools, libraries, dependencies, and settings. Container images become containers at runtime and often when they run on an engine.</p>
+<p>As mentioned, containers are a key component of modern app development. They have become the standard way to organize, compute resources, and manage the content of your application deployments. Containers provide a discrete reproducible compute environment. They also provide a way to simplify packaging and dependency management.</p>
+<p>Amazon ECS is a fully managed container orchestration service that streamlines the customer’s deployment, management, and scaling of containerized applications. The developer simply describes their application and the resource required in the ECS service.</p>
+<p>Amazon ECS will launch, watch, and scale the application along with the elastic compute options. ECS also provides automatic integration with other supporting AWS services that the application needs. For example, AWS Fargate.</p>
+<p>Customers can conduct system operations in ECS. They can generate custom scaling and capacity rules. They can monitor and query data from application logs and telemetry.</p>
+<p>Here, we can see how ECS works from either the developer or the operations standpoint. In other words, DevOps. From the developer standpoint, [Video description begins] <em>A flowchart representing the ECS workflow is displayed on screen. Two headers, Developers and Operaters flow into Amazon ECS which has two outputs - Configuration, and Deployments and scaling. Deployments and Scaling routes back to Amazon ECS through Application telemetry, while Amazon Elastic Container Registry forms an independent input for Deployments and scaling. The host describes each component in further detail.</em> [Video description ends] you describe your application and the resources it needs and then let Amazon ECS take over from there.</p>
+<p>Operators can create custom scaling and capacity rules and observe and query telemetry and logs from running applications.</p>
+<p>Both developers and operators are inputs into the ECS service. Services that are used for deployments and scaling would be AWS Fargate or serverless containers. Amazon EC2, for example running on Graviton or Intel processors. There’s also Amazon ECS Anywhere for hybrid computing. With AWS Outposts, you can deploy to AWS Local Zones in metropolitan areas or for 5G leverage AWS Wavelength.</p>
+<p>All of these services can send application telemetry back to ECS and then back to the operators.</p>
+<p>Another important tool with ECS is the Amazon Elastic Container Registry or ECR. Here you can build and store container images using Amazon ECR or another container registry. For example, GitHub.</p>
+<p>And notice that ECS has automated integration with Elastic Load Balancing, Amazon Elastic File System, and the AWS Secrets Manager for configuration purposes.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Amazon Elastic Kubernetes Service (Amazon EKS) (it_clawsp23_03_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/bde9201a-ce48-4b2c-9028-700fc110dfc3/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/bde9201a-ce48-4b2c-9028-700fc110dfc3/image001.jpg')();" /><div class="section_text"><p>After completing this video, you will be able to provide an overview of the Amazon Elastic Kubernetes Service (EKS).</p></div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of the Amazon Elastic Kubernetes Service (EKS)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Elastic Kubernetes Service (Amazon EKS). Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this lesson, let’s learn about the Amazon Elastic Kubernetes Service or Amazon EKS. AWS customers can choose between two fully managed container services: Amazon’s ECS or the Amazon EKS for Kubernetes.</p>
+<p>Both services support a wide-ranging assortment of compute options. They have strong integration with other AWS services and they offer the global scale and reliability that customers have come to expect from Amazon Web Services.</p>
+<p>Amazon EKS is a managed Kubernetes service to operate Kubernetes container orchestration in the AWS cloud and on-premises data centers. In the cloud, EKS automatically controls and manages the availability and scalability of the Kubernetes control plane nodes that schedule containers such as Docker and Podman. Manage application availability, store cluster data and conduct other key tasks for cloud developers.</p>
+<p>With Amazon EKS, customers can utilize all of the performance, scaling, availability, reliability, and durability of the AWS infrastructure. They can interoperate with AWS networking and security services. On-premises,</p>
+<p>EKS provides a dependable, fully-supported K8 or Kubernetes solution with integrated tooling and fundamental deployment to hybrid cloud sites, virtual machines, or bare metal servers.</p>
+<p>First you would create your Kubernetes clusters. This is powered by Amazon EKS Distro.</p>
+<p>[Video description begins] <em>A flowchart appears on screen. Amazon EKS has two outlets - AWS Fargate and Amazon EC2. These are pointed towards Run Kubernetes apps that further points towards Amazon EKS dashboard in the AWS console.</em> [Video description ends] <br /><br />Then you can transport those to AWS Fargate to deploy serverless containers or to EC2 to deploy worker nodes for your EKS cluster. For example, on Windows Server 22 or Red Hat enterprise.</p>
+<p>Then run your Kubernetes apps and then view and explore running Kubernetes apps in the AWS EKS dashboard in the AWS console.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Surveying Amazon DynamoDB (it_clawsp23_03_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/ba685d11-eb95-4c80-8e88-71251f725870/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/ba685d11-eb95-4c80-8e88-71251f725870/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the use of DynamoDB.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the use of DynamoDB</li></ul><div class="section_text">[Video description begins] <em>Topic title: Surveying Amazon DynamoDB. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;ll take a quick look at Amazon DynamoDB. <br /><br />[Video description begins] <em>The Amazon DynamoDB dashboard is open. It has a list of tabs in the left pane, the How it works section in the middle pane, and the Get starting and Pricing sections on the right.</em> [Video description ends] <br /><br />Dynamo actually has its roots in about 2004, when for some reason that year, more people than ever decided they were going to do online shopping. And basically the databases that were used by Amazon.com got completely overwhelmed. In fact, they were thrashed and it caused Amazon quite a bit of issues and headaches with their customers.</p>
+<p>So over the years, they realized they were going to need a new solution. And that’s where DynamoDB comes from.</p>
+<p>It’s a fast and flexible NoSQL database. Now NoSQL means that by default it doesn’t use Structured Query Language like a relational database system like we saw earlier, MySQL, PostgreSQL,</p>
+<p>Microsoft SQL. So it&#39;s deployed as a fully managed, key-value document database that delivers single-digit-millisecond performance at any scale. And it&#39;s actually used by hundreds of thousands of customers all over the world. In fact, it’s the number one solution for mobile, web, gaming, advertising technology, IoT and other things, supporting some of the world&#39;s largest scale applications. <br /><br />[Video description begins] <em>The host scrolls down. A video on What is DynamoDB becomes clearly visible in the middle pane now, with a description below that the host describes. Benefits and features of the system are listed further below.</em> [Video description ends]</p>
+<p>Also, DynamoDB is serverless. There&#39;s no provisioning, patching, or managing servers. It doesn&#39;t run on Windows or Linux. You don’t have to install, maintain, or operate software. It just automatically scales tables up and down to adjust for capacity and your performance. So it&#39;s built for mission critical workloads.</p>
+<p>If we go up here, we can create a table. Although on the exam you won’t be doing this. <br /><br />[Video description begins] <em>The host now scrolls back up to click on Create table in the Get started section. The Create table tab opens up, with multiple sections that the host describes ahead.</em> [Video description ends]<br /><br />You can name your table. Choose a partition key, which is an aspect of the table&#39;s primary key. It&#39;s a hash value and it can be a string or a number or a binary along with your sort key. You can go with the default settings or you can customize your settings.<br /><br />[Video description begins] <em>The screen now transitions into another tab. We see the Cheat sheet option, from within the How it works section, selected on the left pane.</em> [Video description ends]</p>
+<p>Here we can see a cheat sheet where you would create a table using the AWS Command Line Interface or AWS CLI. Pretty simple. It’s got aws dynamodb followed by create-table<br /><br />Then you have your other parameters. You can write to the table with a put item. You can get from the table with a get item. You can delete an item from the table or you can query a table with</p>
+<p>the query command. You won&#39;t need to know much more about Amazon DynamoDB on this exam. But if you want to know more, there&#39;s plenty of documentation and videos up at AWS.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Surveying AWS Lambda (it_clawsp23_03_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/b40d2dc8-9590-46ce-aec0-0b22febfd755/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b40d2dc8-9590-46ce-aec0-0b22febfd755/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to outline AWS Lambda and functions as a service.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline AWS Lambda and functions as a service</li></ul><div class="section_text">[Video description begins] <em>Topic title: Surveying AWS Lambda. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In the previous lesson, we looked at a serverless service known as DynamoDB. Let&#39;s look at one of the most common and popular serverless options from a compute standpoint, and that’s AWS Lambda, where you run code without even thinking about servers. No Linux, no Windows.</p>
+<p>And they can be triggered by a wide variety of different things. [Video description begins] <em>The AWS Lambda home page is open on screen. It has a section on the top that describes the software, with a Get started box on the right. The bottom sports a How it works section.</em> [Video description ends] <br /><br />An API call, a CloudWatch alarm, manually, or trigger by a security event to name a few. The great thing about Lambda is you only pay for the compute time that you consume.</p>
+<p>So you don’t need to run consistent persistent servers or containers and there’s no charge if your code isn’t running. And you can run code for virtually any type of application, or backend service with no administration.</p>
+<p>As you can see down here, you have several options to create your Lambda function.<br /><br />[Video description begins] <em>The host scrolls down to make a simple Lambda function visible, with a few lines of code. It has numerous language options at the top of the section, that the host goes over, along with the Run button on the Top right.</em> [Video description ends] <br /><br />Most people use Node.js, but you can use .NET Go, Java, Python, or Ruby if you prefer one of those.</p>
+<p>Here we see a simple &#39;Hello from Lambda!&#39; function. They say just click on the run here and it returns &#34;Hello from Lambda!&#34; <br /><br />[Video description begins] <em>A green bar with &#34;Hello from Lambda!&#34; is displayed is response to the run command.</em> [Video description ends] <br /><br />Let&#39;s go up here and just create a function and see our options. <br /><br />[Video description begins] <em>The host scrolls back up to click on the Create function button in the Get started box. A new tab with multiple options to create a function opens up. The three ways to create a function are listed: Author from scratch, Use a blueprint, and Container image. The first function is selected by default.</em> [Video description ends]<br /><br />You can do it from scratch.</p>
+<p>So it&#39;ll ask for some basic information, for example, what&#39;s the name of your function? And then what of the aforementioned options you’re going to use, the latest supported and others. And then the architecture. You want to be on an Intel or an ARM architecture.</p>
+<p>You can also set permissions and other advanced settings. I want to show you Use a blueprint because here you can build a Lambda application from sample code for common use cases.</p>
+<p>Let&#39;s check those out. If we move down here, we see the Blueprint name. [Video description begins] <em>The host selects the radio button next to Use a blueprint and then scrolls down.</em> [Video description ends] <br /><br />There’s the Hello world function that we just saw. It&#39;s in Nodejs14.x But if you open this up, you can see a wide variety of options like Create a microservice that interacts with DynamoDB.</p>
+<p>We saw DynamoDB in the previous lesson. Get an object from an S3 bucket. Or use Lambda HTTP creating an HTTP endpoint that outputs a server side rendered web page. You can make an HTTPS request using TLS. We can throw a custom error.</p>
+<p>We can go down here and have a config rule that&#39;s triggered by an EC2 configuration change. You can get a batch job, you can process CloudWatch log data, submit a batch job, do a bunch of things with event streams like kinesis.</p>
+<p>You&#39;ll learn more about that in this course. And then automation, one of my favorites. Log to a Splunk host. One of the most common places to run your function, by the way, is behind an Application Programing Interface Gateway or the AWS API Gateway. We&#39;ll learn more about that later in this training course.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Examining Amazon Simple Storage Service (S3) (it_clawsp23_03_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/b96272ff-16ff-43d5-934e-a5dc6ae20cba/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b96272ff-16ff-43d5-934e-a5dc6ae20cba/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to provide an overview of Amazon Simple Storage Service (S3).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of Amazon Simple Storage Service (S3)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Examining Amazon Simple Storage Service (S3). Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this demonstration, we&#39;re going to look at Amazon Simple Storage Service or S3. And when you store data in S3, you store it in a container known as a bucket.</p>
+<p>And it tells you right here buckets are containers for data stored in S3. [Video description begins] <em>The Amazon S3 home page is open. The left pane has a list of tabs. The right pane has two sections: Account snapshot and Buckets. The host points to the latter.</em> [Video description ends]<br /><br />And you can see that I have a bucket called shanpics2019. Let&#39;s go ahead and take a look at this bucket.<br /><br />[Video description begins] <em>The host clicks on one of the buckets listed under the Buckets section to open a new tab. The tab displays many options just below the tab name, including Objects, Properties, Permissions, and more. Objects is selected by default.</em> [Video description ends]</p>
+<p>In this bucket, I simply have just one object sailboat.jpg, j p g. This is the kind of information you put in S3. This is object storage. So we call this unstructured data - graphics files, pictures, video files, audio files, things that you’re archiving, may be word documents, and PDF files. <br /><br />So it&#39;s not structured data like you would see in a spreadsheet or a SQL database, and it&#39;s not semi-structured data, which would be things like JSON, JavaScript Object Notation language, and YAML, Yet Another Markup Language, or XML. It&#39;s object storage or as other cloud providers call it, blob storage.</p>
+<p>Let’s go to Permissions first. There&#39;s something very important to know about buckets that you create by default in S3. Realize that by default the Block all public access feature is turned on.</p>
+<p>In other words, there&#39;s no access either using a URL or an API publicly to this bucket. You have to explicitly grant access to that bucket. Also, the main way we provide security is to use bucket policies. Bucket policies are written in JSON and these basically say what API calls can be made through</p>
+<p>the AWS meta structure to this particular bucket. And there are other alternatives. For example, you can use access control list on individual objects in the bucket, but AWS is discontinuing that and they&#39;ve been frowned upon for several years.</p>
+<p>If we go to properties, one thing to also understand about object storage is it has lots of extensible metadata that can be attached to the bucket or the objects.</p>
+<p>So for example, you can turn on Bucket Versioning. Maybe you’re going to store code in this bucket, or PDFs, or documents, or a version of a movie, or a song. <br /><br />[Video description begins] <em>The host scrolls down to explain various sections as they continue to appear.</em> [Video description ends]</p>
+<p>Also notice that the Default encryption is server-side encryption with Amazon S3 managed keys, that is server-side encryption. And it says that automatically any new object will have this encryption.</p>
+<p>This is a more traditional or legacy method of server-side encryption. In this training you&#39;ll learn about the preferred method, which is to use KMS, the Key Management System.</p>
+<p>If we go down to the bottom here, we can have CloudTrail, which is going to monitor API operations so we can turn that on.</p>
+<p>Static website hosting. You can actually find videos on YouTube about this. Remember there&#39;s a free tier model where you get free access to S3 for 365 days. So you could actually create a frontend bucket where your HTML files are, and a backend bucket where let’s say your graphics are, and create a static website. <br /><br />Amazon S3 will give you a URL that&#39;s part of the Amazon Namespace. You could create a tiny URL to represent that, or you could use your own domain name. For example, going to Route 53 and registering a domain name.</p>
+<p>And that could point to this bucket. So you could get a free website that&#39;s a static website. There&#39;s no server-side processing of anything. But for a year you could have a free website, let’s say pictures of your puppies, or your vinyl LP collection, or whatever, free for a year.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Course Summary (it_clawsp23_03_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/7bdf9d0c-748f-4727-91d7-aca6e8e7862d/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/7bdf9d0c-748f-4727-91d7-aca6e8e7862d/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this course, you learned the benefits of automation and AWS Relational Database Service.</p>
+<p>You learned about the Elastic Container Service (ECS), Elastic Kubernetes Service (EKS), and Amazon DynamoDB, Amazon Lambda, and Amazon S3.</p>
+<p>In the next course, you&#39;ll learn about the shared responsibility and compliance models of Amazon Web Services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

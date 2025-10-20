@@ -1,0 +1,332 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Migration to the AWS Cloud &amp; Cloud Economics</h1><div class="section_text"><p>There is a profound saying in the Art of War by the renowned Chinese general Sun Tzu: &#34;Tactics without strategy is the noise before defeat&#34;. It is critical that all potential customers of AWS understand migration options, strategies, and all aspects of AWS cloud economics before placing a single file, data, or app into the cloud. In this course, you will discover the benefits of the AWS Cloud Adoption Framework (AWS CAF) and identify proper migration strategies. Then you will focus on the economic aspects of cloud migration, including costs of on-premises environments, cost savings from moving to the cloud, fixed vs. variable costs, and licensing strategies. Finally, you will explore the concept of right sizing, in order to map the appropriate workload performance and capacity requirements for your organization to the lowest feasible cost. This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</p></div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_02_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Cloud Adoption Strategies and Resources (it_clawsp23_02_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Outlining the AWS Cloud Adoption Framework (it_clawsp23_02_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Appropriate Cloud Migration Strategies (it_clawsp23_02_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Costs of On-premises Environments (it_clawsp23_02_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Cost Savings of Moving to the Cloud (it_clawsp23_02_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Fixed Costs vs. Variable Costs (it_clawsp23_02_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Examining AWS Licensing Strategies (it_clawsp23_02_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: The Right Sizing Concept (it_clawsp23_02_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_02_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_02_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/dc46e5ea-ee32-4ee1-badf-016eda87798b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/dc46e5ea-ee32-4ee1-badf-016eda87798b/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>There is a profound saying in The Art of War by the renowned Chinese General Sun Tzu. Tactics without strategy is the noise before defeat.</p>
+<p>It is critical that all potential customers of AWS understand migration options, strategies, and all aspects of AWS cloud economics before placing a single file, data, or app into the cloud.</p>
+<p>In this course, we will discover the benefits of the AWS Cloud Adoption Framework (AWS CAF), identify proper migration strategies, understand cost models and licensing strategies, and define the concept of right sizing.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Cloud Adoption Strategies and Resources (it_clawsp23_02_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/1e009b82-ec6d-4ee2-9b7e-ed3b1e0fbe54/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/1e009b82-ec6d-4ee2-9b7e-ed3b1e0fbe54/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe cloud adoption strategies and resources.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe cloud adoption strategies and resources</li></ul><div class="section_text">[Video description begins] <em>Topic title: Cloud Adoption Strategies and Resources. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this first lesson, we&#39;re going to look at the six strategies for migrating applications to the cloud. Rehosting, replatforming, repurchasing, refactoring, retiring, and retaining.</p>
+<p>Rehosting is also known as the &#34;lift-and-shift&#34; method. Most applications are rehosted since the organization is looking to scale its migration quickly to meet a certain business case. A common example is Microsoft SharePoint. Most rehosting can be automated with tools provided by Amazon Web Services. Some customers still prefer to do this manually as they learn how to apply their legacy systems to the new cloud platform.</p>
+<p>For example, a legacy call center to a new cloud call center or legacy service desk to a new cloud service desk. Many applications are easier to optimize and rearchitect once they are already running in the cloud.</p>
+<p>The second strategy is replatforming. This is sometimes called &#34;lift-tinker-and-shift&#34;. The customer might make a few cloud (or other) optimizations in order to achieve some tangible benefits with replatforming. Otherwise, they are not changing the core architecture of the application. Examples to be explored later in this training will be migrating to a Database as a Service (DBaaS) platform like Amazon Relational Database Service (Amazon RDS) or migrating an application to a fully managed platform like Amazon Elastic Beanstalk for software development.</p>
+<p>Repurchasing: this strategy involves moving to a different product or vendor solution. A common example is moving to a Software as a Service solution for enterprise resource planning (ERP) or customer relationship management (CRM).</p>
+<p>Next, we have refactoring otherwise known as rearchitecting. Refactoring would involve reimagining how the application is architected and developed, often using cloud-native solutions. A common use case is when a business must add features, scalability, or performance that would otherwise be challenging to achieve in the application’s current server farm or data center environment on-premises.</p>
+<p>Refactoring is a more expensive option for organizations looking to migrate from a monolithic architecture to a service-oriented or serverless cloud environment to boost agility or improve continuity of operations.</p>
+<p>The retiring option is when an application or service has reached the disposition phase because of supply chain challenges, end of life or end of support, deprecated technology, regulations or compliance, or no more utility or usefulness. Cloud adoption strategy number six is retaining. This typically means to &#34;revisit&#34; or do nothing for the foreseeable future. In other words, the company may be still &#34;riding out&#34; some of the depreciation.</p>
+<p>Another reason to retain is there is not a present inclination to migrate some applications until there are changes to the business cycle, socio-political factors, or additional resources in the budgets. Remember, the organization should only migrate what makes sense for the delivery of their value proposition.</p>
+<p>Let’s look at some cloud adoption resources. You can use AWS Professional Services. This is a global team of experts that can help customers realize their desired business outcomes. AWS Solutions Architects - these are certified cloud architects. AWS Activate for Startups - here AWS offers free templates, tools, resources, content, and expert support to accelerate your startup. AWS Knowledge Center - this helps answer the questions most frequently asked by AWS Support customers. AWS Compliance and the AWS Cloud Adoption Framework.</p>
+<p>In the upcoming lesson, we&#39;ll do a cloud safari to Amazon Web Services and explore the Cloud Adoption Framework (CAF).</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Outlining the AWS Cloud Adoption Framework (it_clawsp23_02_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/294266fd-5aa7-4706-b6ed-d6937561a7fe/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/294266fd-5aa7-4706-b6ed-d6937561a7fe/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the benefits of the AWS cloud adoption framework, such as reduced business risk and increased revenue.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the benefits of the AWS cloud adoption framework, such as reduced business risk and increased revenue</li></ul><div class="section_text">[Video description begins] <em>Topic title: Outlining the AWS Cloud Adoption Framework. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>All right, let&#39;s do a web safari up to Amazon Web Services and look at something that you’ll very likely get a question on the exam. [Video description begins] <em>AWS Cloud Adoption Framework page is displayed with a top menu, an introduction about AWS CAF, and several CTA buttons.</em> [Video description ends]</p>
+<p>The AWS Cloud Adoption Framework or AWS CAF standing on the shoulders of giants, really using the experience and best practices of other people at Amazon Web Services to basically help you enhance and accelerate and transform your business by using Amazon Web Services.</p>
+<p>You will want to know on the exam that it breaks up its elements what are called six perspectives. And so, each one of these perspectives is a set of capabilities that basically allow you to focus on your cloud transformation process. So, if we go down here, we&#39;ll see. We have business, people, and governance. [Video description begins] <em>Under a section called Capabilities and Perspectives, there are six options, out of which three are titled: Business, People, and Governance.</em> [Video description ends]</p>
+<p>So, the business perspective helps you make sure that your cloud investments are being accelerated, your ambitions, your business outcomes, you know, used by the C team or the C-suite. And then you see the people perspective, which is a kind of a synergy with technology and business accelerating your journey. And then governance. The governance perspective so you can automate and orchestrate your initiatives and maximize all of the capabilities.</p>
+<p>So, we see the business, the people, and the governance is like the strategic aspect. So you have those three, which are the strategy. [Video description begins] <em>The host scrolls down displaying the other three options labelled: Platform, Security, and Operations.</em> [Video description ends]</p>
+<p>And if we come down here, we have three would be the tactical, right, platform perspective to build the enterprise-grade, scalable, hybrid cloud platform, modernization, leveraging new cloud-native solutions that would be used by your CTO, your chief technology officer. The security aspect, achieving confidentiality, integrity, availability, identity management, including non-repudiation. And then operations ensuring that your cloud services are delivered at an appropriate and efficient level. So remember, we have six of these to remember for the exam. Business, people, and governance being the strategic. Platform, security, and operations being the tactical.</p>
+<p>And then you can go, and you can assess your cloud readiness by going through this. Forty-seven different capabilities across all six perspectives. [Video description begins] <em>He scrolls down and points to a button labelled Assess your cloud readiness.</em> [Video description ends]</p>
+<p>And then of course, we see the benefits reducing your business risk, improving environmental, social, and governance performance (ESG), growing your revenue, and increasing operational efficiency. [Video description begins] <em>He scrolls down further showcasing the Benefits section.</em> [Video description ends] So that is the AWS Cloud Adoption Framework (AWS CAF) with its six perspectives.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Appropriate Cloud Migration Strategies (it_clawsp23_02_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/0185879c-2c47-4384-a447-874ffd9eaeb0/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/0185879c-2c47-4384-a447-874ffd9eaeb0/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to identify proper migration strategies, such as database replication and AWS Snowball.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">identify proper migration strategies, such as database replication and AWS Snowball</li></ul><div class="section_text">[Video description begins] <em>Topic title: Appropriate Cloud Migration Strategies. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>Realize on the cloud practitioner exam. When you look at appropriate migration strategies, it’s really a couple of fundamental concepts, it’s not a deep architectural view.</p>
+<p>So, for many customers, a common strategy is to perform database replication. This refers to the process of copying data from a primary database to one or more replica databases to improve data availability and system fault-tolerance and reliability. Database replication is usually a continual process happening in real-time as data is created, modified, used, shared, or deleted in the primary database. It can also occur as a one-time event or through scheduled batch projects.</p>
+<p>Some use cases for data replication at AWS would be when customers can create tasks for ongoing replication using the AWS Database Migration Service (DMS). Data can be migrated to S3 object storage to match the organizational data life cycle.</p>
+<p>A newer solution would be to use Amazon Elastic File System (EFS) replication to create a replica of their EFS file system in the AWS Region of their choosing. AWS customers may decide to innovate and build new database applications with Amazon Relational Database Service (RDS). For example, for their Oracle database or their Microsoft SQL database.</p>
+<p>Another migration strategy we refer to is OOB or out-of-band. The AWS Snowball service offers secure, rugged devices that allow customers to transfer data into and out of AWS and bring AWS computing and storage capabilities to edge environments. These rugged devices are commonly referred to as AWS Snowball or AWS Snowball Edge.</p>
+<p>Previously, Snowball referred explicitly to an early hardware version of these devices, however that model has been replaced by updated hardware. Keep that in mind for this newer exam. The AWS Snowball service now operates with Snowball Edge devices, which include on-board computing capabilities as well as storage. [Video description begins] <em>A process loop diagram of AWS Snowball depicting the steps is displayed.</em> [Video description ends]</p>
+<p>Here’s how it works. If you want to use AWS Snowball, in the AWS Snow family management console, create a job and then choose your device. AWS prepares and ships the device to you for arrival in approximately 4-6 business days. Then when the device arrives or devices, power it on, unlock it, and connect it to your local network.</p>
+<p>For example, your data center or your storage area network. Read or write the data to the device with the AWS OpsHub, NFS, or the built-in Amazon S3 adapter. When you’re ready, ship the device back to AWS; the e-link shipping label auto-updates for easy return.</p>
+<p>Once it arrives at AWS, your data is transferred to your Amazon S3 bucket, verified, and then securely erased on the device. You can use the graphical interface the Snow family management console to track the progress of data migration plans. Or you can create a large data migration plan if necessary.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Costs of On-premises Environments (it_clawsp23_02_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/a27d9b28-442b-4731-9c60-3891905fb75d/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a27d9b28-442b-4731-9c60-3891905fb75d/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the burdensome costs of existing on-premises environments.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the burdensome costs of existing on-premises environments</li></ul><div class="section_text">[Video description begins] <em>Topic title: Costs of On-premises Environments. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>A major value proposition and why AWS is so popular or cloud computing, in general, is the ongoing increasing costs of on-premises environments.</p>
+<p>On-premises costs can quickly be burdensome and prohibitive, especially in challenging economic environments such as inflation. These costs can range from upfront capital, for example, higher interest rates and borrowing costs to regular operational expenditures to keep that data center running.</p>
+<p>Customers are discovering the massive savings in labor costs and other overhead by moving to the AWS cloud. Although capital expenditures like hardware, racks, and network equipment are a one-time purchase, they typically have a refresh cycle of about five years. Companies will amortize this for an accurate comparison.</p>
+<p>Here we see three categories of on-premises costs: server costs, storage costs, and network costs. [Video description begins] <em>A flow breakdown of the three categories is listed along with their hardware and software usage, and facilities costs.</em> [Video description ends] With servers, we have server hardware, server blades, rack chassis PDUs, and ToR switches, plus the ongoing maintenance. On the server, we’re running software: operating system, and virtualization licenses (&#43; maintenance). Storage costs: we have storage disks, storage area networking switches and fiber channel switches possibly upgrading from a 10 gigabit to 100 gigabit network.</p>
+<p>And of course, storage software costs (&#43; maintenance). On the network, we may have local area network switches, layer two and multilayer switches and load balancers and the recurring costs of Internet service providers and the bandwidth.</p>
+<p>And of course, in the facility, we have space, power, and cooling for servers including hypervisors, the storage area network, and the network infrastructure.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Cost Savings of Moving to the Cloud (it_clawsp23_02_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/586f6af7-cec1-4500-903e-ec4d2dc14a85/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/586f6af7-cec1-4500-903e-ec4d2dc14a85/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe the cost savings of moving to the AWS cloud.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the cost savings of moving to the AWS cloud</li></ul><div class="section_text">[Video description begins] <em>Topic title: Cost Savings of Moving to the Cloud. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this brief lesson, we&#39;ll look at the cost savings of moving to the cloud. The value of the cloud or cloud proposition extends beyond total cost of ownership reduction. AWS customers also see substantial enhancements in other areas, including better productivity for their personnel, operational resilience, and corporate agility. The ability to respond quickly to new customers, new technologies, and the pressure from competitors.</p>
+<p>Amazon Web Services customers get an average cost savings of 31 percent by migrating to the cloud. By moving to the cloud, organizations are achieving more IT competencies at a fraction of the cost. When commercial organizations increase their efficiency and savings, they free up profits to expand, modernize, and grow in new areas.</p>
+<p>And since the customer only pays for the cloud services they use, they can easily adapt to changing business demand. For example, International Data Corporation (IDC) interviewed 41 organizations globally and reported that AWS helped customers accelerate growth, drive efficiencies, and realize vital long-term cost reductions.</p>
+<p>It&#39;s important as a candidate for the AWS cloud practitioner that you understand from AWS’ standpoint, they are the leader offering an average 10 months to pay back, nearly 2.3x more new features are delivered, $66.3M additional revenue per year per organization in US dollars, 47% more efficient IT infrastructure staff, and 50% lower 5-year cost of operations.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Fixed Costs vs. Variable Costs (it_clawsp23_02_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/6b8c5d05-4489-48a2-a524-1f2e57ec7eac/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6b8c5d05-4489-48a2-a524-1f2e57ec7eac/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to compare fixed and variable costs.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare fixed and variable costs</li></ul><div class="section_text">[Video description begins] <em>Topic title: Fixed Costs vs. Variable Costs. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>Let&#39;s compare fixed costs vs. variable costs. The cloud allows customers to trade fixed expenses or capital expenditures for variable expenses and only pay for IT (Information Technology) as they consume it. Due to the economies of scale, the variable expenses are much lower than what organizations would pay to do it themselves. Whether it is a startup in the cloud, for example, a group of programmers who just graduated from university and want to develop mobile apps or do blockchain smart contracts, or you’re just starting the migration journey to the cloud,</p>
+<p>AWS has a set of solutions to help manage and optimize your expenditures. Here&#39;s some examples of fixed cost vs. variable cost. A fixed cost would be data centers and server farms. For example, an on-premise SharePoint server farm.</p>
+<p>A variable cost would be virtual instances of Windows and Linux. And don’t forget macOS. Physical blade servers and racks are fixed costs whereas serverless solutions like Functions as a Service, specifically AWS Lambda is a variable cost.</p>
+<p>Another fixed cost is storage area networks (SAN) or San as opposed to managed relational database services in the cloud, which is a variable cost. Other fixed costs are buildings, HVAC, and environmental controls whereas elastic file services are variable costs.</p>
+<p>By using the AWS cloud and variable costs, we can create a superior environment as opposed to the cost of on-premises environments. For example, we can plan &amp; evaluate with the migration evaluator, AWS pricing calculator, and AWS budgets. We can manage and control our identity and access management with AWS IAM or the Identity Center.</p>
+<p>We can use the billing console, AWS purchase order management, AWS budget actions, and AWS cost anomaly detection. We can see by organizing and reporting through the AWS Cost Explorer, the AWS cost &amp; usage reports, cost categories, and the AWS application cost profiler. And we can optimize and save with savings plans, reserved instances, rightsizing which we’ll define later on in this course, and recommendations.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Examining AWS Licensing Strategies (it_clawsp23_02_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/d8670d01-3fe8-402e-b746-2e84d9fd2f1b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/d8670d01-3fe8-402e-b746-2e84d9fd2f1b/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe licensing strategies, such as included licensees and bring your own license (BYOL).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe licensing strategies, such as included licensees and bring your own license (BYOL)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Examining AWS Licensing Strategies. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;re going to talk about licensing options in the cloud, and we&#39;re going to focus on two things. First, Microsoft licensing on AWS. Because Linux and macOS are open source, we don&#39;t have the same considerations. We&#39;ll also talk about the licensing manager.</p>
+<p>You have a lot of choices here with Microsoft. [Video description begins] <em>The Microsoft Licensing on AWS page is displayed with a menu on the top.</em> [Video description ends] When you instantiate an Elastic Compute Cloud (EC2) instance or a relational database license-included instance, you&#39;re going to get a fully compliant Windows Server.</p>
+<p>And in the case of RDS with Microsoft SQL, you get a SQL Server license directly from AWS. And you can manage all of this through the AWS License Manager, which makes it easy to change license types between AWS provided licenses, where they’re included and what’s called BYOL, which you must know on the exam stands for bring-your-own-license. So you can buy licenses from AWS using the included instances when you spin it up based on the Amazon Machine Image that also includes the platform that’s running on it, for example, Microsoft SQL Server.</p>
+<p>Whether doing Infrastructure as a Service through EC2 or using Amazon RDS for SQL Server, AWS manages the licensing compliance, they support current and other legacy versions as well. And remember, Windows Server Client Access Licenses (CALs) are not required. [Video description begins] <em>The host scrolls down to highlight the Using Microsoft software licenses on the AWS Cloud section.</em> [Video description ends]</p>
+<p>Keep that in mind on the exam. You can bring your license to AWS. [Video description begins] <em>He scrolls down to highlight the Bring licenses to AWS section.</em> [Video description ends] This is called BYOL. Remember, it is subject to the Microsoft licensing terms, however, here you can leverage the efficiencies of the AWS Cloud using your own existing perpetual license, you can extend the lifecycle of your software without additional costs, and you can expedite the migration to the cloud using existing virtual machine images,</p>
+<p>You have two options with BYOL. You can do BYOL without software assurance, or you can do BYOL with software assurance, and that would be Microsoft License Mobility through Software Assurance, which allows many software licenses to be transferred into the AWS Cloud for use with Amazon EC2. Remember, when you purchase an Amazon EC2 instance with a Windows Server-Based AMI, or an Amazon RDS for SQL Server license included instance, Amazon will take care of all the cost and compliance for you.</p>
+<p>Also, Microsoft includes two Microsoft RDP or Remote Desktop Services licenses for administrative purposes. [Video description begins] <em>He scrolls down further to display the Launch licensed Amazon Machine Images section, and the list of eligible products including Microsoft Windows Server, Microsoft SQL Server, Microsoft Remote Desktop Services (user CALs), and 4 others is shown.</em> [Video description ends]</p>
+<p>Here, we see a list of eligible products covered by the Microsoft Product Terms as of September of 2023. This list may change, but you may want to look at it for your reference. This will not be on the exam. Let’s look at the AWS License Manager. Here, you can manage your software licenses and fine-tune your licensing costs. [Video description begins] <em>He clicks on the Use AWS License Manager to start managing your licenses hyperlink just above the Eligible Products section. The AWS License Manager is displayed with a top menu and a Get started with License Manager button.</em> [Video description ends]</p>
+<p>Here&#39;s how it works. [Video description begins] <em>He scrolls down to showcase the process flow of the AWS License Manager.</em> [Video description ends] Basically, the AWS License Manager, you define the rules for your license software, you attach licensing rules during launch and proactively control the usage, you can search the inventory and track licenses brought in post launch, and you can use alerts to control and centrally manage licenses across all AWS accounts including on premises.</p>
+<p>License manager makes it easy and smooth for you to manage your software licenses from vendors like Microsoft, SAP, Oracle, IBM and others in your AWS environment or your hybrid cloud environment.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: The Right Sizing Concept (it_clawsp23_02_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/71791c89-8c27-42e0-bdcf-0b89e82b3949/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/71791c89-8c27-42e0-bdcf-0b89e82b3949/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to define the concept of right sizing.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define the concept of right sizing</li></ul><div class="section_text">[Video description begins] <em>Topic title: The Right Sizing Concept. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>Let&#39;s go ahead and define the right sizing concept. Right sizing is the practice of mapping instance types, for example, Amazon Linux running on T2 micro and different sizes to workload performance and capacity requirements at the lowest feasible cost.</p>
+<p>Right sizing is also the process of observing deployed instances and recognizing openings to eradicate or downsize without compromising capacity or other requirements, which results in lower costs. We would call this due care or ongoing operational excellence.</p>
+<p>Right sizing is a key mechanism for optimizing AWS costs. It is often overlooked by organizations when they first transfer to the AWS Cloud. After all, they have so many other priorities and operational responsibilities, and they fail to emphasize the importance of right sizing.</p>
+<p>Often companies will lift and shift their environments and expect to right size later and then they never get around to it. Another reason is that speed and performance are frequently prioritized over cost, which results in oversized instances and a lot of squandered spending on idle resources. And remember, it’s not an Amazon Web Services’ best interest for their customers to overspend or oversize. They want to keep you for the long run.</p>
+<p>Right sizing is the most effective way to manage costs in the cloud, and it&#39;s an ongoing task. It involves persistently analyzing instance performance and usage needs and patterns. And you can use tools from AWS or from the third party AWS marketplace.</p>
+<p>For example, turning off idle instances and right sizing instances that are either overprovisioned or below par when matched to workloads. And since resource needs are constantly changing, right sizing must be a constant task to continually optimize costs.</p>
+<p>Right sizing can be a tight process by establishing a schedule for each team, placing tags on all instances, and taking advantage of the aforementioned tools that AWS and partners offer to streamline resource monitoring and analysis.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_02_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/789a1424-225d-4a99-b801-97e08c129047/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/789a1424-225d-4a99-b801-97e08c129047/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this course, we learned about cloud adoption and migration, cost structures at AWS, and licensing and right sizing.</p>
+<p>Coming up in the next course, we&#39;ll discover automation and a variety of managed services at Amazon Web Services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

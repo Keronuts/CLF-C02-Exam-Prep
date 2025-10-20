@@ -1,0 +1,360 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Pricing, Billing, Budgeting, &amp; Cost Management</h1><div class="section_text">In order to perform proper due diligence before migrating to the AWS cloud, the organization must understand all of the optimization and forecasting tools that are made available. There are a wide variety of options for entities of all sizes and sectors to accurately utilize compute and storage resources. 
+
+In this course, you will explore compute purchasing options, incoming and outgoing data transfer charges, and storage options and tiers. Then you will investigate reserved instance behavior, billing support, and cost allocation tags. Finally, you will discover AWS Organizations.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_15_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Comparing Compute Purchasing Options (it_clawsp23_15_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Data Transfer Charges (it_clawsp23_15_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Comparing Storage Options and Tiers (it_clawsp23_15_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Reserved Instance Behavior and Flexibility (it_clawsp23_15_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Using AWS Billing Support and Information (it_clawsp23_15_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Cost Allocation Tags (it_clawsp23_15_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: AWS Organizations (it_clawsp23_15_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Course Summary (it_clawsp23_15_enus_09)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_15_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/6d4adc73-9e04-44b5-9aa8-be0157744d50/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6d4adc73-9e04-44b5-9aa8-be0157744d50/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Pricing, billing, budgeting, and cost management in order to perform proper due diligence before using or migrating to the AWS cloud, the organization must understand all of the optimization and forecasting tools that are made available.</p>
+<p>There are a wide variety of options for entities of all sizes and sectors to accurately utilize compute and storage resources. In this course, we&#39;ll discover compute purchasing options, learn about incoming and outgoing data transfer charges, explore storage options and tiers, learn about reserved instance behavior, and examine billing support, cost allocation tags, and AWS Organizations.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Comparing Compute Purchasing Options (it_clawsp23_15_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/3d3f3e1d-e2a7-490c-af3d-d2fb7969916b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3d3f3e1d-e2a7-490c-af3d-d2fb7969916b/image001.jpg')();" /><div class="section_text">In this video, you will learn how to compare compute purchasing options like on-demand, reserved, and spot instances, savings plans, dedicated hosts and instances, and capacity reservations.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare compute purchasing options like on-demand, reserved, and spot instances, savings plans, dedicated hosts and instances, and capacity reservations</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Compute Purchasing Options. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Okay. In this demonstration, we’re going to go up to the EC2 Dashboard, over to the Instances areas and talk about these different options that we have in EC2 and just be able to define them for the exam. Remember there&#39;s no configuration on the cloud practitioner exam.</p>
+<p>Now over here we see Instances. [Video description begins] <em>The EC2 Dashboard is displayed. It features a search bar at the top, a navigator menu in the left, Resources, Launch instance, and Service health options in the middle, and Account attributes and Explore AWS options in the right.</em> [Video description ends] <br /><br />Remember an Instance, when we launch an Instance. Let’s go. And we can see I’ve got one Instance here. You can see it Stopped. It’s of the type t2.micro. It’s located in the us-east-1e Availability Zone. <br /><br />And you can see that it’s on the Windows Platform. [Video description begins] <em>The presenter clicks on Instances from the navigator menu in the left. A list of options is displayed, including Name, Instance ID, Instance state, Instance type, and so on.</em> [Video description ends]</p>
+<p>If we were to go to the Dashboard again and Launch an instance, we are launching instances based on Amazon Machine Images. [Video description begins] <em>He clicks on EC2 Dashboard from the navigator menu in the left and clicks on Launch instance. Another page titled Launch an instance is displayed with options: Name and Application and OS Images (Amazon Machine Image).</em> [Video description ends]</p>
+<p>So, on the exam you need to know what an AMI is, okay. An AMI is a template that contains the software configuration (at least an operating system, but possibly an application server, and applications such as Windows SQL server) everything required to launch your instance. And you can use AMIs that are provided by AWS. There&#39;s a community of AMIs and you can also upload your own AMIs.</p>
+<p>You can see down here we&#39;ve got AMIs and the AMI catalog. [Video description begins] <em>Back to the EC2 dashboard, he points to AMIs and AMI Catalog options under Images in the navigator menu in the left.</em> [Video description ends]</p>
+<p>Now, within this Instance area we also have different Instance Types. And you don&#39;t have to memorize all of these. But you can see that there&#39;s 741 of them, okay. And there&#39;s different Instance types that have different types of pricing, different types of Architectures, Memory, and some of them have Storage and Storage types.</p>
+<p>But often what you do when you create an Instance, you go through this process of walking through the EC2 wizard, or you use the EC2 command line interface. [Video description begins] <em>He clicks on Instance Types under Instances from the navigator menu in the left. A list of options is displayed, including Instance type, vCPUs, Architecture, and so on.</em> [Video description ends]</p>
+<p>You might want to go ahead and save it, as we call it a golden image, and have what&#39;s called a launch template. [Video description begins] <em>He clicks on Launch Templates under Instances from the navigator menu in the left. A page featuring Benefits and features is displayed.</em> [Video description ends] That way you can have these standardized instances and you can just generate EC2 instances, an entire fleet from the launch template. <br /><br />We also have Spot Requests. [Video description begins] <em>He clicks on Spot Requests under Instances from the navigator menu in the left. A list of blank options is displayed, including Request ID, Request type, Instance type, and so on.</em> [Video description ends]</p>
+<p>A Spot Request is an instance that uses whatever spare EC2 capacity that is available, and it’s going to be less than the default on-demand price. And you can often get steep discounts here by going up and requesting a Spot Instance. <br /><br />Now, I am doing this recording in the middle of October, so this would not really be the best time to go up and try to get a good deal for the spot price, which is an hourly price for the Spot Instance and the spot price of each Instance type in each Availability Zone, which of course is in different regions, is set by EC2, but it&#39;s adjusted gradually based on supply and demand.</p>
+<p>So, what I’m saying is probably right now going into the holiday season in United States, you’re not going to get the best deal, right. But the middle, you know, you get to the end of January, start to get into February when people are de-provisioning, they&#39;re not bursting up to the cloud anymore. You’re going to get a lot better deal on the spot prices.</p>
+<p>[Video description begins] <em>He clicks on Savings Plans under Instances from the navigator menu in the left. Another page with information about Savings Plans is displayed, with a Purchase Savings Plans button.</em> [Video description ends] Now, we also have Savings Plans, and Savings Plans is a flexible pricing model, and you can save up to 72% by going with a 1 or 3 year hourly commitment. <br /><br />And there’s three types of Savings Plans. There’s Compute Savings Plans for EC2 instances, Fargate usage, and Lambda.</p>
+<p>So, you can see that down here the Compute Savings Plans would be, you know, Fargate, EC2 and Lambda. There’s EC2 Instance Savings Plans. These provide the lowest prices for EC2 instances up to 72% . It does depend upon where you are, in what region. And then the third would be an Amazon SageMaker Savings Plan, which we don&#39;t see here, but SageMaker for your AI and your machine learning.</p>
+<p>So, it’s an hourly spend commitment for a 1 or 3 year term. And the SageMaker Savings Plan automatically and simultaneously applies to any eligible SageMaker machine learning instance usage in a supported region up to 64% based on on-demand.</p>
+<p>Next, we have what are called Reserved Instances, and you can reserve for 1 year or 3 year. And then within those service level agreements, you have three options. [Video description begins] <em>He clicks on Reserved Instances under Instances from the navigator menu in the left. A list of options is displayed, including Instance type, Scope, and so on.</em> [Video description ends]</p>
+<p>You can pay everything up front, which is AURI, All Upfront. You can do a Partial Upfront, PURI, or you can do No Upfront which would be NURI. So, obviously best savings generally speaking would be a 3 year commitment, paying it All Upfront. Now there’s also a Convertible Reserved Instance, and I’ll talk about a Convertible Reserved Instance in an upcoming lesson.</p>
+<p>And then finally we have what are called Dedicated Hosts. [Video description begins] <em>He clicks on Dedicated Hosts under Instances from the navigator menu in the left. A list of options is displayed, including Name, Host ID, Availability Zone, and so on.</em> [Video description ends] <br /><br />This lets you use your eligible software license from vendors like Microsoft and Oracle on EC2. So, you get flexibility and cost effectiveness of BYOL, Bring Your Own License, but you still get the resiliency, simplicity, and elasticity of AWS. So basically, an Amazon EC2 Dedicated Host is a physical server with your licensing BYOL fully dedicated for your use.</p>
+<p>It&#39;s integrated with the AWS License Manager, helping you manage your licenses for Windows server, Microsoft SQL server, and for larger customers. This can be a really good option to Dedicate Hosts and Dedicate Instances on those hosts. <br /><br />So, on the exam, be able to define Spot Instances, Savings Plans, Reserved Instances including Convertible Reserve, which we’re going to talk about here in a moment, and Dedicated Hosts.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Data Transfer Charges (it_clawsp23_15_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/11a1b347-1375-41a2-9aaf-c79a62f8e3cb/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/11a1b347-1375-41a2-9aaf-c79a62f8e3cb/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe data transfer charges.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe data transfer charges</li></ul><div class="section_text">[Video description begins] <em>Topic title: Data Transfer Charges. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Data transfer charges are a critical aspect of architecting an AWS cloud initiative. It is vital for customers to understand data transfer charges that they may come across when running production workloads at AWS.</p>
+<p>There is no charge for inbound data transfer across all services in all regions at Amazon Web Services. Data transfer from AWS to the Internet is charged per service, with rates specific to the initiating region. In other words, they vary from region to region across the globe, and they&#39;re specific to that region.</p>
+<p>Data transfer within AWS can be from the customer&#39;s workload to other AWS services, or it could be between different components of the customer workload. When a customer workload accesses AWS services, they may invite data transfer charges.</p>
+<p>If an Internet gateway is used to access the public endpoint of the AWS services in the same region, there are no data transfer charges. If a Network Address Translation, NAT gateway is used to access the same services, then there is a data processing charge per gigabyte (GB) for data that passes through the NAT gateway. <br /><br />[Video description begins] <em>A diagram of Data Transfer Charges is displayed. There are two AWS Regions, one on the left and one on the right. Under each AWS Region, there are multiple services such as Amazon S3, Amazon DynamoDB, Amazon Kinesis, and so on. In the left AWS Region, under services, there&#39;s a VPC which includes Internet gateway. And in the right AWS Region, the VPC under services includes Internet gateway and NAT gateway.</em> [Video description ends]</p>
+<p>On the left hand side, we see a VPC using an Internet gateway to connect to various services in the region, such as S3, DynamoDB, SNS, and SQS. There&#39;s No data transfer charge. However, if the customer goes through a VPC. However, if the customer goes through a NAT gateway that has been deployed in the VPC, there&#39;s No data transfer charge, but there is a Per-hour service charge and per-GB data processing charge on the NAT gateway.</p>
+<p>Data transfer within the same Availability Zone is free. One way to achieve high availability for a workload is to deploy it in multiple Availability Zones.</p>
+<p>If customer workloads access services in different regions, there is a charge for data transfer across regions. The charges depend upon the source and destination region, for example, the Northern Virginia region in the US and the Paris region in France, as seen in the next slide.<br /><br />[Video description begins] <em>A diagram of Data Transfer Charges is displayed. There are two AWS Regions: AWS Region 1 is on the left and AWS Region 2 is on the right. In AWS Region 1, the VPC section includes NAT gateway connected to Internet gateway. AWS Region 1 is connected to AWS Region 2 through Per-GB charge for inter-region data transfer. In AWS Region 2, there are various services such as Amazon S3, DynamoDB, Amazon Kinesis, and so on.</em> [Video description ends]</p>
+<p>Let’s say AWS Region 1 is the Northern Virginia region in the United States, and AWS Region 2 is the Paris region in France.</p>
+<p>If you&#39;re going through a NAT gateway to services running in the Paris region, for example, DynamoDB, Kinesis or Amazon Glacier, there’s going to be a Per-hour service charge and per-GB data processing charge generated from the NAT gateway and a Per-GB charge for inter-region data transfer.</p>
+<p>Again, it depends on the source and destination region as to what those charges are. You don&#39;t have to know those charges for the cloud practitioner exam. Just realize there is an inter-region data transfer charge.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Comparing Storage Options and Tiers (it_clawsp23_15_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/58a115d8-eed6-4d6e-9c6b-3854d89f9a9c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/58a115d8-eed6-4d6e-9c6b-3854d89f9a9c/image001.jpg')();" /><div class="section_text">In this video, discover how to compare storage options and tiers.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare storage options and tiers</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Storage Options and Tiers. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this demonstration, we&#39;re going to reiterate the different storage options at Amazon Web Services. And then we&#39;re going to look at the different S3 storage tiers. [Video description begins] <em>The AWS Console Home is displayed. It features a Recently visited section on the left, two CTA buttons on the top right, labeled: Reset to default layout and Add widgets, and a Welcome to AWS section on the right.</em> [Video description ends]</p>
+<p>But remember in the life cycle of data, there’s only two phases or two stages that are necessary or mandatory. The create phase and the use phase of data.</p>
+<p>So, data has to be generated or created or acquired or purchased. It has to come into existence or be inputted and then it has to be used. It has to have utility, usefulness. Because remember data becomes information, information becomes knowledge, knowledge becomes wisdom. But the other phases of the life cycle are actually optional. You don&#39;t have to store data.</p>
+<p>In fact, we could use something like ElastiCache where this is data that&#39;s being cached in real-time, either a Redis cluster or a Memcached cluster. [Video description begins] <em>The Amazon ElastiCache page is displayed. It features a navigator menu in the left, a How it works section in the middle, and a Get started button and a Pricing section on the right.</em> [Video description ends]</p>
+<p>Also, remember that there&#39;s instance storage, which is ephemeral. So, solid-state drives that are directly attached that are used by high performance computing for temporary files and things like that. The data is not necessarily being stored, but it is being used in real-time. So, what are your storage options? Okay.</p>
+<p>Well, if we go back to the Console Home, well, we could store it in an EC2 Elastic Block Store right.</p>
+<p>So, we’ve got our, you know, Volumes, Elastic Block Store Volumes. [Video description begins] <em>The Volumes EC2 page is displayed now, featuring a list of options, including Name, Volume ID, Type, Size, and so on. There are two buttons at the top right, labeled: Actions and Create volume.</em> [Video description ends]</p>
+<p>If we Create a volume, you know, we can have different solid-state drives or hard disk drives of different sizes with different Input Output Per Second.</p>
+<p>So, this is attached to any EC2 instance in the same Availability Zone. [Video description begins] <em>The presenter clicks on the Create volume button. The Create Volume page with Volume settings is displayed, featuring different options such as Volume type, Size (GB), IOPS, and so on.</em> [Video description ends] If I were to go back here, we would see that I&#39;ve got two Volumes, actually one of them is Attached and one of them is not.</p>
+<p>So, this is a place to store data. [Video description begins] <em>He clicks on the Volumes button at the top and the Volumes page is displayed now.</em> [Video description ends] We can also store data in a Neptune graph database or one of the RDS options.</p>
+<p>If we want to use Amazon Aurora, we could use Aurora MySQL or Aurora Postgres. And we have other options of course, as well. Oracle, Microsoft SQL, MariaDB, DynamoDB is a place to store your NoSQL data, your key value document type of data in a database.</p>
+<p>You could store it in a Redshift cluster for data warehousing. And then of course, we&#39;ve got our S3 object storage or the long term S3 storage would be Glacier. So, those are our options for storing data. But we also have Storage Classes we want to remember on the exam.</p>
+<p>[Video description begins] <em>The Amazon S3 Storage Classes page is displayed, featuring information about different options such as S3 Standard, SE Intelligent-Tiering, S3 Standard-IA, and so on.</em> [Video description ends] The most expensive option by default is the default option, and that is S3 Standard. And on the exam just kind of know the basic definition here: high durability, availability, performance object storage for frequently accessed data.</p>
+<p>If you want to get a cheaper option, you would say, look, I want to use S3, but it&#39;s infrequently accessed, so charge me less, right? You still get the 11 9s of durability, so Standard is more expensive.</p>
+<p>You get higher availability, but you can also go with a cheaper option. Infrequent Access, if you want to get even cheaper than that, say, well, it&#39;s infrequently accessed, but let’s just put it into One Availability Zone here.</p>
+<p>You&#39;re going to lose that availability metric. We’re talking about 99.5% now, but it’s also stored in One Availability Zone as opposed to a minimum of three Availability Zones.</p>
+<p>So, this is data that’s not mission critical, data that you have copies of it. It’s basically one step away from being archived into a vault for Glacier, right. So, Glacier is our long-term archival storage.</p>
+<p>The Deep Archive, for example, is going to be, you’re giving them the longest amount of time, like you&#39;re going to give them up to 12 hours to get that data moved over into an S3 bucket, or maybe to an onsite data store that you have.</p>
+<p>So, this is an ideal alternative to magnetic tape libraries. You still get high availability, but we’re talking about stuff being retained for 7-10 years. And you&#39;re giving them up to 12 hours to retrieve it. That would be your cheapest option.</p>
+<p>Also, don’t forget that S3 offers an Intelligent-Tiering service, which is going to basically kind of automate this process and intelligently move data from the Standard tier to the Standard-IA to the One Zone-IA and then into Glacier based on monitoring the access over weeks and months.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Reserved Instance Behavior and Flexibility (it_clawsp23_15_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/5e7edf6a-47e7-45cf-b851-d42a410c0191/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/5e7edf6a-47e7-45cf-b851-d42a410c0191/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe reserved instance behavior and flexibility.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe reserved instance behavior and flexibility</li></ul><div class="section_text">[Video description begins] <em>Topic title: Reserved Instance Behavior and Flexibility. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Reserved Instance Behavior and Flexibility options. Amazon EC2 Reserved Instances (RIs) offer a substantial discount (up to 72%) when compared to On-Demand pricing, which is the default. RIs can deliver a capacity reservation, offering extra confidence in the ability to launch the number of instances reserved when needed.</p>
+<p>Customers also have the flexibility to change families, OS types, and tenancies while benefiting from RI pricing when they use Convertible RIs.</p>
+<p>Standard RIs provide the most significant discount (up to 72% off 0n-Demand) and are best suited for regular usage. Convertible RIs provide a discount (up to 54% off of On-Demand) but you sacrifice some of your discount by getting the capability to change the attributes of the RI if the exchange leads to the creation of Reserved Instances of equal or greater value. Scheduled RIs are available to launch within the time window you reserve.</p>
+<p>The scheduling option allows customers to match their capacity reservation to a predictable recurring schedule when you only need part of a day, a week, or even a month.</p>
+<p>Let’s compare Standard and Convertible. The Terms are 1 yr and 3 yr. Your savings with Standard are about 40% for 1 yr, 60% for 3 yrs. With Convertible, you give up some of your discount for that flexibility. 1 yr about 31% and 3 yr your savings is 54% .</p>
+<p>You can change your Availability Zone, your instance type (for Linux OS), and your networking type for both.</p>
+<p>With Standard, you use the ModifyReservedInstances API or the management console. With Convertible, you use the ExchangeReservedInstances API and/or the console.</p>
+<p>Also notice, with the Convertible instance types, these are the only ones where you can Change the instance family, the operating system, the tenancy, and your payment options and still get a Benefit from price reductions. For billing purposes, the consolidated billing feature of AWS Organizations treats all of the accounts in the organization as one account.</p>
+<p>All accounts in the organization can receive the hourly cost benefit of Reserved Instances that are purchased by any other account. Customers can turn off Reserved Instance discount sharing on the Preferences page on the Billing and Cost Management console.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Using AWS Billing Support and Information (it_clawsp23_15_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/5c024e0e-7adb-44f3-89b5-1bd94912b7e3/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/5c024e0e-7adb-44f3-89b5-1bd94912b7e3/image001.jpg')();" /><div class="section_text">Find out how to use AWS Budgets, AWS Cost Explorer, AWS Billing Conductor, and AWS Pricing Calculator.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use AWS Budgets, AWS Cost Explorer, AWS Billing Conductor, and AWS Pricing Calculator</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Billing Support and Information. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this demonstration, we&#39;re going to explore billing support and information to Amazon Web Services. And we&#39;re going to focus on four key areas for the exam.</p>
+<p>The first one is AWS Budgets. And you can get here by just going up to your account, for example, and going to the Billing Dashboard. And that’s where I’m at right now, the Billing Dashboard. So, we’ll look at AWS Budgets, the AWS Cost Explorer, the Billing Conductor and the AWS Pricing Calculator. <br /><br />Let’s look at AWS Budgets. [Video description begins] <em>The AWS Budgets page is displayed, featuring a navigator menu on the left, a How it works section in the middle, and a Create a budget button and a Pricing (US) section on the right.</em> [Video description ends]</p>
+<p>This allows you to set custom budgets so you can get alerts if you exceed those thresholds. This is a hub for creating, tracking, and inspecting budgets.</p>
+<p>If we go down here, we can see how it works. Let me make this larger. You use budgets to improve your planning and cost control with flexible budgeting and forecasting, so you can customize your budget.</p>
+<p>What you want to spend, for example on S3 storage or Elastic Container Service, Lambda functions and then get alerted, receive alerts when you exceed your budget, and then you can define and trigger cost saving responses so you stay within those budgets. And you can get notified by email or you can publish updates to a Slack channel, to an Amazon Chime room, or the Amazon Simple Notification Service SNS topic of your choice.</p>
+<p>And then track your cost and usage across several dimensions. You can have filters, you could leverage tagging, cost allocation tags, all those wonderful things. Bottom line, it’s helpful to use this AWS budget feature as part of your due diligence to define the actions to reduce or prevent unbudgeted costs or cost overruns before they occur.</p>
+<p>Something else you can use on a ongoing basis, part of your due care is the Cost Explorer. [Video description begins] <em>The AWS Cost Explorer page is displayed, featuring a navigator menu on the left, a Home section in the middle, and October trends and More resources on the right.</em> [Video description ends]</p>
+<p>For example, here I can see my Current monthly costs. I can see my Forecasted month-end costs. It also breaks it down by different months. I can create reports. It’s basically an easy-to-use interface that allows you to visualize, understand, and manage your AWS cost and usage over time.</p>
+<p>So, whereas you might want to use the AWS Budgets and the Pricing Calculator as your due diligence, you can use the Cost Explorer as your ongoing due care. Create custom reports to analyze your costs and usage, and you can break this down within an organization by organizational unit.</p>
+<p>So, the Pricing Calculator, you would probably use ahead of time before your migration to the cloud or before your hybrid cloud solution. [Video description begins] <em>The AWS Pricing Calculator page is displayed, featuring a How it works section on the left, and a Create estimate button and More resources on the right.</em> [Video description ends]</p>
+<p>Estimate the cost of AWS products and services. Simply go into a graphical interface, add the services that you need, and then put in the details or the attributes, the usage to see the service costs and it will generate an estimated total for you.</p>
+<p>So, this is a tool you would use to do your forecasting and estimation before you get into the cloud. So, you would add your service. [Video description begins] <em>The presenter clicks on the Create estimate button. A page titled Add service is displayed, featuring options such as AWS services, Choose a location type, Choose a Region, and so on.</em> [Video description ends]</p>
+<p>You could say Search by location, Search all services, okay. And then you can once you Find the service you’ll configure the attributes of those services. And then it&#39;ll create a summary. And it’ll show your Upfront cost and your Monthly costs and Total 12 months costs.</p>
+<p>So, the Pricing Calculator, think of that as a tool we would use ahead of time for planning, for forecasting before a migration or movement to the cloud, or just doing an entire AWS public cloud solution along with the budgeting tool.</p>
+<p>And then for your ongoing due care, you’d use the Cost Explorer and the Billing Conductor, okay, which now integrates with the Cost Explorer, customizing your bill computation, displaying your billing data in a more meaningful way. [Video description begins] <em>The AWS Billing Conductor page is displayed, featuring a How it works section on the left, and a Create pricing rules and Pricing (US) section on the right.</em> [Video description ends]</p>
+<p>So, you have to have an organization. So, within the organization, create your consolidated billing family. And then with the conductor, customize your billing data on an account by account basis, defining billing parameters, pricing logic, assigning credits and fees.</p>
+<p>Then generate and display cost data at your defined rates for each billing group. Then it can be outputted into an AWS Cost and Usage Report or to the Bills page, which would be here in the GUI or in some other separate report like cost and usage data per billing group.</p>
+<p>So, these are the main tools to be aware of on the exam. And you should expect a question on probably at least two of these, the AWS Budgets, the Cost Explorer, I would say for sure is the Billing Conductor, and then of course the AWS Pricing Calculator, which is an estimation and forecasting tool that we would use before we move to the cloud or start to use the cloud in our hybrid solution.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Cost Allocation Tags (it_clawsp23_15_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/adccb24c-2264-43ad-aa26-69500a27f17d/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/adccb24c-2264-43ad-aa26-69500a27f17d/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe various cost allocation tags and their relation to billing reports, for example, AWS Cost and Usage Report.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe various cost allocation tags and their relation to billing reports, for example, AWS Cost and Usage Report</li></ul><div class="section_text">[Video description begins] <em>Topic title: Cost Allocation Tags. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Let&#39;s talk about tags at AWS. A tag is a label that a customer or Amazon assigns to an AWS resource. Every tag is made up of a key and a value. In other words, it&#39;s a key value pair for each resource. For example, an EC2 instance or an S3 bucket. The tag key must be unique. However, a key can have one to many values. Customers can use tags to organize their resources.</p>
+<p>A special type of tag is a cost allocation tag. Cost allocation tags are used to track AWS costs at a granular level. After a customer activates a cost allocation tag, AWS uses the tag to organize their resource costs on a cost allocation report.</p>
+<p>This makes it a lot easier for customers to categorize and track their AWS costs. We’ll see an example of a cost allocation report here in a moment. AWS offers two types of cost allocation tags: AWS-generated tags and User-defined tags.</p>
+<p>AWS (or AWS Marketplace ISV) defines, creates, and applies the AWS-generated tags for the customer. The customer defines, creates, and applies their user-defined tags. Customers must activate both types of tags separately before they can appear in Cost Explorer or on a cost allocation report.</p>
+<p>After the tag is applied to AWS resources (such as an EC2 instance or an S3 bucket) and the customer activates the tags in the Billing and Cost Management console, AWS will then generate a cost allocation report as a (CSV) comma-separated value file, with the usage and costs grouped by the active tags. Applied tags can represent business categories like cost centers, application names, or owners to organize costs across multiple services.</p>
+<p>The cost allocation report includes all AWS costs for each billing period. The report includes both tagged and untagged resources so that customers can easily organize their charges for AWS resources.</p>
+<p>For instance, if a customer tags resources with an application name, they can track the total cost of a single application that runs on those resources. <br /><br />Here&#39;s a sample dummy cost allocation report where we can see we have the Total Cost that could be in whatever currency you’re using. And then we can see a key value pair. The key being User with several different values Owner, in this example, DbAdmin or SysEng. Stack which we have Test or Prod, the Cost Center value, the unique number, and Application value, Widget2, Widget1, or Portal.</p>
+<p>And again the customer can look at the cost allocation report that&#39;s generated by AWS. Or you can go look at the Cost Explorer service.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: AWS Organizations (it_clawsp23_15_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/6de3ecc3-888d-44e4-ab1c-c42bbdea535a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6de3ecc3-888d-44e4-ab1c-c42bbdea535a/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe AWS Organizations.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Organizations</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Organizations. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Organizations. AWS Organizations provide policy-based management for multiple to many AWS accounts, including: creating groups of accounts, automating account creation using the console and APIs, and applying and managing policies for account groups. Organizations empower customers to streamline costs and take advantage of quantity discounts with a single consolidated bill.</p>
+<p>Customers can centrally manage Service Control Policies (SCPs) within an organization across multiple accounts without having to use custom scripts, custom security policies, or manual processes. An SCP allows administrators to place guardrails on highly privileged principals with “deny” statements in the JSON-managed security policies.<br /><br />[Video description begins] <em>A diagram of AWS Organizations is displayed. The Master account/Administrative root is at the top and is connected to Dev, Test, and Prod Organizational units. They are further connected to AWS accounts, and lastly those AWS accounts are connected to AWS resources.</em> [Video description ends]</p>
+<p>User of an account can enable organizations in the identity and access management area, thereby creating the Master account/Administrative root. Then they’ll create Organizational units based on roles, programs, projects, responsibilities geographically. <br /><br />Basically, whatever criteria they want to use for the Organizational unit, which is a container that holds one or more to many accounts and having several to many accounts is exactly what AWS wants you to have, as opposed to 1 or 2 accounts representing a small attack surface or 1 or 2 single points of failure.</p>
+<p>Here we see the Dev OU, the Test OU, and the Prod OU. One advantage is that the Master account gets a single bill at the end of the month, with the charges broken down by Organizational unit. This way, they can chargeback or show back against the budget of the Dev, Testing, or Prod Organizational unit.</p>
+<p>Also, the administrator can apply Service control policies at the OU level, for example, to put guardrails on a highly privileged groups or users in the Test account, basically denying certain API calls even though it’s allowed from a managed policy or a custom policy.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Course Summary (it_clawsp23_15_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/f502a3d9-9774-4d4c-a841-549ad708d383/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/f502a3d9-9774-4d4c-a841-549ad708d383/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this course, you learned about compute purchasing options, data transfer charges, and storage options and tiers, reserved instance behavior, billing support, and cost allocation tags, and AWS Organizations.<br /><br />In the next and final course, you’ll learn about technical and support resources at AWS.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

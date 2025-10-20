@@ -1,0 +1,304 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Deploying &amp; Operating in the AWS Cloud</h1><div class="section_text">The Cloud Technology and Services portion of the AWS Certified Cloud Practitioner certification is the largest domain in terms of coverage. It is key for practitioners to have knowledge and understanding of what it takes to deploy and operate in the AWS cloud environment.
+
+In this course, we will explore the AWS cloud deployment models. You will discover how to access AWS services, look at connectivity options such as AWS Direct Connect, and learn about the use of multiple zones and multiple regions. Finally, we will discuss and identify the benefits of edge locations, implemented using Amazon CloudFront and AWS Global Accelerator.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_08_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: AWS Deployment Models (it_clawsp23_08_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Using AWS Service Access Methods (it_clawsp23_08_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: One-time vs. Repeatable Operations (it_clawsp23_08_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: AWS Connectivity Options (it_clawsp23_08_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Multiple Availability Zones (it_clawsp23_08_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: When to Use Multiple Regions (it_clawsp23_08_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Benefits of Edge Locations (it_clawsp23_08_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Course Summary (it_clawsp23_08_enus_09)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_08_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/64b81040-11f7-4d99-9773-76fd2a4c4fb8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/64b81040-11f7-4d99-9773-76fd2a4c4fb8/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Deploying &amp; Operating in the AWS Cloud. This is the first course that covers topics in Domain 3 cloud technology and services. This is also the largest percentage domain in terms of coverage, coming in at almost 65%. In this course, we will describe cloud deployment models, find out how to access AWS services, look at connectivity options such as Direct Connect, learn about multiple zones and multiple regions, and survey edge locations.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: AWS Deployment Models (it_clawsp23_08_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/0ab04427-ac23-4adb-80a0-e9bcfd83a8ff/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/0ab04427-ac23-4adb-80a0-e9bcfd83a8ff/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare the three main deployment models at AWS.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare the three main deployment models at AWS</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Deployment Models. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Let&#39;s look at our first of three service types at Amazon Web Services, Infrastructure as a Service or IaaS. IaaS offers the basic building blocks for cloud information technology. It provides access to networking features, computers (virtual or on dedicated hardware), and data storage space in the AWS datacenter. Infrastructure as a Service delivers customers the highest level of flexibility and management control over their IT resources. This type most closely compares to existing IT resources that many IT departments and developers are familiar with today. At AWS, there is a clear demarcation point between the provider&#39;s responsibility below the dash line and the customer responsibility above the dash line. AWS provides the data centers in Availability Zones in regions all over the world.</p>
+<p>They also have access to edge locations to customers. That&#39;s the Global Infrastructure. They provide their own identity and access management, specifically a zero-trust environment in their data centers. They provide secure endpoints for customers to use to get access to a myriad of services at AWS. They also provide foundation services, compute, storage, database, networking and content distribution networking, including a fifth foundation service, most likely machine learning and AI. Everything above that is the customer&#39;s decision responsibility. How data is encrypted, the operating system to deploy, the network configuration, the platform and application management, firewall configuration. The customer decides about identity and access management, and of course, customer data.</p>
+<p>Platform as a Service removes the need for organizations to manage the underlying infrastructure, the hardware and operating systems. But it also lets customers focus on the deployment and management of their applications often at the cloud provider. PaaS allows customers to relax and not be so concerned with resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running applications or databases.</p>
+<p>AWS Platform as a Service includes things like development and software development kit platforms for Java, PHP, Python, and more. Container services for Docker and Kubernetes orchestration. Managed and fully managed relational and document databases, not to mention graph databases and blockchain databases. Managed security and threat modeling services and single sign-on, machine learning, AI, IoT, blockchain, and other media services. These all fall under the category of Platform as a Service. And remember, the demarcation between the customer responsibility and AWS&#39;s responsibility can differ even within a database portfolio. Some are managed, some are fully managed. Software as a Service offers customers a comprehensive solution run and managed almost entirely by the service provider. In most cases, this involves various end-user applications. With a SaaS offering, customers are not involved with the maintenance of the service or the underlying infrastructure.</p>
+<p>A common example of a SaaS application is a web-based email or web-based personal cloud storage. Common SaaS offerings include customer relationship management (CRM), enterprise resource management (ERM), human resources and workplace tools, finance, sales, and marketing services, payroll services, cloud-based email, collaboration, and cloud storage, virtual help desk and virtual service desk, virtual call center, and business analytics. On the exam, remember the three types Infrastructure, Platform, and Software as a Service. And also remember, as far as the shared responsibility model goes, the customer has the most responsibility with Infrastructure as a Service and the least responsibility with Software as a Service.</p>
+<p>And with Platform as a Service, there can be a lot of variance and differentiation depending upon the service and the portfolio offering within the service. In addition to three service types, there&#39;s also three deployment models at Amazon Web Services. The first one is the cloud deployment model. A cloud-based application is fully deployed in the cloud and all parts of the application or database solution run in the cloud. Applications in the cloud have either been generated in the cloud or have been migrated from a standing infrastructure to leverage the benefits of AWS cloud computing. Cloud-based applications, for example, containerized applications can be constructed on low-level infrastructure pieces or they can use higher-level services that offer abstraction from the management, architecting, and scaling needs of the core infrastructure.</p>
+<p>With this model, whatever the program or the initiative, it all is migrated or running in the cloud. The second model, according to AWS is the hybrid cloud deployment. This model is a method for connecting infrastructure and applications between cloud-based resources and existing resources that are not placed in the cloud. In other words, on-premises. The most common method is between the cloud and existing on-premises infrastructure to extend and grow an organization&#39;s infrastructure into the cloud while connecting cloud resources to internal systems. Online retailers may use hybrid cloud for &#34;bursting up&#34;. For example, during peak seasons, the holidays in the United States, or an online travel agent whose peak season is made through September deprovisioning at the end of the peak season.</p>
+<p>The third model is the on-premises model. Installing resources on-premises, using virtualization and resource management tools, is often called a private cloud. On-premises deployment does not provide many of the benefits of cloud computing but is often chosen for its ability to provide dedicated resources. In most scenarios, this deployment model is the same as legacy IT infrastructure while using application management and virtualization technologies to try and increase resource utilization or lower a carbon footprint, or move to a smaller, more compact data center. On the exam, remember that the on-premises cloud deployment model does not use Amazon Web Services.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Using AWS Service Access Methods (it_clawsp23_08_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/652fe4ae-88b1-4fc0-ac4b-07f4ab4ac0d8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/652fe4ae-88b1-4fc0-ac4b-07f4ab4ac0d8/image001.jpg')();" /><div class="section_text">Find out how to access AWS services using programmatic access, the AWS Management Console, and Infrastructure as Code (IaC).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">access AWS services using programmatic access, the AWS Management Console, and Infrastructure as Code (IaC)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Service Access Methods. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Now remember, as a customer of Amazon Web Services, when you&#39;re accessing various services, what you&#39;re actually doing is going through controllers in AWS data centers or even edge locations, and you&#39;re doing this through the metastructure which is exposed to you. In other words, there&#39;s a finite set of API calls that you have as a customer that you can run against AWS resources, and there&#39;s various ways to do it. Probably the most common way to do it is through the AWS Management Console that we see here. <br /><br />[Video description begins] <em>The AWS Management Console Homepage is open. There is a toolbar at the top. It contains a Services icon, a Search bar, a Cloudshell icon, a Notifications icon, and so on. Next to the title &#39;Console Home&#39;, 2 tabs appear: Reset to default layout and Add widgets. Below, several boxes appear: Recently visited, Welcome to AWS, AWS Health, and so on. The Recently visited section contains various options like S3, IAM, Secrets Manager, and so on.</em> [Video description ends] <br /><br />We have various ways to access these resources. We can look at the Recently visited services. We can always search for a service. So, for example, if I want to go to Shield, I can type in Shield, and I&#39;ll see.</p>
+<p>Here&#39;s the web application firewall and AWS Shield which pretty much run hand-in-hand. If you&#39;re going to use Shield Advanced, it&#39;s going to have the WAF bundled into it. <br /><br />[Video description begins] <em>The search bar expands into a panel. It contains 2 panes. The left pane contains various options like Services, Features, Resources, and so on. The Services option is active now. The corresponding page is open on the right pane. It displays various services such as WAF &amp; Shield, AWS Firewall Manager, Amazon Macie, CloudShell, and so on.</em> [Video description ends] <br /><br />We also see here just by the way, after the search, the Firewall Manager, Macie, CloudShell. And by the way, while I&#39;m here, CloudShell is a browser-based shell with AWS CLI access from the AWS Management Console. So, on the exam, it&#39;s not unlikely that you will actually use this terminal within the AWS Management Console. Here we see this is a browser-based shell giving us command-line access to our resources. <br /><br />[Video description begins] <em>A dialog box appears with the title &#39;Welcome to AWS CloudShell&#39;. It displays information and icons labeled Pre-installed tools, Storage included, and Saved files and settings. At the bottom, a Close tab appears.</em> [Video description ends] <br /><br />So, instead of using what I&#39;m going to show you here in a second, the command-line interface running on Windows or macOS or Linux, you can just come in and you can just use the shell environment and you can issue your AWS commands, aws followed by whatever resource you want to work in, ec2 followed by the API call.</p>
+<p>Or you can go and choose Actions and you can fill some of these things in. <br /><br />[Video description begins] <em>An AWS CloudShell page appears. There is a drop-down called Actions in the right corner of the title bar. Below, the following header appears: us-east-1. The following command is added as a demo: aws ec2.</em> [Video description ends] <br /><br />So, that&#39;s the AWS CloudShell, which is an option. <br /><br />[Video description begins] <em>The IAM option is selected from the Recently visited section. The IAM Dashboard page opens. The navigation pane on the left titled &#39;Identity and Access Management (IAM)&#39; displays an option called Dashboard at the top along with several collapsible sections like Access management, Access reports, and so on. The Access Management section contains various options like User groups, Users, Roles, Policies, Account settings, and so on. The main pane displays 2 sections labeled IAM resources and What&#39;s new. To the right, a few sections appear such as AWS Account, Quick Links, and so on.</em> [Video description ends] <br /><br />Now, if you go back to the Management Console, realize that what you see in the console is dictated either by the permissions you have, you have managed Policies that are applied to you, and these managed policies dictate actually what is visible to you in the Management Console. <br /><br />[Video description begins] <em>The Policies page is open on the main pane. It displays a few options at the top like refresh, Actions, and Create policy. A search bar appears next followed by a table with a few column headers like Policy name, Type, Used as, Description, and so on. The table displays several items like AdministratorAccess, PowerUserAccess, ReadOnlyAccess, and so on. A plus icon is available next to each item.</em> [Video description ends] <br /><br />So, often what people will do is if they&#39;re going to assign to a group or maybe a Role that&#39;s going to be assumed something like let&#39;s filter out the Administrators.</p>
+<p>If you&#39;re going to have somebody get the NetworkAdministrator, often, what you&#39;ll do besides what they can do, let&#39;s say, with these ec2 commands, you will often assign this managed policy to them, and then you&#39;ll apply like a read-only so they can see everything in the Management Console, even though they don&#39;t have the ability to actually configure everything. <br /><br />[Video description begins] <em>The icon next to NetworkAdministrator item is selected. It expands into a panel. The panel displays the title &#39;NetworkAdministrator&#39;. A tab labeled Copy appears at the top right corner. Below, a JSON is displayed, containing several lines of code.</em> [Video description ends] <br /><br />So, that&#39;s why we know that we can apply it to 10 policies to a group usually or a role. Usually, when you do that, you want to give them the managed permissions of the API calls they can make, you know, the things that they&#39;re allowed, the actions that they&#39;re allowed to do, but you also may want to give them other managed policies to give them the ability to read-only and view certain other things so they can still see everything in the Management Console. Because this not only dictates what API calls you can make, it also dictates visibility when you&#39;re using the Dashboard. Now, the Command Line Interface.</p>
+<p>One thing you&#39;re probably going to want to do if you&#39;re going to work from home, like I said, you can use the CloudShell that I just showed you. Historically, a lot of users will go up to aws.amazon.com/cli, and they&#39;ll download an installer. So, Windows only supports the 64-bit operating system now, used to have a 32-bit installer, but not anymore. <br /><br />[Video description begins] <em>A page titled &#39;AWS Command Line Interface&#39; appears. The address bar at the top reads: https://aws.amazon.com/cli/. A toolbar appears next with various options and tabs. The navigation pane on the left, contains 2 sections: RESOURCES and RELATED LINKS. Below, there is a box labeled Get Started with AWS for Free. It contains a button called Create Free Account. The main pane displays information and 4 icons with the following hyperlinks: Getting Started, AWS CLI Reference, GitHub Project, and Community Forum. The pane on the right contains several sections like Windows, Linux, Release Notes, and so on. The sections contain the respective hyperlinks: 64-bit, MacOS PKG, Linux installer, and Amazon Linux AMI.</em> [Video description ends] <br /><br />You&#39;ve got a MacOS package you can download. This used to be part of Linux, but now it&#39;s separate. You have a Linux installer, one for the Amazon AMI. If you choose an Amazon Linux image in EC2, for example, the cool thing is it has the CLI pre-installed which is pretty cool. So, you know, for me, I downloaded this one and I installed it on my machine and then I ran as administrator on my machine cmd.exe. Let me show you what that looks like. This is a screenshot I want to show you of what you&#39;re going to do.</p>
+<p>When you download the CLI, you&#39;re going to issue the command aws configure. Now, you&#39;re going to run cmd.exe as administrator most likely. When you issue aws configure, you will have received through email, maybe from yourself, or some other administrator who has managed policies at AWS, an Access Key ID which you&#39;ll copy and paste, a Secret Access Key which you&#39;ll copy and paste in here. <br /><br />[Video description begins] <em>A screenshot of a command prompt window is displayed. The window is titled as follows: C:\Windows\System32\cmd.exe - aws configure. The following command is displayed: aws configure. There are 4 empty output displayed: AWS Access Key ID, AWS Secret Access Key, Default region name, and Default output format.</em> [Video description ends] <br /><br />Then you&#39;ll choose a Default region. That way, when you come into the CLI and you issue an AWS command, you&#39;ll already be in the regional context where you want to work, otherwise, you have to issue a command. The Default output will be JSON. You probably should go with JSON and learn JSON, but if not, you might want to choose table.</p>
+<p>Now, what&#39;s going to happen after that is whenever you issue AWS commands to your resources in your account, you&#39;re going to be digitally signing those API calls with a session key derived from the Secret Access Key. That&#39;s called forward secrecy. And so, basically, the API goes through a cryptographic hash and then your derived access key signs or encrypts that. That gets attached to the API call. Then you have 15 minutes to send it up there. You have to digitally sign everything that you do outside of AWS, even if let&#39;s say it&#39;s to a software development kit or an SDK. Let&#39;s check that out. Now, you can also access remotely using a software development kit. <br /><br />[Video description begins] <em>The Developer Tools tab is open on the browser. The aws toolbar provides a set of tabs like Products, Solutions, Pricing, and so on. The title bar called Developer Center contains several drop-downs and tabs like Learning, Programming Languages, Events, Tools, and so on. The Tools tab is active now. It displays a command bar at the top with the following options: C&#43;&#43;, Go, Java, JavaScript, Kotlin, .NET, Node.js, PHP, Python, Ruby, Rust, Swift, and SAP ABAP. The C&#43;&#43; option is active now. It displays a section called Start building with C&#43;&#43;. Below, 4 boxes appear: BUILD APPLICATIONS, BUILD ON AWS WITH AN IDE, GET STARTED, and CONNECT WITH THE COMMUNITY.</em> [Video description ends] <br /><br />They also offer an integrated development environment known as AWS Cloud9.</p>
+<p>Realize that when you&#39;re using an AWS SDK, whether it&#39;s for C&#43;&#43;, which is very popular, Go, Java, JavaScript, .NET, PHP, Python, or Ruby, when you&#39;re using the SDK, your API calls that you make programmatically were automatically digitally signed. OK, so you don&#39;t have to worry about going through the process of, you know, getting some type of download so that you digitally sign your programmatic access. This is done for you by AWS when you use their software development kits. Now, realize if we go back to IAM here, under Account settings, there&#39;s a Security Token Service. <br /><br />[Video description begins] <em>The Account settings page is open on the main pane. It displays a section called Password policy at the top. Another section labeled Security Token Service (STS) appears next. It contains 2 headers: Session Tokens from the STS endpoints and Endpoints. Under the Session Tokens from the STS endpoints header, 2 fields appear: Global endpoint and Regional endpoints. Below, the Endpoints header, there is a table with 3 column headers: Region name, Endpoint, and STS status. It displays many items below.</em> [Video description ends] <br /><br />This can be used to create and provide trusted users with temporary security credentials to access the AWS resource. But you can do this in the command line interface or through your own application. You&#39;re going to use regional STS endpoints, that way it reduces latency. So, here&#39;s another way I can come in and use one of these endpoints. For example, if I&#39;m in the US N.Virginia since it&#39;s Always active, I can use these STS tokens to temporarily access as a remote administrator.</p>
+<p>That&#39;s a way. Don&#39;t forget, also if you&#39;re using CloudFront, not only users can access cached information in an edge location. You can also be a remote administrator and actually go to and through the CloudFront distribution. In fact, you could go through it and actually configure things in the backend like S3 and EC2. <br /><br />[Video description begins] <em>A tab titled &#39;Low-Latency Content Delivery&#39; is displayed on the browser. It contains the Amazon CloudFront page. The title bar at the top contains tabs like Overview, Features, Pricing, and so on. The Overview tab is active now. It displays a flow diagram below.</em> [Video description ends] <br /><br />You would do that using TLS 1.2 or higher. Or you could also use a digitally signed API session.</p>
+<p>Either way, don&#39;t forget that the CloudFront distribution doesn&#39;t just distribute data and other things to end users, you can also administer or manage through a CloudFront distribution. Obviously, the WAF has to allow it, but remember, this is not something necessarily that AWS likes you to do. It&#39;s not the preferred mechanism, but it still can be done. So, in this lesson, we saw kind of a wide variety of ways to remotely access resources, at AWS including internally through the Management Console. And we also realized that we can use the Systems Manager service as well. We&#39;ve learned about that earlier in the training.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: One-time vs. Repeatable Operations (it_clawsp23_08_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/5fcc8c0a-bf70-427b-b522-68152b42276a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/5fcc8c0a-bf70-427b-b522-68152b42276a/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to compare use cases for repeatable operations vs. one-time processes.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare use cases for repeatable operations vs. one-time processes</li></ul><div class="section_text">[Video description begins] <em>Topic title: One-time vs. Repeatable Operations. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this short lesson, we&#39;re going to look at something that relates to the flexibility value proposition of Amazon Web Services and that is the ability to run one-time operations, do them effectively, and even automate them, as well as repeatable operations. Let&#39;s start with some common one-time operations at Amazon Web Services. You can run ad hoc serverless workloads, for example, Bastion or jump services. For example, you could bring up a high-performance computing instance, access it securely through the Systems Manager Session Manager, run your one-time operation, and then terminate the instance. You can automate extract, transform, and load (ETL) processes. You could do this to ensure that multiple long-running ETL jobs run in a certain order and complete successfully, without the need for manual orchestration.</p>
+<p>Another example of one-time operations is combining multiple AWS Lambda functions into a one-time responsive serverless application or microservice. For example, for a vulnerability assessment use case or a one-time batch job. You can use code to process data on demand with large-scale parallel workflows. Or you could do repeatable operations which are actually much more common at Amazon Web Services. You can have application orchestration of web applications. Machine learning collection and processing of image data to detect objects within a video stream or to provide visual and metadata information for data cataloging. Another repeatable operation is security automation of scheduled analysis or security incident response initiated by managed resource events. Other common security operations that are repeatable would be SIEM and SOAR playbooks or runbooks. Or you could do media processing by extracting data from PDF documents or images for processing. These are common repeatable operations.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: AWS Connectivity Options (it_clawsp23_08_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/7268c80d-e35f-4b8a-8b51-db1a163c7421/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/7268c80d-e35f-4b8a-8b51-db1a163c7421/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to outline the use of AWS connectivity options including AWS VPN, AWS Direct Connect, and public Internet.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the use of AWS connectivity options including AWS VPN, AWS Direct Connect, and public Internet</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Connectivity Options. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;re going to serve a various connection options for connecting to a VPC in the AWS cloud, a virtual private cloud. The first being a very traditional and still popular method, connecting through an Internet gateway. With this solution, the customer or it could be somebody in your organization is connecting through their network connection through their Internet service provider and coming to a public IP address through the Internet gateway to something being served in a public subnet. In this example, we have a public server, let&#39;s say, Apache web server. What makes it a public subnet, by the way, is that in this subnet, it&#39;s using a route table, and in the route table is an entry to the Internet gateway. Generally, the route table has a local entry for the local traffic. For example, here it&#39;s 10.10.0.0/16.</p>
+<p>Then the other entry is usually 0.0.0.0/0 or anything else goes to the Internet gateway. The public server has a private IP address, but it could be IP version 6, but that&#39;s not enabled by default. So, let&#39;s talk about IP version four. If the public server is going to be exposed to the Internet through the gateway, it has to have a public IP address. There&#39;s really three ways to do that. The public server can get an auto-assigned address or you could have an elastic IP address that&#39;s part of your account that you could allocate to the public server. Or you could deploy out in front of the Internet gateway an Application Elastic Load Balancer which actually has the public IP address and then it would load balance to whatever&#39;s in the public subnet.</p>
+<p>This is a very popular option, but realize on the Internet gateway side, you&#39;re going to get a maximum of 1.25 gigabit per second in bandwidth. And then, of course, whatever you connect from through your ISP, it&#39;s whatever service-level agreement you have with your Internet provider, for example, your broadband cable provider. Next, we see connecting to AWS through a site-to-site VPN. In this scenario, you have a virtual private gateway. Your subnet is actually a VPN-only subnet that has an entry to the virtual private gateway or the VPG in its route table. So, it knows that traffic that&#39;s not local should be routed through the virtual private gateway across the public Internet over to the other site. It could be the headquarters, a regional branch office. It could even be a client endpoint to a laptop running open VPN on some teleworkers machine. Here, like the previous example, you&#39;re going over the public Internet, but it&#39;s using an IPsec VPN.</p>
+<p>You have a virtual private gateway on the AWS side which is virtual over on the customer gateway that could be a physical or virtual gateway, something like a Cisco Aggregate Services Router, or something like that. With the site-to-site VPN, it&#39;s easy to configure. It&#39;s rapidly deployed. The VPG on the AWS side has all the settings pretty much defaulted and automatic, so it&#39;s very easy to set up whatever IKE version 1 or IKE version 2 profile you&#39;re using on the customer gateway, you&#39;ll find a match with the virtual private gateway. There&#39;s two ways to route traffic from the customer gateway to the VPG over the site-to-site VPN. That would be static routing or the more common option is to use Border Gateway Protocol.</p>
+<p>Here also the maximum bandwidth will be 1.25 gigabit per second and usually you&#39;re going to use IKE version 2. Another more popular option that&#39;s emerging is connecting to AWS through a transit gateway. So, here you still have the customer gateway. Instead of having a VPG, however, you have several virtual private clouds that connect to a transit gateway and the transit gateway has a route table and it has the information about the customer gateway in it, just like your virtual private gateway. However, with the virtual private gateway, we saw in the previous example, on the site-to-site VPN, you can only have one tunnel. Actually it&#39;s a failover tunnel, but one VPN connection to the site on that VPG. Here you can have many, many VPCs connecting. You can connect other transit gateways and other virtual private gateways.</p>
+<p>The transit gateway is highly scalable and extremely robust and highly configurable. It overcomes a lot of limitations of things like VPC peering that we&#39;ve used in the past. Here we see using Direct Connect. In this example, we have a router at the corporate data center. It&#39;s going to run Border Gateway Protocol and the 802.1Q VLAN tagging protocol. Then you&#39;ll find a partner a Direct Connect location in your metropolitan area. That partner will create a customer cage for you where you&#39;ll have your virtual router. Your virtual router will be routed to the AWS Direct Connect endpoint, which is also virtual routers highly available.</p>
+<p>Then you can use an IPsec IKE version 2 tunnel and connect over across to the virtual private gateway. In some cities, you can even use 802.1AE MACsec to actually encrypt the frames that are being sent from the corporate data center and across the Direct Connect fabric. With this option, you can get bandwidths well above 1.25 gigabit per second. You can get 10 gig, 50 gig, and in some cities, 100 gigabit per second. Also, realize in the diagram in the middle, the AWS Direct Connect endpoint doesn&#39;t necessarily have to connect to a virtual private gateway. It can also use a public virtual interface to connect to a wide variety of services running in the AWS cloud. For example, Elastic File System or DynamoDB, or S3 buckets. The Direct Connect solution is a very important technology for modern hybrid cloud and edge computing.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Multiple Availability Zones (it_clawsp23_08_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/22fb527b-bcf4-4526-9157-07f64a80ec0c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/22fb527b-bcf4-4526-9157-07f64a80ec0c/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline how to achieve high availability by using multiple Availability Zones.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline how to achieve high availability by using multiple Availability Zones</li></ul><div class="section_text">[Video description begins] <em>Topic title: Multiple Availability Zones. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Using multiple Availability Zones, every AWS region is segmented into distinct Availability Zones, or AZs. Each AZ has its own power, cooling, and network connectivity forming an isolated failure domain. Within the AWS domain, customers are encouraged to run their workloads in more than one Availability Zone. This ensures that customer applications can survive even a complete AZ failure, which is still a very rare event at Amazon Web Services. On the exam, you may need to know about AWS placement groups. A placement group is a configuration option that AWS offers that lets customers house a group of interdependent EC2 instances in a certain way across the underlying hardware on which those instances reside.</p>
+<p>The instances could be placed close together or spread through different racks, or even spread through different Availability Zones. Objects in a Simple Storage Service (S3) Standard tier are automatically replicated by default across three availability zones in a region. In an Amazon Relational Database (RDS) Multi-AZ deployment, Amazon RDS automatically creates a primary database instance and synchronously replicates the data to an instance in a different AZ in the same region. When a failure occurs and is detected, RDS automatically fails over to a standby instance without any manual intervention. Remember, every region in the AWS Global Infrastructure has at least 3 Availability Zones, some have 4, even up to six. In the next lesson, we&#39;ll go beyond just using multiple Availability Zones, and we&#39;ll discuss using multiple regions.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: When to Use Multiple Regions (it_clawsp23_08_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/b3efac9c-a677-4748-bade-70617518f9c8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b3efac9c-a677-4748-bade-70617518f9c8/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to recognize when to use multiple regions such as disaster recovery, business continuity, low latency for end users, and data sovereignty.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">recognize when to use multiple regions such as disaster recovery, business continuity, low latency for end users, and data sovereignty</li></ul><div class="section_text">[Video description begins] <em>Topic title: When to Use Multiple Regions. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Using multiple regions in Amazon Web Services. AWS customers can deploy applications in multiple AWS regions in the same country or intercontinentally, for example, Northern Virginia and Paris, and Ireland. Using multiple regions gives them greater control over their recovery time in the event of a hard dependency failure on a regional AWS service. Although it&#39;s rare, it can still happen. In fact, sometimes it happens because of disaster recovery drills or business continuity. Many organizations will use the DNS Route 53 service load balancing on domain names or Global Accelerator IPv6 Anycasting to load balance across multiple regions. Common reasons to utilize multiple AWS regions on the exam would be disaster recovery as part of business continuity, lowering latency for customers in different regions, data dispersion initiatives, for example, for security and high availability, dispersing data among availability zones in two or more regions, and data sovereignty issues.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Benefits of Edge Locations (it_clawsp23_08_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/372eb29b-6539-48f4-a7b5-41149924a4a0/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/372eb29b-6539-48f4-a7b5-41149924a4a0/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to recognize the benefits of edge locations, e.g., Amazon CloudFront, AWS Global Accelerator.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">recognize the benefits of edge locations, e.g., Amazon CloudFront, AWS Global Accelerator</li></ul><div class="section_text">[Video description begins] <em>Topic title: Benefits of Edge Locations. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Edge Locations. Edge locations or AWS data centers, and metropolitan area partners that are designed to deliver customer services with the lowest possible latency. Amazon has dozens of these data centers spread across the world. They are closer to users than regions or even availability zones. They&#39;re often in major cities, so responses to customers and streaming users can be extremely fast and low latency. The benefits of edge locations are that Amazon CloudFront content distribution or delivery networking, uses edge locations. It caches copies of the content that it serves, presenting it closer to consumers and delivering it to them faster. Route 53 serves DNS responses from edge locations so that DNS queries that originate nearby can resolve faster. Web application firewall (WAF) and AWS Shield (Standard and Advanced) filter traffic in edge locations to stop unwanted traffic as soon as possible, denial-of-service (DDoS), and bot traffic.</p>
+<p>AWS Global Accelerator lets customers route requests for key resources through Amazon&#39;s global network, even if the request is going halfway around the world. The request is originally routed to the closest edge location using Anycasting, and then travels through Amazon&#39;s network with lower latency and higher throughput than the public Internet. Here we can see a simple diagram showing edge locations. Viewers get their content, streaming video, streaming audio, other types of data from edge locations serviced through Amazon CloudFront. Typically, the edge locations use Elastic Cache with Redis, in other words, in-memory storage as opposed to solid-state drive arrays for fast delivery and low latency. Edge locations are actually serviced by regional edge caches. The origin server is the original content and it can be stored in AWS S3 buckets, which is the most common solution. However, they could use another cloud provider like Azure Blob or even their own data center to store the origin content.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Course Summary (it_clawsp23_08_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/e4a4bff6-b48b-4e47-a5a0-49398b3195b8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e4a4bff6-b48b-4e47-a5a0-49398b3195b8/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this course, you learned about AWS deployment and service access methods. AWS connectivity options and multiple availability zones and regions. And the benefits of edge locations. Coming up in the next course, you&#39;ll learn about AWS compute services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

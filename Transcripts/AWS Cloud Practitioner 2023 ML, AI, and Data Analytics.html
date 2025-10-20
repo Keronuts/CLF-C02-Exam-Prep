@@ -1,0 +1,325 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: ML, AI, &amp; Data Analytics</h1><div class="section_text">Cloud customers can get deeper insights into their data while lowering costs with AWS machine learning (ML) and artificial intelligence (AI) services. AWS assists at every phase of the ML/AI adoption journey with the most comprehensive set of services, infrastructure, and implementation resources. 
+
+Begin this course by discovering how ML and AI assist organizations like yours in generating growth and fixing challenging issues. Next, you will explore Amazon SageMaker, Amazon Lex, which is a fully managed AI service with cutting-edge natural language models, and Amazon Kendra, which can provide ML-powered instant answers and FAQs. Then you will focus on Amazon Athena, a serverless, interactive analytics solution, Amazon Kinesis, and Amazon Glue, a serverless data integration service. Finally, you will examine Amazon QuickSight and Amazon EMR, the industry-leading cloud big data solution for petabyte-scale data processing, interactive analytics, and ML.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_13_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Machine Learning and Artificial Intelligence in a Nutshell (it_clawsp23_13_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Using Amazon SageMaker, Amazon Lex, and Amazon Kendra (it_clawsp23_13_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Amazon Lex (it_clawsp23_13_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Amazon Kendra (it_clawsp23_13_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Amazon Athena (it_clawsp23_13_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Using Amazon Kinesis (it_clawsp23_13_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: AWS Glue (it_clawsp23_13_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Using Amazon QuickSight (it_clawsp23_13_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Amazon EMR (formerly Amazon Elastic MapReduce) (it_clawsp23_13_enus_10)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_10" tabindex="0" class="toc-link">11. Video: Course Summary (it_clawsp23_13_enus_11)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_13_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/6ad0e108-bc63-408e-8d00-45494809c9d6/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6ad0e108-bc63-408e-8d00-45494809c9d6/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>ML, AI, and Data Analytics. Cloud customers can get deeper insights into their data, while lowering costs with AWS machine learning (ML), and artificial intelligence (AI) services.</p>
+<p>AWS assists at every phase of the ML, AI adoption journey with the most comprehensive set of services, infrastructure, and implementation resources.</p>
+<p>In this course, we will define machine learning and artificial intelligence, compare Amazon SageMaker, Amazon Lex, Amazon Kendra, and Amazon Athena. We&#39;ll describe Amazon Kinesis, Amazon Glue, Amazon QuickSight, and Amazon EMR.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Machine Learning and Artificial Intelligence in a Nutshell (it_clawsp23_13_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/73ee13c0-a5d7-43a6-8117-e825f9d4c5f4/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/73ee13c0-a5d7-43a6-8117-e825f9d4c5f4/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to define machine learning and artificial intelligence.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define machine learning and artificial intelligence</li></ul><div class="section_text">[Video description begins] <em>Topic title: Machine Learning and Artificial Intelligence in a Nutshell. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Machine learning, or ML, assists organizations in generating growth, discovering new revenue streams, and fixing challenging issues. Data is a critical success factor (CSF) in business decision-making, and companies have typically leveraged data from various sources, such as customer feedback, their employees, finance, and external consultants.</p>
+<p>Machine learning research automates and optimizes this process. Businesses can get results quicker by using code that analyzes very large data sets at high speeds. Some machine learning use cases are: Manufacturing- to support predictive maintenance, quality control, and inventive research in the manufacturing sector.</p>
+<p>ML technology also assists companies in improving logistical solutions, supply chain disruptions, and inventory control such as JIT, Just-in-Time. Healthcare and life sciences- the explosion of wearable sensors has resulted in a substantial amount of health data being generated.</p>
+<p>Machine learning solutions can analyze the data and support physicians, and other healthcare professionals in performing real-time diagnosis and treatment. Financial services- projects enhance risk analytics and regulation adherence.</p>
+<p>ML technology can help investors recognize new prospects by analyzing stock market trends, appraising hedge funds, or adjusting portfolios. Retail- ML initiatives can improve customer service, stock or inventory management, upselling, and cross-channel marketing.</p>
+<p>Media and entertainment- this sector uses ML to better appreciate their target audiences and distribute immersive, tailor-made or bespoke, and on-demand content. ML algorithms are used to help design trailers and other advertisements, offer customers content recommendations, and streamline production.</p>
+<p>There&#39;s four main machine learning algorithms. Supervised machine learning, is where data scientists offer algorithms with branded and distinct training data to evaluate for correlations. Unsupervised machine learning- this is a technique that trains on unlabeled data by scanning new data and establishing significant links between the inputs and predetermined outputs.</p>
+<p>Semi-supervised learning- this combines supervised and unsupervised learning by leveraging a small amount of labeled data and a large amount of unlabeled data to train the ML system. And reinforcement machine learning- this is a technique that associates reward values with the different steps that the algorithm must follow.</p>
+<p>Technically speaking, there is a difference between machine learning and artificial intelligence. In a nutshell, AI is a domain of computer science focused on solving cognitive problems universally associated with human intelligence: learning, problem solving, and pattern recognition. Although AI can often invoke robotics or even futuristic dystopian panoramas, it transcends the automatons of science fiction into the non-fiction of modern-day advanced computer science.</p>
+<p>AWS offers ready-made intelligence for customer applications and workflows with pre-trained AI services. These AI services effortlessly integrate with applications to support common use cases such as personalized recommendation engines; contact center modernization; safety and security enhancement; and customer engagement improvement.</p>
+<p>AWS AI services leverage the same deep learning technology that powers Amazon. Customers attain quality and accuracy from continuously learning application programming interfaces without the need for machine learning experience.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Using Amazon SageMaker, Amazon Lex, and Amazon Kendra (it_clawsp23_13_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/a4d6d109-cdcd-4de8-b46b-1781e9b0c2d2/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a4d6d109-cdcd-4de8-b46b-1781e9b0c2d2/image001.jpg')();" /><div class="section_text">In this video, we will compare Amazon SageMaker, Lex, and Kendra.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare Amazon SageMaker, Lex, and Kendra</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Amazon SageMaker, Amazon Lex, and Amazon Kendra. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Let’s do a quick Safari up to AWS, and look at Amazon SageMaker. If you want to get started in machine learning, SageMaker can jump-start that solution, giving you a few common use cases that you can deploy with just a few clicks.</p>
+<p>SageMaker allows customers to build, train, and deploy high-quality machine learning models quickly, leveraging a broad set of capabilities that are purpose-built for machine learning. The other good thing about SageMaker, is that it’s part of the AWS Free Tier program, so you can use it for free for 2 months, getting access to 250 hours per month of ml.t3.medium notebooks.</p>
+<p>Some popular solutions for SageMaker include extracting and analyzing data and documents for more accurate investigation and faster decision making. You can use SageMaker for fraud detection, to automate detection of suspicious transactions, and let your customers know so they can reduce potential financial loss.</p>
+<p>Churn prediction- predict the likelihood of customer churn or turnover, and improve retention by honing in on likely abandoners, and taking remedial actions, such as offering promotions or incentives to remain a customer.</p>
+<p>And you can use SageMaker machine learning to deliver customized, unique experience to customers to improve their satisfaction and rapidly grow your business through personalized recommendations.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Amazon Lex (it_clawsp23_13_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/e3cb01b3-ce81-4260-8d71-8abc92a053d9/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e3cb01b3-ce81-4260-8d71-8abc92a053d9/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe Amazon Lex.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe Amazon Lex</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Lex. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this short video, let&#39;s talk about another managed AI service from Amazon Web Services. This one&#39;s called Lex.</p>
+<p>Amazon Lex is a fully managed artificial intelligence service with cutting-edge natural language models for designing, constructing, testing, and releasing conversational interfaces in applications and mobile apps.</p>
+<p>That’s the key on the exam- Lex is for conversational interfaces. It provides virtual agents and voice assistants; informational response automation; application bots for enhancing productivity; and chatbots using existing contact center transcripts.</p>
+<p>With Amazon Lex, you can build conversational interfaces into any app or application that&#39;s using voice and text. [Video description begins] <em>A flowchart displaying the various processes involved in using Amazon Lex to build and deploy a chatbot is shown on the screen.</em> [Video description ends] You can define your chat experience in a granular way.</p>
+<p>For example, what issue or what challenge are you solving? And what are the desired outcomes? Some of the variables would be, Intent or Desired action, Utterance: User input, Prompt: Request data, Slot: Required data, Fulfillment: Completed action. Use Amazon Lex to build, test, and deploy your chatbot into your production environment.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Amazon Kendra (it_clawsp23_13_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/2117fc78-c60c-4186-a630-fdeb9fd4c572/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/2117fc78-c60c-4186-a630-fdeb9fd4c572/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe Amazon Kendra.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe Amazon Kendra</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Kendra. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Amazon Kendra. Generative AI is a type of artificial intelligence that can create new content and ideas, including conversations, stories, images, videos, and music.</p>
+<p>It is powered by very large ML models that are pre-trained on large amounts of data and is usually referred to as a foundation model (FM). Customers use Amazon Kendra with large language models (LLMs) to rapidly construct secure, generative AI-powered conversational experiences for users on top of enterprise content.</p>
+<p>Some use cases for Amazon Kendra would be deploying a fine-tuned and cohesive search experience across multiple structured and unstructured content sources; using natural language processing (NLP) to attain decidedly accurate answers without any ML experience; providing ML-powered instant answers, frequently asked questions (FAQs) and document ranking using a fully managed service.</p>
+<p>Use Amazon Kendra for intelligent search for websites and applications that are powered by machine learning. [Video description begins] <em>A diagram displaying the various processes in using Amazon Kendra is shown on the screen.</em> [Video description ends] You can ingest data using data source connectors, for example, S3, software as a service providers- Salesforce or Slack, or custom data source connectors to sync multiple data repositories.</p>
+<p>Then use built-in features to improve search accuracy. For example, incremental learning, custom content attributes, relevance tuning, custom document enrichment, pre-trained domains, and custom synonyms. <br /><br />Then, improve customer search experience, and employee productivity when they’re searching their intranet, or doing website search and self-service bots, contact center agent assist, or embedded SaaS applications.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Amazon Athena (it_clawsp23_13_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/a28c7e83-5657-4d9e-a51a-c79e42d9ebb0/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a28c7e83-5657-4d9e-a51a-c79e42d9ebb0/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe Amazon Athena.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe Amazon Athena</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon Athena. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>Amazon Athena is a serverless, interactive analytics solution built on open-source frameworks. It supports open-table formats and file formats.</p>
+<p>Athena delivers a flexible and easy way to analyze petabytes of data right where it resides. Customers use Athena to analyze data or build applications from an Amazon Simple Storage Service (S3) data lake and 30 data sources, including on-premises data sources or other cloud solutions using SQL or Python. Athena is built on open-source Trino and Presto engines and Apache Spark frameworks.</p>
+<p>And there’s no provisioning or configuration effort required on the client side. With Amazon Athena, you can query data from data lakes, data warehouses, transactional systems, big data frameworks, enterprise resource planning frameworks, Amazon S3 data lake/data mesh, and more, running on-premises or in the cloud.</p>
+<p>Athena is serverless, highly scalable, and offers streamlined analytics service for all of your data. [Video description begins] <em>A flowchart showing the lists of data sources and features of Amazon Athena is displayed on the screen. Amazon Athena at the center, is further connected to options called ML tools and BI and analytics applications. All the elements are connected using bi-directional arrows.</em> [Video description ends] You can also integrate Athena with machine learning tools to forecast revenue, predict customer churn and more, or build applications to analyze and visualize your data.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Using Amazon Kinesis (it_clawsp23_13_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/eb01e748-ec0e-4413-9911-ca98388551b9/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/eb01e748-ec0e-4413-9911-ca98388551b9/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to use Amazon Kinesis.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use Amazon Kinesis</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Amazon Kinesis. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>All right, in this short video, we&#39;re going to do a web safari up to Amazon Web Services and talk about Amazon Kinesis, which is a fully managed service allowing you to collect, process, and analyze real-time, streaming data to get timely insights and react quickly to new data. Data becoming information, information becoming knowledge.</p>
+<p>Kinesis ingests real-time data like video, audio, application logs, website clickstreams, and more recently, IoT, Internet of Things telemetry data from machine learning, for analytics, and other applications. Amazon Kinesis is a very popular service to run, behind an API gateway. <br /><br />On the exam, be familiar with these four main use cases: Building video analytics applications- securely streaming video from camera-equipped devices in homes and businesses, and public places for security monitoring, face detection and face recognition and other analytics.</p>
+<p>Moving away from just batch jobs to real-time analytics- performing real-time analysis on data, for example, sharing data between different applications and streaming ETL. You can use Kinesis for real-time applications such as application monitoring, fraud detection, and live leader-boards. And process streaming IoT device data, for example, sending real-time alerts from medical IoT, or manufacturing IoT, to take other actions programmatically.</p>
+<p>For example, when a sensor exceeds operating thresholds. It may be on the exam that you have to define four different Kinesis products. You have Kinesis Video Streams, to securely stream video from connected devices. Kinesis Data Streams, for scalable and durable real-time data streaming services continuously capturing gigabytes of data per second from hundreds of thousands of sources. <br /><br />There&#39;s also Kinesis Data Firehose, where you capture, transform, and load data streams into AWS data stores for near real-time analytics with existing business tools. And Kinesis Data Analytics to process data streams in real time with SQL or Apache Flink, without having to learn a new programming language, or learn a new processing framework.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: AWS Glue (it_clawsp23_13_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/cb81894e-8619-4c19-b819-4282608c2186/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/cb81894e-8619-4c19-b819-4282608c2186/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe AWS Glue.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Glue</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Glue. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>AWS Glue. AWS Glue is a serverless data integration service that makes it easier to discover, prepare, move, and integrate data from multiple sources.</p>
+<p>Glue is used for analytics, machine learning, and application development. AWS customers can use Glue to discover and connect to over 70 varied data sources; manage data in a centralized data catalog; and visually create, run and monitor ETL- extract, transform, and load pipelines, to load data into data lakes.</p>
+<p>Some of the Glue data sources include S3, DynamoDB, Amazon Relational Database Service (RDS), database running on EC2 instances, and other databases, and SaaS providers or AWS marketplace providers. [Video description begins] <em>A flowchart containing four boxes is displayed on the screen. The first box is titled Data sources and lists various data sources in it. This is connected u to the second box titled Choice of interfaces which in turn is connected to a third box titled Data integration engines using to and fro arrows. The second box is also connected to a fourth box containing data lakes and data warehouse options.</em> [Video description ends]</p>
+<p>Glue&#39;s open interfaces support interactive and job workloads. You can choose between different interfaces such as AWS Glue Studio, Amazon SageMaker notebooks, or other notebooks and IDEs, Integrated Development Environments.</p>
+<p>Then you can choose a preferred serverless, scalable data processing engine such as AWS Glue for Ray, AWS Glue for Python Shell, or AWS Glue for Apache Spark, with automatic scaling, and pay-as-you-go pricing, ultimately sending the data to Amazon Redshift data warehousing, S3 data lakes, or other data warehouses.</p>
+<p>If you’re going to use Amazon S3 with AWS Glue, a popular solution, simply load the new data into an S3 bucket, then, initiate one or more ETL jobs. [Video description begins] <em>A flowchart labelled AWS Glue is displayed on the screen. It contains 6 boxes and the first box titled Amazon S3 is connected to another titled AWS Glue. This connects to a box titled AWS Glue ETL which connects to two buckets that load transformed data into the target data store: Amazon Redshift and Amazon S3. Underneath, there are also processes happening simultaneously. These include AWS Glue Data Catalog, that manages data, and also, Amazon Cloudwatch, that monitors logs and notifications.</em> [Video description ends] You can use the AWS Glue Data Catalog to manage data, with the data catalog serving as a central metadata repository.</p>
+<p>You can use AWS Glue ETL to schedule the ETL jobs to transform and load the data. You can monitor logs and push notifications to Amazon CloudWatch, and then ultimately load your transformed data into your targeted data store- an Amazon Redshift cluster, or an Amazon S3 bucket.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Using Amazon QuickSight (it_clawsp23_13_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/e20d7926-5959-408c-9570-be73665e427b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e20d7926-5959-408c-9570-be73665e427b/image001.jpg')();" /><div class="section_text">Learn how to use Amazon QuickSight.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use Amazon QuickSight</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Amazon QuickSight. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>All right, let’s take a quick look at Amazon QuickSight- Unified business intelligence at hyperscale. This is a service that powers data-driven companies with unified BI or business intelligence at what they consider to be hyperscale.</p>
+<p>You can meet various analytic needs from the same source of truth using modern interactive dashboards, paginated reports, embedded analytics, and natural language queries.</p>
+<p>AWS calls this generative BI, transforming the traditional multiphased BI tasks into intuitive and powerful natural language experiences, built on leading machine learning expertise of QuickSight. On the exam, know the benefits of QuickSight.</p>
+<p>You can meet the needs of your users from the same source of truth with the aforementioned tools. You can speed up development by using one unified authoring experience to build and share insights using modern dashboards, reporting, and embedded insights. <br /><br />Automatically scale to tens of thousands of users without having to set up, configure, or manage your own servers, and pay for what you use, like a utility. There’s no need to buy thousands of end-user license for large-scale BI or embedded analytics deployment.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Amazon EMR (formerly Amazon Elastic MapReduce) (it_clawsp23_13_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/247760e7-efe0-43ad-912d-439c8632e1ab/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/247760e7-efe0-43ad-912d-439c8632e1ab/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe Amazon EMR.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe Amazon EMR</li></ul><div class="section_text">[Video description begins] <em>Topic title: Amazon EMR (formerly Amazon Elastic MapReduce). Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this lesson, we’re going to look at Amazon EMR, and that’s what we call it on the exam because it&#39;s not called Amazon Elastic MapReduce anymore. And correct me if I&#39;m wrong, but I think Elastic MapReduce was the original Google search engine, memo to check me on that.</p>
+<p>However, today, EMR is the industry-leading cloud big data solution for petabyte-scale data processing, interactive analytics, and machine learning. EMR utilizes open-source frameworks such as Apache Spark, Apache Hive, and Presto.</p>
+<p>Amazon EMR Serverless is a new option in EMR. It makes it simple and cost-effective for engineers and analysts to run applications built using open-source big data frameworks like the aforementioned Spark, Hive, or Presto. And there&#39;s no need to tune, operate, optimize, secure, or manage clusters.</p>
+<p>With EMR, you can easily run these three platforms and other big data workloads. [Video description begins] <em>The screen displays a flowchart with three boxes. The first box contains the title Amazon EMR and it is connected to the second box which lists open-source frameworks. This in turn is connected to another box containing lists of tools such as Amazon SageMaker Studio, AWS Step Functions, and so on.</em> [Video description ends] Choose your open-source big data framework and version, and then run applications using open-source frameworks on EC2, Elastic Kubernetes Services, AWS Outposts, or completely serverless.</p>
+<p>Then with EMR, you can develop, run, visualize and debug data pipelines, analytics, and data science applications, SQL queries, and machine learning workloads using familiar tools like Amazon SageMaker Studio; Amazon EMR Studio; Amazon MWAA, which is Amazon Managed Workflows for Apache Airflow, which you won&#39;t need to know about on the exam, but it is in the diagram, so that’s what it is- Manage Workflows for Apache Airflow; AWS Step Functions; or self-managed tools.</p></div></div></div><div class="section"><div id="section_10" tabindex="-1"></div><h2 class="section_title">11. Video: Course Summary (it_clawsp23_13_enus_11)</h2><img src="https://cdn2.percipio.com/public/b/feeec835-31d2-487e-a0e2-fefd9ed40572/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/feeec835-31d2-487e-a0e2-fefd9ed40572/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael J. Shannon.</em> [Video description ends]
+<p>In this course, you learned about machine learning and artificial intelligence, Amazon SageMaker, Amazon Lex, Amazon Kendra, and Amazon Athena.</p>
+<p>You also looked at analytic services like Amazon Kinesis, Amazon Glue, QuickSight, and Elastic MapReduce (EMR). Coming up in the next course, you’ll learn about AWS developer services and tools.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

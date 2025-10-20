@@ -1,0 +1,401 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: AWS Compute Services</h1><div class="section_text">Millions of organizations run diverse and complex workloads on the AWS compute platform. As the longest-running Gartner Magic Quadrant Leader for Cloud Infrastructure and Platform Services, AWS has been recognized for 12 consecutive years and is helping many organizations lower infrastructure costs and accelerate innovation on the world&#39;s most reliable, secure, and capable cloud.
+
+Begin this course by working with AWS Elastic Compute Cloud (EC2), batch, and instance types. Then you will explore Amazon Lightsail, Elastic Beanstalk, containers, and container services like Amazon Elastic Container Registry (Amazon ECR), Amazon Elastic Container Service (Amazon ECS), and Amazon Elastic Kubernetes Service (Amazon EKS). Next, you will compare serverless compute options like AWS Fargate and take a look at AWS Auto Scaling services. Finally, you will compare load balancing options and discover AWS Local Zone, AWS Outposts, and AWS Wavelength.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_09_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Working with AWS EC2, AWS Batch, and Instance Types (it_clawsp23_09_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Working with Amazon Lightsail (it_clawsp23_09_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: AWS Elastic Beanstalk (it_clawsp23_09_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Containers Defined (it_clawsp23_09_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Comparing AWS Container Services (it_clawsp23_09_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Serverless Compute Options (it_clawsp23_09_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: AWS Auto Scaling Services (it_clawsp23_09_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: AWS Load Balancing (it_clawsp23_09_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: AWS Local Zones (it_clawsp23_09_enus_10)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_10" tabindex="0" class="toc-link">11. Video: AWS Outposts (it_clawsp23_09_enus_11)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_11" tabindex="0" class="toc-link">12. Video: AWS Wavelength (it_clawsp23_09_enus_12)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_12" tabindex="0" class="toc-link">13. Video: Course Summary (it_clawsp23_09_enus_13)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_09_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/b1e08afb-e86d-460f-be56-71599994c627/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b1e08afb-e86d-460f-be56-71599994c627/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS compute services. Millions of organizations run diverse and complex workloads on the AWS compute platform.</p>
+<p>As the longest-running Gartner Magic Quadrant leader, for cloud infrastructure and platform services, AWS has been recognized for 12 consecutive years, and is helping many organizations lower infrastructure costs and accelerate innovation on the world&#39;s most reliable, secure and capable cloud.</p>
+<p>In this course, we will explore AWS EC2 and instance types, examine AWS Batch, Amazon Lightsail, and Elastic Beanstalk. Understand containers and container services like Elastic Container Registry (ECR) , Elastic Container Service (ECS), and Elastic Kubernetes Service (EKS).</p>
+<p>Finally, we’ll explore AWS Fargate, AWS Lambda, two very popular serverless platforms. Autoscale Scaling, load balancing, local zones, Outposts, and AWS Wavelength.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Working with AWS EC2, AWS Batch, and Instance Types (it_clawsp23_09_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/3cfbd7be-6189-42cf-86a1-58f2984cc28c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3cfbd7be-6189-42cf-86a1-58f2984cc28c/image001.jpg')();" /><div class="section_text">Learn how to work with AWS Elastic Compute Cloud (EC2), batch, and different instance types.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with AWS Elastic Compute Cloud (EC2), batch, and different instance types</li></ul><div class="section_text">[Video description begins] <em>Topic title: Working with AWS EC2, AWS Batch, and Instance Types. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Okay, as you can see, I’m in the EC2 dashboard. [Video description begins] <em>The EC2 Dashboard option located in the left pane is selected by the host. The left pane of the window displays dropdown options labeled as EC2 Dashboard, Instances, Images, Elastic Block Store and so on. The center pane displays options labeled as Resources, Launch instance and Service health respectively. The right pane displays options labeled as Account attributes and Explore AWS respectively.</em> [Video description ends]</p>
+<p>And in the EC2 area, this is where you’re going to find several things, including your Instances. [Video description begins] <em>The host points to the multiple options listed under the Instances dropdown option.</em> [Video description ends] We’ll talk about Instance Types in a moment.</p>
+<p>You’re already familiar with Reserved Instances. We talked about that earlier in the training. We can have Savings Plans for a wide variety of different types of services. And we’ll also look at Spot Requests here in a minute.</p>
+<p>Down here we see Images. Remember an image, an AMI is an Amazon Machine Image. It has everything necessary, a configuration file and everything else. [Video description begins] <em>The host selects the AMIs option listed under the Images dropdown option and the center pane displays the AMIs info page.</em> [Video description ends]</p>
+<p>Also in the EC2 area, is where your Elastic Block Store Volumes will be. They’re a part of your account, as you can see, I have a couple. [Video description begins] <em>The host selects the Volumes option listed under the Elastic Block Store dropdown. The center pane now displays the Volumes info page.</em> [Video description ends]</p>
+<p>There’s also a Network &amp; Security area, this is also where Load Balancers are. [Video description begins] <em>The host clicks on the Create load balancer option and is redirected to the Compare and select load balancer type page.</em> [Video description ends]</p>
+<p>And we have three different types of load balancers, we’ll talk about that Application Load Balancer, Network Load Balancer and Gateway Load Balancer.</p>
+<p>And also in this area of EC2 are the Auto Scaling Groups. [Video description begins] <em>The host clicks on the back button to navigate back to the dashboard. The Auto Scaling Groups option is listed under the Auto Scaling option.</em> [Video description ends]</p>
+<p>So if you want to go to the dashboard and you want to launch an instance, [Video description begins] <em>The host clicks on the EC2 Dashboard option and clicks on the Launch instance button listed under the Launch instance option. The center pane now displays the Launch an instance page.</em> [Video description ends] preferably you’ll be launching from a template, so you probably should save it. When you create an instance, a virtual machine or instance, we are going to first name it and that will be a part of our tag. [Video description begins] <em>The center pane of the Launch an instance page contains a Name and tags option which contains a Name field. The Application and OS Images (Amazon Machine Image) option is below the Name and tags option and it contains a search field. The right pane displays the Summary option. Cancel and Launch instance options are visible at below the Summary option.</em> [Video description ends]</p>
+<p>And then you can see down here we can choose from our different, Application and OS images, some of these are just operating systems, some of them are operating systems or Amazon Machine Images and applications over a thousand of these. So, you know, just know the general categories.</p>
+<p>Okay, you&#39;ve got Amazon Linux and this is their own version of Ubuntu, [Video description begins] <em>The host is referring to the options listed under the Quick Start section from the Application and OS Images option.</em> [Video description ends] Amazon Linux 2023. macOS, there&#39;s three different macOS images, Ventura, Monterey and Big Sur. There is Linux Ubuntu, there&#39;s various Windows servers. Some of these are just going to be just the server like 2019 Core Base or 2019 Base, 2022. They also have options where you can run SQL Server, Standard and Enterprise. So this is, you know, full on Infrastructure as Code. And then we’ve got Red Hat Enterprise, we’ve got SUSE Linux, we’ve got Debian.</p>
+<p>If you&#39;re just starting out as a practitioner, make sure you choose something that’s Free tier eligible. All of these may not have a Free tier eligible. Here’s a Debian free to let’s see SUSE. So make sure that you start out with the free tier. Unless you’re in a production environment, of course you get what you need.</p>
+<p>Once you choose one, there’s different architectures, there’s no 32-bit anymore, [Video description begins] <em>The host scrolls down and clicks on a dropdown labeled as Architecture.</em> [Video description ends] so it’s just 64-bit Intel or 64-bit (Arm) and then your instance types.</p>
+<p>So let&#39;s take a look at this real quick. If we go up here to instances. On this site, which is basically amazon.com/ec2/instance-types/ Well, you want to be aware of that. If we go down here, we see the major, instance types.</p>
+<p>So on the exam, here’s the takeaway. If you choose General Purpose, look at this first sentence here. [Video description begins] <em>The left pane of the window displays the Page Contents and options labeled as General Purpose, Compute Optimized, Memory Optimized, Accelerated Computing, Storage Optimized, HPC Optimized, Instance Features and Measuring Instance Features are listed under it.</em> [Video description ends] That&#39;s really what you need to know. You know, General purpose provide a balance of compute memory and networking resources, a variety of diverse workloads. At this level, you do not need to know these granular T3s and T2s and M6gs and all of these. Just know the basic definition.</p>
+<p>Obviously Compute, ideal for compute bound applications, high performance processing. Memory Optimized, fast performance with large data sets in memory. Accelerated, is going to involve things like, up to 8 NVIDIA Tensor Core GPUs, you know, accelerator processors.</p>
+<p>Storage Optimized, goes without saying, workloads that need high, sequential read and write access, large data sets.</p>
+<p>And this one’s interesting, HPC is High Performance Computing, and these are, you know, really super high, expensive Graviton3E processors, up to 64 cores, huge workloads, massive scalability, high performance processing, large complex simulations, deep learning workloads, computational fluid dynamics (CFD).</p>
+<p>So, you know, on the exam, you&#39;re going to have some questions that will have two out of five, correct. So I would anticipate a question that has five of these, General Purpose, Compute Optimized, Memory Optimized, Storage Optimized and HPC Optimized. And then the correct answer is going to be two out of those five.</p>
+<p>Maybe they&#39;ll give you a scenario where you&#39;ve got a couple of different workloads, one is just a balance of compute, memory and networking. And the other is, best price performance on high-end workloads, massively scalable, something like that. And of course the two correct answers be General Purpose and HPC, be aware of something like that.</p>
+<p>Also on the exam, they’re going to expect you to know about Spot EC2 Instances. [Video description begins] <em>The URL of the website the host is currently on is, aws.amazon.com/ec2/spot/ and it contains information related to the Amazon EC2 Spot Instances.</em> [Video description ends] So these are kind of like bidding on, you know, additional processing that’s available. Let’s say February, things get cheaper. So you can go for a Spot Instance and you can combine Spot Instances with RIs and On-demand and get even cheaper, you know, for your organization.</p>
+<p>Also in the exam, you need to be aware of Convertible Reserved Instances. [Video description begins] <em>The URL of the website the host is currently on is docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-convertible-exchange.html</em> [Video description ends] It used to be that once you reserved an instance for one year or three years and you said, I&#39;m going to pay full upfront or partial upfront, you were stuck. You know, it was a contract, it was an agreement. But then they introduced Convertible Reserved Instances. So, you could exchange a different configuration, like the instance family, like I just showed you.</p>
+<p>You could go from, let’s say, Accelerated Computing to HPC computing, or from the General class to the Memory Optimized, right? So you can switch out the family, the operating system, even your tenancy. This is something they added to give customers flexibility. So, you know, as you can imagine, there wasn&#39;t a lot of that initially. So keep that in mind, Convertible Reserved Instances on the exam.</p>
+<p>Also on the exam is AWS Batch, [Video description begins] <em>The host is on the AWS Batch website. The left pane of the window displays options labeled as Dashboard, Console Settings, Related AWS services and so on. The center pane contains a How it works section.</em> [Video description ends] which gives you the ability to easily and effectively run batch computing workloads, basically massive scale, using EC2 and the aforementioned Amazon EC2 Spot Instances.</p>
+<p>This is a fully managed service that can do batch processing at any scale and you can kind of see here how it works.</p>
+<p>Let me see if I can make that a little bit bigger. Run batch-style workloads at any scale, it’s container-based, [Video description begins] <em>The host refers a flow chart in the How it works section which explains the AWS Batch workflow.</em> [Video description ends] it’s fully managed. And here you define your job, which is basically an application image plus a configuration.</p>
+<p>So it’s a container. Application image&#43;configuration. You assign an IAM role to it. That way you only can do certain APIs from that particular batch job. You have a batch queue setting up a flow.</p>
+<p>Then there’s a Batch scheduler and of course that engine sends the batch job to the Compute environment. Then the results of the batch job will be sent to some user defined storage, like your own S3 bucket.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Working with Amazon Lightsail (it_clawsp23_09_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/de4b0e0b-e4b3-4bc2-8bf8-1942753810ad/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/de4b0e0b-e4b3-4bc2-8bf8-1942753810ad/image001.jpg')();" /><div class="section_text">In this video, find out how to work with Amazon Lightsail.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with Amazon Lightsail</li></ul><div class="section_text">[Video description begins] <em>Topic title: Working with Amazon Lightsail. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we’re going to do a web safari up to Amazon Lightsail.</p>
+<p>Lightsail is the easiest way to basically create a website, for a small to medium-sized business at Amazon Web Services. [Video description begins] <em>The host is currently on the Amazon Lightsail documentation website. The URL to this website reads lightsail.aws.amazon.com</em> [Video description ends]</p>
+<p>It’s kind of like if you go to register a domain name, and they ask you, hey, do you want your own website to go with that? This is used by developers, students, small businesses and others who need to build and host their website and web application in the cloud. You pay a monthly charge for compute, storage and networking capacity.</p>
+<p>Everything you need to launch your web application project, you get virtual machines, containers, databases. You can even do content distribution networking to edge locations in regions all over the world. You get load balancers and DNS management for a low, predictable monthly price.</p>
+<p>We can create pre-configured virtual private servers or instances that have everything we need to deploy and manage an application. Or we can create databases, all managed by Lightsail.</p>
+<p>Lightsail is best for projects that have a few dozen instances or less, and developers who want a simple management interface. Some of the common use cases for Lightsail would be running a website, maybe a public website for your business or your organization. Web applications, business software, blogs, small to medium-sized company, e-commerce sites and more.</p>
+<p>And if your project grows or you get more customers, you can use load balancers and auto scale. And yes, you can even do content distribution networking.</p>
+<p>If we go over here to the Lightsail dashboard, [Video description begins] <em>The URL to the Lightspeed dashboard reads lightsail.aws.amazon.com/Is/webapp/home/instances. Multiple options labeled as Instances, Containers, Databases and so on are listed in the left pane. The center pane contains a a search field and a Create instance button.</em> [Video description ends] we also notice that you can use CloudShell in Lightsail now.</p>
+<p>A browser-based pre-authenticated shell, that you launch from the Lightsail console, in case you want to run AWS CLI commands. If you want to create an instance, you just come down here and say let’s create an instance with Lightsail.</p>
+<p>Now on the exam there is no configuration. [Video description begins] <em>The host clicks on the Create instance button and is redirected to the Create an instance page. The page contains options labeled as Instance location, Pick your instance image, Select a blueprint, Optional and Choose your instance plan respectively.</em> [Video description ends] So you basically know everything you need to know about Lightsail for the exam, but realize they’re going to ask me, hey, where do you want to create this instance? What platform? Linux or Unix?</p>
+<p>There’s 27 blueprints there or Microsoft blueprints, that’s going to have additional licensing fees, of course. Then within Windows, we choose Windows Server 2022, 2019, 2016 or 2012 R2. You can also optionally add a PowerShell script.</p>
+<p>Then you choose your plan, again, this is going to be your monthly plan. Notice you get the first three months free, that can be as little as $8 a month for 512 MB. Two vCPUs, 30 GB of SSD storage and a 1 TB transfer. Of course, it goes up higher than that, from $70 to $120 to $240 a month.</p>
+<p>Anything above which you would get for $240, you’re going to start looking at things like CloudFront for CDN or Elastic Beanstalk or maybe Elastic Container Service and Elastic Kubernetes Service.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: AWS Elastic Beanstalk (it_clawsp23_09_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/aaf08ba2-fbe5-4735-9165-5736651eb9cf/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/aaf08ba2-fbe5-4735-9165-5736651eb9cf/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe AWS Elastic Beanstalk.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Elastic Beanstalk</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Elastic Beanstalk. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Elastic Beanstalk.</p>
+<p>Elastic Beanstalk is an AWS service for deploying and scaling web applications and services. Customers can upload their code and let Elastic Beanstalk automatically handle the deployment.</p>
+<p>In other words, you do the Dev, Beanstalk does the Ops in the DevOps environment. Beanstalk does everything from capacity provisioning, load balancing, and auto scaling to application health monitoring.</p>
+<p>With the Elastic Beanstalk, you can rapidly launch web applications. Deploy scalable web applications in minutes without the overhead of provisioning and handling the underlying infrastructure. Create mobile API backends for the applications. You can use the desired programing language and there&#39;s quite a few of them, to build mobile API backends. Beanstalk will also manage patches and updates.</p>
+<p>You can replatform critical business applications. Customers can migrate stateful applications based on legacy infrastructure to Elastic Beanstalk and then connect securely to private networks, if desired.</p>
+<p>Let’s see a diagram of Elastic Beanstalk in action. As mentioned with Beanstalk, customers can deploy and scale web applications and services.</p>
+<p>Once you create your AWS account, you can use the AWS Elastic Beanstalk console to answer questions that become inputs to create your environment. For example, do you want to use Java, PHP, Ruby, JavaScript, Node.js, .NET or others.</p>
+<p>You can set up your application with your own code and runtime with the Beanstalk platform. Then launch your resources for your environment with an Infrastructure as a Service CloudFormation template or S3 Buckets and then monitor with Amazon CloudWatch.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Containers Defined (it_clawsp23_09_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/3c2e0713-92cc-4b97-866a-df25b42185c5/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3c2e0713-92cc-4b97-866a-df25b42185c5/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to define containerized applications and microservices.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define containerized applications and microservices</li></ul><div class="section_text">[Video description begins] <em>Topic title: Containers Defined. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In AWS, customers can also build and run containerized applications.</p>
+<p>A container is a discrete environment within an operating system, or more recently, a serverless architecture where one or more applications can run. It is typically assigned all the resources and dependencies needed to function.</p>
+<p>A container is a modular and portable environment that includes the application binaries, software dependencies and hardware requirements wrapped up into an independent, self-contained unit. Containers are commonly used for processes and workflows in which there are important requirements for security, reliability, and scalability.</p>
+<p>All cloud providers offer managed container development, automation, and orchestration services. Containers can be server-based or serverless, for example with AWS Fargate. Traditionally, application containers use an engine such as Docker or Podman, among others.</p>
+<p>The container engine runs on top of a host operating system, traditionally. Within the container, you have the binaries and the libraries and one or more applications or microservices.</p>
+<p>While a Virtual Machine (VM) is a full abstraction of an operating system, a container is a constrained place to run segregated processes while still utilizing the kernel and other capabilities of the base operating system or an infrastructure provided by the cloud provider, for example, the aforementioned AWS Fargate.</p>
+<p>There are some similarities between virtual machines and application containers.</p>
+<p>With traditional virtual machines, the Hypervisor or Virtual Machine Manager runs on the operating system.</p>
+<p>In a containerized environment, the container runtime, for instance, Docker runs on the operating system. Within the container runtime, you have multiple containers, each with their own libraries and applications. Just like on a Hypervisor, you have individual virtual machines with their own operating systems and applications.</p>
+<p>Although there are many similarities between containers and microservices, microservices are technically different. They&#39;re specific service-oriented application component made up of small independent services that communicate over well-defined APIs for notification and process queuing.</p>
+<p>Microservices, make applications and apps faster to develop and easier to scale by small, self-contained teams of developers. Microservices are about the design of software, whereas containers are about packaging software for deployment.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Comparing AWS Container Services (it_clawsp23_09_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/dff72ace-0f4b-4ee3-8415-2421b7df5589/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/dff72ace-0f4b-4ee3-8415-2421b7df5589/image001.jpg')();" /><div class="section_text">In this video, we will compare Amazon Elastic Container Registry (Amazon ECR), Amazon Elastic Container Service (Amazon ECS), and Amazon Elastic Kubernetes Service (Amazon EKS).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare Amazon Elastic Container Registry (Amazon ECR), Amazon Elastic Container Service (Amazon ECS), and Amazon Elastic Kubernetes Service (Amazon EKS)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing AWS Container Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Well, now that you have a basic understanding of containers and microservices that we defined and talked about in the previous lesson, let&#39;s go up to AWS and look at three key services to manage containers and to orchestrate containers.</p>
+<p>First, we have the Amazon Elastic Container Service, which is fully managed, [Video description begins] <em>The AWS Elastic Container Service website is open in the background. The left pane of the window displays multiple options labeled as Clusters, Namespaces, Task definitions and so on. The right pane displays options related to Pricing, More resources and so on. A Benefits and features section is visible in the center pane.</em> [Video description ends] highly scalable, fast container management services. So you can run, stop, and manage containers on a container cluster.</p>
+<p>If we scroll down here, realize that you can run containers, serverless. If you want to use AWS Fargate and that’s actually a quite popular solution going forward. But you can still run containers on Amazon EC2 instances as well.</p>
+<p>Amazon Elastic Container Service powers, several different services at Amazon and it’s built on established technology. And you can launch thousands of containers by just simply going over to the left-hand side and creating your container Clusters. And as I mentioned, this might be a solution for medium to larger companies, where Lightsail doesn&#39;t provide what you need and you might want to go with the Elastic Container Service. This is also a very popular service, for people and customers who&#39;ve moved away from Elastic Beanstalk.</p>
+<p>Notice there’s also an Elastic Container Registry or ECR at AWS, [Video description begins] <em>The host is on the Amazon Elastic Container Registry website.</em> [Video description ends] where you can share, and deploy container software and you can do it in a public way, or you could do it in a private way. ECR is a fully managed container registry where you can store, manage, share, and deploy container images. You only pay for the amount of data that you store in your public or private repositories. You also pay for data transferred to the Internet.</p>
+<p>In the diagram here, you can see that you write and you package your code as a Docker image. Then, you send it to ECR where you can compress, encrypt and control access to the images. You can do versioning, tagging, and you can manage your image lifecycles. Then, when it&#39;s time you can run the container and you can use the Amazon ECS service that we just talked about, or Amazon EKS, Elastic Kubernetes Service, let’s look at that next. [Video description begins] <em>The host is on the Elastic Kubernetes Service website. The left pane displays options labeled as Clusters, Related services, Amazon ECR and so on. The center pane displays a dropdown labeled as Add cluster.</em> [Video description ends]</p>
+<p>EKS is a fully managed Kubernetes control plane. Kubernetes is a separate service that allows you to orchestrate, your containers and your container clusters. If we scroll down here, we can see that you provisioned an EKS cluster [Video description begins] <em>The host is referring to a diagram that explains the workflow of the Amazon EKS service.</em> [Video description ends] and Elastic Kubernetes Service automatically deploys the Kubernetes control plane.</p>
+<p>You deploy worker nodes, you add worker nodes to your cluster. You connect to EKS, pointing to your favorite Kubernetes tooling and then run Kubernetes apps. Amazon EKS exposes a Kubernetes API endpoint, so that your existing Kubernetes tools can connect directly to EKS managed control plane.</p>
+<p>We can use EKS to run highly available and scalable Kubernetes clusters on AWS. We can containerize and migrate existing applications, without having to refactor or retool your code.</p>
+<p>You can easily run microservice applications with deep integrations into many AWS services, and you can use Kubernetes Jobs API to run sequential or parallel workloads on your Amazon EKS cluster.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Serverless Compute Options (it_clawsp23_09_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/b530ee16-1312-48ae-9c01-88273f15f56f/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b530ee16-1312-48ae-9c01-88273f15f56f/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare the appropriate use of different serverless compute options (for example, AWS Fargate and Lambda).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare the appropriate use of different serverless compute options (for example, AWS Fargate and Lambda)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Serverless Compute Options. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Serverless compute options.</p>
+<p>Modern serverless solutions, often leverage modern cloud infrastructures that emulate the network operating system environment without the need for a Windows or a Linux-based server. These are technologies for running code, managing data, and integrating applications, all without managing servers.</p>
+<p>Serverless technologies feature automatic scaling, built-in high availability, and a pay-for-use billing model that helps increase agility and optimizes costs for the cloud customer. Functions, are a form of serverless technology.</p>
+<p>AWS Fargate, is a serverless pay-as-you-go compute engine that lets customers construct applications, without servers. Fargate, is highly attuned with Amazon Elastic Container Service (ECS), and Amazon Elastic Kubernetes Service (EKS). Fargate tasks include, choosing an Open Container Initiative (OCI)-compliant container image, defining memory and compute resources, as well as running the container with serverless compute. In addition, multiple CPU architectures and various operating systems are supported.</p>
+<p>On the left-hand side, we see the process of containerized application development without Fargate. First, you build your container image, then you would define and deploy the EC2 Instances. For example Windows, macOS or various Linux builds.</p>
+<p>Next, you would provision and manage compute and memory resources. Then isolate applications in separate VMs, run and manage both applications and infrastructure, and then pay for your EC2 Instances.</p>
+<p>On the right-hand side, with Fargate you build your container image, you then define memory and compute resources necessary. Run and manage your applications and then pay for the request to compute resources, but only when they&#39;re used. Leveraging Application isolation by design.</p>
+<p>AWS Lambda is a serverless, event-driven compute service that enables customers to run code for practically any application or backend service without deploying or managing servers.</p>
+<p>Customers can trigger Lambda from over 200 AWS services and Software as a Service (SaaS) applications. And Lambda uses the pay-as-you-go model. In other words, you only pay when the Lambda function is running.</p>
+<p>Let’s look at some use cases for AWS Lambda. Here we see Lambda for file processing, for example, a photograph is taken. Then, the photo is uploaded to an S3 bucket, that triggers a Lambda function and Lambda runs image resizing code and the photo is resized into web, mobile, and tablet sizes, for optimal consumer utilization.</p>
+<p>How about stream processing? Lambda can be used with Amazon Kinesis. A social media stream is loaded into the Kinesis in real-time, that triggers a Lambda function, and the code generates hashtag trend data that’s then sent to Amazon DynamoDB, to be stored. And then, social media trend data is available for business users to query.</p>
+<p>Another common application, is AWS Lambda for web applications. In Amazon S3, you have front-end code for your weather app hosted in S3. The user clicks a link to get local weather information. The Amazon API Gateway, makes a RESTful API call to an endpoint, which triggers a Lambda function. The code retrieves local weather information, from DynamoDB and returns the data back to the user.</p>
+<p>How about Lambda for IoT backends? Let&#39;s say in a modern agricultural environment, tractor sensors send data to Amazon Kinesis. Kinesis captures and streams the sensor data from the tractor, triggering a Lambda function. Lambda runs code to detect trends in sensor data, look for anomalies, and order replacements for faulty tractor parts. The order is automatically placed for the replacement parts.</p>
+<p>For mobile backends, the tractor sensors send data to Amazon Kinesis. It goes through the API gateway using a RESTful API, triggering a Lambda function. Lambda runs code to look up friends list and initiate status update notification.</p>
+<p>The Amazon SNS takes the status update notification and pushes it to user’s friends. The user’s friends receive status update notification.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: AWS Auto Scaling Services (it_clawsp23_09_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/e8f0ae95-db78-4406-a717-79f7f7cd41bb/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e8f0ae95-db78-4406-a717-79f7f7cd41bb/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe AWS Auto Scaling.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Auto Scaling</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Auto Scaling Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;re going to look at auto scaling services, which is really synonymous with the elasticity value proposition at Amazon Web Services.</p>
+<p>AWS Auto Scaling, monitors client applications and routinely regulates capacity to maintain stable, predictable performance at the lowest probable cost.</p>
+<p>Auto scaling is simple to set up, and you can use it for multiple resources across multiple services, in just a matter of minutes. The service offers an efficient GUI, to construct scaling plans and launch templates for resources, including EC2 instances, Spot Fleets, ECS tasks, DynamoDB tables, database indexes and even Amazon Aurora (RDS) Replicas.</p>
+<p>AWS Auto Scaling makes scaling easy with common suggestions that let customers optimize performance, costs, or balance between them. Customers often combine existing EC2 instances with AWS Auto Scaling to scale out extra resources for other AWS services. Applications will always have the proper resources at the right time with AWS.</p>
+<p>AWS Auto Scaling offers unified scaling for your cloud applications. First, you explore your applications and decide which ones you want to scale. As mentioned earlier, this is determined with a launch template, and the launch template can choose to optimize cost or to optimize performance.</p>
+<p>The main tool that you use to track and optimize is AWS CloudWatch. Remember that for the exam.</p>
+<p>Also remember that in the launch template your auto scaling can be predictive or dynamic. In other words, it can be deterministic, you can set up a schedule. For example, if you have more traffic during the week, Monday to Friday, as opposed to the weekends, you can set up your schedule to auto scale out during the week and then deprovision over the weekend.</p>
+<p>Or you can do it dynamically, allowing your instances or your Spot Fleets or your containers to scale up as needed, always making sure that the template says, that you&#39;re running a minimum amount and a maximum amount.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: AWS Load Balancing (it_clawsp23_09_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/686428a6-1f2f-48fd-82b5-44870fc88274/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/686428a6-1f2f-48fd-82b5-44870fc88274/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare different load balancing options.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare different load balancing options</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Load Balancing. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Load Balancing.</p>
+<p>Load balancing is a technique for allocating network traffic equally across a pool of resources. For example, EC2 instances or containers that host an application.</p>
+<p>Modern applications must process millions of users at the same time and respond with the requested files, videos, images, and other data in a rapid and reliable way.</p>
+<p>To accommodate high amounts of traffic, most applications have numerous resource servers that transfer data between them.</p>
+<p>A load balancer is a device that is placed between the client and the server group and functions as a transparent mediator. At AWS, an Application Load Balancer is a public-facing load balancer. A Network Load Balancer, typically load balances between availability zones. And a Gateway Load Balancer, load balances between virtual appliances.</p>
+<p>These load balancing services ensure that all resource servers are leveraged equally, by providing: scalability, security, and performance.</p>
+<p>Here we see the popular AWS Elastic Application Load Balancer. The source traffic can be IPV4 or IPV6. It can come from the public internet or it can be from internal workloads, operating in AWS Regions, Local Zones and AWS Outposts or hybrid cloud.</p>
+<p>The Elastic Application Load Balancer can do user authentication, provide rich metrics and logging. It can redirect to various targets such as an EC2 Auto Scaling group, Lambda functions, Fargate containers in the cloud, EKS, ECS or an IP address.</p>
+<p>It can do content-based routing. It can perform health checks, for example, against the EC2 instances. It provides sticky sessions and it supports several load balancing algorithms.</p>
+<p>In addition, the Application Load Balancer generates a flow log, and you can also run other services. For example, Amazon Cognito to do single sign-on as a commercial identity provider or offload TLS with the AWS Certificate Manager or the popular, AWS WAF.</p>
+<p>In the next lesson, we’ll explore AWS Local Zones.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: AWS Local Zones (it_clawsp23_09_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/3f83bbf3-e85f-4e52-b0c6-2851e56a2996/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3f83bbf3-e85f-4e52-b0c6-2851e56a2996/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe AWS Local Zones.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Local Zones</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Local Zones. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Let’s look at AWS Local Zones.</p>
+<p>AWS Local Zones are an infrastructure deployment solution that places compute, storage, database, and other specific AWS services close to large population and industry centers.</p>
+<p>Over the recent years, AWS customers have started migrating their applications to nearby AWS Local Zones, while still addressing the low-latency needs of hybrid or cloud edge deployment.</p>
+<p>Local zones support the building and deployment of applications close to end users to enable: real-time gaming, live streaming, augmented and virtual reality (AR/VR), virtual workstations, and more.</p>
+<p>Realize that Local Zones are not available in all regions throughout the world. You want to check with the Global Infrastructure Map to find out if Local Zones are available in your region.</p>
+<p>If they are, you just simply click to enable AWS Local Zones. Then, you simply extend your Amazon VPC to the AWS Local Zone. And now you can build and run your low latency applications in the Local Zone.</p></div></div></div><div class="section"><div id="section_10" tabindex="-1"></div><h2 class="section_title">11. Video: AWS Outposts (it_clawsp23_09_enus_11)</h2><img src="https://cdn2.percipio.com/public/b/3d8ab1b4-ee8f-4ade-99c9-281663877519/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/3d8ab1b4-ee8f-4ade-99c9-281663877519/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe AWS Outposts.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Outposts</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Outposts. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Outposts, is a collection of fully managed solutions that deliver AWS infrastructure and services to most on-premises or edge locations for a reliable hybrid cloud experience.</p>
+<p>With AWS Outposts, customers can run some AWS services on-premises and then connect to a wide array of services available in their local AWS region. They can also run applications and workloads on-premises using familiar AWS services, tools, and APIs.</p>
+<p>AWS Outposts supports workloads and devices needing low latency access to on-premises systems, local data processing, data residency, and application migration initiatives with local system interdependencies.</p>
+<p>It’s available in a variety of form factors, from 1U to 2U Outposts servers to 42U Outposts racks and multiple rack environments. The AWS Outposts rack is an industry-standard 42U form factor and AWS Outposts servers come in a 1U or 2U form factor.</p>
+<p>Let’s look at some use cases for AWS Outposts. You can achieve low latency compute- provide high-quality gaming environments for interactive applications, like real-time multiplayer games across the world.</p>
+<p>Data residency- data often must remain in a specific country, state, or province for regulatory, contractual, or data security initiatives.</p>
+<p>Migration and modernization- legacy on-premises applications can have latency-sensitive system dependencies, making them problematic to migrate to the cloud completely.</p>
+<p>And, local data processing- customers can process data locally for use cases like data lakes and machine learning (ML) model training, or simply to provide a reliable hybrid architecture for their data.</p></div></div></div><div class="section"><div id="section_11" tabindex="-1"></div><h2 class="section_title">12. Video: AWS Wavelength (it_clawsp23_09_enus_12)</h2><img src="https://cdn2.percipio.com/public/b/0529e73e-b1ef-4f03-942d-f24b243226a1/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/0529e73e-b1ef-4f03-942d-f24b243226a1/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to describe AWS Wavelength.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe AWS Wavelength</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Wavelength. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this brief lesson, we’ll explore AWS Wavelength.</p>
+<p>AWS Wavelength, inserts AWS compute and storage services into 5G cellular networks and eventually 6G. It offers a mobile edge computing infrastructure for developing, deploying, and scaling ultra-low-latency applications. Customers often use this to deliver high-resolution live video streaming, high-fidelity audio, and AR/VR applications using 5G cellular, a rapidly emerging solution.</p>
+<p>Another use case is to run artificial intelligence and machine learning video and image analytics at the edge, to accelerate 5G systems to support retail, medical diagnostics, and smart factory environments.</p>
+<p>Let’s see how it works. As an AWS customer, you extend your Amazon VPC to include a Wavelength Zone. Then you generate AWS resources like EC2 instances in the desired subnets.</p>
+<p>Working in your AWS Region, you’ll deploy the portions of an application that need ultra-low latency in a Wavelength Zone, and then seamlessly connect back to the rest of the application and the full range of AWS cloud services that you&#39;re running in your AWS Region. Keep in mind, by the way, not all services are always available in every region in the world. Sometimes a new service or an emerging service will only be available in certain regions.</p>
+<p>Finally, application traffic can reach application servers running in Wavelength Zones without leaving the mobile network.</p></div></div></div><div class="section"><div id="section_12" tabindex="-1"></div><h2 class="section_title">13. Video: Course Summary (it_clawsp23_09_enus_13)</h2><img src="https://cdn2.percipio.com/public/b/6a6d1a4a-cb15-4df5-b673-6431a6ab480c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6a6d1a4a-cb15-4df5-b673-6431a6ab480c/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this course you learned about EC2, AWS Batch, instance types, Amazon Lightsail, Elastic Beanstalk, containers, and container services like ECR, ECS, and EKS.</p>
+<p>You also learned about AWS Fargate, AWS Lambda, Auto Scaling, and load balancing. And you learned about local zones, AWS Outposts, and AWS Wavelength.</p>
+<p>Coming up in the next course, you&#39;ll explore AWS database services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

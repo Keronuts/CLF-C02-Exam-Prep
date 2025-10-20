@@ -1,0 +1,303 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: AWS Database Services</h1><div class="section_text">Database is one of the core foundational services of AWS. A database is an electronically stored, systematic collection of data including words, numbers, images, videos, and files. In computer systems, the word database can also refer to any database management system (DBMS), to the database system, or to an application associated with the database. 
+
+In this course, you will begin by exploring the use of relational, NoSQL, and memory-based databases in AWS. Next you will compare database migration tools including AWS Database Migration Service (AWS DMS) and AWS Schema Conversion Tool (AWS SCT). You will also compare Amazon Elastic Compute Cloud (EC2) hosted databases to AWS managed databases. Finally, you will explore the use of Amazon Aurora and Amazon Neptune.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_10_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Relational Databases (it_clawsp23_10_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: NoSQL Databases (it_clawsp23_10_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Memory-based Databases (it_clawsp23_10_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Comparing Database Migration Tools (it_clawsp23_10_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Comparing EC2 Hosted to AWS Managed Databases (it_clawsp23_10_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Using Amazon Aurora (it_clawsp23_10_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Using Amazon Neptune (it_clawsp23_10_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Course Summary (it_clawsp23_10_enus_09)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_10_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/2990f992-2e82-4b97-b368-2a02bb4fdf93/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/2990f992-2e82-4b97-b368-2a02bb4fdf93/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael J. Shannon.</em> [Video description ends] AWS Database Services. A database is an electronic stored systematic collection of data including words, numbers, images, videos, and files. One can use software called a Database Management System, DBMS to store retrieve, and edit data in computer systems. The word database can also refer to any DBMS to the database system, or to an application associated with the database. Database is one of the core foundational services of AWS.
+<p>In this course, we will compare database migration options, compare EC2 hosted databases, describe relational database services, describe NoSQL databases, and outline memory-based and specialty services such as AWS Database Migration Service and the AWS Schema Conversion Tool.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Relational Databases (it_clawsp23_10_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/9a5c58b1-2822-45b3-aeae-6347d4d95740/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9a5c58b1-2822-45b3-aeae-6347d4d95740/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to provide an overview of relational databases at AWS.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of relational databases at AWS</li></ul><div class="section_text">[Video description begins] <em>Topic title: Relational Databases. Presented by: Michael J. Shannon.</em> [Video description ends] A relational database is a collection of structured data items with pre-defined relationships between them. These database items are ordered as a set of tables with associated columns and rows. Tables are used to hold information about the objects to be represented in the database. Each column in a table holds a specific format of data, and a field stores the actual value of an attribute.
+<p>The rows in the table embody a collection of related values or attributes of one object or entity. Each row in a table could and should be marked with a unique identifier, often called a primary key, and rows among multiple tables can be made related using foreign keys. Subsequently, this data can be accessed in many ways without rearranging the database tables themselves, and this rearranged data can be viewed as an abstraction of the underlying data.</p>
+<p>Structured Query Language, SQL or Sequel is the main interface used to communicate with relational databases. Data integrity is the general fullness, accuracy, and consistency of data. Relational databases use a set of constraints called keys to enforce data integrity in the database.</p>
+<p>A database transaction is one or more all or nothing SQL statements that are performed as a series of operations that establish a single logical unit of work. To ensure data integrity, all database transactions must be ACID compliant: a atomic. In other words, singular, granular, like a single IP packet or datagram. Consistent, isolated, separate, and compartmentalized from other data, and durable, not subject to loss, corruption, or lack of integrity.</p>
+<p>In the next lesson, we&#39;ll look at a different type of database called a document or NoSQL database.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: NoSQL Databases (it_clawsp23_10_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/9fd95f70-4644-4b75-aedd-deeba95a9821/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9fd95f70-4644-4b75-aedd-deeba95a9821/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the use of NoSQL databases at AWS.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the use of NoSQL databases at AWS</li></ul><div class="section_text">[Video description begins] <em>Topic title: NoSQL Databases. Presented by: Michael J. Shannon.</em> [Video description ends] NoSQL databases are purpose-built for designated or customized data models. They have elastic schemas for constructing modern applications, web apps, mobile apps, container support, and more. They&#39;re commonly known for their simplicity of development functionality and scalable performance.
+<p>NoSQL databases can use a diversity of data models for accessing and controlling the data. These database types are optimized explicitly for applications that demand large data volume, like data lakes, low latency or fast speed, and support of flexible data models. This is accomplished by bypassing some of the data consistency restrictions of other databases, such as the relational type that we discussed in the aforementioned lesson.</p>
+<p>NoSQL databases are an excellent solution for many modern applications like mobile, web, and gaming. They offer more flexible schemas that enable faster and more iterative database development. They&#39;re generally designed to scale out by using distributed clusters of hardware, instead of scaling up by adding expensive and more robust servers.</p>
+<p>They&#39;re optimized for high performance for specific data models and access patterns that allow for higher performance than relational databases. And they offer highly functional APIs, Application Programming Interfaces, and data types that are purpose-built for their respective data models.</p>
+<p>Amazon DynamoDB. Dynamo is a fast, malleable NoSQL database service for single-digit millisecond performance at any scale. It&#39;s a fully managed, serverless, key value NoSQL database that was designed by Amazon to run high performance applications. It delivers built-in security, nonstop backups, automated multi-Region replication, in-memory caching, and powerful data import and export tools.</p>
+<p>As a customer of AWS, you can configure key features of Amazon DynamoDB. It has built in security, native backup and restore, flexible capacity modes, the ability to replicate in a multi-Region deployment, in-memory caching, data modeling tools, and more like a NoSQL workbench. Global tables that are multi-Region, native encryption at rest with AES-256. Point in time recovery and on demand capacity mode and support for PartiQL. Then you can export, analyze and stream the data by integrating with other AWS services. You can export table data to conduct analytics and extract insights, or you can monitor trends and logs for enhanced security by storing it in Amazon S3 buckets or leveraging AWS Glue Elastic Views, analyzing with Amazon Kinesis Data Streams, monitoring trends with AWS CloudTrail and getting visibility with Amazon CloudWatch.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Memory-based Databases (it_clawsp23_10_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/6f01b947-60da-494f-904a-6fd44dabd76a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6f01b947-60da-494f-904a-6fd44dabd76a/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to provide an overview of memory-based databases such as Redis ElastiCache.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of memory-based databases such as Redis ElastiCache</li></ul><div class="section_text">[Video description begins] <em>Topic title: Memory-based Databases. Presented by: Michael J. Shannon.</em> [Video description ends] Memory-based databases. In-memory databases are purpose-built databases that typically depend on high-speed memory chip clusters for data storage, as opposed to databases that store data on disk or solid-state drives, SSDs. In-memory data storage is intended to allow for nominal response times by abolishing the need to access physical disks.
+<p>Since all of the data is stored and managed exclusively in main memory. Memory based databases do risk losing data if there is a process or server failure. This is often called ephemeral storage. In-memory databases can persist data on chips or even disks by storing each operation in a log or a snapshot. In-memory databases are best for caching and applications that need microsecond response times or have big spikes in traffic like gaming, leaderboards, session stores, and real-time analytics.</p>
+<p>A popular in-memory database at Amazon is ElastiCache for Redis. ElastiCache is an extremely fast in-memory data store that provides sub-millisecond latency to enable internet scale, real-time applications. ElastiCache is constructed on open-source Redis and compatible with the Redis APIs. Self-managed Redis applications can function effortlessly with Redis ElastiCache without any code changes, and it joins the speed, ease, and flexibility of open-source Redis with manageability, security, and scalability from AWS.</p>
+<p>ElastiCache for Redis is used for real-time apps and gaming, ride-hailing. For example Uber or Lyft, media streaming, dating and social media that need fast data access. ElastiCache for Redis provides blazing fast in-memory data store for use as a database, a cache memory broker and queue, as well as storing ephemeral data in-memory for sub-millisecond response. Other use cases are real time transactions, chat and chat bots, business intelligence and analytics, session store, gaming, leaderboards, and cache. For example, at AWS edge locations to support content distribution networking.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Comparing Database Migration Tools (it_clawsp23_10_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/87341d46-02e7-475d-8ef1-a2d7a31db7ba/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/87341d46-02e7-475d-8ef1-a2d7a31db7ba/image001.jpg')();" /><div class="section_text">Learn how to compare database migration tools such as AWS Database Migration Service (AWS DMS) and AWS Schema Conversion Tool (AWS SCT).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare database migration tools such as AWS Database Migration Service (AWS DMS) and AWS Schema Conversion Tool (AWS SCT)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Database Migration Tools. Presented by: Michael J. Shannon.</em> [Video description ends] All right, let&#39;s do a web safari and look at a couple of different database migration tools at Amazon Web Services, starting with the AWS Database Migration Service, or DMS. When you use this, your source database will stay fully operational during the migration. So, this limits downtime, and you can migrate your data to and from some of the most widely used commercial and open-source databases. [Video description begins] <em>The AWS Database Migration Service is open on the AWS website. The lefthand side pane has a dropdown labeled Migration Tool and Services underneath which there are various options such as AWS Database Migration Service, AWS Schema Conversion Tool, AWS SCT Action Code Index, Amazon RDS on Outposts, etc.</em> [Video description ends]
+<p>For example, you can do a homogenous Oracle to Oracle, or you can do a heterogeneous migration between things like Oracle to Aurora or Microsoft SQL server to MySQL. You can also use it to stream data to warehousing services like Amazon Redshift, NoSQL DynamoDB storage, and even Amazon S3 buckets. If we scroll on down here, we can see the actual workflow, and it reminds us that at the most basic level, DMS is a server running in the AWS Cloud that runs replication software. You generate a source and target connection to tell DMS where to extract from and where to load to. Then you schedule it. DMS creates the tables and the associated primary keys if they don’t already exist on your target. And you can always pre-create the target tables manually if you want to.</p>
+<p>So, here we see our source database. As we mentioned there&#39;s quite a few options there. For example Oracle or Microsoft SQL. Then within AWS DMS you have the source endpoint. You have the Replication Instance which is the engine running the Replication Task. Again, it’s basically a server running in the AWS Cloud that goes to your Target Endpoint and then to your Target Database.</p>
+<p>On the exam, you want to be able to define basically the importance of the database migration service. So for example, on the exam you might get one of those two out of five questions saying, you know, you want to migrate your Oracle database up to the cloud. Which two of these tools out of five would you use? One of them would be the AWS Database Migration Service. The other one might be the Relational Database Service, or the correct answer might be the AWS Schema Conversion Tool. Let&#39;s look at that.</p>
+<p>There&#39;s two schema conversion options. To make a heterogeneous database migration possible, you can log in to the Database Migration Service, DMS console and initiate the DMS Schema Conversion Workflow. Or you can download the AWS Schema Conversion Tool, SCT software to your local drive. Both of these options will automatically assess and convert the source database schema, and a majority, if not all of the database code, objects, views, stored procedures, functions, and more to the target database. In fact, if you use the conversion tool that we talked about, it will scan your application source codes for embedded SQL statements and then convert them as part of the conversion project. On the exam be aware of these key benefits of Database Schema Conversion. You can simplify your database migrations by automating schema analysis, recommendations, and conversion at scale. It&#39;s compatible with popular databases and analytic services Oracle, SQL server, Postgres and MySQL, and you can save weeks or even months of manual time and resources.</p>
+<p>And like I said on the exam, it may be the correct answer, with two out of five, one being the Database Migration Service and the other being the Schema Conversion Tool. For your reference down here you can see all the things it supports, but by no means is it to memorize this for the exam. [Video description begins] <em>The host clicks on the AWS Schema Conversion Tool from the left pane, and that redirects to its page. On the AWS Schema Conversion Tool page, the left pane has various content like AWS database schema conversion options, Key benefits of database schema conversion, Supported AWS SCT use cases, etc.</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Comparing EC2 Hosted to AWS Managed Databases (it_clawsp23_10_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/187da242-a6fe-42db-981d-fbeaa592bef8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/187da242-a6fe-42db-981d-fbeaa592bef8/image001.jpg')();" /><div class="section_text">Find out how to compare EC2 hosted databases to AWS managed databases.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare EC2 hosted databases to AWS managed databases</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing EC2 Hosted to AWS Managed Databases. Presented by: Michael J. Shannon.</em> [Video description ends] So on the exam, you want to make sure that you know the difference between EC2, Elastic Compute Cloud hosted databases and AWS managed databases.
+<p>So if we go to EC2 and we say, [Video description begins] <em>The EC2 window is open. The left pane has various options such as EC2 Dashboard, EC2 Global View, Events, Instances, and Images. Instances and Images have further options underneath them. EC2 Dashboard is selected from the left pane, and the main pane has various information like Resources, EC2 Global view, Launch Instance, etc. The right pane has various options such as Account attributes, Default VPC, Settings, Explore AWS, etc.</em> [Video description ends] let’s launch an instance and we come and we look at the Application and OS Images or the Amazon Machine images, if we go to the Amazon Linux option starting with 2023 AMI, if we go down through here, we’ll see that we’ve got Amazon Linux 2 LTS with SQL Server 2019 Standard. We’ve got Amazon Linux 2, LTS with SQL Server 2017 Standard. Those are examples of EC2 hosted databases.</p>
+<p>The same thing if we go to Windows, for example, and we scroll down here in EC2, we see a bunch of Windows Server options. But we&#39;ll also see, for example, Windows Server 2022 with SQL Server 2022 Standard and Enterprise. We’ve also got Server 2022 with SQL Server Web. And there&#39;s more some older options, for example Windows Server 2019, but still with SQL Server 2022 and other variances. Okay. So we see those as well. You have to memorize these, but you want to understand that there&#39;s a big difference when you go up to use the EC2 for example under Red Hat. Here’s Red Hat Enterprise 8 with SQL Server 2022 as well. So, you can do this in the EC2 area. [Video description begins] <em>The Launched Instance page is open and the right pane has various options like Summary, Software Image, Virtual Server type, storage, etc. The main pane has information about Application and OS Images (Amazon Machine Image) and various Quick Start options such as Amazon Linux, macOS, Ubuntu, Windows, Red Hat, etc.</em> [Video description ends]</p>
+<p>You could also go to the VPC wizard and get to this EC2 to launch an instance. Or if you don&#39;t want to do it manually, you can also do it with cloud formation where it&#39;s going to be a stack or [Video description begins] <em>The AWS CloudFormation is open.</em> [Video description ends] a member. You can also do this in a cloud shell CLI environment with the EC2 commands, or you can do it remotely with the Command Line Interface, either in Linux or MacOS or Windows in the CLI with an EC2 command.</p>
+<p>Now options for AWS managed databases, we have to begin with the RDS service notice. [Video description begins] <em>The host redirects to the Amazon RDS tab. The left pane has various options such as Dashboard, Databases, Query Editor, etc. The Dashboard option is selected and the main pane shows information about Try the new Amazon RDS Multi-AZ deployment option for MySQL and PostgreSQL.</em> [Video description ends] When we go to the RDS dashboard, there’s some new things that are out there. Probably not on the exam, but it says try the new Amazon RDS Multi-AZ deployment option. And remember that I mentioned this in other areas in the training. AWS Aurora is going to support MySQL and PostgreSQL as well. So this is where we become to do AWS managed databases.</p>
+<p>And of course you can do fully managed if you want to do Aurora for MySQL or Postgres and Aurora even runs serverless now and again, the other options would be MariaDB, Oracle and Microsoft SQL Server.</p>
+<p>For managed data warehousing we would do Redshift fast, fully managed, petabyte scale cloud data warehouse. There’s also DynamoDB. If you want to do the no SQL option. Manage your NoSQL databases fast and flexible, NoSQL database service at any scale. And these are of course, AWS managed solutions. And then in the previous lesson, we talked about some managed solutions to do database migration and Schema Conversion as well.</p>
+<p>Just make sure on the exam you know the difference. EC2 hosted databases really being infrastructure as a service and the AWS Managed Databases being platform as a service options.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Using Amazon Aurora (it_clawsp23_10_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/9166233b-b0dd-4258-88a3-1c0b3eb50c3b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9166233b-b0dd-4258-88a3-1c0b3eb50c3b/image001.jpg')();" /><div class="section_text">Discover how to work with Amazon Aurora.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with Amazon Aurora</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Amazon Aurora. Presented by: Michael J. Shannon.</em> [Video description ends] In this demo, let’s look back again at the RDS Aurora service. [Video description begins] <em>The Amazon RDS website is open. The main pane has two options for creating a database: Standard create and Easy create. There are various Engine options such as Aurora (My SQL Compatible), Aurora (PostgreSQL Compatible), MySQL, etc.</em> [Video description ends]
+<p>And again remind ourselves that we have a couple of methods we can do a Standard create where we set up all the configuration options, availability, security, backup and ongoing continual operations or maintenance. Or we can do an Easy create and use recommended best practice configurations. On the exam, it’s very likely but not a guarantee, that Aurora will be a two out of five question where you&#39;ll have five options MySQL, PostgreSQL, MariaDB, Oracle, and Microsoft SQL Server. And you&#39;ll have to tell the test engine that the two Aurora options are MySQL and PostgreSQL.</p>
+<p>That being said, you can choose either Aurora MySQL compatible, and then below that you&#39;ll see some database features. For example, the available versions. And there&#39;s a bunch of them. Of course, by no means do you have to memorize these. You can choose a Production or Dev/Test template. You would name your cluster, create a login ID for the master user of your DB instance, with the option of managing the master credentials in AWS Secrets Manager, and that is highly recommended. Or you can go back up here and choose a PostgreSQL Compatible version. By the way, when I do that over on the right hand side, it gives you some of the features up to three times the throughput of a typical PostgreSQL, up to 128 TB of autoscaling, SSD storage, six way replication across three availability zones, up to 15 read replicas, and automatic monitoring with failover.</p>
+<p>Again on this exam, there is no configuration, but just be ready for a couple of questions on the AWS RDS Aurora fully managed database offering.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Using Amazon Neptune (it_clawsp23_10_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/e6006ac0-d9fd-48c9-b535-1a53b47c8581/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e6006ac0-d9fd-48c9-b535-1a53b47c8581/image001.jpg')();" /><div class="section_text">Learn how to work with Amazon Neptune.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">work with Amazon Neptune</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Amazon Neptune. Presented by: Michael J. Shannon.</em> [Video description ends] It&#39;s important to realize on the exam when you&#39;re examining the database foundational services, that it&#39;s not just about relational database management systems and SQL based databases like MySQL, Microsoft SQL, and others. Nor is it all about NoSQL databases or document style databases.
+<p>We also have what&#39;s called a graph database offering and that&#39;s Amazon Neptune. [Video description begins] <em>The Amazon Neptune page is open, and the main pane has various information about its features.</em> [Video description ends] It&#39;s a fast, reliable graph database service fully managed for the AWS customer. Now, one thing about graph databases is they have different use cases. They excel at relationships. In other words, they use nodes as opposed to other mechanisms like table joins that we would see, let&#39;s say in a Microsoft SQL server.</p>
+<p>So, you run applications that have highly connected data sets built on nodes. So for example, you can process these graph queries on these nodes over billions of relationships in a matter of milliseconds. Also, it offers greater than 99.99 availability as it replicates six copies of the data across three availability zones and has instance failover, typically under 30 seconds. So, it’s optimized for a wide variety of different graph APIs and graph query languages.</p>
+<p>Now, there&#39;s no reason to memorize on the exam things like open source Apache TinkerPop, Gremlin or the W3C standard SPARQL.</p>
+<p>But it is important to know what is a graph database, and some of the use cases would be predominantly social networking. In fact, this is the type of database that a government or a state based entity like an agency would use to build social profiles about their citizens. It creates knowledge graphs to represent information such as products, regulations, and general information. It can be used in IT operations. It can also be used in Life Sciences. It&#39;ll very likely be used as recommendation engines. For example, when you enter into a retail establishment, it identifies you as a customer and it makes point in time recommendations to you as a customer. It supports interactive graph queries so you can find patterns relationships more quickly with graph database nodes.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Course Summary (it_clawsp23_10_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/916c1573-d3eb-412d-a124-7e61883b72c8/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/916c1573-d3eb-412d-a124-7e61883b72c8/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael J. Shannon.</em> [Video description ends] In this course, you learned about Relational, NoSQL and memory-based databases like Amazon ElastiCache for Redis. You’ve explored the AWS Database Migration Service (AWS DMS), AWS Schema Conversion Tool (AWS SCT), as well as comparing EC2 hosted and AWS managed databases.
+<p>And finally, you learned about Amazon Aurora and Amazon Neptune. Coming up in the next course, you&#39;ll look at AWS Network Services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

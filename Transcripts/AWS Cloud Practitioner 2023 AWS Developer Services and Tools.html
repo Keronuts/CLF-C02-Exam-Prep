@@ -1,0 +1,330 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: AWS Developer Services &amp; Tools</h1><div class="section_text">The term DevOps is a clipped compound of development (Dev) and operations (Ops). DevOps is the union of people, process, and technology to continually provide value to customers. 
+
+In this course, the learner will be exposed to a wide array of AWS developer tools and services. You will begin by exploring AWS application integration and business application services. Next, you will look at customer engagement and developer tool services. You will then compare AWS AppConfig, AWS Cloud9, and AWS CloudShell and explore End User Computing (EUC) services offered by AWS. Finally, you will dive into frontend web and mobile services and compare AWS Internet of Things (IoT) services.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_14_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Exploring AWS Application Integration Services (it_clawsp23_14_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Business Application Services (it_clawsp23_14_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Customer Engagement Services (it_clawsp23_14_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Comparing Developer Tool Services (it_clawsp23_14_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: AWS AppConfig, AWS Cloud9, and AWS CloudShell (it_clawsp23_14_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Exploring End User Computing (EUC) Services (it_clawsp23_14_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Frontend Web and Mobile Services (it_clawsp23_14_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: Comparing AWS Internet of Things (IoT) Services (it_clawsp23_14_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Course Summary (it_clawsp23_14_enus_10)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_14_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/9532ce7c-fcd2-43e2-a8a9-020d835b581e/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9532ce7c-fcd2-43e2-a8a9-020d835b581e/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Developer Services and Tools. The term DevOps is a clipped compound of development, Dev, and Operations, Ops. DevOps is the union of people, process, and technology to continually provide value to customers. This course has many learning objectives. We’ll survey Amazon EventBridge, Amazon Simple Notification Service (SNS), and Amazon Simple Queue Service (SQS). We’ll explore Amazon Connect, Amazon Simple Email Service (SES), AWS Activate for startups, AWS IQ, AWS Managed Services (AMS), and AWS Support.</p>
+<p>We’ll also look at developer tools like AWS AppConfig, AWS Cloud9, CloudShell, CodeArtifact, CodeBuild, CodeCommit, CodeDeploy, CodePipeline, CodeStar, and AWS X-Ray.</p>
+<p>We’ll also look at AppStream 2.0, Amazon WorkSpaces, Amazon WorkSpaces Web, AWS Amplify, AppSync, IoT Core, and AWS IoT Greengrass.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Exploring AWS Application Integration Services (it_clawsp23_14_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/ab6ca98c-ec62-415c-a67d-104b0a4e81ed/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/ab6ca98c-ec62-415c-a67d-104b0a4e81ed/image001.jpg')();" /><div class="section_text">In this video, you will explore Amazon EventBridge, Amazon Simple Notification Service (Amazon SNS), and Amazon Simple Queue Service (Amazon SQS).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">explore Amazon EventBridge, Amazon Simple Notification Service (Amazon SNS), and Amazon Simple Queue Service (Amazon SQS)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Exploring AWS Application Integration Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Let’s start up this course on AWS Developer Tools by looking at three very important tools to assist developers, especially those that work with containers and microservices and event-driven applications, starting with Amazon EventBridge. This is a scalable solution for building event-driven applications, existing systems, or integrated Software-as-a-Service applications. There&#39;s no setup, and the event targets don&#39;t even have to know about the event sources, because you can filter and publish directly to the EventBridge or the EventBus that operates in between the order service and the target microservice or container or event-driven app.</p>
+<p>EventBridge delivers a stream of real-time data from event sources like Shopify to targets like AWS Lambda functions and other Software-as-a-Service applications.<br /><br />[Video description begins] <em>The presenter refers to the Use Cases section in the EventBridge page from https://aws.amazon.com</em> [Video description ends]<br /><br />On the exam, be aware of three primary use cases for EventBridge. You can accelerate modernizing or reorchestrating your architecture with decoupled services and applications. And we’re going to look at a couple of other Amazon services that assist developers with these decoupled services and applications: SNS and SQS.</p>
+<p>But EventBridge can speed up the development process by allowing your teams to iterate on features without explicit dependencies between systems. EventBridge can provide real-time monitoring and auditing. You can even use the Amazon IAM Access Analyzer to remove unintended or overprovisioned permissions and enrich your events from SaaS applications using AI and ML services to gather valuable insights. On the exam, be aware of two primary services that assist in the decoupling of monolithic applications and services supporting containers and microservices.<br /><br />[Video description begins] <em>He refers to the Amazon Simple Notification Service page from https://aws.amazon.com/sns/</em> [Video description ends]</p>
+<p>The first is the Amazon Simple Notification Service. This is a managed, publish, subscribe, or Pub/Sub service for application to application or application to person messaging, you can simplify your architecture, lower cost with message filtering, batching, ordering, and deduplication. With SNS, the publisher publishes messages from distributed systems, microservices, and other AWS services using the fully managed Pub/Sub service, leveraging SNS topic to decouple message publishers from subscribers with topics.<br /><br />[Video description begins] <em>He then jumps to the Overview tab and explains the topics associated with it.</em> [Video description ends]</p>
+<p>Also, if an endpoint is unavailable, messages can be held in a dead letter queue for analysis and reprocessing, and you can filter messages according to subscription filter policies and then deliver them to various subscribers, such as Lambda, SQS, that we&#39;ll look at here in a moment Amazon Kinesis Data Firehose, even email, and Https. You can also integrate the SNS service with simple messaging messages as SNS topics, and a push notification service from a provider like Apple, Google,</p>
+<p>Amazon, or Microsoft to various endpoints like mobile devices, iPhones, and Android phones. One of the primary services for decoupling containers and microservices is the fully managed message queuing, Simple Queue Service (SQS). In this diagram on the website, we can see how it works as SQS enables you to send, store, and receive messages between software components at any volume without losing messages or needing other services to be available. The producer sends messages to Amazon SQS, the fully managed queuing service.</p>
+<p>The messages at rest are encrypted with AWS Key Management Service, in other words as AES GCM 256, and it provides nearly infinite scalability to consumers without the need to pre-provision capacity. On the exam, remember that three large enablers for microservices and containers and event-driven applications are EventBridge, SNS, and SQS.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Business Application Services (it_clawsp23_14_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/b7d13442-c330-4bcb-8729-df62381d1ae7/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b7d13442-c330-4bcb-8729-df62381d1ae7/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare and contrast Amazon Connect and Amazon Simple Email Service (Amazon SES).</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare and contrast Amazon Connect and Amazon Simple Email Service (Amazon SES)</li></ul><div class="section_text">[Video description begins] <em>Topic title: Business Application Services . Presented by: Michael Shannon.</em> [Video description ends]
+<p>Amazon Connect. Amazon Connect allows customers to roll out a contact center in minutes that is scalable to millions of customers. Customers can use a few clicks and onboard agents to assist customers immediately. Connect can be used to expand agent productivity and customer experience over voice and digital channels with the AI/ML-powered contact center. Amazon Connect offers powerful analytics, insights, and continual optimization.</p>
+<p>Customers can convert data into actionable and meaningful metrics regarding customer sentiment, agent performance assessment, and workforce optimization. With Amazon Connect, customers get a fast, secure, high-quality, personalized customer service center. Connect is an omnichannel cloud contact center driving better customer experiences. Agents have efficient tools in one graphical interface to deliver productive customer conversations and improve CSAT. Managers have an ML-powered contact center where they can set up quickly and make changes in minutes, not months.</p>
+<p>Amazon Simple Email Service (SES) lets AWS customers reach their customers assertively without an on-premises Simple Mail Transfer protocol (SMTP) email server, for example, like Microsoft Exchange, also referred to as a message transfer agent or mail exchanger from their perspective of DNS. And it can use the Amazon SES API or an SMTP interface.</p>
+<p>The customer data goes through the Amazon SES, where you can configure emails sending at scale in minutes. It supports owned, dedicated, or shared IP addresses. And you get security and scale with SPF, DMARC, or DKIM protocols. It enables transactional and marketing messaging supported by engagement reports. And it can feed into Amazon S3 buckets, Amazon Redshift clusters to EC2 instances, to serverless Lambda functions, or Spark on Amazon EMR, previously known as elastic MapReduce using Amazon Kinesis to send engagement data for analysis, processing, and storage on any or all of these services.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Customer Engagement Services (it_clawsp23_14_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/bb14c554-2924-412b-bc01-87fc6ce91525/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/bb14c554-2924-412b-bc01-87fc6ce91525/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the following customer engagement services: AWS Activate for Startups, AWS IQ, AWS Managed Services (AMS), and AWS Support.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the following customer engagement services: AWS Activate for Startups, AWS IQ, AWS Managed Services (AMS), and AWS Support</li></ul><div class="section_text">[Video description begins] <em>Topic title: Customer Engagement Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Activate for Startups offers eligible startup organizations free tools, resources, and content meant to streamline every phase of the startup initiative. New members get benefits such as: AWS curated expert advice on business and technical needs; training and support; pre-built Json and Yaml infrastructure templates. Startups can apply for AWS Activate credits to offset their AWS bill and build a new scalable, dependable, secure, and efficient infrastructure.</p>
+<p>Once approved for AWS Activate credits, customers can also get access to exclusive offers from trusted organizations such as Amazon Business Prime, Zendesk, Stripe, Datadog, BREX, HubSpot, and Chargebee. The discounts, free trial periods, credits, and other startup-friendly perks are all designed to help new startups grow and succeed. Keep in mind, startups must have been initiated within the previous ten years and have an operational website or public profile.</p>
+<p>AWS IQ. AWS IQ enables customers to quickly find, engage, and pay AWS Certified third-party experts for on-demand project work. AWS IQ also makes it easy for you to use your AWS Certifications to help AWS customers. With AWS IQ, you have a secure collaborative workspace for project consultations and an easy way to get paid. Think of it as AWS’s own version of Fiverr.</p>
+<p>With AWS IQ, you create your AWS IQ profile. Then you can connect with customers by reviewing their requests and chat with them to understand their requirements. Then start and send a proposal for the project. All of your work is done securely by requesting task-appropriate access to the customer&#39;s AWS account. Then you can get paid. Request payment after milestones are met, or after the project is complete.</p>
+<p>AWS Managed Services (AMS) helps you adopt AWS at scale and operate more efficiently and securely. You can leverage standard AWS services and offer guidance and execution of operational best practices with specialized automation, skills, and experience that are contextual to your environment and to your applications.</p>
+<p>AMS delivers proactive preventative and detective functions to enhance operations and help reduce risk without affecting agility. AMS extends the operational teams with abilities that include monitoring, incident management, AWS Incident Detection and Response, security, patch and backup, and cost optimization.</p>
+<p>With AWS Managed Services, you can create a baseline governance and control model using inputs from people, processes, and tool sets. Then, decide on the fastest and most efficient way to sustain, integrate, build, develop, and migrate your workloads. Achieve operational outcomes at scale, anywhere, through observability, compliance, and financial management. AMS delivers improved security, focus on automation, stronger compliance, reduced operating costs, simplified management, and frictionless innovation.</p>
+<p>AWS Support. AWS Support is one-on-one, fast-response report from expert technical support engineers. The service assists customers in best leveraging the AWS product line and features. It utilizes pay-by-the-month pricing with unlimited support cases. And because of the month to month pricing, customers are unfettered from long-term obligations.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Comparing Developer Tool Services (it_clawsp23_14_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/dd7db5d8-1146-4e44-942e-d90bbe6c57fa/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/dd7db5d8-1146-4e44-942e-d90bbe6c57fa/image001.jpg')();" /><div class="section_text">In this video, we will compare developer tool services and capabilities of AWS AppConfig, AWS Cloud9, AWS CloudShell, AWS CodeArtifact, AWS CodeBuild, AWS CodeCommit, AWS CodeDeploy, AWS CodePipeline, AWS CodeStar, and AWS X-Ray.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare developer tool services and capabilities of AWS AppConfig, AWS Cloud9, AWS CloudShell, AWS CodeArtifact, AWS CodeBuild, AWS CodeCommit, AWS CodeDeploy, AWS CodePipeline, AWS CodeStar, and AWS X-Ray</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing Developer Tool Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Okay, this&#39;ll be a fun demonstration or a fun lesson. You know, there&#39;s one thing about Amazon Web Services that&#39;s kind of interesting. Well, I don’t know if it’s necessarily interesting, but it is challenging, especially if you&#39;re a candidate for the cloud practitioner. For example, they have several services that begin with the word “Cloud.” And on the exam, you have to be able to tell, for example, CloudTrail, CloudWatch, CloudFormation, and CloudFront, you have to be able to know the difference and tell them apart.</p>
+<p>Now in other lessons in this training, we&#39;ll make that perfectly clear. But in this lesson, another challenge is there&#39;s six managed services that begin with the word “Code.” And then we’re going to look at one other. So we’ve got CodeArtifact, CodeBuild, CodeCommit, CodeDeploy, CodePipeline, CodeStar, and X-Ray. And I think there’s a joke here somewhere.<br /><br />[Video description begins] <em>The presenter opens every mentioned service in a tab, and he switches from one to the other while explaining.</em> [Video description ends]<br /><br />Like if I was introducing you to my seven siblings and I said, here&#39;s Bob, Sue, Dan, Lee, John, Kate.</p>
+<p>And here’s my youngest brother Euripides, I don’t know. Let’s start with CodeArtifact. And we just need to know on the exam the basic definition and how to tell them apart. Now we know there’s an AWS Artifact, which is a repository for compliance information, reports, documentation; so it’s kind of the same thing here. Secure, scalable, cost-effective package management for software development.</p>
+<p>So storing artifacts using popular package managers and build tools. Do you have to memorize this list? You do not. But you can pull application dependencies from public artifact repositories and use artifact to provide secure, scalable, and cost-effective artifact management for software development. How about CodeBuild? In a scalable way, build and test code. So pull your code from a public or private repository with the webhook, and then use CodeBuild to compile the source code, run tests, and generate artifacts without managing build servers.</p>
+<p>We&#39;re talking about leveraging Amazon Elastic Container Repository, AWS Key Management Services, the Secrets Manager, and running it, of course, in your Amazon VPC environment. That’s CodeBuild. Next we have CodeCommit. And this one looks pretty familiar if you know what I mean. So it’s a secure, highly scalable, fully managed source control service that hosts private Git repositories.</p>
+<p>So applications and app developers – either using the management console or a software development kit, or the AWS CLI or a Git client or some other IDE (Integrated Development Environment) – can use code commit to securely host highly scalable private Git repositories, and then collaborate on the code. It&#39;s encrypted, it&#39;s automatically scalable, and you get massive high availability. And then your developers can use CodeCommit to collaborate on the code with teammates. Often these teammates are in very disparate locations, remote locations – pull requests, handle branching and merging; it functions with the preexisting CodeBuild and AWS CodePipeline that we’ll look at here in a moment.</p>
+<p>CodeDeploy allows you to automate the code deployment to maintain application uptime. So on the exam, remember CodeDeploy is all about automation. So a fully managed deployment service that automates software deployments to other services like EC2, ECS, Lambda, even servers that are on-premise in your hybrid cloud environment. So we use CodeDeploy to automate software deployments, eliminating the need for error-prone manual operations – automated configure deployment, automate orchestrate deployment, and if necessary, monitor and rollback.</p>
+<p>So on the exam, it will help to map these different code this and code that, I think a single sentence and certain keywords. AWS CodePipeline supports CI/CD, which is a very popular way to develop at Amazon Web Services, Continual integration Continual deployment, CI/CD. So it&#39;s a fully managed continuous delivery service helping you automate your release pipelines for fast and reliable application and infrastructure updates.</p>
+<p>The CI/CD pipeline being source, build, test, staging, and production. Don’t worry, you don’t have to be a programmer or developer on this exam by any means. Just have some basic definitions and be able to map these different code things to a single sentence and certain keywords. CodeStar is interesting because it&#39;s going to be discontinued in July of 2024, however, AWS decided to go ahead and possibly put it on the exam. I don’t get it; but they did.</p>
+<p>So quickly develop, build, and deploy applications on AWS, kind of generic, really – enabling you to quickly develop, build, and deploy applications – a unified user interface, easy to manage in one place, set up your entire continuous delivery toolchain in minutes and help you release code faster. It may be on the exam, it&#39;s in the objectives in the PDF file for the CLF-C02 — Cloud Practitioner exam, but as we can see here, discontinued in summer of 2024. Configure.</p>
+<p>Finally, we have AWS X-Ray to analyze and debug production and distributed applications. So X-Ray is a complete view of request. Think of the data flow diagrams that we would see, let&#39;s say in STRIDE or DREAD those old types of threat modeling mechanisms. So a complete view of requests as they travel through your application. You can filter visual data across Azure functions, payloads, traces, services, APIs with no-code and low-code motions.</p>
+<p>So it’s a analysis tool. It’s a debugging tool for modern applications – microservices, containers, serverless architectures. You can do tracing where you collect the data, you can record it, you can view it as a service map to see trace data like latencies, the status of Http and even metadata, and an overall analysis tool, and end-to-end view of your application, your microservices, and your serverless architecture.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: AWS AppConfig, AWS Cloud9, and AWS CloudShell (it_clawsp23_14_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/9ea081da-3168-498f-8bc9-31ca12aed7ca/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9ea081da-3168-498f-8bc9-31ca12aed7ca/image001.jpg')();" /><div class="section_text">In this video, we will compare AWS AppConfig, AWS Cloud9, and AWS CloudShell.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare AWS AppConfig, AWS Cloud9, and AWS CloudShell</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS AppConfig, AWS Cloud9, and AWS CloudShell. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS AppConfig. AWS AppConfig is a feature of AWS Systems Manager that enables customers to generate, manage, and rapidly install application configurations. A configuration is a pool of settings that impact the functionality of the application. AppConfig is used with applications hosted on EC2 instances, AWS Lambda, containers, mobile apps, or IoT devices.</p>
+<p>AWS Cloud9 is a cloud-based integrated development environment (IDE) that enables DevOps professionals to construct, run, and debug the code with only a browser. It includes a code editor, debugger, and terminal. Cloud9 comes prepackaged with vital tools for popular programming languages, including JavaScript, Python, and PHP. And there&#39;s no need to install any files or even configure the development machine for new projects.</p>
+<p>As the Cloud9 IDE is cloud-based, teams can work on their projects from anywhere using an Internet-linked machine. Cloud9 also delivers a unified environment for developing serverless applications. Developers can simply define resources, debug, and switch between local and remote execution of serverless applications.</p>
+<p>Here we see a screenshot of the IDE of Cloud9 from Amazon Web Services. Here we see the JavaScript code from line 92 through line 117. On the right-hand side, we can see you, Aaron, and Rob exchanging chat information and inserting comments: A, B, and C.</p>
+<p>AWS CloudShell enables developers to control, discover, and interact with AWS resources directly from a browser. CloudShell is a browser-based shell where customers can quickly run scripts with the AWS Command Line Interface (AWS CLI), test service APIs using the AWS CLI, and even use other tools to help boost productivity. The CloudShell icon appears in AWS regions where CloudShell is available.</p>
+<p>AWS CloudShell offers command line access to AWS resources and tools directly from a browser. It comes with popular development tools preinstalled, as well as common CLIs and other tools, and you can store up to 1 GB of data per region in a persistent home directory that will be available the next time you launch CloudShell in that same Region.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Exploring End User Computing (EUC) Services (it_clawsp23_14_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/f3c0830a-a996-4219-bc5d-812b8fb74203/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/f3c0830a-a996-4219-bc5d-812b8fb74203/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the following End User Computing (EUC) services: Amazon AppStream 2.0, Amazon WorkSpaces, and Amazon WorkSpaces Web.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the following End User Computing (EUC) services: Amazon AppStream 2.0, Amazon WorkSpaces, and Amazon WorkSpaces Web</li></ul><div class="section_text">[Video description begins] <em>Topic title: Exploring End User Computing (EUC) Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Okay, in this web Safari, we’re going to look at what Amazon calls End User Computing or EUC services, starting with Amazon AppStream 2.0, which they advertise as a secure, reliable, and scalable access to applications and non-persistent desktops from anywhere. We know that since 2020, we have more and more remote workforce, so we want to enable and empower that workforce to react quickly to changing conditions with access to applications and desktops, no matter where they are. We also want to do it securely and in a cost efficient way.</p>
+<p>By the way, you can use AppStream 2.0 with your free tier for one year.<br /><br />[Video description begins] <em>The presenter opens the Use Cases section in the AppStream 2.0 page from https://aws.amazon.com</em> [Video description ends]<br /><br />But several use cases to know about on the exam is to launch Software-as-a-Service for software vendors, a wide variety of applications that are available to you in the AWS marketplace. You don&#39;t need rewrites, special hardware, or device installs. So this is excellent for training; for trials, for example, application trials, and even software demonstrations. You can enable your contact center agents to work remotely from any location with a secure, easy-to-use agent experience.</p>
+<p>You can enable online learning, especially in certain areas that have slow network connections. And access to 3D design and engineering applications from any computer with responsive high-performance streaming sessions. <br /><br />[Video description begins] <em>Now, the presenter opens the Amazon WorkSpaces page from the same url.</em> [Video description ends]<br /><br />Amazon WorkSpaces provides a secure, managed Desktop-as-a-Service, that’s a new one, DaaS, to your end users. You can provision Windows or Linux desktops to users anywhere, anytime, and from any supported device.</p>
+<p>You can also strengthen security by storing data in the AWS cloud instead of on vulnerable endpoint devices. Like AppStream 2.0, workspaces provide contact centers from anywhere. It facilitates remote work, enabling your work from home and Teleworkers to access fully functional windows and desktops from any location. You can assign and remove desktops for contractors or temporary employees while keeping your sensitive data secure in the cloud. And these are high performance desktops, so they&#39;re available to engineers and developers and people working in CAD environments like we talked about a moment ago.</p>
+<p>On the exam, also, be aware of Amazon WorkSpaces Web. This is a low cost, fully managed, Linux-based service, so keep that in mind. The goal is to facilitate secure browser access to internal websites and SaaS applications from your existing browser, hence the word “WorkSpaces Web.” You don&#39;t need to manage appliances or an infrastructure, or deal with any specialized client software, or even VPN connections.</p>
+<p>WorkSpaces Web is a fully managed, non-persistent, browser based access to internal sites and SaaS web applications with enterprise controls. You can launch your WorkSpaces Web portal using a SAML 2.0 identity provider, connect your VPC to WorkSpaces Webs, and set your controls. It’s also an ephemeral non persistent browser portal with access to internal sites and SaaS web applications. Remember these three EUC, End User Computing services, solutions on the Cloud Practitioner exam.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Frontend Web and Mobile Services (it_clawsp23_14_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/319d8e64-d58d-40fd-9bf0-89973f7ad038/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/319d8e64-d58d-40fd-9bf0-89973f7ad038/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to identify the frontend web and mobile services of AWS Amplify and AWS AppSync.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">identify the frontend web and mobile services of AWS Amplify and AWS AppSync</li></ul><div class="section_text">[Video description begins] <em>Topic title: Frontend Web and Mobile Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Amplify is a total solution that enables frontend web and mobile developers to rapidly and seamlessly build, deploy, and host full stack applications on AWS. It has the flexibility to leverage the range of AWS services as use cases introduce themselves without any necessary cloud expertise. In this diagram, we can see how you can create an App Backend with AWS Amplify. You accelerate your app backend development using tools and services of Amplify.</p>
+<p>Configure a new backend with authentication, storage, data, and GraphQL and REST APIs, or import existing AWS resources. Then use Amplify Libraries or Amplify Studio to connect your app to new existing AWS backends. Then manage users and app content using Amplify Studio, hosted outside the AWS console. And using a single CLI command, you can access 175&#43; AWS services to support evolving requirements and scale. Here we see creating a Frontend UI with AWS Amplify. Choose from dozens of popular React components and customize them to fit your style guide.</p>
+<p>Then import designer-built Figma prototypes as credible React code you would write yourself. Next, you can visually bind frontend UI components to your data sources in your cloud-connected backend. And then easily test and preview your changes in preproduction environments before you deploy them into production. AWS AppSync generates serverless GraphQL and pub/sub APIs – publish and subscribe – that make application development easy. It offers a single endpoint to securely query, update, or publish data. Customers can connect apps to data and events with secure, serverless and high-performing APIs.</p>
+<p>Whether it’s an enterprise app, a web or mobile app, a real-time dashboard, or an IoT device, AppSync combines data from databases, APIs, and other backend systems into a single GraphQL endpoint. Then, you can leverage the GraphQL schema and introspection and resolvers to connect to Amazon DB tables, Amazon Aurora databases, MySQL and Postgres, Amazon OpenSearch service, AWS Lambda functions, Http, or Local (Pub/Sub). You can also monitor metrics, logs, and insights with Amazon CloudWatch.</p>
+<p>In this AppSync use case, we can publish to the AppSync Pub/Sub API to process ephemeral messages and updates of persistent data. We can leverage Serverless WebSockets to manage client connections, messages, broadcast and fan-out to subscribe to web, mobile, and IoT devices, channels for real-time data updates.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: Comparing AWS Internet of Things (IoT) Services (it_clawsp23_14_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/e536c340-d2be-4cfb-a097-1e01d5fbc96b/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e536c340-d2be-4cfb-a097-1e01d5fbc96b/image001.jpg')();" /><div class="section_text">In this video, we will compare IoT services of AWS IoT Core and AWS IoT Greengrass.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare IoT services of AWS IoT Core and AWS IoT Greengrass</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing AWS Internet of Things (IoT) Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Okay, in this demonstration, we’re going to do a web Safari to two main Platform-as-a-Service offerings for IoT – Internet of Things – starting with IoT Core, which allows you to easily and securely connect devices, various devices to the cloud. You can use a wide variety of protocols. You don’t need to know what the acronym stand for; obviously, we have HTTPS, which is going to be Transport Layer Security, but there’s also MQTT and MQTT over WSS and LoRaWAN.</p>
+<p>IoT Core allows you to connect billions of IoT devices and route trillions of messages to AWS services without having to manage any infrastructure.<br /><br />[Video description begins] <em>The presenter opens the Overview page of AWS IoT Core from https://aws.amazon.com/iot-core/ and explains all the offerings associated with it.</em> [Video description ends]<br /><br />Therefore, it’s a Platform-as-a-Service offering. IoT Core can perform as a message broker to transmit and receive messages with the MQTT protocol. The IoT Core spectrometer allows you to mirror the device state. This is called Device Shadow, which stores the latest state of a connected device so it can be read or set at any time.</p>
+<p>IoT Core also supports Built-in Alexa, LoRaWAN Devices using the LoRa protocol; gateways connect to the AWS IoT Core using the LoRa Basic Station protocol over Secure WebSockets. That way, you don&#39;t have to develop or operate an LNS, a LoRaWAN Network Server.</p>
+<p>And then Amazon Sidewalk Devices. The IoT device connects to Amazon Sidewalk and the Sidewalk network to create long-range connected solutions. Sidewalk bridges are devices like Amazon Echo and Amazon Ring products that connect to the Sidewalk network, and you can enable or disable Sidewalk functionality on these bridge devices. Sidewalk devices come pre-provisioned with security certificates so you can securely and quickly connect to AWS using IoT Core with the Amazon Sidewalk feature. And, of course, you can route messages to Amazon SageMaker for AI, Amazon S3 bucket, or other AWS Services.</p>
+<p>Another core IoT service is IoT Greengrass.<br /><br />[Video description begins] <em>He then switches to the AWS IoT Greengrass page from the url https://aws.amazon.com/greengrass/</em> [Video description ends]<br /><br />This is an open-source edge runtime and cloud service for building, deploying, and managing device software.<br /><br />[Video description begins] <em>Now, he switches to the Overview Tab of AWS IoT Greengrass page and refers to the offerings associated with it.</em> [Video description ends]<br /><br />Your IoT device has the IoT Greengrass client software so you can process, message, do data management, machine learning inference, and other built-in components to accelerate your application development. The IoT device connects to IoT Greengrass. So you can build, deploy, and manage your device software across fleets of devices.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Course Summary (it_clawsp23_14_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/9bcb1f6e-0765-4f0c-bbd6-8f21debe6d6e/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/9bcb1f6e-0765-4f0c-bbd6-8f21debe6d6e/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this course, you learned about Amazon services like EventBridge, SNS, SQS, AWS Connect, Simple Email Service, Activate for startups, IQ, AWS Managed Services (AMS), and AWS support.</p>
+<p>You also learned about developer tools like AppConfig, Cloud9, CloudShell, CodeArtifact, CodeBuild, CodeCommit, CodeDeploy, CodePipeline, CodeStar, and X-Ray.</p>
+<p>And finally, you learned about AWS AppStream 2.0, WorkSpaces, WorkSpaces Web, AWS Amplify, AppSync, and IoT Core, and IoT Greengrass.</p>
+<p>Coming up in the next course, you&#39;ll explore pricing, billing, budgeting, and cost management at Amazon Web Services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

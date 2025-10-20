@@ -1,0 +1,315 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: Benefits &amp; Design Principles of the AWS Cloud</h1><div class="section_text">It has always been a top priority for Amazon Web Services (AWS) to provide their potential and existing customers with the knowledge and tools necessary to conduct proper due diligence. 
+
+In this course, you will explore the value proposition of the AWS Cloud and understand the economies of scale. Next, you will examine the AWS global infrastructure and the advantages of high availability, elasticity, and agility. Finally, you will discover the AWS Well-Architected Framework and the six pillars of design principles.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_01_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: The Value Proposition of the AWS Cloud (it_clawsp23_01_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Economies of Scale (it_clawsp23_01_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Exploring the AWS Global Infrastructure (it_clawsp23_01_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Advantages of High Availability, Elasticity, and Agility (it_clawsp23_01_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Exploring the AWS Well-Architected Framework (it_clawsp23_01_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Examining the Well-Architected Framework Design Principles (it_clawsp23_01_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Course Summary (it_clawsp23_01_enus_08)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_01_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/a5bffa35-4249-4b08-87f5-4852b19e1346/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a5bffa35-4249-4b08-87f5-4852b19e1346/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>Benefits and design principles of the AWS Cloud. It has always been a top priority for Amazon Web Services to provide all potential and existing customers with the knowledge and tools necessary to conduct proper due diligence.</p>
+<p>In this course, we will outline the value proposition of the AWS Cloud and understand the economies of scale. We&#39;ll describe the AWS global infrastructure and list the advantages of high availability, elasticity, and agility. And wrap it up by defining the AWS Well-Architected Framework and the six pillars of design principles of the Well-Architected Framework.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: The Value Proposition of the AWS Cloud (it_clawsp23_01_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/c198f779-0bf3-4b31-9e61-23db711c2295/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/c198f779-0bf3-4b31-9e61-23db711c2295/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to define the various value proposition elements of the AWS cloud such as trading fixed expenses for variable expenses.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">define the various value proposition elements of the AWS cloud such as trading fixed expenses for variable expenses</li></ul><div class="section_text">[Video description begins] <em>Topic title: The Value Proposition of the AWS Cloud. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>Let&#39;s go ahead and define cloud computing right from the source. Let&#39;s see what Amazon Web Services has to say about it. Cloud computing is the on-demand delivery of compute power. In other words, virtual CPU and virtual RAM, database, storage, applications, and other IT resources through a cloud services platform via the Internet with pay-as-you-go pricing.</p>
+<p>Whether you&#39;re running applications that share photos to millions of mobile users or you&#39;re supporting the critical operations of your business, a cloud services platform provides rapid access to flexible and low-cost IT resources. With cloud computing, you don&#39;t need to make large upfront investments in hardware and spend a lot of time on the heavy lifting of managing that hardware. Instead, you can provision exactly the right type and size of computing resources you need to power your newest bright idea or operate your IT department. You can access as many resources as you need, almost instantly, and only pay for what you use.</p>
+<p>One of the biggest value propositions of cloud computing is the ability to trade fixed expenses for variable expenses. But what does that mean exactly? Well, you only pay for what is needed and used. Customers can pay only when they consume computing resources like a utility, for example, your water bill, your electric bill, or your mobile phone bill. The default model is to only pay for what is consumed. You can reduce upfront capital expenditures or CapEx by avoiding heavy investments in server farms, data centers, and blade server stacks before you know how you&#39;re going to use them.</p>
+<p>Another characteristic is to benefit from massive economies of scale. By using cloud computing, customers can obtain a much lower adaptable cost than they can get on their own. New customers can leverage the utilization and experience of hundreds of thousands of other customers aggregated in the cloud. Cloud service providers like AWS can realize higher economies of scale which leads to lower pay-as-you-go pricing.</p>
+<p>Stop guessing capacity. Remove the need to guess about infrastructure and service capacity needs. Customers typically find themselves either sitting on costly idle resources or struggling with inadequate capacity. Proper capacity decisions can be made prior to application deployment, and a cloud consumer can access as much or as little capacity as needed, and scale up and down as required, with only a few minutes&#39; notice. And you may think that scaling up or adding capacity is the true value add. But sometimes in some situations, for example, a global pandemic, the ability to scale down or de-provision can be even more valuable.</p>
+<p>With cloud computing, you can increase speed and agility. Cutting-edge IT resources are only a click away in a cloud computing environment. Customers decrease the time to make resources available to administrators and developers from weeks to merely minutes in many circumstances. The outcome of cloud computing is a substantial increase in agility for the enterprise. The resources, for example, cost and time necessary to experiment and develop can be considerably lower.</p>
+<p>Stop spending money running and maintaining data centers. Cloud customers can prioritize projects and propositions that set the business apart from competitors rather than the infrastructure. AWS cloud computing lets organizations focus on their own customers instead of the overhead and heavy lifting of racking, stacking, and powering racks of server blades. Large and unsustainable data centers will become a thing of the past due to global cloud consuming.</p>
+<p>And finally, go global in minutes. Organizations can effortlessly deploy data and applications in several regions around the world, pretty much all the continents, with just a few simple clicks. This results in lower latency and a better experience for customers at a minimal cost. AWS customers are leveraging edge locations and availability zone data centers in over 30 geographic regions throughout the world. And new availability zones and regions are added every year.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Economies of Scale (it_clawsp23_01_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/b4c73f3e-db4d-450c-a384-3a7b665ae63f/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b4c73f3e-db4d-450c-a384-3a7b665ae63f/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to outline the economies of scale.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">outline the economies of scale</li></ul><div class="section_text">[Video description begins] <em>Topic title: Economies of Scale. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In the previous lesson, we mentioned that one of the value propositions of cloud computing is economies of scale. In this lesson, I want to elaborate more on this concept. It refers to the ability to lower costs and raise the efficiency when operating at a larger scale in comparison to operating at a smaller scale. Since cloud customers are becoming more motivated and willing to drive growth through technology, they often look to strategies such as cost-reducing while enabling innovation.</p>
+<p>Cloud economics transcends simply cutting cloud costs. It&#39;s about addressing business goals through greater speed, agility, and flexibility. Considering the larger perspective in this way helps IT groups to select the best cloud solution for their projects, programs, and initiatives. For example, in a traditional infrastructure, you have capital expenditures on equipment or infrastructure components, you have resources and administrative overhead, contracts and agreements, and general costs. But in the AWS Cloud, you have no upfront expense, you only pay for what you use. You can improve time to market and agility and that could mean using an Agile Software Development Lifecycle or Agile Project Management. You can quickly scale up and scale down and you can leverage a self-service infrastructure.</p>
+<p>What are some traditional examples of economies of scale? Well, technical. Large capital equipment with high fixed costs. Specialization. The division of labor and specialization within production. In other words, a more efficient way to deliver with high output or bulk buying, lowering the average costs by buying large quantity. In the cloud, for example, at AWS, the more data storage you use, the cheaper it is by gigabyte. Marketing; national ad campaigns may be more efficient for high sales. Risk bearing. You can transfer risk. Bigger firms are more able to survive downturns when using the cloud, especially because of auto-scaling. Container principle. Increase in the surface area leads to double the increase in volume. Financial economy of scale. A large firm gets better rates of interest from the bank or external economy of scale when a firm benefits from the whole industry increasing in size or becoming more popular.</p>
+<p>One of the primary aspects of Amazon Web Services economy of scale is their global infrastructure. In the next lesson, we&#39;ll take a web Safari up to Amazon Web Services and learn about their global infrastructure of Availability Zones, data centers, and edge locations all over the world.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Exploring the AWS Global Infrastructure (it_clawsp23_01_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/4deac880-748a-4954-92c7-02c7084959f7/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/4deac880-748a-4954-92c7-02c7084959f7/image001.jpg')();" /><div class="section_text">In this video, you will learn how to recognize the benefits of the AWS global infrastructure including regions, availability zones, and edge locations.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">recognize the benefits of the AWS global infrastructure including regions, availability zones, and edge locations</li></ul><div class="section_text">[Video description begins] <em>Topic title: Exploring the AWS Global Infrastructure. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>All right, in this first demo, we&#39;re going to do a web Safari up to AWS and we&#39;re going to look at the global infrastructure and realize that AWS has regions all over the world.<br /><br />[Video description begins] <em>A web page appears with the heading: Global Infrastructure Regions &amp; Availability Zones. It contains various options such as: Products, Solutions, Pricing, Documentation, Learn, Partner Network, and More. Below, it contains another bar with various tabs: Global Infrastructure, Overview, Regions and AZs, Local Zones, Wavelength Zones, and More. The Regions and AZs tab is active. Further below, it contains a bar with options such as: North America, South America, Europe, Middle East, Africa, Asia Pacific, and Australia and New Zealand. The Europe option is active. Below, it contains a map of Europe with a few dots on it.</em> [Video description ends]<br /><br />We can see North America, South America, Europe, Middle East, Africa, Asia Pacific, and Australia and New Zealand.</p>
+<p>If we look at Europe here, these little circles represent regions. Now, one thing about AWS is that every region in the world has at least three Availability Zones. OK. So, if we go here, let&#39;s say to Frankfurt, we can see there&#39;s 3 Availability Zones.<br /><br />[Video description begins] <em>A pop up appears on the dot on the map of Europe. It shows: Frankfurt. Launched 2014. Availability Zones: 3 | Local Zones: 2.</em> [Video description ends] <br /><br />Now on the exam, don&#39;t confuse Availability Zones, which we will discuss in more detail throughout this training with Local Zones. Local Zones are really for hybrid cloud or edge computing. So, we&#39;ll talk about Local Zones later on in this training. But in this lesson, we want to focus on Availability Zones</p>
+<p>Now, an Availability Zone is at least two data centers and those two data centers can be relatively close like on a Metro Ethernet or a fiber ring. So, they&#39;re relatively close. But the Availability Zones, because of the technology that&#39;s being used, specifically VXLAN, Virtual Extensible LAN, the Availability Zone data centers can be theoretically up to 600 miles apart or about 800 kilometers.</p>
+<p>So, in this region, let&#39;s say Spain, those 3 Availability Zones are many miles apart, dozens or hundreds of miles apart and that&#39;s for durability, high availability, and resiliency. <br /><br />[Video description begins] <em>A new pop up appears on a dot on the map. It displays: Spain. Launched 2022. Availability Zones: 3.</em> [Video description ends] <br /><br />And if we were to look at all these different areas, for example, South America just has one region here in Sao Paulo, Brazil. But if you were to look at these, for example, North America, the Northern Virginia region, which is right here, has 6 Availability Zones. <br /><br />[Video description begins] <em>A pop up appears on a dot on the map of North America. It shows: Northern Virginia. Launched 2006. Availability Zones: 6 | Local Zones: 12 | Wavelength Zones: 8.</em> [Video description ends] <br /><br />So, this is the largest region in AWS&#39;s global infrastructure. And so those are many miles apart, and of course, we&#39;re servicing not just Washington D.C., but Northern Virginia and other cities like Philadelphia and Baltimore, and don&#39;t forget North Carolina has a lot of IT and universities.</p>
+<p>Now right next to that, we see what&#39;s called GovCloud. So, this is a separate community cloud just for the US government.<br /><br />[Video description begins] <em>A pop up appears on a dot on the map of North America. It displays: AWS GovCloud (US-East). Launched 2018. Availability Zones: 3.</em> [Video description ends] <br /><br />The GovCloud in Northern Virginia region are really isolated from each other and separate. If you see one that&#39;s red here, it means it&#39;s coming soon. OK, now, when Canada West rolls out, and by the time you&#39;re doing this training, it may be rolled out, there will be at least 3 Availability Zones. Something else about these zones.</p>
+<p>Let&#39;s go back to Europe. If we scroll down, we&#39;ll see the different regions, at least 3 Availability Zones in each region. What we&#39;re also going to have is edge locations.<br /><br />[Video description begins] <em>The Europe option is active now. Below the map, there are three sections: Europe, AWS Edge Locations, and Regional Edge Caches. The Europe section contains information about different regions such as name, launch year, and Availability Zones. The AWS Edge Locations sections contains names of different cities.</em> [Video description ends] <br /><br />So, edge locations have several functions, but the primary function is for something we&#39;re going to learn later called Content Distribution Networking or Content Delivery Networking. Maybe you&#39;ve heard of something like Akamai or Cloudflare? Well, AWS has CloudFront, and this is just a way for you to get your content a wide variety of different things close to your customers.</p>
+<p>So, if they want to stream your audio or stream video, or watch your documentary or get your content or maybe access data, you can get copies of it close to them. So, for example, if you have customers in Prague or if you have customers in London or Manchester, or Frankfurt, you can just distribute copies of this content to these edge locations and then your customers in those areas can then get the content from there. OK, so, these edge locations are very important and they&#39;re also part of the AWS global infrastructure. And so, this is how we get all of those wonderful global benefits of high availability and resiliency and durability of data because we have regions all over the world and you want to be aware of this on the exam.</p>
+<p>You can also check out Middle East, we have several there. Asia Pacific has a couple coming soon, for example, in Thailand and Malaysia. Japan has a pretty big region. The Tokyo region has 4 Availability Zones. <br /><br />[Video description begins] <em>A pop up appears on a dot on the map of Asia Pacific. It displays: Tokyo. Launched 2011. Availability Zones: 4 | Local Zones: 1| Wavelength Zones: 2.</em> [Video description ends] <br /><br />You&#39;ll also notice on this pop-up here something called Wavelength Zones. That is for 5G. OK, so Wavelength Zones or for what we call 5G gateways. And we can see Seoul, South Korea has 4 Availability Zones as well. So, that&#39;s the global infrastructure of Amazon Web Services. <br /><br />[Video description begins] <em>A new pop up appears on a dot on the map of Asia Pacific. It shows: Seoul. Launched 2016. Availability Zones: 4 | Wavelength Zones: 1.</em> [Video description ends] <br /><br />Be familiar with it on your Cloud Practitioner exam.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Advantages of High Availability, Elasticity, and Agility (it_clawsp23_01_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/e774217e-a950-41be-9243-10c6702548f1/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e774217e-a950-41be-9243-10c6702548f1/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to compare the advantages of cloud characteristics like high availability, elasticity, and agility.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare the advantages of cloud characteristics like high availability, elasticity, and agility</li></ul><div class="section_text">[Video description begins] <em>Topic title: Advantages of High Availability, Elasticity, and Agility. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In the previous lesson, as we looked at the AWS global infrastructure, we saw an example of massive global high availability. High availability protects against data center, Availability Zone (AZ), server, network, and storage subsystem failures. You can keep your organization or your business running with little or no downtime.</p>
+<p>All Availability Zones in an AWS region are interconnected with high-bandwidth, low-latency networking over fully redundant, dedicated metro fiber. Data centers located in different AWS Availability Zones have a discreet, uninterruptible power supply and onsite backup generation facilities. Most providers of real-time communications align with service levels that provide availability from 99.9% to 99.999%, otherwise known as five nines, which means your planned and unplanned downtime is literally only minutes per year.</p>
+<p>Depending upon the degree of High Availability needed at AWS, customers can take progressively sophisticated steps along the full life cycle of the service or the application. AWS recommends following these guidelines to achieve a robust degree of high availability. Design the system or application to have no single point of failure by using automated monitoring, detection, and failover mechanisms for both stateless and stateful components. Remember, a stateful component has data or metadata stored about that state, in some type of construct or table, or buffer.</p>
+<p>Correctly instrument and test system availability. Prepare operating procedures for manual mechanisms to respond to, mitigate, and recover from the failure. Let&#39;s talk more about elasticity. Elasticity provides the ability to almost instantly provision and de-provision assorted cloud resources. This could be virtual instances, for example at AWS, Windows Server 2019, 2022, various Linux builds including their own machine images, and even MacOS. They could be containers, appliances, virtual appliances from many different partners, database tables, and more.</p>
+<p>Elasticity involves leveraging dynamic auto-scaling technologies, typically referring to scaling out the virtual instances or the containers or appliances. Another advantage of elasticity is that there&#39;s many challenges with predicting demand in the enterprise, which leads to higher costs. Recent circumstances, for example, starting in 2020, have revealed how de-provisioning may be the more vital aspect of elasticity. In other words, a company can run at 70% for months after months if they&#39;re running most of their business in the cloud.</p>
+<p>Let&#39;s see what Yury Izrailevsky, the vice president of cloud and platform engineering at Netflix says, &#34;Elasticity of the cloud allows us to add thousands of virtual servers and petabytes of storage within minutes, making such an expansion possible. Leveraging multiple AWS cloud regions, spread all over the world, enables us to dynamically shift around and expand our global infrastructure capacity, creating a better and more enjoyable streaming experience for Netflix members wherever they are.&#34;</p>
+<p>By using cloud elasticity at Amazon Web Services, we can reduce waste and we can reduce customer satisfaction. When the predicted demand is less than actual demand, we have waste, when the actual demand is greater than predicted demand, we have customer satisfaction, and this is more common with rigid on-premises resources. However, in the cloud, our predicted demand will be much more closely aligned with actual demand because we&#39;re relying on elastic cloud-based resources.</p>
+<p>Cloud computing also offers agility. Agility leverages features for rapid deployment, testing, experimentation, and innovation. Customers can quickly overcome geographical limitations. And content creators can get customer content as close to the customer as possible. Agility means reducing time and costs for testing, innovation, and experimentation. With AWS as the producer, consumers can co-create value and deliver data, applications, services, and solutions.</p>
+<p>Agility also includes the concept of flexibility in terms of many different options, but the two terms aren&#39;t exactly the same. For example, growing up, I may have been very fast and agile and quick, but not very flexible. The decision to &#34;build or buy&#34;, otherwise known as acquire or construct, can be more adaptable for your DevOps programs. Remember, DevOps is a clipped compound of development and operations. The value proposition of agility integrates with the Agile development and Agile project management as well.</p>
+<p>How can you make sure that you take advantage of all of the value propositions at Amazon Web Services? Well, in the next lesson, we&#39;ll look at their Well-Architected Framework, which will put you on the path to taking advantage of all of the propositions and features and characteristics that the AWS cloud has to offer.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Exploring the AWS Well-Architected Framework (it_clawsp23_01_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/e7edea2b-559e-48f4-949c-ffda0f8abaf0/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/e7edea2b-559e-48f4-949c-ffda0f8abaf0/image001.jpg')();" /><div class="section_text">In this video, you will identify the six pillars of the AWS well-architected initiative.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">identify the six pillars of the AWS well-architected initiative</li></ul><div class="section_text">[Video description begins] <em>Topic title: Exploring the AWS Well-Architected Framework. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;re going to do a web Safari up to Amazon.com and get a basic understanding of the AWS Well-Architected or architectural best practices. <br /><br />[Video description begins] <em>A web page appears with the heading: AWS Well-Architected. It contains a menu with various options: Products, Solutions, Pricing, Documentation, Learn, Partner Network, and More. Below, the banner contains a button: Get started with the AWS Well-Architected Tool. Further, it contains various options: AWS Well-Architected Tool, AWS Well-Architected Pillars, AWS Well-Architected Lenses, AWS Well-Architected Guidance, AWS Architecture Center, and Partners.</em> [Video description ends] <br /><br />So, on the exam, you want to be able to define simply what Well-Architected is, and it says right here. It helps cloud practitioners, engineers, and architects build secure, high-performing, resilient, and efficient infrastructure for a variety of applications and workloads. That&#39;s the definition.</p>
+<p>Now, we have a tool that can help us as well called the Well-Architected Tool. So, learning best practices and applying important design considerations. Also in Well-Architected, if we go back, we&#39;ll notice that there are six pillars. Also on the exam, you&#39;ll want to be able to memorize these six pillars.<br /><br />[Video description begins] <em>The main pane displays: AWS Well-Architected and the Six Pillars. Below, it displays: Framework Overview. Further, it contains the six headings with descriptions: Operational Excellence Pillar, Security Pillar, Reliability Pillar, Performance Efficiency Pillar, Cost Optimization Pillar, and Sustainability Pillar. Beneath each heading, there are two buttons: HTML and Labs.</em> [Video description ends] <br /><br />Remember, on the CLF-C02 exam, you&#39;re going to have a number of questions, there are going to be, let&#39;s say, five possible answers and two out of the five will be correct.</p>
+<p>The Operational Excellence Pillar, the Security Pillar, the Reliability Pillar, the Performance Efficiency Pillar, Cost Optimization, and Sustainability. So, you would have two of these correct answers. You would have five options, one would be Performance Efficiency, the other Reliability. The other three would be distractors. In fact, they may be actually trusted advisor categories. So, on the exam, you want to be aware of these different pillars and these basic descriptions here.</p>
+<p>OK, the operational excellence pillar focuses on this. The security pillar focuses on protecting information and systems, reliability pillar on workloads, performing their intended functions, also how to recover. Performance efficiency, that goes without saying, streamlining the allocation of your computing resources. Cost optimization and of course, sustainability, minimizing the environmental impact of running cloud workloads. So, you need to be aware of the six pillars and a kind of brief understanding of these pillars.</p>
+<p>I also want you to know that within each one of these pillars you have Labs and, in these Labs, it&#39;s kind of like going to college, right? You&#39;ve got Foundational level, 100 level is like your freshman year, 200 level is sophomore, 300 is your junior year, and the senior year would be Quests.<br /><br />[Video description begins] <em>A new web page appears with the heading: Security :: AWS Well-Architected Labs. The left navigation menu contains various options: Operational Excellence, Reliability, Performance Efficiency, Cost Optimization, and so on. The Operational Excellence option contains a sub-option: Security. The Security sub-option contains four collapsible options: 100 Level Foundational Labs, 200 Level Intermediate Labs. 300 Level Advanced Labs, and Quests. The main pane displays: SECURITY. Below, it contains the Introduction.</em> [Video description ends]<br /><br />So, these are all walkthroughs that you can go through. 100, 200, and 300 or walkthroughs. They&#39;re going to provide you often with an infrastructure as code environment. So, they&#39;ll give you a YAML, Yet Another Markup Language, YAML or JSON, JavaScript object notation, template, and that kind of create your lab environment.</p>
+<p>You go through the walkthrough and then you tear it down.<br /><br />[Video description begins] <em>The 100 Level Foundational Labs collapsible option is open. It contains various options: Account Setup and Root User, Identity and Access Management User, Group, Role, CloudFront with S3 Bucket Origin, Enable Security Hub, and Create a Data Bunker Account.</em> [Video description ends] <br /><br />So, they provide those for you. The Quests aren&#39;t walkthroughs. They&#39;re going to give you tasks to go through and you basically leverage what you learned in these walkthroughs at the 100, 200, and 300 level to accomplish the Quests. And as you can see, you&#39;ve got Labs for each one of these Well-Architected pillars. And obviously, it depends on what your specialty is. Mine happens to be Security. So, I&#39;ve spent quite a bit of time going through the Security Labs and they&#39;re very helpful. In the next lesson, we&#39;re going to dig a little bit deeper and we&#39;re going to look at the design principles of each one of these six pillars.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Examining the Well-Architected Framework Design Principles (it_clawsp23_01_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/1457c4da-c503-4d4b-87b3-eaaca5de34b6/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/1457c4da-c503-4d4b-87b3-eaaca5de34b6/image001.jpg')();" /><div class="section_text">In this video, you will compare the design principles of the six well-architected pillars.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare the design principles of the six well-architected pillars</li></ul><div class="section_text">[Video description begins] <em>Topic title: Examining the Well-Architected Framework Design Principles. Your host for this session is Michael Shannon.</em> [Video description ends]
+<p>In this lesson, we&#39;re going to dig deeper into the six pillars of the AWS Well-Architected framework because on the exam, they may ask you questions about the actual design principles in each one of those pillars. <br /><br />[Video description begins] <em>A web page appears with the heading: The 6 Pillars of the AWS Well-Architected Framework. It contains various tabs such as: Products, Solutions, Pricing, Documentation, Learn, Partner Network, and More. Below, it contains three options in a bar: AWS Blog Home, Blogs, and Editions. The main pane displays: AWS Partner Network (APN) Blog.</em> [Video description ends]<br /><br />Now it&#39;s odd, but this is really difficult to find at the AWS Well-Architected site. So, I&#39;m going to use this blog article that was written by Seth Eliott and Lara Valverde. It&#39;s been updated in 2022.</p>
+<p>If we scroll down here, we&#39;ll see Operational Excellence and then some design principles for Operational Excellence. <br /><br />[Video description begins] <em>The main pane now displays the heading with description: Operational Excellence. Below, it contains two sub-headings with points: Design Principles and Best Practices.</em> [Video description ends]<br /><br />Perform operations as code, make frequent, small, reversible changes, refine operation procedures frequently, anticipate failure, and learn from all of your operational failures. And so, you may have a question on the exam, and they&#39;ll give you a multiple-choice question, you&#39;ll have to know that performing operations as code is a design principle of Operational Excellence.</p>
+<p>If we come down to Security, there are seven design principles for Security. Implement a strong identity foundation, enable traceability, that may be on the exam, apply security at all layers. For example, layer three of the OSI model all the way up to layer five, automate security best practices, protect data in transit and data at rest. Keep people away from data. In other words, it should only be acting on a abstraction view or a copy of that data and prepare for security events.</p>
+<p>The Reliability pillar has five design principles. Automatically recover from failure, test recovery procedures, scale horizontally to increase aggregate workload availability, stop guessing capacity, and manage change in automation.</p>
+<p>Number 4 is Performance Efficiency. Performance Efficiency has five design principles. Democratize advanced technologies. In other words, don&#39;t just let your DevOps team or your data analyst use the advanced technologies of Amazon Web Services. Consider how all your different departments and business units and organizational units can benefit from the cloud. Go global in minutes, use serverless architectures, we&#39;ll talk more about that later in this training. Experiment more often and consider mechanical sympathy. In other words, not everything&#39;s right for virtualization and the cloud.</p>
+<p>Cost Optimization. Implement cloud financial management, adopt a consumption model, measure overall efficiency, stop spending money on undifferentiated heavy lifting, and analyze and attribute your expenditure. And finally, we have the Sustainability pillar with six design principles. Understand your impact, establish sustainability goals, maximize utilization, anticipate and adopt new, more efficient hardware and software offerings, use managed services, and reduce the downstream impact of your cloud workloads. Make sure you&#39;re familiar with these design principles and that you can map them to the actual pillar on the exam. <br /><br />[Video description begins] <em>Various points like Security, Reliability, Performance Efficiency, Cost Optimization, and Sustainability are displayed one after the other.</em> [Video description ends]</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Course Summary (it_clawsp23_01_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/445c3593-96e7-4c47-89cd-6d8075f03271/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/445c3593-96e7-4c47-89cd-6d8075f03271/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary</em> [Video description ends]
+<p>In this course, you learned about the AWS value proposition and economy of scale. High availability, elasticity, and agility, and the AWS Well-Architected Framework. Coming up in the next course, we&#39;ll look at migration to the AWS Cloud and cloud economics.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>

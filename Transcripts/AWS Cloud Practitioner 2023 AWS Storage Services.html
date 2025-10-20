@@ -1,0 +1,306 @@
+<!doctype html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css2"><title>Course Transcript</title><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><style>:root {
+    --title-text: #243038;
+    --toc-link: #0073C4;
+    --section-title-text: #243038;
+    --section-title-border: #bababa;
+    --grid-caption-text: #164794;
+    --grid-border: #c0c0c0;
+    --grid-hdr-text: #973131;
+    --grid-hdr-background: #f7f7f7;
+    --missing-data: #767676;
+    --text-color: #343434;
+    --lightbox-border: #a0a0a0;
+
+    --bold-font-weight: 700;
+
+    font-family: Lato;
+}
+
+.report {
+    margin: 24px;
+}
+
+.container {
+    position: relative;
+}
+
+#lb-curtain {
+    background-color: white;
+    opacity: 1.0;
+}
+
+#lb-overlay {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border: solid 1px var(--lightbox-border);
+    visibility: hidden;
+}
+
+.lb-header, .lb-footer {
+    height: 40px;
+    line-height: 40px;
+}
+
+.lb-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#lb-image-container {
+    margin: 0 40px;
+}
+
+#lb-image {
+    width: 100%;
+}
+
+.report_title {
+    font-size: 22px;
+    font-weight: var(--bold-font-weight);
+    color: var(--title-text);
+}
+
+.toc_link {
+    font-size: 14px;
+    color: var(--toc-link);
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.separator {
+    margin: 12px 0 0;
+}
+
+.section {
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.section.inner {
+    margin-top: 20px;
+}
+
+.section.inline {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: var(--bold-font-weight);
+    width: 100%;
+    color: var(--section-title-text);
+}
+
+h2.section_title {
+    border-bottom-color: var(--section-title-border);
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+h3.section_title {
+    margin: 8px 0;
+}
+
+h3.list_title {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--title-text);
+}
+
+.section_text {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 12px 0;
+    width: 90%;
+}
+
+.section_link {
+    font-size: 14px;
+    margin: 12px 0;
+    width: 90%;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid_caption {
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    color: var(--grid-caption-text);
+    margin: 12px 0;
+    text-align: left;
+    white-space: nowrap;
+}
+.grid_hdr_row {
+
+}
+.grid_col {
+    font-size: 13px;
+    color: var(--text-color);
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+}
+.grid_col_hdr, .grid_row_hdr {
+    font-size: 12px;
+    font-weight: var(--bold-font-weight);
+    white-space: nowrap;
+}
+.grid_row_hdr {
+
+}
+
+.empty_grid {
+    border-collapse: collapse;
+    border-color: var(--grid-border);
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.htmlbox {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    padding: 8px;
+}
+
+.list {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.missing_data {
+    color: var(--missing-data);
+    font-size: 14px;
+    font-weight: var(--bold-font-weight);
+    font-style: italic;
+}
+
+.copyright-container {
+    margin-top: 24px;
+    text-align: center;
+}
+.copyright-text {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+/* Transcript Questions CSS */
+
+.question {
+    border: solid 1px var(--grid-border);
+    box-shadow: 1px 1px 4px var(--grid-border);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.question_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question_images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.question_image {
+    margin-bottom: 8px;
+}
+
+.question_title {
+    font-weight: var(--bold-font-weight);
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.question_label, .question_stem {
+    font-weight: var(--bold-font-weight);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.question_data_row {
+    display: flex;
+}
+
+.question_data_col1 {
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.question_data_col2 {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_answer_key {
+    margin-top: 8px;
+    border-bottom-color: var(--grid-border);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.feedback {
+    font-style: italic;
+}
+</style></head><body class="report"><div class="container"><div class="content" id="lb-curtain"><h1 class="report_title">AWS Cloud Practitioner 2023: AWS Storage Services</h1><div class="section_text">Many consumers use cloud storage services to support their value propositions, increase agility, lower costs, and accelerate innovation. AWS has a wide portfolio of storage solutions for storing, accessing, protecting, and analyzing data. AWS can truly help raw data to become information, information to become knowledge, and knowledge to become wisdom. 
+
+Begin this course with a comparison of block storage to object storage. Next, you will explore Amazon Simple Storage Service (S3) storage classes, block storage solutions, and AWS files services, including Elastic File System (EFS) and Amazon FSx. Then you will examine cached file systems like Amazon Storage Gateway and data life cycle policies. Finally, you will investigate AWS Backup and AWS Elastic Disaster Recovery.
+
+This course is one of a collection that prepares learners for the AWS Certified Cloud Practitioner (CLF-C02) exam.</div><div class="section"><h2 class="section_title">Table of Contents</h2><div class="toc"><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_0" tabindex="0" class="toc-link">1. Video: Course Overview (it_clawsp23_12_enus_01)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_1" tabindex="0" class="toc-link">2. Video: Block Storage vs. Object Storage (it_clawsp23_12_enus_02)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_2" tabindex="0" class="toc-link">3. Video: Object Storage Use Cases (it_clawsp23_12_enus_03)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_3" tabindex="0" class="toc-link">4. Video: Comparing S3 Storage Classes (it_clawsp23_12_enus_04)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_4" tabindex="0" class="toc-link">5. Video: Using Block Storage Solutions (it_clawsp23_12_enus_05)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_5" tabindex="0" class="toc-link">6. Video: Comparing AWS File Services (it_clawsp23_12_enus_06)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_6" tabindex="0" class="toc-link">7. Video: Cached File Systems (it_clawsp23_12_enus_07)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_7" tabindex="0" class="toc-link">8. Video: Data Lifecycle Policies (it_clawsp23_12_enus_08)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_8" tabindex="0" class="toc-link">9. Video: AWS Backup Use Cases (it_clawsp23_12_enus_09)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_9" tabindex="0" class="toc-link">10. Video: Using AWS Backup and AWS Elastic Disaster Recovery (it_clawsp23_12_enus_10)</a></p><p class="toc_link">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#section_10" tabindex="0" class="toc-link">11. Video: Course Summary (it_clawsp23_12_enus_11)</a></p></div></div><div class="section"><div id="section_0" tabindex="-1"></div><h2 class="section_title">1. Video: Course Overview (it_clawsp23_12_enus_01)</h2><img src="https://cdn2.percipio.com/public/b/60e39b30-11c7-4003-a532-58df871473d2/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/60e39b30-11c7-4003-a532-58df871473d2/image001.jpg')();" /><div class="section_text">In this video, we will discover the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">discover the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Overview. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS storage services. Many consumers utilize cloud storage services to support their value propositions, increase agility, lower costs, and accelerate innovation. AWS has a wide portfolio of storage solutions for storing, accessing, protecting, and analyzing data. AWS can truly help raw data to become information, information to become knowledge, and then knowledge to become wisdom. In this course, we&#39;ll compare block and object storage, explore Amazon S3 and its various storage classes, learn about Amazon Elastic Block Store (EBS), ephemeral instance store, file services, and the Amazon Elastic File System (EFS). Finally, we&#39;ll evaluate Amazon FSx, cached file systems, the AWS Storage Gateway, data lifecycle policies, AWS Backup, and AWS Elastic Disaster Recovery.</p></div></div></div><div class="section"><div id="section_1" tabindex="-1"></div><h2 class="section_title">2. Video: Block Storage vs. Object Storage (it_clawsp23_12_enus_02)</h2><img src="https://cdn2.percipio.com/public/b/5c29b88a-03aa-4bd9-b700-d0b79b7c976d/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/5c29b88a-03aa-4bd9-b700-d0b79b7c976d/image001.jpg')();" /><div class="section_text">In this video, we will compare block and object storage.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare block and object storage</li></ul><div class="section_text">[Video description begins] <em>Topic title: Block Storage vs. Object Storage. Presented by: Michael Shannon.</em> [Video description ends]
+<p>There are three types of cloud storage at Amazon Web Services, object, file, and block, each having specific use cases and storage needs. Block storage or volume storage is a classic technology that manages data storage and storage devices. For example, on your traditional PC, workstation, laptop, or RAID array. It takes any data, like a file or a database entry, and distributes it into equal size blocks (512-bit is legacy, 4K is more common). The block storage system stores the data block on supporting physical storage, for example, hard disk drives and solid-state drives, in a way that&#39;s optimized for fast access and retrieval, for example, from a RAID array, Redundant Array of independent disks. Developers prefer block storage for applications that require efficient, fast, and reliable data access.</p>
+<p>Block storage offers a more direct pipeline to the data. By comparison, file storage has an extra layer consisting of a file system (NFS, SMB, or CIFS) to process before accessing the data. Let&#39;s look at some common use cases for block storage. Storage area networking (SANs), containerized applications, transactional workloads, analytics and data warehousing, and virtual machines. In this diagram, we&#39;ll see all three types at Amazon Web Services. For example, let&#39;s say, instance B is an instance of Red Hat Linux. When it gets instantiated or spun up, it&#39;ll have a system volume, an Elastic Block Store volume, and usually a separate data volume, also Elastic Block Store. If for some reason you stop running the Red Hat instance or you terminate it, you don&#39;t lose the data in the Elastic Block Store. It&#39;s part of your account.</p>
+<p>Also, usually by default, when you create an Elastic Block Store volume, AWS or the database administrator will create a snapshot in an S3 bucket. That&#39;s object storage. What if instance B doesn&#39;t want to store its subsequent files on an Elastic Block Store volume? That&#39;s OK. It can have an endpoint connection to Amazon EFS, the Elastic File System, which is an example of file storage. There&#39;s also an instance store that&#39;s ephemeral at AWS. For example, let&#39;s say instance A is a high performance compute instance doing data analytics, floating point calculations, and creating many temporary files. Often it will use an array of solid-state drives, that&#39;s an ephemeral instance store that&#39;s directly attached to the instance. If you stop running that high performance compute instance, however, you lose the data on the instance store because it&#39;s ephemeral.</p>
+<p>Let&#39;s look closer at object storage. Object storage is a technology that stores and controls data in an unstructured format called objects. Modern enterprises generate and analyze large amounts of unstructured data such as photographs, graphics, audio files, video files, bulk email, web pages, and data generated from sensors, for example, log data. Cloud object storage systems such as Amazon Simple Storage Service (S3) and S3 Glacier archives distribute this data across multiple physical devices but let users access the content proficiently from a single, virtual storage pool.</p>
+<p>Object storage solutions are excellent for building cloud-native applications that require scale and flexibility and can also be used to import existing data stores for analytics, backup and restore, or archival solutions. Metadata is critical to object storage technology, and objects are kept in a bucket instead of files or folders. Object storage combines the chunks of data that make up a file, adds all the user-created metadata to that file, and then assigns a custom identifier. This scenario creates a flat structure instead of a hierarchical or tiered storage structure. Users can get and analyze any object in the bucket, no matter the file type, based on its function and attributes.</p></div></div></div><div class="section"><div id="section_2" tabindex="-1"></div><h2 class="section_title">3. Video: Object Storage Use Cases (it_clawsp23_12_enus_03)</h2><img src="https://cdn2.percipio.com/public/b/6ecc4163-ae87-4073-8ac5-1519359dccae/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/6ecc4163-ae87-4073-8ac5-1519359dccae/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe object storage use cases.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe object storage use cases</li></ul><div class="section_text">[Video description begins] <em>Topic title: Object Storage Use Cases. Presented by: Michael Shannon.</em> [Video description ends]
+<p>On the Cloud Practitioner exam, you&#39;ll be expected to know some object storage use cases. We can use object storage for analytics, where we collect and store virtually unlimited data of any type in our cloud object storage. Data lakes. We can use cloud object storage as its core for a data lake since it has virtually unlimited scalability and high durability. Data archiving. Cloud object storage is exceptional for long-term data retention.</p>
+<p>And rich media. We can speed up applications and lower the cost of storing media files like video, digital images, and music. And backup and recovery. We can deploy object storage systems to duplicate content in case a physical device fails, for example, storing snapshots in object storage. We can use object storage for cloud-native applications. We can use technologies like containerization and serverless to address customer needs in a rapid and flexible way. And machine learning (ML). Machine learning needs object storage because of the scale and cost efficiency to &#34;teach&#34; a computer system to make predictions or inferences.</p></div></div></div><div class="section"><div id="section_3" tabindex="-1"></div><h2 class="section_title">4. Video: Comparing S3 Storage Classes (it_clawsp23_12_enus_04)</h2><img src="https://cdn2.percipio.com/public/b/21ca8fac-6ae9-4a29-8e2d-5379c79d8e76/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/21ca8fac-6ae9-4a29-8e2d-5379c79d8e76/image001.jpg')();" /><div class="section_text">In this video, we will compare Amazon Simple Storage Service (S3) storage classes to S3 Glacier.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare Amazon Simple Storage Service (S3) storage classes to S3 Glacier</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing S3 Storage Classes. Presented by: Michael Shannon.</em> [Video description ends]
+<p>All right, for this demonstration, let&#39;s do a web safari up to the AWS S3 area, and look at the S3 Storage Classes infographic, which is a kind of a cool way to look at this. The default is going to be S3 Standard. So, if you were to go into S3 and just create a bucket, it&#39;s going to be S3 Standard General purpose storage for active, frequently accessed data. Now frequently accessed objects like graphic files, video files, audio files, pictures not frequently accessed like random read, write, and transactional. That&#39;s would be for block storage and for databases. <br /><br />[Video description begins] <em>A page titled &#39;The Amazon S3 Storage Classes&#39; is open on the browser. The address bar reads: https://aws.amazon.com/s3/storage-classes-infographic/. It displays the aws toolbar at the top with various options like Contact Us, Support, My Account, Products, Solutions, Pricing, Documentation, Learn, and so on. Below, an infographic appears. It displays the following components: S3 Intelligent-Tiering, S3 Standard, S3 Standard-Infrequent Access (S3 Standard-IA), S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, S3 Glacier Deep Archive, S3 One Zone-Infrequent Access (S3 One Zone-IA), and S3 on Outposts.</em> [Video description ends]<br /><br />But the most frequently accessed objects would go in S3 Standard, and it&#39;s actually the most expensive of the options. OK, so how do you get less expensive?</p>
+<p>Well, one thing you could do is say, well, let&#39;s do S3 Standard-Infrequent Access. So, it&#39;s still the S3 Standard, you still get like 4 nines of availability, 11 nines of durability, but it&#39;s a lower cost option for data that&#39;s accessed monthly, and requires milliseconds of retrieval. So, the next class cheaper than S3 Standard is S3 Standard IA, Infrequent Access. All right, what&#39;s cheaper than that? Well, for S3, let&#39;s go down here, it&#39;s going to be S3 One Zone-Infrequent Access. So, this is going to be Infrequently accessed data, but you only want it to be in a single availability zone. You don&#39;t need redundancy or that kind of high availability. Maybe it&#39;s not data that&#39;s mission-critical or has a lot of utility or you have other copies of it somewhere else, so this is going to be even cheaper.</p>
+<p>All right, so with those three options, AWS also has a service that is utilized by the S3 Intelligent-Tiering and this is basically kind of a dynamic storage review service, so you can do auto-tiering. So, it kind of evaluates your usage of data in S3 Standard, S3 Standard-Infrequent Access, and S3 Standard Infrequent Access One Zone and it will automatically move the data. Now that&#39;s S3. Once you get beyond that and you want even lower cost savings, we&#39;re talking about archive data or long-term storage. And that&#39;s where you get into things like S3 Glacier. And the faster you want it, the quicker the retrieval time, the more expensive it is. So, for example, yes, S3 Glacier is Low cost storage, but if you want Instant Retrieval, you&#39;re going to pay a little bit more for it, OK.</p>
+<p>If it&#39;s Deep Archive, then it&#39;s going to be an even cheaper option because you&#39;re going to give them hours to move this data, let&#39;s say to an S3 bucket, for example, or even to move it on-site, and that would be S3 on Outpost. So, this is S3 with a hybrid cloud solution delivering object storage to on-premises AWS Outpost environment. So, for example, you could use the S3 Glacier Flexible Retrieval option and then it would be from minutes to hours, and instead of sending the data to S3 buckets, you could send it to your AWS local Outposts. So, on the exam have a general idea and this infographic is a great way to look at it if you just go to aws.amazon.com/s3, or you can go back here to the main storage classes site and you can get this breakdown. But this is you know, way more than you would need to know <br /><br />[Video description begins] <em>A new tab opens. It displays a page titled &#39;Amazon S3 Storage Classes&#39;. A menu bar appears below the aws toolbar. It contains various options like Overview, Features, Storage classes, Pricing, and so on. To the left, the header PAGE CONTENT is displayed. It displays several links such as S3 Standard, S3 Intelligent-Tiering, S3 Standard-IA, S3 One Zone-IA, and so on. The S3 Standard link is active now. The main pane displays information under sections and sub-sections like General purpose, Amazon S3 Standard (S3 Standard), Key Features, and so on.</em> [Video description ends]<br /><br />for the Cloud Practitioner. This is starting to get into the SysOps Admin Associate-type stuff.</p></div></div></div><div class="section"><div id="section_4" tabindex="-1"></div><h2 class="section_title">5. Video: Using Block Storage Solutions (it_clawsp23_12_enus_05)</h2><img src="https://cdn2.percipio.com/public/b/77dffe98-3357-4497-acf4-4340fbb5fb4a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/77dffe98-3357-4497-acf4-4340fbb5fb4a/image001.jpg')();" /><div class="section_text">Learn how to use block storage solutions, for example, Amazon Elastic Block Store (Amazon EBS) and instance store.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use block storage solutions, for example, Amazon Elastic Block Store (Amazon EBS) and instance store</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using Block Storage Solutions. Presented by: Michael Shannon.</em> [Video description ends]
+<p>OK, we&#39;re up at AWS again and we&#39;re going to look at the difference between ephemeral instance store and the very popular Elastic Block Store. Now, over here on the left-hand side, we see Elastic Block Store and we&#39;ll look at that in a second and realize there&#39;s no configuration on this exam. But I&#39;m looking at the Instance types here, and there&#39;s a bunch of these instance types, but I just chose one of these. You know, it&#39;s a 32xlarge. <br /><br />[Video description begins] <em>A tab titled InstanceTypeDetails | EC2 | us-east-1 is displayed on the browser. The page displays the aws toolbar at the top, containing a Services icon, a Search bar, a Cloudshell icon, a Notifications icon, and so on. The navigation pane on the left contains several collapsible sections like Images, Elastic Block Store, Network &amp; Security, and so on. The Elastic Block Store section contains various options like Volumes, Snapshots, and Lifecycle Manager. The main pane displays the following breadcrumb trail at the top: EC2 &gt; Instance types &gt; x2iedn.32xlarge. The heading, x2iedn.32xlarge appears next followed by several sections like Details, Compute, Networking, Storage, Accelerators, and so on. Various information is provided in these sections in different fields.</em> [Video description ends] <br /><br />And so, as you scroll down here, we can see that this is the instance family.</p>
+<p>It&#39;s running on a nitro hypervisor, which is very special at AWS. If we keep on going down through to the Storage area, notice that it says Storage, 3800 gigabytes, Local instance storage, true. <br /><br />[Video description begins] <em>The Storage section is displayed. It contains various information in fields like Storage (GB), Local instance storage, Storage type, Storage disk count, and EBS encryption support.</em> [Video description ends]<br /><br />So, this is locally attached ephemeral instance store which has several use cases. It&#39;s for a high-performance computing, temporary files, scratch files, floating point calculations, those types of things. But it&#39;s ephemeral. If I run this instance, whatever data is on the local instance store. If I run this instance and I stop running it, I will lose that temporary data on this locally attached ephemeral storage, which is 2 solid-state drives.</p>
+<p>But also this instance also supports EBS as well, which is actually much more common and much less expensive. Let&#39;s take a look at that real quick and go to look at Volumes. I have a couple of volumes of the type gp2, one of them is a 100 gigabytes, the other is 30 gigabytes, and one of them has much higher input/output per second. If you click on Create volume, we can see the types, and probably on the exam, <br /><br />[Video description begins] <em>The Volumes option is selected. The corresponding page appears on the main pane. It displays a few options at the top like Refresh, Actions, and Create volume. A search bar appears next followed by a table with several column headers labeled Name, Volume ID, Type, Size, IOPS, Throughput, Snapshot, Created, and so on. The table lists 2 items.</em> [Video description ends]<br /><br />you should know that there&#39;s four solid-state types. gp2 is the cheapest solid-state drive, the most expensive is going to be Provisioned io2.</p>
+<p>There are a couple of hard disk options, Cold hard disk HDD, and Throughput Optimized. Remember these are mechanical, like there&#39;s going to be hard disk with arms and plates. <br /><br />[Video description begins] <em>A page titled &#39;Create Volume&#39; appears. It contains various fields like Volume type, Size (GiB), IOPS, Throughput (MiB/s), Availability Zone, Snapshot ID - optional, and Encryption. The Volume Type field contains a drop-down list with many options like General Purpose SSD (gp2), General Purpose SSD (gp3), Provisioned IOPS SSD (io1), Provisioned IOPS SSD (io2), Cold HDD (sc1), Throughput Optimized HDD (st1), and Magnetic (standard).</em> [Video description ends]<br /><br />Whereas solid-state is, you know, circuitry, solid-state circuitry. gp2 is the most common, so that&#39;s Elastic Block Store, and you can go find that in the EC2 area. And if you go to the instance types here, this is where you&#39;ll see that huge long list, and you can go through and find some of the more high-end instances, and that&#39;s where you&#39;ll find ones that support the ephemeral instance store as well.</p></div></div></div><div class="section"><div id="section_5" tabindex="-1"></div><h2 class="section_title">6. Video: Comparing AWS File Services (it_clawsp23_12_enus_06)</h2><img src="https://cdn2.percipio.com/public/b/a3408eae-ae41-4697-9705-874020d3b0a3/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a3408eae-ae41-4697-9705-874020d3b0a3/image001.jpg')();" /><div class="section_text">In this video, we will compare file services, including Amazon Elastic File System (EFS) and Amazon FSx.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare file services, including Amazon Elastic File System (EFS) and Amazon FSx</li></ul><div class="section_text">[Video description begins] <em>Topic title: Comparing AWS File Services. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Well, we&#39;ve talked about block storage and some block storage options like instance store, which is ephemeral, and Elastic Block Store. We&#39;ve looked at object storage, S3 buckets, and glacier vaults. Let&#39;s look at some file storage now. Looking at the Amazon Elastic File System Serverless, fully elastic file storage. <br /><br />[Video description begins] <em>The Amazon EFS page is open on the browser. A menu bar appears below the aws toolbar. It contains various options like Overview, Features, Pricing, Getting Started, and so on. The Overview tab is active now. Below, a panel appears displaying various information on the Amazon Elastic File System. A section labeled How it works appears next. It contains an infographic.</em> [Video description ends] <br /><br />And the good news is, on that AWS Free Tier for 365 days, you get 5 gigabytes of standard EFS storage. You only pay for what you use and you get 4 nines of availability and 11 nines of durability, not unlike S3 standard storage.</p>
+<p>And here&#39;s how it works, automatically growing and shrinking as you add or remove files. No management, no provisioning. Basically, create your file system using the EC2 Launch Instance wizard or you can use the EFS console, a CLI, or API. Then you mount your file system on EC2 instances or AWS containers, or Lambda functions. Or if you want, you can do them on the on-premises servers as well. As far as the AWS containers go, we&#39;re looking at Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, or the serverless container solution AWS Fargate.</p>
+<p>Then you can test and optimize performance for your workloads, move the data to your file system from the cloud and that would be over an endpoint, an API call, or on-premises. You could be using AWS DataSync or Secure Shell with FTP or FTPS which uses Transport Layer Security or some other protocols. And then share your file data, optimize your cost with Lifecycle Management, and further protect data with AWS Backup and EFS Replication. We also have Amazon FSx to Launch, run, and scale feature-rich and highly-performant file systems with just a few clicks.</p>
+<p>And there&#39;s four widely used file systems you can choose from. So, FSx for NetApp ONTAP, FSx for OpenZFS, FSx for Windows File Server, and FSx for Lustre,<br /><br />[Video description begins] <em>Another tab opens. It displays a page called Amazon FSx. The menu bar below the aws toolbar contains three options: Overview, File Systems, and Pricing. The Overview tab is active now. Below, various information is provided. There is a section called Amazon FSx file systems. It displays 4 components: Amazon FSx for NetApp ONTAP, Amazon FSx for OpenZFS, Amazon FSx for Windows File Server, and Amazon FSx for Lustre.</em> [Video description ends]<br /><br />one of the world&#39;s most popular high-performance file systems. This is an excellent solution by the way for a hybrid cloud or edge computing environment where you have let&#39;s say a storage gateway deployed at your headquarters or your regional branch office and you&#39;re using a direct connect connection of let&#39;s say if you&#39;re lucky in your city upto a 100 gigabit per second.</p></div></div></div><div class="section"><div id="section_6" tabindex="-1"></div><h2 class="section_title">7. Video: Cached File Systems (it_clawsp23_12_enus_07)</h2><img src="https://cdn2.percipio.com/public/b/a40ef26a-fe8c-4d8d-b5c5-bc467362a21a/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/a40ef26a-fe8c-4d8d-b5c5-bc467362a21a/image001.jpg')();" /><div class="section_text">Upon completion of this video, you will be able to provide an overview of cached file systems, for example, AWS Storage Gateway.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">provide an overview of cached file systems, for example, AWS Storage Gateway</li></ul><div class="section_text">[Video description begins] <em>Topic title: Cached File Systems. Presented by: Michael Shannon.</em> [Video description ends]
+<p>AWS Storage Gateway. The AWS Storage Gateway is a multipurpose hybrid storage service. In other words, it works in conjunction with AWS hybrid cloud, AWS Outposts, and edge computing to enable your on-premises applications to seamlessly use AWS cloud storage, block storage, or object storage. You can use the service for backup and archiving, for disaster recovery, for cloud data processing, storage tiering, both block storage and object storage, and database migration. For example, facilitating your Oracle database migration to AWS RDS. The Storage Gateway can be appliance-based, for example, deployed in a rack in your data center or it can run in a hypervisor environment. And Storage Gateway is often used in conjunction with AWS Direct Connect which gives you 10, 50, or even a 100 gigabit per second connections in certain metropolitan areas.</p>
+<p>On the left-hand side, we see our on-premises environment. Use cases include user and group file shares, database backups, and data archives, facilitating application servers, and backup applications. The gateway deployment options are to use a VMware Hypervisor environment, Microsoft Hyper-V, Linux-based KVM, or a hardware appliance, going over the public Internet or through an AWS Direct Connect connection, you encrypt the data in transit. The AWS Storage Gateway Service endpoint options are the Internet, the Amazon VPC, or FIPS. At AWS, you can manage the lifecycle with AWS Backup. You can connect to Amazon S3, including Glacier and Glacier Deep Archive, a Tape library at Amazon S3 or FSx, Amazon FSx for Windows File Server.</p></div></div></div><div class="section"><div id="section_7" tabindex="-1"></div><h2 class="section_title">8. Video: Data Lifecycle Policies (it_clawsp23_12_enus_08)</h2><img src="https://cdn2.percipio.com/public/b/c9ea6a58-0b95-4d94-bed6-15a505a8e70c/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/c9ea6a58-0b95-4d94-bed6-15a505a8e70c/image001.jpg')();" /><div class="section_text">In this video, we will compare data life cycle policies.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">compare data life cycle policies</li></ul><div class="section_text">[Video description begins] <em>Topic title: Data Lifecycle Policies. Presented by: Michael Shannon.</em> [Video description ends]
+<p>On the AWS Cloud Practitioner exam, you may want to know the six phases of the cloud data lifecycle. The first being the create phase. One thing about that phase is you want to adhere to data minimization. Unless you&#39;re trying to improve your AI or machine learning algorithms, you only want to generate or create or purchase, or acquire data that is meaningful and has utility. In other words, raw data that becomes information and then knowledge and then possibly wisdom. A lot of things happen in that create phase.</p>
+<p>You&#39;ll do your tagging and your labeling, your prioritization, your classification, data handling, potential data ownership or stewardship or custodianship, and realize the only two phases that are mandatory in the lifecycle are the create phase and the use phase. You don&#39;t necessarily store data, nor do you necessarily share it, archive it, or destroy it. And also the phases are not linear necessarily and you can combine phases, for example, the create and store phase. And then finally realize that the store phase and the archive phase are quite different, in that, the archive is long-term archival storage of the data for a variety of reasons and use cases.</p>
+<p>It&#39;s very important to have data lifecycle policies. Customers can formulate a data lifecycle initiative for several areas. It could be block storage, a lifecycle using hard disk drives or various tiers of solid-state drives, or both, object storage using S3 storage tiers or plans, S3 Glacier archiving retrieval plans, managing EBS snapshots and EBS-backed AMIs Amazon Machine Images, moving data to AWS with the AWS Snow services, supporting enterprise backup and restore policies, enabling cloud disaster recovery, and database replication plans. The Amazon Data Lifecycle Manager (DLM) is used to automate the creation, retention, and deletion of EBS snapshots and EBS-backed AMIs.</p>
+<p>DLM helps to protect valuable data by enforcing a regular backup schedule to create standardized AMIs that can be refreshed at regular intervals, retain backups as necessary by auditors or internal compliance, reduce storage costs by deleting outdated backups, and create disaster recovery backup policies that backup data to isolated accounts. DLM creates EBS snapshots policy using EC2 consoles, APIs, the AWS CLI, SDKs, or AWS CloudFormation Infrastructure as Code. You choose your target resource type, EBS volumes, or EC2 instances. You can exclude root volumes or data volumes and set up for custom schedules. Automate the creation, retention, and deletion of the EBS snapshots. It also works with Amazon EBS fast snapshot restore (FSR), the Amazon EBS Snapshots Archive, and supports cross-region copies.</p></div></div></div><div class="section"><div id="section_8" tabindex="-1"></div><h2 class="section_title">9. Video: AWS Backup Use Cases (it_clawsp23_12_enus_09)</h2><img src="https://cdn2.percipio.com/public/b/c2bfe448-f2ba-4efb-99ac-eacbea68b9c2/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/c2bfe448-f2ba-4efb-99ac-eacbea68b9c2/image001.jpg')();" /><div class="section_text">After completing this video, you will be able to describe the AWS Backup service.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">describe the AWS Backup service</li></ul><div class="section_text">[Video description begins] <em>Topic title: AWS Backup Use Cases. Presented by: Michael Shannon.</em> [Video description ends]
+<p>Many third-party backup services have built-in cloud connectors that could be used to send data backups to AWS in a smooth manner. In other scenarios, customers use gateway services like the AWS Storage Gateway that we looked at in a previous lesson to create a seamless connection between on-premises environments and AWS. During a restoration or recovery, backup data is brought back to the on-premises environment and then reinstated for production use. Backups are generated on-premises where the backup master server is hosted and sent to AWS to be stored in Amazon S3 or archived in S3 Glacier and S3 Glacier Deep Archive. To facilitate this scenario, at the on-premise site, whether it be the headquarters, a regional branch office, or a colocation office, the customer will install the AWS Storage Gateway, either the appliance solution or the hypervisor solution.</p>
+<p>That&#39;s where their local backup target is, possibly their virtual tape library, and various other backup target options. The networking options to facilitate this hybrid backup solution would be a high-speed AWS Direct Connect connection or a VPN connection, generally 1.25 to 1.5 gigabit per second with IPsec IKE version 2 or over the public Internet without a VPN, facilitated by S3 application programming interfaces. If it&#39;s Direct Connect, it&#39;ll be a public virtual interface or a VIP to the Amazon S3 bucket or Amazon S3 Glacier. Tape replacement. With Storage Gateway and Hybrid Backup, customers can retire physical tape libraries and replace them with sturdy and secure cloud-enabled storage solutions. This enables IT groups to transfer backup jobs from on-premises tape or virtual tape library systems to Amazon Web Services without disrupting existing on-premises workflows.</p>
+<p>The Storage Gateway&#39;s virtual tape library interface can help customers update their backup infrastructure, lower the need to transport storage media to and from offsite facilities, and remove upfront capital investments or CapEx of maintaining old legacy tape media solutions. In the diagram at the on-premises site, let&#39;s say the regional branch office will use the AWS Storage Gateway virtual tape library solution. The data can then be sent to virtual tapes stored in Amazon S3 or archived tapes stored in Amazon S3 Glacier. AWS provides the widest array of database services to support virtually any use case. Services such as Amazon Relational Database Service (RDS), and Amazon DynamoDB have built-in backup functionalities to protect data and related applications.</p>
+<p>Customers can also use EBS snapshots to backup Amazon EBS volumes that support other database services running on EC2. Amazon S3 supports tools to manage data throughout its lifecycle. S3 storage class analysis can monitor data access patterns and identify data sets that should be moved to more cost-effective storage classes such as Standard Infrequent Access or Standard Infrequent Access One Zone. Customers can configure lifecycle policies to move a data set to a cheaper storage class or even an archival storage class for maximum savings. S3 lifecycle management policies are used to schedule object deletes that have come to the end of their lifecycle, otherwise known as the destroy phase. Let&#39;s take a look at the workflow of database backup. First, we apply S3 storage class analysis.</p>
+<p>This can be configured to monitor objects by S3 bucket, by prefix, or by object&#39;s tag. Then identify data sets to transfer. You can utilize reports from S3 storage class analysis to identify data sets for transition to other storage classes or for expiration. Then configure an S3 Lifecycle policy. This is a set of rules that defines actions for a data set by S3 bucket, prefix, or object tag. And then specify one of two policy types, transitions that move objects to other storage classes, or expirations that delete objects. Once you configure database backup, the S3 Lifecycle policies automate tiering and expiration of data sets for cost savings and resource optimization.</p></div></div></div><div class="section"><div id="section_9" tabindex="-1"></div><h2 class="section_title">10. Video: Using AWS Backup and AWS Elastic Disaster Recovery (it_clawsp23_12_enus_10)</h2><img src="https://cdn2.percipio.com/public/b/b7fcc064-8c90-45a2-ac37-8de1240ea3bd/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/b7fcc064-8c90-45a2-ac37-8de1240ea3bd/image001.jpg')();" /><div class="section_text">Find out how to use AWS Backup and AWS Elastic Disaster Recovery.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">use AWS Backup and AWS Elastic Disaster Recovery</li></ul><div class="section_text">[Video description begins] <em>Topic title: Using AWS Backup and AWS Elastic Disaster Recovery. Presented by: Michael Shannon.</em> [Video description ends]
+<p>All right, let&#39;s do a web safari and we&#39;re up at AWS Backup, where you can centrally manage and automate data protection. It&#39;s where you can simplify your backup and recovery service, create immutable, in other words unchangeable backups as a safeguard against accidents and even malicious incidents. It&#39;s a cost-effective, fully-managed, policy-based backup service. As you can see here, AWS Backup allows you to centralize and automate data protection across AWS services, a bunch of different services as well as on-premise by using the AWS Backup console, or you can use APIs, or you can use the CLI, the AWS CLI or Cloud Shell as well. <br /><br />[Video description begins] <em>The AWS Backup page is open on the browser. A menu bar appears below the aws toolbar. It contains various options like Overview, Features, Pricing, Getting Started, and so on. The Overview tab is active now. Below, a panel appears displaying various information on AWS Backup. It contains 2 tabs: Getting Started with AWS Backup and Contact us. A few sections appear next such as How it works, Use cases, Customers, and so on. The section labeled How it works contains a diagram.</em> [Video description ends]<br /><br />So, you create your backup plan by configuring your settings like how often you&#39;re going to backup, your schedule, or your retention policy.</p>
+<p>You can assign application and service resources from three major categories, compute, storage, and database so that your resources are protected automatically based on your backup plans, which include monitoring, configuring, restoring, auditing, and reporting. Some use cases would be cloud-native backup to back up key data stores like S3 buckets, volumes, databases, and file systems. Hybrid data protection for your hybrid and edge computing environments like VMware workloads and AWS Storage Gateway volumes. You can get complete control of your backup activity across your organization&#39;s AWS accounts, resources, and regions. And you can ensure that you have compliance with organizational or regulatory requirements. Another service on the exam to be aware of is the AWS Elastic Disaster Recovery <br /><br />[Video description begins] <em>The Use cases section is displayed. It offers various information under 4 headers: Cloud-native backup, Hybrid data protection, Centralized data protection policies, and Data protection compliance.</em> [Video description ends] <br /><br />which is a scalable, cost-effective application recovery to the AWS cloud. AWS DRS minimizes downtime and data loss by offering a fast, reliable recovery of on-premises and cloud-based applications.<br /><br />[Video description begins] <em>Another tab opens. It displays the AWS Elastic Disaster Recovery page. A menu bar appears below the aws toolbar. It contains various options like Overview, Pricing, Resources, and so on. The Overview tab is active now. Below, a panel appears displaying various information on AWS Elastic Disaster Recovery. It contains 2 tabs: Getting Started with AWS Elastic Disaster Recovery and Take free online technical training. A diagram appears below followed by a link called Compare with CloudEndure Disaster Recovery. A section labeled Use cases appears next.</em> [Video description ends]</p>
+<p>It&#39;s affordable, uses minimal compute resources, and it provides point-in-time recovery, otherwise, known as a recovery point objective for your business continuity planning and your business impact analysis. In the diagram, we can see that AWS Elastic Disaster Recovery or EDR, quickly and reliably recovers your on-premises or cloud applications. You set it up by defining settings and initiate continuous data replication. You can launch instances for non-disruptive tests. You can maintain operational readiness with monitoring and periodic drills and tests. And you can test your failover launch recovery instances on AWS and initiate failback replication and return to the primary site. When you use AWS Elastic Disaster Recovery, your data is replicated to a staging area subnet in your AWS account, in the AWS region that you choose.</p>
+<p>There is another service at AWS that you may need to know about for the exam. It&#39;s called CloudEndure Disaster Recovery and on the exam, remember that they&#39;re going to recommend CloudEndure Disaster Recovery only if you need the following capabilities. Replication to an AWS GovCloud or China Region or Replication and recovery into AWS Outposts.<br /><br />[Video description begins] <em>A page called When to choose AWS Elastic Disaster Recovery appears. Below, various information is provided.</em> [Video description ends]<br /><br />In 2022, they began limiting the availability of CloudEndure in all AWS regions. So, CloudEndure used to be something that they would test you on the previous iteration CLFC-01. But in AWS Cloud Practitioner CLFC-02, you definitely want to focus on AWS Elastic Disaster Recovery. This will be the one that you want to consider going forward and on the Cloud Practitioner exam.</p></div></div></div><div class="section"><div id="section_10" tabindex="-1"></div><h2 class="section_title">11. Video: Course Summary (it_clawsp23_12_enus_11)</h2><img src="https://cdn2.percipio.com/public/b/fec3b4c1-b114-49d9-afc7-1e9f41b7ba2f/image001.jpg" alt="" role="presentation" width="300" onclick="(()=>document.getElementById('lb-image').src = 'https://cdn2.percipio.com/public/b/fec3b4c1-b114-49d9-afc7-1e9f41b7ba2f/image001.jpg')();" /><div class="section_text">In this video, we will summarize the key concepts covered in this course.</div><div class="section inner"><h3 class="list_title"></h3><ul class="list"><li class="list_item">summarize the key concepts covered in this course</li></ul><div class="section_text">[Video description begins] <em>Topic title: Course Summary. Presented by: Michael Shannon.</em> [Video description ends]
+<p>In this course, you learned about block storage and object storage, the differences and use cases. AWS file services, cached file systems, and data lifecycle policies. And AWS Backup and Elastic Disaster Recovery. Coming up in the next course, you&#39;ll learn about machine learning, AI, and data analytics at Amazon Web Services.</p></div></div></div><div class="copyright-container"><span class="copyright-text">© 2025 Skillsoft Ireland Limited - All rights reserved.</span></div></div><div id="lb-overlay"><div class="lb-header"><button onclick="(()=>{const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'hidden';const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 1.0;curtain.style.backgroundColor = 'white';curtain.style.pointerEvents = 'auto';})();">X</button></div><div id="lb-image-container"><img id="lb-image" alt onload="(()=>{const curtain = document.getElementById('lb-curtain');curtain.style.opacity = 0.5;curtain.style.backgroundColor = 'grey';curtain.style.pointerEvents = 'none';const overlay = document.getElementById('lb-overlay');overlay.style.visibility = 'visible';window.scrollTo(0, 0);})();"/></div><div class="lb-footer" /></div></div></body></html>
