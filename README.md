@@ -1,4 +1,4 @@
-# 🧠 AWS Cloud Practitioner Quiz System
+# AWS Cloud Practitioner Quiz System
 
 An adaptive quiz engine built for **AWS Cloud Practitioner (CLF-C02)** study using ChatGPT-5.  
 This system pulls from your local project folder — including **flashcard CSVs, course transcripts, and history logs** — to deliver **smart, randomized, feedback-driven quiz sessions** with **persistent tracking**.
